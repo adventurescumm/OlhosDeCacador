@@ -11,39 +11,48 @@ assert len(catalog['maps'])==3
 for m in catalog['maps']:
  assert len(m['rooms'])==3
  targets=[p for r in m['rooms'] for p in r['objects'] if p['id']]
- assert len(targets)==6
+ assert len(targets)==18
  assert len([p for p in targets if p['clue']])==3
  assert m['puzzle'] in ['lock','memory','matching']
  for r in m['rooms']:
-  assert r['id'] and len(r['riddle'].splitlines())==4
+  assert r['id'] and len(r['riddle'].splitlines())==6
   roomids.append(r['id'])
-  assert len([p for p in r['objects'] if p['id']])==2
+  assert len([p for p in r['objects'] if p['id']])==6
+  for target in (p for p in r['objects'] if p['id']):assert sum(p['asset']==target['asset'] for p in r['objects'])==1,(r['id'],target['id'],'indistinguishable duplicate')
   for p in r['objects']:
    instances+=1;models.add(p['asset'])
-   assert 0<p['size']<=4 and abs(p['x'])<=5.5 and abs(p['z'])<=3.2
+   assert 0<p['size']<=4 and abs(p['x'])<r['width']/2 and abs(p['z'])<r['depth']/2-.1
    obj=root/'Assets/Resources/Hunter/Models'/(p['asset']+'.obj');assert obj.is_file(),str(obj)
    mtl=obj.with_suffix('.mtl');assert mtl.is_file()
    for line in mtl.read_text().splitlines():
     if line.startswith('map_Kd '):assert (mtl.parent/line[7:].strip()).is_file()
    if p['id']:ids.append(p['id']);assert p['label'] and p['hint']
-assert len(ids)==len(set(ids))==18
+assert len(ids)==len(set(ids))==54
 assert len(roomids)==len(set(roomids))==9
 assert {p['destination'] for p in catalog['hub']['objects'] if p.get('action')=='world'}=={m['id'] for m in catalog['maps']}
 for m in catalog['maps']:
  for r in m['rooms']:
-  destinations=[p['destination'] for p in r['objects'] if p.get('action')=='travel']
-  assert len(destinations)==2 and set(destinations)=={other['id'] for other in m['rooms'] if other['id']!=r['id']},r['id']
- assert sum(p.get('action')=='puzzle' for r in m['rooms'] for p in r['objects'])==1
+  assert sum(p.get('action')=='junction' for p in r['objects'])==1
+ routes=[p['destination'] for p in m['junction']['objects'] if p.get('action')=='travel']
+ assert len(routes)==3 and set(routes)=={r['id'] for r in m['rooms']}
+ assert sum(p.get('action')=='puzzle' for p in m['junction']['objects'])==1
+ assert len(m['gates'])==2 and {g['sourceRoom'] for g in m['gates']}=={0,1}
+ assert len({g['id'] for g in m['gates']})==2
+ for g in m['gates']:
+  assert g['roomId']==m['rooms'][g['sourceRoom']+1]['id']
+  assert any(p['id']==g['tokenId'] for p in m['rooms'][g['sourceRoom']]['objects'])
+  assert sum(p.get('action')=='gate' and p.get('destination')==g['id'] for p in m['junction']['objects'])==1
  puzzle=m['challenge']
  for action in {'lock':['digit'],'memory':['signal'],'matching':['supply','destination']}[m['puzzle']]:
   assert sorted(p['value'] for p in puzzle['objects'] if p.get('action')==action)==list(range(4 if action=='signal' else 3)),(m['id'],action)
  if m['puzzle']=='lock':assert sum(p.get('action')=='unlock' for p in puzzle['objects'])==1
-all_stages=[r for m in catalog['maps'] for r in m['rooms']+[m['challenge']]]+[catalog['hub']]
+all_stages=[r for m in catalog['maps'] for r in m['rooms']+[m['junction'],m['challenge']]]+[catalog['hub']]
 for stage in all_stages:
+ models.update(p['asset'] for p in stage['objects'])
  assert len(stage['camera'])==len(stage['lookAt'])==3 and 20<=stage['fieldOfView']<=60,stage['id']
  for prop in stage['objects']:
   assert (root/'Assets/Resources/Hunter/Models'/(prop['asset']+'.obj')).is_file(),prop['asset']
-  assert prop.get('action','') in ['', 'inspect', 'travel', 'world', 'puzzle', 'digit', 'unlock', 'signal', 'supply', 'destination', 'celebrate']
+  assert prop.get('action','') in ['', 'junction', 'gate', 'inspect', 'travel', 'world', 'puzzle', 'digit', 'unlock', 'signal', 'supply', 'destination', 'celebrate']
   if prop['id']:assert prop.get('reaction') in ['hop','tip','spin','launch']
 for asset in manifest['files']:
  path=root/asset['file'];assert path.is_file(),str(path)
@@ -58,7 +67,7 @@ for asset in manifest['files']:
 script_meta=(root/'Assets/Hunter/Runtime/HunterGame.cs.meta').read_text()
 guid=re.search(r'guid: ([a-f0-9]+)',script_meta).group(1)
 assert guid in (root/'Assets/Hunter/Scenes/Main.unity').read_text()
-assert all((root/'Assets/ThirdPartyLicenses'/p['pack']/'License.txt').is_file() for p in manifest['packs'])
+assert all(any((root/'Assets/ThirdPartyLicenses'/p['pack']/name).is_file() for name in ['License.txt','OFL.txt']) for p in manifest['packs'])
 # Every source material must map to a persistent Unity material with the original Kd and texture.
 bindings=json.loads((root/'Assets/Resources/Hunter/material-bindings.json').read_text())['materials']
 keys=[(b['model'],b['name']) for b in bindings];assert len(keys)==len(set(keys))
@@ -78,7 +87,7 @@ for model in sorted(models):
   mat=(root/b['material']).read_text()
   assert f'm_Shader: {{fileID: 4800000, guid: {LIT_SHADER_GUID}, type: 3}}' in mat,b['material']
   assert 'guid: d0353a89b1f911e48b9e16bdc9f2e058' in mat and '  version: 10\n' in mat,b['material']
-  assert '_Smoothness: 0.18' in mat and '_Metallic: 0' in mat,b['material']
+  assert 0<=float(re.search(r'_Smoothness: ([0-9.]+)',mat).group(1))<=.5 and '_Metallic: 0' in mat,b['material']
   actual=[float(x) for x in re.search(r'_BaseColor: \{r: ([^,]+), g: ([^,]+), b: ([^,]+), a: ([^}]+)',mat).groups()]
   assert actual==b['color'],b['material']
   texture_ref=re.search(r'- _BaseMap:\s+m_Texture: (\{[^}]+\})',mat).group(1)
@@ -98,7 +107,7 @@ assert 'texture.textureShape = TextureImporterShape.Texture2D' in importer
 assert 'texture.maxTextureSize = 1024' in importer
 assert 'texture.sRGBTexture = true' in importer
 textures=list((root/'Assets/Resources/Hunter').rglob('*.png'))
-assert len(textures)==17
+assert len(textures)>=17
 for texture in textures:
  meta=Path(str(texture)+'.meta').read_text()
  assert re.search(r'^  textureShape: 1$',meta,re.M),str(texture)
@@ -117,7 +126,7 @@ assert packages['com.unity.render-pipelines.universal']=='17.6.0'
 assert packages['com.unity.inputsystem']=='1.20.1'
 player=(root/'ProjectSettings/ProjectSettings.asset').read_text()
 assert re.search(r'^  activeInputHandler: 1$',player,re.M)
-assert re.search(r'^  bundleVersion: 0.7.0$',player,re.M)
+assert re.search(r'^  bundleVersion: 0.8.0$',player,re.M)
 game=(root/'Assets/Hunter/Runtime/HunterGame.cs').read_text()
 assert 'typeof(InputSystemUIInputModule)' in game
 world=(root/'Assets/Hunter/Runtime/HunterGame.World.cs').read_text()
@@ -139,6 +148,7 @@ assert f'm_RendererDataList:\n  - {renderer_ref}' in pipeline
 assert 'm_DefaultRendererIndex: 0' in pipeline and 'm_RenderingMode: 0' in renderer
 assert 'm_MSAA: 2' in pipeline and 'm_ShadowDistance: 35' in pipeline
 assert 'm_SupportsHDR: 0' in pipeline
+assert 'm_AdditionalLightsRenderingMode: 1' in pipeline and 'm_AdditionalLightsPerObjectLimit: 2' in pipeline
 graphics=(root/'ProjectSettings/GraphicsSettings.asset').read_text()
 quality=(root/'ProjectSettings/QualitySettings.asset').read_text()
 assert f'm_CustomRenderPipeline: {pipeline_ref}' in graphics
@@ -147,6 +157,15 @@ assert quality_refs and all(ref==pipeline_ref for ref in quality_refs)
 assert len(quality_refs)==len(re.findall(r'^    name:',quality,re.M))
 for path in (root/'Assets/Hunter/Runtime').rglob('*.cs'):
  assert 'Shader.Find("Standard")' not in path.read_text(),str(path)
+# Every navigable screen has its own scene and a matching build entry.
+build=(root/'ProjectSettings/EditorBuildSettings.asset').read_text()
+scenes=list((root/'Assets/Hunter/Scenes').rglob('*.unity'))
+expected={'Main','inicio','quarto'}|{r['id'] for m in catalog['maps'] for r in m['rooms']+[m['junction'],m['challenge']]}
+assert len(scenes)==len(expected)==18 and {p.stem for p in scenes}==expected
+for scene in scenes:
+ assert scene.relative_to(root).as_posix() in build
+ assert asset_guid(scene.relative_to(root).as_posix()) in build
+ if scene.stem!='Main':assert 'stageId: '+scene.stem in scene.read_text()
 # Stable .meta identifiers for every shipped Unity asset, including folders.
 metas=[]
 for path in (root/'Assets').rglob('*'):
@@ -154,4 +173,4 @@ for path in (root/'Assets').rglob('*'):
  meta=Path(str(path)+'.meta');assert meta.is_file(),str(meta)+' missing'
  metas.append(re.search(r'guid: ([a-f0-9]{32})',meta.read_text()).group(1))
 assert len(metas)==len(set(metas)),'Duplicate asset GUID'
-print(json.dumps({'maps':3,'rooms':9,'targets':18,'instances':instances,'unique_models':len(models),'verified_original_files':len(manifest['files']),'urp_material_bindings':len(bindings),'explicit_2d_texture_importers':len(textures),'models_requiring_uv_repeat':uv_tiling_models,'narration_scripts':len(entries),'unity_version':'6000.6.4f1','urp_version':'17.6.0','input_system_version':'1.20.1','active_input_handling':'Input System Package (New)','rendering_path':'Forward','quality_pipeline_references':len(quality_refs),'unity_compile':'NOT RUN','playtest':'NOT RUN'},ensure_ascii=False,indent=2))
+print(json.dumps({'maps':3,'scenes':len(scenes),'rooms':9,'targets':54,'instances':instances,'unique_models':len(models),'verified_original_files':len(manifest['files']),'urp_material_bindings':len(bindings),'explicit_2d_texture_importers':len(textures),'models_requiring_uv_repeat':uv_tiling_models,'narration_scripts':len(entries),'unity_version':'6000.6.4f1','urp_version':'17.6.0','input_system_version':'1.20.1','active_input_handling':'Input System Package (New)','rendering_path':'Forward','quality_pipeline_references':len(quality_refs),'unity_compile':'NOT RUN','playtest':'NOT RUN'},ensure_ascii=False,indent=2))

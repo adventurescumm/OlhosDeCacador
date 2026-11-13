@@ -16,7 +16,7 @@ namespace OlhosDeCacador.Editor
         internal const string Materials = "Assets/Resources/Hunter/Materials/";
         internal const string UI = "Assets/Resources/Hunter/UI/";
         bool IsModel => assetPath.StartsWith(Models, StringComparison.Ordinal);
-        public override uint GetVersion() => 7;
+        public override uint GetVersion() => 8;
         internal static Material OriginalMaterial(string modelPath, string materialName)
         {
             string model = modelPath.Substring(Models.Length);
@@ -45,6 +45,11 @@ namespace OlhosDeCacador.Editor
             var model = (ModelImporter)assetImporter;
             model.importAnimation = false; model.importCameras = false; model.importLights = false;
             model.isReadable = false; model.addCollider = false;
+            // Smooth lighting across rounded toy surfaces, retaining sharp right-angle edges.
+            // This changes import shading only: source vertices, UVs and artwork remain untouched.
+            model.importNormals = ModelImporterNormals.Calculate;
+            model.normalSmoothingSource = ModelImporterNormalSmoothingSource.FromAngle;
+            model.normalSmoothingAngle = 75;
             // Only importer settings here. Mutating external remaps during import can restart it.
             model.materialImportMode = ModelImporterMaterialImportMode.ImportStandard;
             model.materialLocation = ModelImporterMaterialLocation.InPrefab;
@@ -63,7 +68,8 @@ namespace OlhosDeCacador.Editor
             bool ui = path.StartsWith(UI, StringComparison.Ordinal);
             if (!ui && !path.StartsWith(Models, StringComparison.Ordinal)) return false;
             var type = ui ? TextureImporterType.Sprite : TextureImporterType.Default;
-            var filter = ui ? FilterMode.Bilinear : FilterMode.Point;
+            bool toyPack = path.Contains("/furniture-kit/") || path.Contains("/toy-car-kit/") || path.Contains("/food-kit/");
+            var filter = ui || toyPack ? FilterMode.Bilinear : FilterMode.Point;
             var wrap = ui ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
             string name = Path.GetFileNameWithoutExtension(path);
             int borderSize = name == "panel_border_brown" ? 32 : name.StartsWith("panel_") ? 20 : 0;

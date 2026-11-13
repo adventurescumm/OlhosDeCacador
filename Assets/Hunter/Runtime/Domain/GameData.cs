@@ -11,16 +11,23 @@ namespace OlhosDeCacador
         public string[] clues;
         public int[] solution;
         public RoomData[] rooms;
-        public RoomData challenge;
+        public RoomData challenge, junction;
+        public GateData[] gates = Array.Empty<GateData>();
         public IEnumerable<PropData> Targets => rooms.SelectMany(r => r.objects).Where(p => !string.IsNullOrEmpty(p.id));
     }
     [Serializable] public sealed class RoomData
     {
         public string id, name, caption, riddle;
-        public string layout;
+        public string layout, floor, wall, color;
+        public float width = 12, depth = 8;
         public float[] camera, lookAt;
         public float fieldOfView;
         public PropData[] objects;
+    }
+    [Serializable] public sealed class GateData
+    {
+        public string id, title, tokenId, roomId, hint;
+        public int sourceRoom;
     }
     [Serializable] public sealed class PropData
     {
@@ -34,6 +41,7 @@ namespace OlhosDeCacador
         public int schema = 1;
         public List<string> found = new List<string>();
         public List<string> solved = new List<string>();
+        public List<string> opened = new List<string>();
     }
 
     // Pure domain logic: no engine, UI, disk or physics dependencies.
@@ -49,11 +57,24 @@ namespace OlhosDeCacador
                 throw new ArgumentException("Formato de progresso inválido.");
             var known = new HashSet<string>(catalog.maps.SelectMany(m => m.Targets).Select(p => p.id));
             Data.found = Data.found.Where(known.Contains).Distinct().ToList();
+            // Older saves have no opened field. Retain found IDs, then validate the new passages.
+            Data.opened = (Data.opened ?? new List<string>()).Where(id => catalog.maps.Any(m =>
+                (m.gates ?? Array.Empty<GateData>()).Any(g => g.id == id && RoomReady(m.rooms[g.sourceRoom]) && Has(g.tokenId)))).Distinct().ToList();
             Data.solved = Data.solved.Where(id => catalog.maps.Any(m => m.id == id && Ready(m))).Distinct().ToList();
         }
         public bool Has(string id) => Data.found.Contains(id);
         public bool Solved(MapData map) => Data.solved.Contains(map.id);
         public int Count(MapData map) => map.Targets.Count(p => Has(p.id));
+        public bool RoomReady(RoomData room) => room.objects.Where(p => !string.IsNullOrEmpty(p.id)).All(p => Has(p.id));
+        public bool Opened(string gate) => Data.opened.Contains(gate);
+        public bool CanVisit(MapData map, string roomId) => map.rooms.Any(r => r.id == roomId) &&
+            !(map.gates ?? Array.Empty<GateData>()).Any(g => g.roomId == roomId && !Opened(g.id));
+        public bool Use(MapData map, string gateId, string tokenId)
+        {
+            var gate = (map.gates ?? Array.Empty<GateData>()).FirstOrDefault(g => g.id == gateId);
+            if (gate == null || Opened(gateId) || gate.tokenId != tokenId || !Has(tokenId) || !RoomReady(map.rooms[gate.sourceRoom])) return false;
+            Data.opened.Add(gateId); return true;
+        }
         public bool Ready(MapData map) => map.Targets.All(p => Has(p.id));
         public bool Finished => catalog.maps.All(Solved);
         public bool Collect(string id)
@@ -70,6 +91,8 @@ namespace OlhosDeCacador
         {
             var ids = new HashSet<string>(map.Targets.Select(p => p.id));
             Data.found.RemoveAll(ids.Contains); Data.solved.Remove(map.id);
+            var gates = new HashSet<string>((map.gates ?? Array.Empty<GateData>()).Select(g => g.id));
+            Data.opened.RemoveAll(gates.Contains);
         }
         public void ResetAll() => Data = new SaveData();
     }

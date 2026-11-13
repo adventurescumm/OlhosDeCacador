@@ -15,6 +15,7 @@ namespace OlhosDeCacador
         public static readonly Color Plum = new Color(.24f, .16f, .39f);
         readonly Transform canvas;
         readonly Font font;
+        readonly Font display;
         readonly Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
         RectTransform root;
         public HunterUI(Transform owner)
@@ -24,7 +25,8 @@ namespace OlhosDeCacador
             go.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             var scaler = go.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1440, 900); scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-            canvas = go.transform; font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"); Clear();
+            canvas = go.transform; font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            display = Resources.Load<Font>("Hunter/UI/LilitaOne-Regular") ?? font; Clear();
         }
         public void Clear()
         {
@@ -62,11 +64,12 @@ namespace OlhosDeCacador
         public void Sheet(float x, float y, float w, float h)
         {
             Panel(x + 5, y + 6, w, h, new Color(.07f, .07f, .15f, .25f));
-            Art("panel_brown", x, y, w, h, true);
+            Panel(x, y, w, h, Paper);
+            Panel(x, y, 6, h, new Color(.90f, .48f, .59f));
         }
         public void Banner(string value, float x, float y, float w, float h, int size = 28)
         {
-            Art("banner_classic_curtain", x, y, w, h);
+            Panel(x, y, w, h - 12, Plum);
             Label(value, x + 24, y + 3, w - 48, h - 15, size, Color.white, true, TextAnchor.MiddleCenter);
         }
         public Text Label(string value, float x, float y, float w, float h, int size = 22, Color? color = null, bool bold = false, TextAnchor align = TextAnchor.UpperLeft)
@@ -75,26 +78,29 @@ namespace OlhosDeCacador
             text.text = value; text.fontSize = size; text.fontStyle = bold ? FontStyle.Bold : FontStyle.Normal;
             text.color = color ?? Ink; text.alignment = align; text.raycastTarget = false;
             text.horizontalOverflow = HorizontalWrapMode.Wrap; text.verticalOverflow = VerticalWrapMode.Truncate;
+            if (bold && size >= 25) { text.font = display; text.fontStyle = FontStyle.Normal; }
             return text;
         }
         public Button Button(string label, float x, float y, float w, float h, Action action, Color? fill = null, bool enabled = true, int size = 21)
         {
             var rt = Rect(label, x, y, w, h); var image = rt.gameObject.AddComponent<Image>(); image.color = fill ?? Teal;
-            var frame = Rect("Moldura Kenney", 0, 0, w, h, rt).gameObject.AddComponent<Image>();
-            frame.sprite = LoadSprite("panel_border_brown"); frame.type = Image.Type.Sliced; frame.raycastTarget = false;
+            var shadow = rt.gameObject.AddComponent<Shadow>(); shadow.effectDistance = new Vector2(3, -4);
+            shadow.effectColor = new Color(.10f, .08f, .22f, .30f);
             var b = rt.gameObject.AddComponent<Button>(); b.targetGraphic = image; b.interactable = enabled;
             var colors = b.colors; colors.highlightedColor = new Color(1.16f, 1.16f, 1.16f); colors.pressedColor = new Color(.72f, .72f, .72f);
             colors.selectedColor = colors.highlightedColor; colors.disabledColor = new Color(.65f, .65f, .65f, .8f); b.colors = colors;
             b.onClick.AddListener(() => { LastActionFrame = Time.frameCount; action(); });
             var txt = Rect("Texto", 24, 4, w - 48, h - 8, rt).gameObject.AddComponent<Text>();
-            txt.font = font; txt.text = label; txt.fontSize = size; txt.fontStyle = FontStyle.Bold;
+            txt.font = display; txt.text = label; txt.fontSize = size; txt.fontStyle = FontStyle.Normal;
             txt.color = Color.white; txt.alignment = TextAnchor.MiddleCenter; txt.raycastTarget = false;
             return b;
         }
         public void Backdrop(string title, string subtitle)
         {
             Clear(); Panel(0, 0, 1440, 900, Plum);
-            Panel(22, 22, 1396, 856, Teal);
+            Panel(22, 22, 1396, 856, new Color(.27f, .53f, .61f));
+            Panel(22, 22, 340, 856, new Color(.68f, .32f, .49f));
+            Panel(1140, 22, 278, 856, new Color(.88f, .62f, .31f));
             Art("minimap_icon_star_yellow", 50, 40, 48, 48);
             Art("minimap_icon_star_yellow", 1342, 40, 48, 48);
             Banner(title, 310, 25, 820, 100, 42);

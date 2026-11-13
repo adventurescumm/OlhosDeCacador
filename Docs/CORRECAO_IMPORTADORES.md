@@ -1,4 +1,6 @@
-# Importadores antigos e atualização visual — v0.7
+# Importadores antigos — histórico da correção v0.7
+
+**Atualização v0.8:** o pacote atual contém 141 modelos e sete efeitos, com os mesmos schemas suportados. Os modelos agora usam cálculo de normais por ângulo de 75°. Para cenas separadas, novos alvos e narração ampliada, siga [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md); os passos abaixo registram a correção original.
 
 O aviso de AudioImporter versão 1 abaixo do mínimo 6, e ModelImporter versão 1 abaixo do mínimo 25, surgiu porque os `.meta` fornecidos tinham apenas cabeçalho e GUID, sem o bloco de configurações do importador. A falha estava nos metadados do pacote. Não era necessário mudar a versão do Unity.
 

@@ -1,168 +1,162 @@
-# Sua voz em Olhos de Caçador
+# Sua voz em Olhos de Caçador — v0.8
 
-Guia atualizado para a **v0.7**, em 13/11/2026. Projeto para **Windows**, com **Unity 6000.6.4f1**, URP e Input System Package (New).
+Atualizado em 13/11/2026 para Unity 6000.6.4f1 e Windows. Há **nove charadas, cada uma com seis versos e seis objetos**. Os nove IDs de sala continuam iguais, mas os textos foram ampliados: gravações da v0.7, com apenas dois alvos, precisam ser refeitas. O pacote não contém voz gerada nem gravações de narrador.
 
-O jogo tem **nove charadas, uma por tela de busca**, com dois objetos para encontrar em cada tela. Os espaços estão preparados para **suas gravações humanas**; o pacote continua sem clipes de narração. Você também pode ler ao vivo enquanto outra pessoa procura, usando a faixa inferior ou o botão **Ler juntos**.
+## Onde a narração aparece
 
-## O que mudou com a revisão visual
+A abertura mostra Iniciar, Opções e Como jogar sobre o quarto. Iniciar leva à seleção: baú à esquerda, nave sobre a mesa e heroína à direita. Cada mundo começa numa cena de caminho, que conecta suas três buscas e o desafio final. Consulte [CENAS.md](CENAS.md) para os nomes das cenas.
 
-A abertura leva ao **Quarto das Brincadeiras**, onde os próprios brinquedos dão acesso aos mundos. Nas buscas, o cenário ocupa a área central, os quatro versos aparecem em duas colunas na faixa inferior e o painel **Voz da aventura** fica à direita. As placas do cenário e seus rótulos permitem trocar de cantinho.
+A voz gravada é usada **somente nas nove buscas**. No caminho, no quarto, nas passagens e nos desafios, as instruções são texto e podem ser lidas ao vivo. Essas cenas não acrescentam campos ao banco de narração.
 
-| Mundo | Entrada no quarto | Acesso ao desafio após encontrar os seis objetos |
-| --- | --- | --- |
-| Faroeste de Quintal | Baú | Baú do piquenique, na Mina dos Brilhos |
-| Missão Caixa Lunar | Nave | Rádio da nave, na Garagem das Naves |
-| Liga dos Brinquedos | Heroína | Missão da maquete, no Quartel das Boas Ideias |
+Durante uma busca, os versos ficam na faixa inferior, em duas colunas de três linhas. Leia a primeira coluna de cima para baixo e depois a segunda. Os botões **Dica 1 a Dica 6** correspondem aos alvos na ordem dos versos. O painel **Voz da aventura**, à direita, mantém Ler juntos e o controle de áudio.
 
-O quarto e os três desafios 3D somam quatro composições às nove buscas, mas **não acrescentam gravações ao banco**. Os nove IDs e roteiros abaixo foram preservados; gravações compatíveis da versão anterior podem ser reutilizadas.
+## Gravar e integrar
 
-Atualmente, a abertura, o quarto, as instruções dos desafios, as dicas e as mensagens de descoberta não têm campos próprios de voz nem reprodução automática pelo banco. Você pode lê-las ao vivo. Adicionar arquivos para essas telas, por si só, não cria novas falas no jogo. Os efeitos dos brinquedos e os sinais do puzzle espacial usam os áudios prontos já incluídos.
+1. Grave um arquivo por charada, lendo os seis versos do bloco correspondente. Não leia o ID. Faça pausas curtas entre versos e deixe os nomes dos objetos claros.
+2. Fora do Play, importe seus WAV ou OGG em `Assets` e aguarde o Unity. Não é necessário regravar os sete efeitos prontos.
+3. Selecione `Assets/Resources/Hunter/Narration/NarrationBank.asset` na janela Project.
+4. Expanda `Readings`. Cada item contém `Room Id`, `Recording Script` e `Clip`. Mantenha os nove IDs.
+5. Arraste a gravação nova para o `Clip` correspondente.
+6. Execute **Olhos de Cacador > 2. Verificar conteudo**. O comando compara os roteiros com o catálogo e conta as gravações disponíveis; ele não escuta o conteúdo dos clipes.
+7. Dê Play por `Assets/Hunter/Scenes/Main.unity`, entre no mundo e visite a busca. Teste **Ouvir charada**.
 
-## Integrar as gravações
+**Alternativa por nome:** com Clip vazio, o banco procura `Assets/Resources/Hunter/Narration/<ID>.wav` ou `.ogg`, por exemplo `faroeste_estacao.wav`. Use apenas um arquivo com esse nome-base. Um Clip atribuído explicitamente tem prioridade. Importar um arquivo com o nome do caminho ou do desafio não cria uma fala nova nessas cenas.
 
-1. Grave um arquivo por charada. WAV ou OGG são adequados. Comece diretamente na leitura, com uma pequena pausa entre versos; evite música que atrapalhe a compreensão.
-2. Fora do Play Mode, importe os áudios para uma pasta em `Assets` e aguarde o Unity terminar a importação. Não é necessário regravar os efeitos prontos.
-3. Na janela Project, selecione `Assets/Resources/Hunter/Narration/NarrationBank.asset`.
-4. Expanda `Readings` no Inspector. Cada item já traz `Room Id` e `Recording Script`.
-5. Arraste a gravação correspondente para o campo `Clip`. Mantenha os IDs existentes.
-6. Execute **Olhos de Cacador > 2. Verificar conteudo**. O verificador confere os nove roteiros e informa quantas salas têm uma gravação disponível; não avalia o conteúdo falado do áudio.
-7. Abra `Assets/Hunter/Scenes/Main.unity`, dê Play, passe pela abertura e escolha um brinquedo no quarto. Na sala correspondente, clique em **Ouvir charada**.
+O texto de jogo vem de `Assets/Resources/Hunter/catalog.json`; o Inspector mostra `Recording Script`. Se personalizar a charada, mantenha os dois textos e este guia sincronizados, com **seis linhas**, e atualize o áudio. Editar este Markdown sozinho não altera a fala nem o texto no jogo.
 
-**Alternativa sem atribuição manual:** coloque o arquivo em `Assets/Resources/Hunter/Narration/`, com o nome exato do ID listado abaixo, por exemplo `faroeste_estacao.wav`. O banco procura esse recurso automaticamente quando o campo Clip está vazio. Não coloque dois arquivos de extensões diferentes com o mesmo nome nesse caminho. Uma atribuição explícita em Clip tem prioridade sobre o nome automático.
+## Controles e interrupções
 
-O campo `Recording Script` serve como roteiro no Inspector. O texto mostrado no jogo vem de `Assets/Resources/Hunter/catalog.json`. Se mudar uma charada, atualize os dois textos, este guia e a gravação correspondente. Preserve os **quatro versos separados por quebras de linha**, usados pelas duas colunas da interface. `2. Verificar conteudo` detecta divergências entre o banco e o catálogo. Editar somente este Markdown não altera o jogo; não altere um ID para corrigir o nome de uma sala.
-
-## Durante a brincadeira
-
-| Controle ou situação | Comportamento atual |
+| Situação | Comportamento |
 | --- | --- |
-| **Ler juntos** | Está sempre disponível, com ou sem gravação. Interrompe a voz gravada e abre os quatro versos em letras maiores. Use **Voltar e procurar** ou Esc para retornar à busca. |
-| **Ouvir charada** | Disponível quando a sala tem um clipe. Reproduz a gravação do começo. |
-| **Parar leitura** | Substitui Ouvir charada enquanto a voz toca. Interrompe a reprodução; o próximo clique em Ouvir reinicia do começo, sem retomar o ponto anterior. |
-| **Sem gravação** | Aparece desabilitado quando não há clipe para a sala. Ler juntos e o texto na faixa inferior continuam disponíveis. |
-| Trocar de cantinho pelas placas | Interrompe a fala anterior e passa a usar a charada da sala de destino. |
-| Encontrar um objeto | Mostra a reação e a descoberta, sem interromper ou reiniciar a charada em andamento. Os efeitos podem tocar junto da voz. |
-| Abrir pausa, caderno, leitura ampliada ou desafio; voltar ao quarto | Interrompe a fala. O desafio usa suas próprias instruções de texto e efeitos. |
-| Perder o foco da janela, por exemplo com Alt+Tab | Interrompe a fala. Voltar à janela não a reinicia automaticamente; use Ouvir charada. |
+| Ler juntos | Sempre disponível. Interrompe o áudio e abre os seis versos maiores; Voltar e procurar ou Esc retorna à busca. |
+| Ouvir charada | Toca o clipe da sala desde o começo. |
+| Parar leitura | Interrompe; ao ouvir novamente, começa do início, sem retomar o ponto anterior. |
+| Sem gravação | Botão desabilitado quando não existe clipe; Ler juntos continua disponível. |
+| Encontrar um objeto | A voz continua; o efeito de descoberta pode tocar junto. |
+| Voltar ao Caminho, mudar de cena, abrir pausa/caderno/leitura ou desafio | A fala é interrompida. Não continua tocando na cena seguinte. |
+| Alt+Tab ou perda de foco | Interrompe a voz; voltar à janela não a reinicia sozinho. |
 
-As gravações de voz não se sobrepõem. A narração é opcional e os desafios continuam funcionando sem ela.
+As gravações não se sobrepõem. A voz é opcional e não é necessária para resolver as passagens ou os desafios.
 
-### Volume e leitura automática
+### Opções e leitura ao vivo
 
-Abra **Opções** na tela inicial ou no quarto. Durante a busca, use **Pausa > Opções de áudio e movimento**. A tela permite ajustar **Sons dos brinquedos** e **Voz do narrador** separadamente; desligar o áudio geral silencia os dois. Se os efeitos atrapalharem a leitura, reduza apenas o volume deles.
+Abra Opções na abertura/quarto, ou **Pausa > Opções de áudio e movimento** durante a aventura. **Sons dos brinquedos** e **Voz do narrador** têm volumes independentes; o silêncio geral afeta ambos. As preferências são guardadas.
 
-**Leitura automática** começa desligada numa instalação sem preferências salvas. Quando ativada, lê ao entrar em uma sala e ao retornar à busca, desde que haja uma gravação, o áudio geral esteja ligado e o volume de voz seja maior que zero. Isso inclui voltar do caderno, da pausa, de Ler juntos e do desafio: a leitura começa novamente do início, mesmo se os objetos já foram encontrados. Na primeira visita a um mundo, a apresentação inicial é fechada antes de continuar a leitura na busca.
+**Leitura automática** começa desligada numa instalação sem preferências anteriores. Quando ativada, toca ao entrar numa busca e ao retornar à busca após pausa, caderno ou Ler juntos, se houver clipe e volume. Não toca no caminho nem no quarto. Voltar de um desafio agora leva ao caminho; a próxima busca visitada terá sua própria leitura. Objetos já encontrados não impedem a repetição da charada.
 
-As preferências de volume, silêncio e leitura automática são guardadas. **Movimento reduzido** altera as animações e o foco da câmera, sem mudar o texto ou a reprodução da voz.
+Para narrar ao vivo enquanto alguém procura, use os versos na faixa inferior. Ler juntos ocupa a tela e precisa ser fechado para retomar os cliques no cenário. Desative Leitura automática ou deixe somente Voz do narrador em zero para evitar fala gravada junto da sua. Movimento reduzido não altera os versos nem o áudio.
 
-### Ler ao vivo
+## Migrar gravações anteriores
 
-Para narrar enquanto outra pessoa procura, leia a faixa inferior da própria busca. **Ler juntos** é útil para uma leitura ampliada antes de voltar a procurar; seu painel ocupa a tela e precisa ser fechado para retomar a interação com os objetos. Desative Leitura automática se não quiser que a gravação recomece ao fechar esse painel. Você pode deixar somente Voz do narrador em zero para manter os efeitos durante a leitura ao vivo.
+Guarde os áudios antigos e seus `.meta` numa cópia do projeto. Os GUIDs preservam referências, mas **não tornam uma gravação antiga compatível com os seis alvos novos**. Regrave os nove textos abaixo e atribua os novos clipes ao banco da v0.8. Se mantiver o mesmo arquivo para preservar um vínculo, substitua também seu conteúdo de áudio pela leitura nova.
 
-## Preservar suas gravações ao atualizar
+Não substitua o banco e o catálogo atuais por cópias antigas: isso restauraria roteiros de quatro versos e removeria dados dos caminhos. Para personalizações, combine os novos textos e campos conscientemente. Veja [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md).
 
-1. Feche o Unity e guarde uma cópia do projeto que contém suas gravações.
-2. Extraia a revisão atual em outra pasta. Copie os arquivos de áudio e seus `.meta`, mantendo os caminhos relativos dentro de `Assets`.
-3. Se você preencheu campos `Clip` ou personalizou os roteiros, copie também seu `NarrationBank.asset` e seu `.meta` para o mesmo caminho. Confira os nove IDs e textos antes de substituir o banco novo. Se usava apenas a convenção automática de nomes e não alterou o banco, basta preservar os áudios e seus `.meta`.
-4. Mantenha o **catálogo da v0.7**, que contém quarto, passagens, câmeras e desafios. Se personalizou versos no catálogo antigo, combine apenas essas alterações de texto com o novo arquivo e atualize os roteiros correspondentes. Não substitua o catálogo inteiro pela versão antiga.
-5. Abra com Unity 6000.6.4f1, aguarde a importação e execute **1. Preparar projeto** e **2. Verificar conteudo**. Teste as nove salas antes de gerar o executável Windows.
+Os sete AudioImporters corrigidos pertencem aos efeitos originais. `Tools/repair_importer_metadata.py` atua nos assets do manifesto, não em gravações particulares. Importe sua voz normalmente pelo Unity, conservando os metadados que ele gerar.
 
-Os GUIDs dos `.meta` preservam os vínculos dos campos Clip. Não substitua seu banco preenchido pelo banco vazio do ZIP nem apague metadados para tentar corrigir a narração.
-
-A correção de AudioImporter da v0.7 abrange os **sete efeitos originais**, não nove narrações: estas ainda serão fornecidas por você. O reparador `Tools/repair_importer_metadata.py` atua apenas nos assets do manifesto e **não repara gravações pessoais**. Importe novos áudios normalmente pelo Unity; para os avisos de importação do pacote e a atualização completa, consulte [CORRECAO_IMPORTADORES.md](CORRECAO_IMPORTADORES.md).
-
-## Roteiro completo
-
-Leia os quatro versos de cada bloco; o ID é apenas o identificador do arquivo e não precisa ser falado.
+## Roteiros completos
 
 ### Estação do Quintal
 
 ID: `faroeste_estacao`
 
-> Na estação, a aventura já vai começar.  
-> Procuro um balde para água levar.  
-> Uma garrafinha resolveu se esconder.  
-> Olhos de caçador, quem consegue ver?  
+> Um balde quer água levar,  
+> uma garrafinha veio passear.  
+> Uma roda pede outra viagem,  
+> uma maçã se esconde na bagagem.  
+> Rosquinha com confeitos eu vou procurar,  
+> e um biscoito de gente quer me acompanhar.  
 
 ### Salão do Suco
 
 ID: `faroeste_salao`
 
-> No salão do suco, há uma festa no ar.  
-> Um martelo de brinquedo veio ajudar.  
-> E um peixe sem rio, que coisa engraçada!  
-> Encontre os dois para seguir a jornada.  
+> Um martelo quer ajudar,  
+> um peixe sem rio veio brincar.  
+> Xícara de chá para a visita,  
+> biscoito com chocolate na pista.  
+> Uma banana curva eu quero achar,  
+> e livros empilhados para imaginar.  
 
 ### Mina dos Brilhos
 
 ID: `faroeste_mina`
 
-> Na mina dos brilhos, vamos procurar:  
-> Uma picareta pronta para trabalhar.  
-> Uma garrafa grandona espera no chão.  
-> Dois novos tesouros para a coleção!  
+> Uma picareta quer trabalhar,  
+> uma garrafa grandona vou encontrar.  
+> Moeda dourada vale um tesouro,  
+> cogumelo de mentira não é ouro.  
+> Cristais juntinhos brilham no caminho,  
+> e uma cenoura espera num cantinho.  
 
 ### Base de Papelão
 
 ID: `espaco_base`
 
-> Nossa base de papelão já pode decolar.  
-> Um astronauta de bolso quer viajar.  
-> Uma antena curiosa escuta a imensidão.  
-> Ache os dois para começar a missão!  
+> Um astronauta de bolso vai viajar,  
+> uma antena curiosa quer escutar.  
+> Carrinho de corrida perdeu a direção,  
+> um mouse apareceu nesta missão.  
+> Pirulito redondo parece um planeta,  
+> e um abajur redondo ilumina a descoberta.  
 
 ### Jardim de Meteoros
 
 ID: `espaco_jardim`
 
-> No jardim de meteoros, quem veio passear?  
-> Um visitante simpático de outro lugar.  
-> Um meteoro cheio de marcas caiu por aqui.  
-> Procure bem os dois: será que estão ali?  
+> Um visitante de outro lugar,  
+> um meteoro com marcas veio pousar.  
+> Um rádio de brinquedo guarda o sinal,  
+> uma laranja parece um sol especial.  
+> Berinjela virou nave na imaginação,  
+> e cristais juntinhos completam a missão.  
 
 ### Garagem das Naves
 
 ID: `espaco_garagem`
 
-> Na garagem das naves, já é hora de partir.  
-> Uma nave pequenininha quer se divertir.  
-> O segundo tripulante espera a contagem.  
-> Encontre os dois e prepare a viagem!  
+> Uma nave pequenina vai partir,  
+> um segundo tripulante quer se divertir.  
+> Uma rodinha solta precisa voltar,  
+> almofada azul é boa para descansar.  
+> Duas cerejas juntinhas fazem par,  
+> e sorvete no copinho eu quero encontrar.  
 
 ### Praça dos Blocos
 
 ID: `herois_praca`
 
-> Na praça dos blocos, que grande animação!  
-> A Capitã Faísca está de prontidão.  
-> Um balde leva água para a flor crescer.  
-> Ache os dois: ajudar é um superpoder!  
+> A Capitã Faísca está de prontidão,  
+> um balde leva água para a missão.  
+> Caminhão de brinquedo veio trabalhar,  
+> melancia de mentira quer participar.  
+> Livros empilhados guardam uma aventura,  
+> e um bolinho de festa completa a procura.  
 
 ### Ponte do Faz de Conta
 
 ID: `herois_ponte`
 
-> Na ponte de brinquedo, a turma vai passar.  
-> Um martelo bem pequeno vem para consertar.  
-> O Robô Violeta quer dar uma mão.  
-> Encontre os dois e complete a missão!  
+> Um martelo pequeno pode consertar,  
+> o Robô Violeta veio ajudar.  
+> Biscoito de gente observa a ponte,  
+> uma pera se esconde no horizonte.  
+> Um cone de trânsito pede atenção,  
+> e caneca com alça espera uma mão.  
 
 ### Quartel das Boas Ideias
 
 ID: `herois_quartel`
 
-> No quartel das ideias, já toca o chamado.  
-> Um comunicador espera ser encontrado.  
-> Um ajudante amarelinho quer participar.  
-> Ache os dois: a cidade vamos ajudar!  
+> Um comunicador quer ser encontrado,  
+> um ajudante amarelinho está ao lado.  
+> Carro de corrida chegou à reunião,  
+> biscoito de gente entrou na missão.  
+> Um picolé no palito quer participar,  
+> e abajur quadrado ilumina o lugar.  
 
-## Conferir antes de publicar
+## Conferir antes de distribuir
 
-1. Visite os três mundos pelo quarto e as nove salas pelas placas. Confirme que cada gravação corresponde ao nome e aos quatro versos da sala atual.
-2. Teste Ouvir, Parar e Ouvir novamente: a repetição deve começar do início. Confira também Ler juntos com e sem clipe associado.
-3. Durante a fala, encontre um objeto, troque de sala, abra Caderno/Pausa e alterne para outra janela. Compare as interrupções com a tabela acima.
-4. Ative Leitura automática e teste a entrada na sala e o retorno de Ler juntos e do desafio. Repita com voz em zero e com áudio geral desligado.
-5. Confira o texto e os botões em 1280 × 720, o equilíbrio de voz/efeitos e a preferência de movimento reduzido.
-6. Depois de importar e vincular os clipes, gere um **novo build Windows** e repita os testes no executável, fora do editor. Um executável gerado antes da inclusão das gravações não passa a contê-las automaticamente.
+Teste os nove clipes em Play e no executável Windows: correspondência com os seis versos, Ouvir/Parar/repetir, interrupção ao trocar de cena, leitura automática, silêncio e equilíbrio com os efeitos. Confira também uma sala sem clipe, Ler juntos e a faixa inferior em 1280 × 720.
 
-O verificador de conteúdo não escuta os arquivos nem comprova a reprodução. Este guia foi conferido com o código e os nove roteiros da v0.7; a reprodução em Play e no Windows ainda precisa ser validada no Unity. Veja também o roteiro completo em [VALIDACAO.md](VALIDACAO.md).
+Depois de importar as gravações, gere um novo build; um executável anterior não passa a conter os áudios sozinho. Os roteiros deste arquivo foram comparados com o banco e o catálogo. Reprodução e transições de voz ainda precisam ser confirmadas no Unity, conforme [VALIDACAO.md](VALIDACAO.md).

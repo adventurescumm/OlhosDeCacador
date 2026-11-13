@@ -1,4 +1,4 @@
-# Migração para URP — introduzida na v0.4, mantida na v0.7 Windows
+# Migração para URP — introduzida na v0.4, mantida na v0.8 Windows
 
 O aviso **“The Built-In Renderer Pipeline is deprecated”** se refere ao pipeline usado na versão anterior. Esta revisão usa **URP 17.6.0**, mantendo **Unity 6000.6.4f1**.
 
@@ -10,7 +10,7 @@ O aviso **“The Built-In Renderer Pipeline is deprecated”** se refere ao pipe
 4. Abra `Assets/Hunter/Scenes/Main.unity` e pressione Play.
 5. Limpe o Console e reabra o projeto para conferir se o aviso reaparece. Uma mensagem antiga no Console não indica que a configuração atual ainda usa Built-in.
 
-Caso já tenha gravado sua narração ou editado cenários na versão anterior, mantenha essa pasta. Traga para a nova cópia os áudios, o `NarrationBank.asset` preenchido e seus respectivos `.meta`; traga também seu `catalog.json` se o alterou. Mudanças próprias nos scripts devem ser comparadas antes de substituir arquivos. A chave de salvamento do jogo continua `OlhosDeCacador.v1`.
+Caso já tenha gravado sua narração ou editado cenários na versão anterior, mantenha essa pasta. A v0.8 amplia cada charada para seis versos: preserve os áudios antigos, mas grave os roteiros novos e atribua-os ao banco da v0.8. Não substitua o catálogo ou o banco novos pelas versões antigas; compare alterações próprias conforme [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md). Mudanças próprias nos scripts devem ser comparadas antes de substituir arquivos. A chave de salvamento do jogo continua `OlhosDeCacador.v1`.
 
 ## Campos para conferir no editor
 
@@ -23,20 +23,20 @@ Caso já tenha gravado sua narração ou editado cenários na versão anterior, 
 | `Assets/Hunter/Settings/HunterRenderer.asset` → Rendering Path | Forward |
 | Materiais em `Assets/Resources/Hunter/Materials` → Shader | Universal Render Pipeline/Lit |
 
-O nível de qualidade atual chama-se **Windows**, desde a revisão v0.5. Os assets fornecidos já estão atribuídos em Graphics e Quality. O comando **6. Configurar URP** refaz as referências se tiverem sido removidas, e também é chamado por Preparar projeto/build. Desde a v0.6, o projeto não agenda esse comando após importação ou recarga de scripts: as gravações são feitas por comandos explícitos, com o editor fora de Play e da importação. A configuração mantém os ajustes de qualidade dos assets já existentes; os valores iniciais são MSAA 2×, HDR desligado, sombras de 1024 px e distância de 35 unidades.
+O nível de qualidade atual chama-se **Windows**, desde a revisão v0.5. Os assets fornecidos já estão atribuídos em Graphics e Quality. O comando **6. Configurar URP** refaz as referências se tiverem sido removidas, e também é chamado por Preparar projeto/build. Desde a v0.6, o projeto não agenda esse comando após importação ou recarga de scripts: as gravações são feitas por comandos explícitos, com o editor fora de Play e da importação. Os valores iniciais são MSAA 2×, HDR desligado, sombras de 1024 px e distância de 35 unidades. A v0.8 configura luzes adicionais por pixel, com limite de duas por objeto, para a luz quente de cada quarto. Suas sombras continuam desligadas. A preparação aplica essa configuração também aos assets já existentes.
 
 Os **Global Settings**, perfis e recursos internos são inicializados pelo próprio URP no editor. Não é necessário montar suas referências manualmente. A revisão usa Render Graph e não adiciona Renderer Features ou passes personalizados. Não procure habilitar o antigo Compatibility Mode para resolver este aviso.
 
 ## O que mudou no código e nos materiais
 
 - O manifest instala URP 17.6.0 e habilita os módulos internos de partículas e conversão de imagens usados por ferramentas gráficas do editor; os arquivos de Graphics e Quality apontam para o pipeline incluído. Isso não adiciona efeitos de partículas ao jogo.
-- Os 167 materiais mantêm a cor original `Kd` em `_BaseColor` e a textura original em `_BaseMap`.
+- Os 246 materiais mantêm a cor original `Kd` em `_BaseColor` e a textura original em `_BaseMap`.
 - Os materiais incluem os metadados de versão usados pelo importador URP 17.6, para que a primeira importação não os confunda com materiais de versões antigas do LWRP.
 - As salas primitivas usam URP/Lit e `_Smoothness`; não criam mais materiais Standard.
 - As duas câmeras usam dados URP explícitos: uma limpa o fundo e a outra renderiza o diorama em seu viewport. Pós-processamento e cópias de depth/opaque texture ficam desligados.
 - O verificador do editor confere pipeline, renderer, níveis de qualidade, shaders, cores e texturas antes do build.
 
-Nenhum OBJ, MTL, PNG ou OGG original foi modificado. A tela de início, as charadas, os puzzles e os nove espaços de gravação permanecem no projeto.
+Nenhum OBJ, MTL, PNG ou OGG original foi modificado. O importador calcula normais por ângulo de 75° para suavizar o sombreamento das malhas existentes; isso não aumenta sua geometria. A tela de início, as charadas, os puzzles e os nove espaços de gravação permanecem no projeto.
 
 ## Correção CS0200 e Safe Mode
 

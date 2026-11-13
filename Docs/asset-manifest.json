@@ -41,6 +41,29 @@
       "source": "https://kenney.nl/assets/ui-pack-adventure",
       "zip_sha256": "982e8ab66842509ee9214f9c2038e594cbe029f19d1dc177fecaad3b41a67ed3",
       "bytes": 577463
+    },
+    {
+      "pack": "furniture-kit",
+      "source": "https://kenney.nl/assets/furniture-kit",
+      "zip_sha256": "e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0",
+      "bytes": 5130729
+    },
+    {
+      "pack": "toy-car-kit",
+      "source": "https://kenney.nl/assets/toy-car-kit",
+      "zip_sha256": "26c11bbb77102b8dd00cdaf7b2c7ab692416d750dd064de886d809acec346782",
+      "bytes": 5245353
+    },
+    {
+      "pack": "food-kit",
+      "source": "https://kenney.nl/assets/food-kit",
+      "zip_sha256": "cdad90853682499b94c9fda2f87678b24bfd8f3264e0ed323f6b6a27fd7c6f6f",
+      "bytes": 4606270
+    },
+    {
+      "pack": "lilita-one",
+      "source": "https://github.com/google/fonts/tree/main/ofl/lilitaone",
+      "license": "SIL Open Font License 1.1"
     }
   ],
   "files": [
@@ -993,6 +1016,601 @@
       "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-d.png",
       "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-d.png",
       "sha256": "c61bc29ec4d96229b979fc9196500afac13c2b448bbab1085832354fb4ef849a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/apple.obj",
+      "source": "downloads/food-kit/Models/OBJ format/apple.obj",
+      "sha256": "cb8d02f0860a426bdefa373d748ab6f4a65cfbbd757db3275e68738cdd2fa5ad"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/apple.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/apple.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png",
+      "source": "downloads/food-kit/Models/OBJ format/Textures/colormap.png",
+      "sha256": "75baf74d9483a0fc56ac21ceba346fbe16fc24a2a1bf0524c53e6bbe802e1153"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/banana.obj",
+      "source": "downloads/food-kit/Models/OBJ format/banana.obj",
+      "sha256": "b676ad8dfd2d3a5b8d4496c6da5b4e487a5fe0f3a24825bfdcff5ef60d3c6a54"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/banana.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/banana.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/carrot.obj",
+      "source": "downloads/food-kit/Models/OBJ format/carrot.obj",
+      "sha256": "23792b149cb22222317ff7aa811e9b040ca19fa6a1093dc630d16a5d73300c69"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/carrot.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/carrot.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cherries.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cherries.obj",
+      "sha256": "d3e073561fe4993d27f614484950aa017d0928efcb0b549de22a319440cd0c04"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cherries.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cherries.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cookie.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cookie.obj",
+      "sha256": "7b2ba4847492305ded015826da5654a595d731aaed18841b77199e1ed2454513"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cookie.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cookie.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cookie-chocolate.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cookie-chocolate.obj",
+      "sha256": "6ffdf84e5fd0540f791a8bd63817cee8ceabb288067a3d46625048d3c48cf484"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cookie-chocolate.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cookie-chocolate.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cup.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cup.obj",
+      "sha256": "27fc5a5e6cda8fe4d518cf56da5a909fdd766b3d4cdd6e5c3a5bfac4b90ecdca"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cup.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cup.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cup-tea.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cup-tea.obj",
+      "sha256": "f4559941485e1a2ea99aea58dcd04cc10adbf45c50f291bed94ee258299232c3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cup-tea.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cup-tea.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cupcake.obj",
+      "source": "downloads/food-kit/Models/OBJ format/cupcake.obj",
+      "sha256": "d12cdf69f588393cd7c6d479746f261587a3d866812b535b09417c0dd1cfd550"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/cupcake.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/cupcake.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut.obj",
+      "source": "downloads/food-kit/Models/OBJ format/donut.obj",
+      "sha256": "b9ab244700e1e7f0a93e2ffbdee9d7c956592e590b9a98807cb6399a90185695"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/donut.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut-chocolate.obj",
+      "source": "downloads/food-kit/Models/OBJ format/donut-chocolate.obj",
+      "sha256": "8bd3b60a2a230c7fee685bd155d5c08721d333a1f2d28e6d2f394500794876bb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut-chocolate.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/donut-chocolate.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut-sprinkles.obj",
+      "source": "downloads/food-kit/Models/OBJ format/donut-sprinkles.obj",
+      "sha256": "7695804cc9aeefc5ca20fe79d7a537ad5390da169d81141c2cb24cc29461876e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/donut-sprinkles.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/donut-sprinkles.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/eggplant.obj",
+      "source": "downloads/food-kit/Models/OBJ format/eggplant.obj",
+      "sha256": "55d54111ec37520b5fcb87e3af5c3e0b4b47f88c40de4f5d1411aa3cea5c172d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/eggplant.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/eggplant.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/ginger-bread.obj",
+      "source": "downloads/food-kit/Models/OBJ format/ginger-bread.obj",
+      "sha256": "29b31752f22ae533ee09a6c6c690868a0f923c14491333e1229f67d306979b9b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/ginger-bread.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/ginger-bread.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/ice-cream-cup.obj",
+      "source": "downloads/food-kit/Models/OBJ format/ice-cream-cup.obj",
+      "sha256": "2b93606c23d15ae5843e32df268ae9713899415eaeae416e9ff9313b703cae31"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/ice-cream-cup.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/ice-cream-cup.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/lollypop.obj",
+      "source": "downloads/food-kit/Models/OBJ format/lollypop.obj",
+      "sha256": "2ba12380b8a9171e14a72ac9c640de4050bd6e5d7a8658446de1b0c5052ea679"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/lollypop.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/lollypop.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/mug.obj",
+      "source": "downloads/food-kit/Models/OBJ format/mug.obj",
+      "sha256": "8ac2081089f43a4ca52836d5b3598d3c97dd94893232b3663bd623ef4ab91183"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/mug.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/mug.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/mushroom.obj",
+      "source": "downloads/food-kit/Models/OBJ format/mushroom.obj",
+      "sha256": "abe856209ebde07bb8dd937f64999fd42235fc27324431850d2e405d28541968"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/mushroom.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/mushroom.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/orange.obj",
+      "source": "downloads/food-kit/Models/OBJ format/orange.obj",
+      "sha256": "b8e4f2019d980db840a63a374cf646a5a2216d2443ed0d9882cd6571b49e82f3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/orange.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/orange.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/pear.obj",
+      "source": "downloads/food-kit/Models/OBJ format/pear.obj",
+      "sha256": "a6558dd5af90bdd1a84245e45fbae25e5973cb251fa0632fc103d1d0556be7dd"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/pear.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/pear.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/popsicle.obj",
+      "source": "downloads/food-kit/Models/OBJ format/popsicle.obj",
+      "sha256": "50ff258efbf0135c94aac625127fca524b956d58fb2024d95ff6db8dba5e4242"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/popsicle.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/popsicle.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/strawberry.obj",
+      "source": "downloads/food-kit/Models/OBJ format/strawberry.obj",
+      "sha256": "1be28091f09494cf22194638d3f92f0159072b55af6ba66c285db22739a2e4bf"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/strawberry.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/strawberry.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/watermelon.obj",
+      "source": "downloads/food-kit/Models/OBJ format/watermelon.obj",
+      "sha256": "a104af3a607723f2dd77afd5a173889cc7acf96679b1b358b423a8572c3798c3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/food-kit/watermelon.mtl",
+      "source": "downloads/food-kit/Models/OBJ format/watermelon.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bear.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/bear.obj",
+      "sha256": "3dd342716531b4e2e7889293d0b67e1b8968928df61f2cc0e67056f6b661877a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bear.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/bear.mtl",
+      "sha256": "9feebaa9671009643d13a793d32f3ab99024462231f488194c44486579da94b8"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bedSingle.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/bedSingle.obj",
+      "sha256": "e93bf273166e0cbe5699cff5f95dd90da4c2c25d48931d92b1f9e077d60a9814"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bedSingle.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/bedSingle.mtl",
+      "sha256": "c68f3b5128ae18ed9a1723a1363b1c56cbbb17ae12de246de26af761ec822fc0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpen.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpen.obj",
+      "sha256": "c582b0306529553018eb5a9f58eef35c7383e566a0613d32dea41612cfaded8c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpen.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpen.mtl",
+      "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpenLow.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpenLow.obj",
+      "sha256": "bee575ba5ba4f2c7cb77c688d98c83d7bbfa70d1f6f80717afaa5586f04b018a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpenLow.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpenLow.mtl",
+      "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/books.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/books.obj",
+      "sha256": "619b78970d787db48f7562c51ed5c85239d61ce075e32f0c2b486bbaa736a479"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/books.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/books.mtl",
+      "sha256": "4c4124eba54d96842cbc27861696001bdda52abcf5e0f0e786732924c5bd61e0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/cardboardBoxOpen.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/cardboardBoxOpen.obj",
+      "sha256": "21fc2e5b06dd1f267074381a30a5d5945626996b96d6016b5ba3a9bd245272f0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/cardboardBoxOpen.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/cardboardBoxOpen.mtl",
+      "sha256": "aeb33dfccdf381881fd065ef5724709610fe7748f818090a755b4eb46002a952"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairDesk.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/chairDesk.obj",
+      "sha256": "2e4448333f39ceda9f3e90f02236463e34fbae80d470084ae2009541c16c89c6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairDesk.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/chairDesk.mtl",
+      "sha256": "6d45d00e9569fe5b1abc4c9fb1caedc99cb7b519cdcd09a1377ecd8cb79f6f53"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairRounded.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/chairRounded.obj",
+      "sha256": "7f42548c11c2aa8e56e03e74f6e7ce36d062171797da76e39851008d74806f4c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairRounded.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/chairRounded.mtl",
+      "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerMouse.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/computerMouse.obj",
+      "sha256": "f48d88fb9d1c4f79843e03a446f13b57d65dbe884095135cd907e96511d85dca"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerMouse.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/computerMouse.mtl",
+      "sha256": "8d2aea496efc3f8575ef22d6a134ec39d0e0d7b32f2f6b1fae125ffb244824a1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/desk.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/desk.obj",
+      "sha256": "5591258c26d1311a99ddb7b73e1e9ca48492afa102757d51fd9b3686e3fbff7e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/desk.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/desk.mtl",
+      "sha256": "5e5596841db7ef51c29d073c80e432ccca5240d0fc966255a0cb1fbcec3f6dc0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundFloor.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampRoundFloor.obj",
+      "sha256": "65b7be5588a17293cbb4f59773e71cf860106022e0fc2c63be73bdfe38c63a86"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundFloor.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampRoundFloor.mtl",
+      "sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundTable.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampRoundTable.obj",
+      "sha256": "3d5f74dc94552c722404c21f64f0f14b0b873771fbd4918eecc3898de65d2831"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundTable.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampRoundTable.mtl",
+      "sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampSquareTable.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampSquareTable.obj",
+      "sha256": "d76db315ff17fd6f157226e1dbbc3c778e61b14fec8b1169b1aed25e5919cd19"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampSquareTable.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/lampSquareTable.mtl",
+      "sha256": "9b1c81ac53aa626c47641c9e89d632360b5c833c9050b56641388af543d96dbe"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillow.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillow.obj",
+      "sha256": "58d7f8896d23db772280bf433f8a2dbfcd23b7b117ba9ff016299660eb5b0eaa"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillow.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillow.mtl",
+      "sha256": "3e6f3744b0011c35dbf4da0a92bbbb26ccdee052501c2e3da216e58c961e4d80"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlue.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillowBlue.obj",
+      "sha256": "2759512bbccb695f22f22b549f7f58435ab74497dac586bca67d30935ad61b9a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlue.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillowBlue.mtl",
+      "sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlueLong.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillowBlueLong.obj",
+      "sha256": "e62bc0eece83457000d3c0b33b4bd47e5ef439d3a152465ee36629d3c3a1ffdf"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlueLong.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/pillowBlueLong.mtl",
+      "sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/radio.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/radio.obj",
+      "sha256": "a595663a057462eb9a3db3e45bd03f823f9410e6d4fc6f62cd5024bf6d1060e6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/radio.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/radio.mtl",
+      "sha256": "709c74fe716dc8ef9195ab195db6ab657d0232951153a1ec86e96b86869e8913"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRound.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/rugRound.obj",
+      "sha256": "676ecbeaa49d6dca45414854db76df9f3d1b5a74f93b966cb258e1356d2f926d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRound.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/rugRound.mtl",
+      "sha256": "9ff56ef802c85b11af44277aea9c49e1129d8aee4b5f9fd277e9cf9be8010069"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRounded.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/rugRounded.obj",
+      "sha256": "e8156efe2e8a6383138bce27bfc60350ee67de50ff2230b38ffd135e68981c60"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRounded.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/rugRounded.mtl",
+      "sha256": "61484c56e3faaad7857ef2673d85eabd710e138a0fb18517e26ad47413a75b50"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/wallWindow.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/wallWindow.obj",
+      "sha256": "a36ec164158c63df3d0250a57fc6a94472e7137d7f4cc428eb24e7641e553977"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/wallWindow.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/wallWindow.mtl",
+      "sha256": "6d0557a8be7dd9d13f888b746c5a9e37031af128cf45e0ef428dfcd1789867f9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-gold.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-gold.obj",
+      "sha256": "ddd73145c9e64b2faf925597153202e6318adc65a5f543f7c0ad1291c20e28af"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-gold.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-gold.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png",
+      "source": "downloads/toy-car-kit/Models/OBJ format/Textures/colormap.png",
+      "sha256": "0d4947d34ff32acf4a359c7f22ca784e057e7e72f622170a9a77b6fc88fdb70e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-silver.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-silver.obj",
+      "sha256": "dd1c7a39b0ef3071c856b31ad376b0a8d1b1ed1f8bfc1a1ba207bd03f8399ebf"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-silver.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-silver.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-cone.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-cone.obj",
+      "sha256": "c5f330b509bbece12b2f10c9b858146944ae90bf87143ad4161c68bf1dceb7ef"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-cone.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/item-cone.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-looping.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-looping.obj",
+      "sha256": "3bf63a5f6e1c6015ffdb68799b042c9f1248bd51d1717e498f7be03830a082eb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-looping.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-looping.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-straight.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-straight.obj",
+      "sha256": "157e3e9d4a51325d0578455d96d251750a8864bb2e293dbe47dca40139680211"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-straight.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-straight.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-curve.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-curve.obj",
+      "sha256": "c967be1d992411e304fee3f8a7e5e5cddac3f246e724beb7ab92e045620c39a5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-curve.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-curve.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-straight.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-straight.obj",
+      "sha256": "98e13e60bd2f85973102907fd0e8217268eb7eb567ae14c1dfd52032d7656883"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-straight.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-straight.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer.obj",
+      "sha256": "5b7165c5547832eb2d00b4723acd06853d6aef3ef075c4fb30913ed46a48c8de"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer-low.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer-low.obj",
+      "sha256": "271739ac4a03695fdd40dcf0e619ef68002b10c3ee8959cee3d39f701a86a46e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer-low.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer-low.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-speedster.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-speedster.obj",
+      "sha256": "9528d425f4713918c841800e889c4c220aff42818f6dd7e35e961dd39089e7cb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-speedster.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-speedster.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-suv.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-suv.obj",
+      "sha256": "7925174af14264dcbee6435b8ae34e400d0a2b03c54a55500e29c37489db6816"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-suv.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-suv.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-truck.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-truck.obj",
+      "sha256": "cc5473fe55ef868654014133cef931c62dd8f2411be542f1db1fe34da3f9c711"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-truck.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-truck.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-large.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-large.obj",
+      "sha256": "8ad25cf20a043159f7e82bfc437d4fe1c2042e381836a5db74ad6862db78a892"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-large.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-large.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-medium.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-medium.obj",
+      "sha256": "5c9f1dc41f0531d1539fa0a3f14ccce10268e2a474f8d6d16458e18a807467b9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-medium.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-medium.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-small.obj",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-small.obj",
+      "sha256": "9723dba1de58118a3100ea93214fde3a4a1cd52c6185263ca49779e8e8add779"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-small.mtl",
+      "source": "downloads/toy-car-kit/Models/OBJ format/wheel-small.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/LilitaOne-Regular.ttf",
+      "source": "downloads/lilita-one/LilitaOne-Regular.ttf",
+      "sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59"
     }
   ]
 }

@@ -1,30 +1,27 @@
-# Referência em vídeo — adaptação v0.7
+# I Spy Fantasy: referência e adaptação v0.8
 
-Estado em 13/11/2026: **ideias implementadas no código e no catálogo; importação, compilação e playtest Unity ainda pendentes**.
+Referência: vídeo enviado pelo usuário (`videoplayback.mp4`), revisto por quadros da abertura/quarto, entrada do castelo, oficina de busca e sequências de interação. O vídeo é referência de estudo; não faz parte dos assets do projeto. Nenhuma malha, textura, imagem, música ou fala de I Spy foi incorporada.
 
-A referência é `videoplayback.mp4`, enviado pelo usuário, com aproximadamente 17 minutos de um mundo de I Spy Fantasy no modo fácil. Foram revistas as sequências do quarto e da entrada no castelo (00:35–00:47), do cenário do mago e sua charada (01:36–01:56), além das sequências de descobertas e desafios. O vídeo e suas capturas não são assets do projeto. Não copiamos personagens, cenários, imagens, sons ou código de I Spy.
+A revisão anterior deixou as buscas fáceis e as telas com aparência de caixas pouco variadas. Esta revisão muda a escala da procura, o fluxo e o ambiente.
 
-| Ideia observada | Implementação nesta revisão | Conferência realizada |
-| --- | --- | --- |
-| Cenário dominante; charada em faixa inferior | Área 3D de 1440 × 704 numa referência de 1440 × 900, cerca de 78% da altura. Cabeçalho de 56 px e faixa inferior de 140 px, com quatro versos em duas colunas | Coordenadas e larguras de texto conferidas; testar no Game View e com janela redimensionada |
-| Sobreposições, objetos próximos e diferenças de escala | Nove composições com 271 instâncias, contra 118 antes; 28–32 por tela. Recipientes, caixas empilhadas, bancada/prateleira, pedras, prédios e móbiles espaciais | Projeção com oclusão confere área visível dos 18 alvos. Prévias externas em Blender ajudaram a corrigir enquadramentos e interseções; não são screenshots Unity |
-| Brincadeira montada fisicamente | Mesmos modelos Kenney de madeira, ferramentas, móveis, naves e bonecos, com materiais/texturas originais. Prateleiras, caixas, faixas de piso e suportes dos móbiles usam somente primitivas autorizadas | 190 arquivos de arte/áudio de terceiros idênticos por SHA-256 |
-| Entradas fazem parte do quarto | Quarto 3D com baú, nave e heroína como entradas. Clique na malha ou no rótulo, que informa contagem e selo | Três destinos conferidos contra os IDs dos mapas; meshes visíveis na projeção |
-| Navegação integrada ao ambiente | Duas placas 3D em cada tela levam aos outros cantinhos. Abas inferiores removidas. Rótulos clicáveis oferecem área adicional de clique | As 18 passagens formam rotas válidas e não dependem de coletar alvos |
-| Enquadramentos próximos e pequenas reações | Câmeras por tela; foco breve em descobertas e brinquedos curiosos; alvos saltam, giram, inclinam ou decolam antes de desaparecer. Decorações respondem ao clique | Código e sintaxe conferidos. Movimento reduzido elimina deslocamentos/rotações e mantém texto e indicação estática |
-| Desafios pertencem ao mundo | Clique no baú da Mina, rádio da Garagem ou maquete do Quartel após os seis alvos. Cada um abre um enquadramento 3D próprio; peças e rótulos compartilham a mesma ação | Índices, peças, soluções e acesso conferidos; interação e temporização exigem Play |
-| Recompensa preserva o cenário | Vitória mantém o cenário 3D visível, mostra o selo e reage com os brinquedos presentes; nave dá um salto de decolagem e figuras da cidade comemoram | Fluxo implementado; percepção e duração precisam de playtest |
+| Observação na referência / pedido | Implementação atual |
+| --- | --- |
+| Quarto cotidiano abre mundos imaginários | Abertura e seleção usam um quarto com cama, mesa, estante, tapete, almofadas e carrinhos; baú, nave e heroína ficam afastados |
+| A abertura precisa ser clara | Título e três botões: Iniciar, Opções, Como jogar |
+| Muitos objetos competem pela atenção | 67–70 instâncias por busca, com distratores, escalas menores e distribuição diferente dos alvos em cada tela |
+| Lista maior e observação real | Seis alvos por busca, 54 no total; os alvos não revelam nome nem aumentam ao passar o mouse; ajuda explícita em três etapas |
+| Brinquedos chamativos têm utilidade futura | Cada caminho apresenta duas peças/mecanismos desde a primeira visita; a solução exige voltar com itens encontrados e completar a busca anterior |
+| Navegação conecta as brincadeiras | Três cenas de caminho, nove cenas de busca e três desafios finais; sessões persistentes entre carregamentos |
+| Objetos devem parecer brinquedos | Packs prontos de mobiliário, carrinhos e comidinhas; materiais originais, iluminação quente e normais suavizadas por ângulo |
+| Mais cor e personalidade | Nove paletas, botões coloridos, fonte Lilita One e detalhes de festa feitos com primitivas |
+| Charada acompanha a busca | Faixa de seis versos em duas colunas, seis dicas e espaço de leitura/narração humana |
 
-## Os três desafios
+## O que continua diferente
 
-- **Faroeste:** clique em três garrafinhas para ajustar os números e depois no baú. A solução continua 243. A comemoração usa o baú existente; não foi criada uma tampa articulada ou um modelo novo de baú aberto.
-- **Espaço:** os brinquedos Lua, Sol, Estrela e Planeta recebem sinais com nome escrito, indicação de escala e som opcional. Durante a demonstração, cliques nas peças não contam. A sequência continua Estrela → Lua → Planeta → Sol.
-- **Heróis:** selecione a antena, balde ou martelo e depois a miniatura da praça, ponte ou quartel. Uma ferramenta correta é levada ao destino; com movimento reduzido, muda de posição imediatamente. Acertos não são reutilizados e erros não apagam o progresso.
+A composição é original e usa modelos estilizados disponíveis nos packs, sem reconstruir a estética fotográfica de I Spy ou modelar objetos novos. O cálculo de normais suaviza a iluminação, mas não adiciona polígonos às silhuetas. Não há narração produzida por IA nem animação modelada de abrir a tampa do baú.
 
-## Narração, progresso e limites
+As seis passagens são associações de uma peça com um brinquedo; os desafios finais continuam sendo combinação, memória e associação. A dificuldade foi aumentada pela quantidade, distribuição e semelhança entre objetos; o equilíbrio real ainda depende de playtest.
 
-Os 18 IDs, nove charadas, roteiros de narração, soluções e chave de save foram preservados. `Ler juntos` permanece disponível; `Ouvir charada` depende da gravação humana de cada sala. Nenhuma voz foi criada. A abertura colorida, opções separadas, pausas e saída Windows foram mantidas.
+## Conferência
 
-Esta é uma adaptação das ideias à estética dos assets prontos do projeto. Não pretende reproduzir o acabamento fotográfico de I Spy. Não há animações esqueléticas novas, personagens gerados, texturas pintadas, cursor ilustrado novo ou trilha gerada.
-
-As composições foram revisadas externamente e o código foi analisado, mas este ambiente não possui Unity. A confirmação de cores após importação, colisores, animações, resolução, desempenho e funcionamento dos puzzles depende de [VALIDACAO.md](VALIDACAO.md).
+Os enquadramentos e a visibilidade são conferidos externamente com as malhas originais e projeção geométrica; prévias em Blender não são capturas de uma execução Unity. As cenas `.unity` separadas precisam ser populadas pela primeira preparação no editor. Veja [CENAS.md](CENAS.md) e [VALIDACAO.md](VALIDACAO.md).

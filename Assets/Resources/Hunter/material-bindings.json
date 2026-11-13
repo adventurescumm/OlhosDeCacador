@@ -2003,6 +2003,954 @@
         1
       ],
       "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/apple",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/apple/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/banana",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/banana/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/carrot",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/carrot/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cherries",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cherries/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cookie",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cookie/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cookie-chocolate",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cookie-chocolate/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cup",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cup/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cup-tea",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cup-tea/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/cupcake",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/cupcake/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/donut",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/donut/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/donut-chocolate",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/donut-chocolate/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/donut-sprinkles",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/donut-sprinkles/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/eggplant",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/eggplant/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/ginger-bread",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/ginger-bread/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/ice-cream-cup",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/ice-cream-cup/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/lollypop",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/lollypop/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/mug",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/mug/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/mushroom",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/mushroom/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/orange",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/orange/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/pear",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/pear/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/popsicle",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/popsicle/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/strawberry",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/strawberry/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "food-kit/watermelon",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/food-kit/watermelon/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png"
+    },
+    {
+      "model": "furniture-kit/bear",
+      "name": "fur",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bear/fur.mat",
+      "color": [
+        0.6470588,
+        0.4588235,
+        0.2980392,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bear",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bear/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bear",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bear/metalDark.mat",
+      "color": [
+        0.3058824,
+        0.3882353,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bedSingle",
+      "name": "carpetWhite",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bedSingle/carpetWhite.mat",
+      "color": [
+        0.972549,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bedSingle",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bedSingle/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bedSingle",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bedSingle/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bedSingle",
+      "name": "carpet",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bedSingle/carpet.mat",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bookcaseOpen",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bookcaseOpen/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/bookcaseOpenLow",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/bookcaseOpenLow/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/books",
+      "name": "carpetDarker",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/books/carpetDarker.mat",
+      "color": [
+        0.608,
+        0.2978127,
+        0.285152,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/books",
+      "name": "carpetWhite",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/books/carpetWhite.mat",
+      "color": [
+        0.972549,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/books",
+      "name": "plant",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/books/plant.mat",
+      "color": [
+        0.1819598,
+        0.8207547,
+        0.5758286,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/books",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/books/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/cardboardBoxOpen",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/cardboardBoxOpen/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/cardboardBoxOpen",
+      "name": "woodDark",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/cardboardBoxOpen/woodDark.mat",
+      "color": [
+        0.678,
+        0.4559477,
+        0.2990306,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/chairDesk",
+      "name": "metalMedium",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/chairDesk/metalMedium.mat",
+      "color": [
+        0.3686275,
+        0.4666667,
+        0.4666667,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/chairDesk",
+      "name": "carpet",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/chairDesk/carpet.mat",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/chairRounded",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/chairRounded/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/computerMouse",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/computerMouse/metalDark.mat",
+      "color": [
+        0.3058824,
+        0.3882353,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/desk",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/desk/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/desk",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/desk/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampRoundFloor",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampRoundFloor/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampRoundFloor",
+      "name": "lamp",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampRoundFloor/lamp.mat",
+      "color": [
+        1.0,
+        0.9137255,
+        0.5882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampRoundTable",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampRoundTable/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampRoundTable",
+      "name": "lamp",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampRoundTable/lamp.mat",
+      "color": [
+        1.0,
+        0.9137255,
+        0.5882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampSquareTable",
+      "name": "lamp",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampSquareTable/lamp.mat",
+      "color": [
+        1.0,
+        0.9137255,
+        0.5882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/lampSquareTable",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/lampSquareTable/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/pillow",
+      "name": "carpet",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pillow/carpet.mat",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/pillowBlue",
+      "name": "carpetBlue",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pillowBlue/carpetBlue.mat",
+      "color": [
+        0.3561766,
+        0.51664,
+        0.8679245,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/pillowBlueLong",
+      "name": "carpetBlue",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pillowBlueLong/carpetBlue.mat",
+      "color": [
+        0.3561766,
+        0.51664,
+        0.8679245,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/radio",
+      "name": "metalMedium",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/radio/metalMedium.mat",
+      "color": [
+        0.3686275,
+        0.4666667,
+        0.4666667,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/radio",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/radio/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/radio",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/radio/metal.mat",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/rugRound",
+      "name": "carpet",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/rugRound/carpet.mat",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/rugRound",
+      "name": "carpetDarker",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/rugRound/carpetDarker.mat",
+      "color": [
+        0.608,
+        0.2978127,
+        0.285152,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/rugRounded",
+      "name": "carpetDarker",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/rugRounded/carpetDarker.mat",
+      "color": [
+        0.608,
+        0.2978127,
+        0.285152,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/rugRounded",
+      "name": "carpet",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/rugRounded/carpet.mat",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/wallWindow",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/wallWindow/wood.mat",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/wallWindow",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/wallWindow/metalDark.mat",
+      "color": [
+        0.3058824,
+        0.3882353,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/wallWindow",
+      "name": "_defaultMat",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/wallWindow/_defaultMat.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "furniture-kit/wallWindow",
+      "name": "glass",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/wallWindow/glass.mat",
+      "color": [
+        0.6980392,
+        0.827451,
+        0.7686275,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "toy-car-kit/item-coin-gold",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/item-coin-gold/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/item-coin-silver",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/item-coin-silver/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/item-cone",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/item-cone/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/track-narrow-looping",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/track-narrow-looping/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/track-narrow-straight",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/track-narrow-straight/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/track-wide-curve",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/track-wide-curve/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/track-wide-straight",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/track-wide-straight/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/vehicle-racer",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/vehicle-racer/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/vehicle-racer-low",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/vehicle-racer-low/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/vehicle-speedster",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/vehicle-speedster/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/vehicle-suv",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/vehicle-suv/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/vehicle-truck",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/vehicle-truck/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/wheel-large",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/wheel-large/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/wheel-medium",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/wheel-medium/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "toy-car-kit/wheel-small",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/toy-car-kit/wheel-small/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
     }
   ]
 }

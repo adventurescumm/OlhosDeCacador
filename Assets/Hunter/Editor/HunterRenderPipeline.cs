@@ -53,7 +53,7 @@ namespace OlhosDeCacador.Editor
                 defaults.FindProperty("m_AdditionalLightShadowsSupported").boolValue = false;
                 defaults.FindProperty("m_AnyShadowsSupported").boolValue = true;
                 defaults.FindProperty("m_SoftShadowsSupported").boolValue = true;
-                defaults.FindProperty("m_AdditionalLightsRenderingMode").intValue = 0;
+                defaults.FindProperty("m_AdditionalLightsRenderingMode").intValue = 1;
                 defaults.ApplyModifiedPropertiesWithoutUndo();
                 AssetDatabase.CreateAsset(pipeline, PipelinePath);
             }
@@ -64,6 +64,8 @@ namespace OlhosDeCacador.Editor
             renderers.arraySize = 1;
             renderers.GetArrayElementAtIndex(0).objectReferenceValue = renderer;
             settings.FindProperty("m_DefaultRendererIndex").intValue = 0;
+            settings.FindProperty("m_AdditionalLightsRenderingMode").intValue = 1;
+            settings.FindProperty("m_AdditionalLightsPerObjectLimit").intValue = 2;
             settings.ApplyModifiedPropertiesWithoutUndo();
             if (GraphicsSettings.defaultRenderPipeline != pipeline)
                 GraphicsSettings.defaultRenderPipeline = pipeline;

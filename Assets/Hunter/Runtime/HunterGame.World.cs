@@ -33,12 +33,17 @@ namespace OlhosDeCacador
         {
             float scale = Mathf.Min(Screen.width / 1440f, Screen.height / 900f);
             float left = (Screen.width - 1440 * scale) * .5f, bottom = (Screen.height - 900 * scale) * .5f;
-            float top = viewingShelf ? 300 : 56, height = viewingShelf ? 340 : 704;
+            float top = mode == Mode.Title ? 0 : 56;
+            float height = mode == Mode.Title ? 900 : mode == Mode.Menu ? 744 : (mode == Mode.Explore || mode == Mode.Junction) ? 674 : 704;
             worldCamera.rect = new Rect(left / Screen.width, (bottom + (900 - top - height) * scale) / Screen.height,
                 1440 * scale / Screen.width, height * scale / Screen.height);
             Vector3 eye = viewingShelf ? new Vector3(0, 8, -13.6f) : Position(currentStage?.camera, new Vector3(0, 6.3f, -9.2f));
             Vector3 look = viewingShelf ? new Vector3(0, .4f, .5f) : Position(currentStage?.lookAt, new Vector3(0, 1, .4f));
             float fov = viewingShelf ? 18 : currentStage != null && currentStage.fieldOfView > 0 ? currentStage.fieldOfView : 36;
+            if (HunterStage.Active != null)
+            {
+                eye = HunterStage.Active.cameraPosition; look = HunterStage.Active.lookAt; fov = HunterStage.Active.fieldOfView;
+            }
             bool focus = !reduceMotion && mode == Mode.Explore && Time.unscaledTime < focusUntil;
             if (advanceAnimation) focusBlend = reduceMotion ? 0 : Mathf.MoveTowards(focusBlend, focus ? 1 : 0, Time.unscaledDeltaTime * 3);
             // Fixed authored shots; a small focus on a discovery returns to the full composition.
@@ -54,7 +59,7 @@ namespace OlhosDeCacador
                 var screen = worldCamera.WorldToScreenPoint(label.spot.transform.position);
                 float x = (screen.x - left) / scale;
                 float y = 900 - (screen.y - bottom) / scale + 12;
-                label.rect.anchoredPosition = new Vector2(Mathf.Clamp(x - label.width * .5f, 12, 1428 - label.width), -Mathf.Clamp(y, 100, 684));
+                label.rect.anchoredPosition = new Vector2(Mathf.Clamp(x - label.width * .5f, 12, 1428 - label.width), -Mathf.Clamp(y, 100, mode == Mode.Menu ? 724 : 642));
             }
         }
         void WorldButton(WorldHotspot spot, string text, Color color, float width, bool enabled = true)
@@ -71,7 +76,7 @@ namespace OlhosDeCacador
         }
         void UpdateWorldInput()
         {
-            if ((mode != Mode.Menu && mode != Mode.Explore && mode != Mode.Puzzle) || transition > 0)
+            if ((mode != Mode.Menu && mode != Mode.Junction && mode != Mode.Explore && mode != Mode.Puzzle) || transition > 0)
             { ClearWorldHover(); return; }
             var mouse = Mouse.current;
             if (mouse == null) { ClearWorldHover(); return; }
@@ -95,10 +100,10 @@ namespace OlhosDeCacador
             {
                 if (target != null) Collect(target);
                 else if (spot != null) Activate(spot);
+                else if (mode == Mode.Explore && hit.collider != null) Tell("Esse brinquedo não está na charada deste cantinho.");
             }
         }
-        string ChallengeInvitation() => map.id == "faroeste" ? "Visite o baú na Mina dos Brilhos." :
-            map.id == "espaco" ? "Visite o rádio na Garagem das Naves." : "Visite a maquete no Quartel das Boas Ideias.";
+        string ChallengeInvitation() => "Volte ao caminho para o desafio final!";
         void Activate(WorldHotspot spot)
         {
             if (spot == null) return;
@@ -107,17 +112,23 @@ namespace OlhosDeCacador
             {
                 EnterMap(catalog.maps.First(m => m.id == data.destination)); return;
             }
-            if (mode == Mode.Explore)
+            if (mode == Mode.Explore || mode == Mode.Junction)
             {
+                if (data.action == "junction") { ShowJunction(); return; }
+                if (data.action == "gate") { UseGate(spot); return; }
                 if (data.action == "travel")
                 {
                     int next = Array.FindIndex(map.rooms, r => r.id == data.destination);
-                    if (next >= 0) { Tap(); roomIndex = next; selectedTarget = null; LoadRoom(); }
+                    if (next >= 0)
+                    {
+                        if (!progress.CanVisit(map, data.destination)) { Tell("Este caminho precisa de uma peça. Observe os brinquedos aqui e complete a busca anterior."); return; }
+                        Tap(); roomIndex = next; selectedTarget = null; LoadRoom();
+                    }
                     return;
                 }
                 if (data.action == "puzzle") { OpenPuzzle(); return; }
             }
-            if (data.action == "inspect" && (mode == Mode.Menu || mode == Mode.Explore))
+            if (data.action == "inspect" && (mode == Mode.Menu || mode == Mode.Explore || mode == Mode.Junction))
             {
                 spot.React(); FocusOn(spot.transform.position, 2); Tap(); Tell(data.label); return;
             }

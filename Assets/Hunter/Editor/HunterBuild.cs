@@ -26,7 +26,7 @@ namespace OlhosDeCacador.Editor
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
             PlayerSettings.allowFullscreenSwitch = true;
             PlayerSettings.resizableWindow = true; PlayerSettings.runInBackground = false;
-            PlayerSettings.bundleVersion = "0.7.0";
+            PlayerSettings.bundleVersion = "0.8.0";
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
             // Use only Input System Package (New); the editor may require a restart.
@@ -44,7 +44,7 @@ namespace OlhosDeCacador.Editor
                 new GameObject("Olhos de Caçador").AddComponent<HunterGame>();
                 EditorSceneManager.SaveScene(scene, Scene);
             }
-            EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(Scene, true) };
+            HunterSceneBuilder.EnsureScenes();
             AssetDatabase.SaveAssets();
             Debug.Log("Projeto preparado. Abra Main.unity e pressione Play.");
         }
@@ -67,11 +67,14 @@ namespace OlhosDeCacador.Editor
             var catalog = JsonUtility.FromJson<Catalog>(text.text);
             if (catalog.maps.Length != 3) throw new BuildFailedException("São necessários três mapas.");
             ValidateStages(catalog);
+            var expectedScenes = new[] { "Main", "inicio", "quarto" }.Concat(catalog.maps.SelectMany(m => new[] { m.junction.id, m.challenge.id }.Concat(m.rooms.Select(r => r.id)))).OrderBy(x => x);
+            if (!EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => Path.GetFileNameWithoutExtension(s.path)).OrderBy(x => x).SequenceEqual(expectedScenes))
+                throw new BuildFailedException("As 18 cenas precisam estar no build. Execute Preparar projeto.");
             var ids = catalog.maps.SelectMany(m => m.Targets).Select(p => p.id).ToArray();
-            if (ids.Distinct().Count() != ids.Length || ids.Length != 18) throw new BuildFailedException("IDs duplicados ou quantidade de alvos inválida.");
+            if (ids.Distinct().Count() != ids.Length || ids.Length != 54) throw new BuildFailedException("IDs duplicados ou quantidade de alvos inválida.");
             foreach (var map in catalog.maps)
             {
-                if (map.rooms.Length != 3 || map.Targets.Count() != 6) throw new BuildFailedException("Mapa incompleto: " + map.id);
+                if (map.rooms.Length != 3 || map.Targets.Count() != 18) throw new BuildFailedException("Mapa incompleto: " + map.id);
                 foreach (var room in map.rooms)
                     if (string.IsNullOrEmpty(room.id) || string.IsNullOrEmpty(room.riddle))
                         throw new BuildFailedException("Charada ou ID da tela ausente: " + room.name);
@@ -126,8 +129,9 @@ namespace OlhosDeCacador.Editor
                     throw new BuildFailedException("Roteiro de gravação não corresponde à charada: " + room.id);
             foreach (string art in new[] { "panel_brown", "panel_border_brown", "banner_classic_curtain", "minimap_icon_star_yellow" })
                 if (Resources.Load<Sprite>("Hunter/UI/" + art) == null) throw new BuildFailedException("Sprite não importado: " + art);
+            if (Resources.Load<Font>("Hunter/UI/LilitaOne-Regular") == null) throw new BuildFailedException("Fonte Lilita One não importada.");
             int recordings = rooms.Count(r => bank.ForRoom(r.id) != null);
-            Debug.Log("Conteúdo íntegro: URP e Input System configurados; 3 mapas, 9 charadas, 18 alvos, materiais URP/Lit com cores e texturas originais; " + recordings + "/9 gravações humanas. Ainda é necessário testar a jogabilidade.");
+            Debug.Log("Conteúdo íntegro: URP e Input System configurados; 3 mapas, 9 charadas, 54 alvos, materiais URP/Lit com cores e texturas originais; " + recordings + "/9 gravações humanas. Ainda é necessário testar a jogabilidade.");
         }
         [Serializable] sealed class MaterialBindings { public MaterialBinding[] materials; }
         [Serializable] sealed class MaterialBinding { public string model, name, material, texture; public float[] color; }
@@ -141,14 +145,27 @@ namespace OlhosDeCacador.Editor
             foreach (var map in catalog.maps)
             {
                 if (map.challenge == null) throw new BuildFailedException("Cenário do desafio ausente: " + map.id);
+                if (map.junction == null || map.gates == null || map.gates.Length != 2)
+                    throw new BuildFailedException("Caminho ou duas passagens ausentes: " + map.id);
                 foreach (var room in map.rooms)
                 {
-                    var exits = room.objects.Where(p => p.action == "travel").Select(p => p.destination).OrderBy(x => x);
-                    if (!exits.SequenceEqual(map.rooms.Where(r => r.id != room.id).Select(r => r.id).OrderBy(x => x)))
-                        throw new BuildFailedException("As duas passagens precisam levar aos outros cantinhos: " + room.id);
+                    if (room.objects.Count(p => !string.IsNullOrEmpty(p.id)) != 6 || room.riddle.Split('\n').Length != 6)
+                        throw new BuildFailedException("São necessários seis alvos e seis versos: " + room.id);
+                    if (room.objects.Count(p => p.action == "junction") != 1)
+                        throw new BuildFailedException("Passagem de retorno ausente: " + room.id);
                 }
-                if (map.rooms.SelectMany(r => r.objects).Count(p => p.action == "puzzle") != 1)
-                    throw new BuildFailedException("Cada mundo precisa de um objeto de entrada do desafio: " + map.id);
+                var exits = map.junction.objects.Where(p => p.action == "travel").Select(p => p.destination).OrderBy(x => x);
+                if (!exits.SequenceEqual(map.rooms.Select(r => r.id).OrderBy(x => x)))
+                    throw new BuildFailedException("O caminho precisa conectar os três cantinhos: " + map.id);
+                if (map.junction.objects.Count(p => p.action == "puzzle") != 1)
+                    throw new BuildFailedException("Entrada do desafio final ausente: " + map.id);
+                foreach (var gate in map.gates)
+                {
+                    if (gate.sourceRoom < 0 || gate.sourceRoom > 1 || gate.roomId != map.rooms[gate.sourceRoom + 1].id ||
+                        !map.rooms[gate.sourceRoom].objects.Any(p => p.id == gate.tokenId) ||
+                        map.junction.objects.Count(p => p.action == "gate" && p.destination == gate.id) != 1)
+                        throw new BuildFailedException("Peça ou passagem inválida: " + gate.id);
+                }
                 foreach (string action in map.puzzle == "lock" ? new[] { "digit" } : map.puzzle == "memory" ? new[] { "signal" } : new[] { "supply", "destination" })
                 {
                     int count = action == "signal" ? 4 : 3;
@@ -156,7 +173,7 @@ namespace OlhosDeCacador.Editor
                         throw new BuildFailedException("Peças incompletas/duplicadas no desafio: " + map.id + "/" + action);
                 }
             }
-            foreach (var stage in catalog.maps.SelectMany(m => m.rooms.Concat(new[] { m.challenge })).Concat(new[] { catalog.hub }))
+            foreach (var stage in catalog.maps.SelectMany(m => m.rooms.Concat(new[] { m.junction, m.challenge })).Concat(new[] { catalog.hub }))
             {
                 if (stage.camera == null || stage.camera.Length != 3 || stage.lookAt == null || stage.lookAt.Length != 3 || stage.fieldOfView < 20 || stage.fieldOfView > 60)
                     throw new BuildFailedException("Enquadramento inválido: " + stage.id);

@@ -28,7 +28,7 @@ namespace OlhosDeCacador.Tests
             foreach (var map in catalog.maps) { foreach (var target in map.Targets) p.Collect(target.id); p.Complete(map); }
             Assert.IsTrue(p.Finished); p.ResetMap(catalog.maps[1]);
             Assert.IsFalse(p.Finished); Assert.AreEqual(0, p.Count(catalog.maps[1]));
-            Assert.AreEqual(6, p.Count(catalog.maps[0])); Assert.IsTrue(p.Solved(catalog.maps[2]));
+            Assert.AreEqual(18, p.Count(catalog.maps[0])); Assert.IsTrue(p.Solved(catalog.maps[2]));
         }
         [Test] public void LoadingFiltersDuplicateUnknownAndImpossibleCompletionEntries()
         {
@@ -47,6 +47,37 @@ namespace OlhosDeCacador.Tests
             var p = new Progress(catalog); p.Collect(catalog.maps[0].Targets.First().id);
             var copy = new Progress(catalog, JsonUtility.FromJson<SaveData>(JsonUtility.ToJson(p.Data)));
             CollectionAssert.AreEqual(p.Data.found, copy.Data.found);
+        }
+        [Test] public void PassagesNeedTheCorrectPieceAndTheCompleteSourceRoom()
+        {
+            var p = new Progress(catalog); var map = catalog.maps[0]; var gate = map.gates[0];
+            Assert.IsTrue(p.CanVisit(map, map.rooms[0].id)); Assert.IsFalse(p.CanVisit(map, gate.roomId));
+            Assert.IsFalse(p.Use(map, gate.id, gate.tokenId));
+            p.Collect(gate.tokenId); Assert.IsFalse(p.Use(map, gate.id, gate.tokenId));
+            foreach (var t in map.rooms[gate.sourceRoom].objects.Where(t => !string.IsNullOrEmpty(t.id))) p.Collect(t.id);
+            Assert.IsFalse(p.Use(map, gate.id, "wrong")); Assert.IsTrue(p.Use(map, gate.id, gate.tokenId));
+            Assert.IsTrue(p.CanVisit(map, gate.roomId)); Assert.IsFalse(p.Use(map, gate.id, gate.tokenId));
+            Assert.IsTrue(p.Has(gate.tokenId));
+        }
+        [Test] public void OldSavesKeepFindsAndInvalidPassagesAreDiscarded()
+        {
+            var map = catalog.maps[0]; var data = new SaveData { opened = null };
+            data.found.Add(map.Targets.First().id);
+            var p = new Progress(catalog, data); Assert.AreEqual(1, p.Count(map)); Assert.IsEmpty(p.Data.opened);
+            data.opened.Add(map.gates[0].id); data.opened.Add("missing");
+            Assert.IsEmpty(new Progress(catalog, data).Data.opened);
+        }
+        [Test] public void SavedPassagesSurviveReloadAndResetWithTheirOwnWorld()
+        {
+            var p = new Progress(catalog);
+            foreach (var map in catalog.maps)
+            {
+                foreach (var t in map.Targets) p.Collect(t.id);
+                foreach (var g in map.gates) Assert.IsTrue(p.Use(map, g.id, g.tokenId));
+            }
+            p = new Progress(catalog, JsonUtility.FromJson<SaveData>(JsonUtility.ToJson(p.Data)));
+            Assert.AreEqual(6, p.Data.opened.Count); p.ResetMap(catalog.maps[0]);
+            Assert.AreEqual(4, p.Data.opened.Count); Assert.AreEqual(18, p.Count(catalog.maps[1]));
         }
         [Test] public void WrongMemoryInputResetsOnlyTheSequence()
         {

@@ -8,4 +8,55 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hunter/Scenes/Main.unity
     guid: fe778a18f4d35f4face6e8a2c7da70a2
+  - enabled: 1
+    path: Assets/Hunter/Scenes/Menus/inicio.unity
+    guid: 9170ae45d6005c79a70851dba29dd49f
+  - enabled: 1
+    path: Assets/Hunter/Scenes/Menus/quarto.unity
+    guid: e0b60c90289352a8991ed9e5c2be4099
+  - enabled: 1
+    path: Assets/Hunter/Scenes/faroeste/faroeste_caminho.unity
+    guid: a634567e47de5652a63995ebc43a2888
+  - enabled: 1
+    path: Assets/Hunter/Scenes/faroeste/faroeste_estacao.unity
+    guid: 4c77cd2406535f6d866325219557fee6
+  - enabled: 1
+    path: Assets/Hunter/Scenes/faroeste/faroeste_salao.unity
+    guid: d4c34fb26b5159f7a2fb1f6e7f68c75b
+  - enabled: 1
+    path: Assets/Hunter/Scenes/faroeste/faroeste_mina.unity
+    guid: d0e37df00ca750c4b464c59cf51cb785
+  - enabled: 1
+    path: Assets/Hunter/Scenes/faroeste/faroeste_desafio.unity
+    guid: 765533fa22135bebb571e1c3f222f097
+  - enabled: 1
+    path: Assets/Hunter/Scenes/espaco/espaco_caminho.unity
+    guid: c065e6c0287c505f861e56c8aa50504e
+  - enabled: 1
+    path: Assets/Hunter/Scenes/espaco/espaco_base.unity
+    guid: 17cdff8ea94a51d5afa0e7c6961fb47f
+  - enabled: 1
+    path: Assets/Hunter/Scenes/espaco/espaco_jardim.unity
+    guid: 14558fa0d1e1538d8ea2cb16a4ecbb1e
+  - enabled: 1
+    path: Assets/Hunter/Scenes/espaco/espaco_garagem.unity
+    guid: 4eea810307d556db9317d9bb33489675
+  - enabled: 1
+    path: Assets/Hunter/Scenes/espaco/espaco_desafio.unity
+    guid: 67c593dae98f573aa5cdcc7defd9eed9
+  - enabled: 1
+    path: Assets/Hunter/Scenes/herois/herois_caminho.unity
+    guid: 44a67b82126751be89016e929fc712a5
+  - enabled: 1
+    path: Assets/Hunter/Scenes/herois/herois_praca.unity
+    guid: 98167f65ae35505796c6b2b7ada76db6
+  - enabled: 1
+    path: Assets/Hunter/Scenes/herois/herois_ponte.unity
+    guid: bff95b22ee7152f7a14c2c0f21c6b0cc
+  - enabled: 1
+    path: Assets/Hunter/Scenes/herois/herois_quartel.unity
+    guid: 7d7feff218615fb9a07299da052eaf65
+  - enabled: 1
+    path: Assets/Hunter/Scenes/herois/herois_desafio.unity
+    guid: 374e04190f9751c2a7a062d5fbe006cf
   m_configObjects: {}

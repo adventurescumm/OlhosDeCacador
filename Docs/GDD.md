@@ -1,41 +1,45 @@
-# Olhos de Caçador — GDD v0.8
+# Olhos de Caçador — GDD v0.9
 
-Jogo 3D point-and-click para Windows x64, em Unity 6000.6.4f1, URP 17.6.0 e Input System 1.20.1. A criança transforma o quarto em faroeste, espaço e cidade de super-heróis. A referência de gênero é I Spy; a arte é composta com assets prontos, sem copiar a propriedade visual da referência.
+Point-and-click 3D para Windows x64, Unity 6000.6.4f1, URP 17.6.0 e Input System 1.20.1. Um quarto infantil contém três maquetes: faroeste, espaço e cidade de super-heróis. A referência de gênero é I Spy; modelos e imagens da referência não foram incorporados.
 
-## Experiência e fluxo
+## Exploração
 
-Abertura com título, Iniciar, Opções e Como jogar → quarto de seleção → caminho do mundo → busca de seis objetos → retorno e uso de uma peça → próxima busca → segundo uso de peça → terceira busca → desafio final → selo.
+Abertura com título, Iniciar, Opções e Como jogar → quarto → clique numa maquete → exploração por passagens físicas. Não há menu de destinos ou lista de níveis dentro dos mundos. Portas, trilhos, pontes e túneis são objetos clicáveis que conectam cenas vizinhas.
 
-Há 18 cenas: Main, abertura, quarto e cinco por mundo. O controlador de sessão persiste; cada cena de conteúdo guarda sua câmera e hierarquia depois da primeira preparação no editor. Opções, pausa, caderno e leitura ampliada são painéis sobre a cena atual. A estrutura de edição está em CENAS.md.
+Cada mundo contém uma entrada, três buscas e um desafio final, formando um circuito: entrada ↔ busca 1 ↔ busca 2 ↔ busca 3 ↔ entrada. A busca 3 também se liga ao desafio. As duas passagens de progresso ficam bloqueadas até os mecanismos funcionarem; o retorno entre busca 3 e entrada torna-se um atalho. A passagem ao quarto fica na entrada.
 
-| Mundo | Primeira passagem | Segunda passagem | Final |
+São 18 cenas ao todo: Main, abertura, quarto e cinco por mundo. Câmeras, UI e progresso persistem entre cargas. O editor monta as hierarquias na primeira preparação, preservando edições posteriores; consulte CENAS.md.
+
+## Busca e mecanismos
+
+Seis objetos por busca, 54 no total. Há 611 instâncias nas buscas, incluindo cenário, alvos, passagens e peças que só aparecem após o uso. Os objetos ficam em agrupamentos ligados à arquitetura, em balcões, patamares, margens de rios e entre brinquedos. Escalas e alturas variam. Uma cópia visível indistinguível de um alvo é evitada antes de sua coleta.
+
+| Mundo | Mecanismo na busca 1 | Mecanismo na busca 2 | Final |
 | --- | --- | --- | --- |
-| Faroeste de Quintal | Roda da estação na diligência, após seis descobertas | Martelo do salão na ponte da mina, após seis descobertas | Baú: 2, 4, 3 |
-| Missão Caixa Lunar | Antena da base no observatório | Rádio do jardim no carrinho lunar | Sequência: Estrela, Lua, Planeta, Sol |
-| Liga dos Brinquedos | Balde da praça no jardim com sede | Martelo da ponte no reparo da passagem | Balde → Praça; Martelo → Ponte; Antena → Quartel |
+| Faroeste | Roda encontrada põe a diligência em movimento | Martelo permite baixar a ponte | Senha 243 |
+| Espaço | Antena orienta o observatório | Rádio põe o veículo lunar em movimento | Estrela, Lua, Planeta, Sol |
+| Super-heróis | Balde faz o jardim reagir | Martelo permite baixar a ponte | Balde → Praça; Martelo → Ponte; Antena → Quartel |
 
-Cada passagem exige os seis objetos da busca de origem e a peça correta. Os mecanismos aparecem desde a primeira visita, mas não podem ser resolvidos antes desses requisitos. A peça fica representada no cenário depois do uso. O final exige os 18 objetos do mundo.
+Complete os seis objetos e clique no mecanismo: a peça correspondente é aplicada automaticamente, aparece montada e o brinquedo muda de posição/orientação. O resultado é salvo. Isso evita o seletor de peças da antiga navegação. As associações ainda são simples; os desafios finais mantêm combinação, memória e associação.
 
-## Busca e dificuldade
+Alvos e decoração comum mostram o mesmo texto ao passar o mouse. Não há ampliação automática exclusiva dos alvos. Dicas explícitas oferecem contexto, região e destaque. Roda do mouse aproxima a região apontada; botão direito restaura o plano geral. Essa aproximação funciona sobre qualquer parte do cenário.
 
-São nove buscas, seis alvos em cada uma, 54 ao todo. As 614 instâncias nas buscas incluem decoração e passagens; cada tela tem de 67 a 70. Os alvos são menores que as grandes peças do ambiente e variam de posição entre as salas. Existem formas e cores semelhantes na decoração, mas não outra instância indistinguível do mesmo modelo-alvo na mesma busca.
+A dificuldade precisa ser medida com pessoas que não conheçam as composições: tempo por descoberta, cliques incorretos, uso de dicas e identificação das passagens. Quantidade de objetos e oclusão externa não comprovam equilíbrio de jogo.
 
-O cursor não revela o nome de um alvo nem o amplia automaticamente. Clicar num objeto errado dá retorno, sem punição. Uma dica informa a sala; a próxima indica a região; a terceira destaca o objeto. IDs encontrados contam uma vez, inclusive durante a animação. O raycast respeita a primeira malha atingida.
+## Direção visual e assets
 
-O aumento de dificuldade é uma hipótese de design a testar, não uma medição. Verificar tempo até a primeira descoberta, tempo por tela, erros e uso de dicas em pessoas que não conheçam a composição.
+Os mundos têm bases espessas de maquete sobre uma mesa, construções em miniatura, patamares, ruas, rios e caminhos. As composições e os enquadramentos variam entre estação, salão, mina, base, jardim lunar, hangar, praça, ponte e quartel. O quarto mantém mobiliário, luzinhas e três entradas afastadas.
 
-## Direção visual
+Modelos existentes: oito packs 3D Kenney e Rubber Duck Toy de Plat251/Poly Haven. O pato tem curvas e textura originais mais detalhadas; muitos outros objetos continuam estilizados. A revisão não promete converter todos os modelos para fotorrealismo. Materiais URP preservam cores/texturas de origem; normais suavizadas melhoram os OBJ e o FBX mantém suas normais.
 
-Quarto com mobiliário e brinquedos; mundos como brincadeiras montadas nesse espaço. Cores variam por sala, com tecidos, tapetes, comidinhas, carrinhos e miniaturas. Lilita One destaca títulos e botões; textos longos mantêm uma fonte legível. A luz é quente, com sombras suaves e uma luz local adicional. Superfícies curvas usam sombreamento por ângulo, sem alterar a geometria original.
+Nenhum modelo artístico, textura, sprite, áudio ou fonte foi sintetizado. Cubos, esferas e cilindros formam somente volumes arquitetônicos e detalhes permitidos. Os 326 arquivos originais são verificados por SHA-256 no manifesto.
 
-Apenas cubos e esferas são criados para arquitetura, prateleiras, frisos e luzinhas. OBJ, MTL, imagens, efeitos e fonte vêm de downloads registrados no manifesto. As formas continuam estilizadas; não se promete fotorrealismo.
+## Voz e persistência
 
-## Voz, acessibilidade e persistência
+Nove campos de narração humana opcionais; seis versos em duas colunas e leitura ampliada. A última linha da estação agora pede um pato; as outras oito charadas não mudaram em relação à v0.8. Volumes independentes, silêncio e movimento reduzido permanecem.
 
-Nove roteiros humanos opcionais, agora com seis versos. Texto sempre disponível, leitura ampliada, volumes independentes, silêncio e movimento reduzido. Os desafios de memória têm nomes e sinais visuais, permitindo jogar sem áudio. A narração para ao mudar de cena.
+A chave de save e os 54 IDs foram preservados. Encontrados, selos e passagens da v0.8 continuam válidos. O ID histórico west_bear agora corresponde ao pato para evitar quebrar saves. Reinício parcial e recuperação de backup continuam disponíveis.
 
-A chave de save permanece OlhosDeCacador.v1. Descobertas antigas conhecidas são preservadas; conclusões incompatíveis com os novos 18 objetos são filtradas. A nova lista opened guarda passagens. Reinício parcial afeta só o mundo escolhido; há cópia de recuperação para save danificado.
+## Limites de validação
 
-## Limites da entrega
-
-Sem executável Windows, teste de desempenho ou execução do Unity neste ambiente. A preparação das cenas, os controles em Play e a apresentação URP precisam ser confirmados no editor. Documentação: VALIDACAO.md, NARRACAO.md, CENAS.md e ATUALIZACAO_V08.md.
+175 verificações do domínio C# passaram fora do Unity. O projeto inclui 13 testes NUnit, ainda sem execução no Test Runner. Importação, preparação das cenas, Play, desempenho e build Windows continuam pendentes no editor. Leia VALIDACAO.md antes da entrega final.

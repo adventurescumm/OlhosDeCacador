@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   readings:
   - roomId: faroeste_estacao
-    recordingScript: "Um balde quer água levar,\numa garrafinha veio passear.\nUma roda pede outra viagem,\numa maçã se esconde na bagagem.\nRosquinha com confeitos eu vou procurar,\ne um biscoito de gente quer me acompanhar."
+    recordingScript: "Um balde quer água levar,\numa garrafinha veio passear.\nUma roda pede outra viagem,\numa maçã se esconde na bagagem.\nRosquinha com confeitos eu vou procurar,\ne um pato de borracha quer me acompanhar."
     clip: {fileID: 0}
   - roomId: faroeste_salao
     recordingScript: "Um martelo quer ajudar,\num peixe sem rio veio brincar.\nXícara de chá para a visita,\nbiscoito com chocolate na pista.\nUma banana curva eu quero achar,\ne livros empilhados para imaginar."

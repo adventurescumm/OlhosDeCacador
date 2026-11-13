@@ -1,101 +1,73 @@
-# Validação e roteiro de testes — v0.8
+# Validação — v0.9
 
-Data: **13/11/2026**. Destino: **Unity 6000.6.4f1** (`12bfff696524`), Windows x64, URP 17.6.0 e Input System 1.20.1 (New).
+Conferência de 13/11/2026. Unity **6000.6.4f1**, Windows x64, URP 17.6.0 e Input System 1.20.1 (New).
 
-## Evidência disponível
+## Resultados externos
 
 | Verificação | Resultado | Limite |
 | --- | --- | --- |
-| Catálogo | 3 mundos, 9 buscas, 54 IDs de alvo, 6 versos por busca e 614 instâncias nas buscas; 115 modelos distintos usados | Integridade dos dados, sem execução Unity |
-| Progressão | 3 caminhos, 6 passagens com peças e 3 desafios finais; requisitos e destinos consistentes | Cliques, transições e ritmo precisam de playtest |
-| Cenas | 18 arquivos `.unity`, nomes únicos, GUIDs e lista de build correspondentes; 17 marcadores de conteúdo | As hierarquias completas serão montadas por Preparar projeto no Unity |
-| Domínio C# | **97 verificações passaram** com o arquivo real `Domain/GameData.cs` compilado pelo Roslyn/.NET 8 | Compilação apenas da lógica independente, sem APIs Unity |
-| Sintaxe C# | 18 arquivos analisados por parser C#, sem erro de sintaxe | Não verifica ligação às APIs do editor e dos pacotes |
-| Arquivos de terceiros | 309 arquivos conferidos por SHA-256 contra as fontes baixadas; 141 modelos OBJ | Os arquivos artísticos originais não foram alterados |
-| Materiais | 246 vínculos URP/Lit e 19 importadores PNG explicitamente 2D; cores/texturas correspondem aos MTL | Aparência e importação reais ainda pendentes |
-| Importadores | 141 ModelImporter com schema 19300 e 7 AudioImporter com schema 6; nenhum bloco abaixo do mínimo | A ausência dos avisos precisa ser confirmada no Console |
-| Narração | Nove IDs e roteiros correspondentes no catálogo, banco e NARRACAO.md; seis versos por leitura | Os campos de áudio continuam vazios |
-| Entrada e renderer | New Input System, UI Input Module, URP/Forward, referências Graphics/Quality e luzes adicionais por pixel | Resolução dos pacotes e execução dependem do Unity |
-| Composição | 16 composições distintas revistas externamente; a abertura e o quarto compartilham a composição | Prévias de Blender não são capturas Unity |
-| Visibilidade | Projeção com oclusão por triângulos dos modelos e áreas de interface verifica os 54 alvos e entradas/mecanismos | Não substitui MeshCollider, raycast, UI ou renderização real |
+| Catálogo | 3 mundos, 9 buscas, 54 IDs, 6 versos por busca, 611 instâncias nas buscas | Integridade de dados |
+| Mapa | Passagens físicas recíprocas, circuito por mundo, seis mecanismos, atalhos bloqueados e final após progresso | Não mede legibilidade das passagens em Play |
+| Lógica C# | **175 verificações passaram**, compilando o arquivo real Domain/GameData.cs com Roslyn/.NET 8 | Não compila APIs Unity |
+| Sintaxe | 18 arquivos C# sem erro de sintaxe no parser | Não verifica referências às APIs dos pacotes |
+| Assets | 326 arquivos originais conferidos por SHA-256; 147 OBJ e um FBX; 131 modelos distintos usados | Não executa importação Unity |
+| Materiais | 264 vínculos URP, 23 importadores de imagens explicitamente 2D | Aparência final precisa de Unity |
+| Metadados | 148 ModelImporters completos, schema 19300; sete AudioImporters schema 6 | Avisos reais precisam ser conferidos no Console |
+| Preservação | IDs e GUIDs existentes mantidos; originais artísticos antigos sem alteração | Não importa cenas personalizadas do usuário |
+| Cenas | 18 arquivos e referências no build, com câmeras atualizadas | Primeira preparação deve montar hierarquias no editor |
+| Narração | Nove IDs e textos correspondem ao catálogo e banco | Nenhuma gravação humana incluída |
+| Composição | 16 composições distintas conferidas externamente com os modelos originais | Prévias Blender não são capturas do jogo Unity |
+| Visibilidade | Os 54 alvos e interações têm área visível na projeção externa, com geometria como oclusor; mínimo de 35 pixels na resolução reduzida do teste | Não comprova raycast Unity, conforto ou dificuldade |
+| Interface de navegação | Sem WorldButton de destino, botão Caminho, seletor de peças ou atalho de escolha de mundo na pausa | Leitura e conforto ainda precisam de playtest |
 
-**Não há compilação completa Unity, montagem de cenas, Play, build Windows ou medição de desempenho executados neste ambiente.** O editor não está instalado. O teste de domínio e o parser não comprovam que os scripts ligados ao Unity compilem. Os resultados externos de composição não devem ser apresentados como capturas de uma versão validada do jogo.
+**Não foram executados compilação completa Unity, importação real, preparação das cenas, Play, build Windows ou Profiler.** Não há executável pronto nem resultados de FPS. Os testes de domínio e o parser não substituem a compilação no editor.
 
-As correções anteriores de propriedades URP somente leitura, texturas CUBE em slots 2D, reimportação e metadados foram preservadas. Os materiais e GUIDs antigos também foram mantidos. A revisão acrescenta normais calculadas por ângulo, modelos prontos e fontes, sem editar a geometria artística original.
-
-Para repetir as verificações estáticas incluídas:
+## Repetir as conferências incluídas
 
 ```bash
 python Tools/validate_content.py
 python Tools/repair_importer_metadata.py --check
 ```
 
-## Testes de domínio
+O projeto inclui **13 testes NUnit** em `Assets/Hunter/Tests/Editor/ProgressTests.cs`, cobrindo coleta, saves, mecanismos, reinício, memória, combinação, associação e passagens físicas. Execute **Window > General > Test Runner > EditMode**. Esses testes não foram executados no Test Runner deste ambiente.
 
-O ensaio externo com 97 verificações cobre coleta repetida e IDs desconhecidos, seis passagens, peças erradas/ausentes, busca de origem incompleta, uso correto, persistência, migração de saves antigos, reinício parcial e os três desafios. Ele usa o catálogo real e percorre a aventura completa na camada de regras.
-
-O projeto também inclui **11 testes NUnit** em `OlhosDeCacador.Tests`. Execute-os em **Window > General > Test Runner > EditMode**. O Test Runner do Unity não foi executado nesta entrega. Esses testes não cobrem interface, colisores, importação, armazenamento físico ou executável Windows.
-
-## Primeira verificação no Unity
-
-1. Abra uma cópia nova do pacote no editor exato; preserve a versão anterior e suas gravações.
-2. Aguarde os pacotes e a importação. Confira o primeiro erro completo do Console, caso apareça.
-3. Abra `Assets/Hunter/Scenes/Main.unity`; execute **1. Preparar projeto** e **2. Verificar conteudo**.
-4. Abra uma cena de busca: a hierarquia deve conter arquitetura, decoração, seis objetos da charada e passagens. As 18 cenas devem constar na lista do build.
-5. Execute o Test Runner. Depois inicie a aventura por Main e complete o roteiro abaixo.
-
-## Roteiro de playtest
-
-Todos os casos abaixo estão **pendentes**. Registre data, versão Windows e hardware. Leitura de código não aprova uma linha.
+## Roteiro no Unity — todos pendentes
 
 | Caso | Ação | Resultado esperado |
 | --- | --- | --- |
-| Importação | Abrir, preparar, verificar e limpar Console | Sem novo CS0200, CUBE/2D, ciclo de importação ou importador abaixo do mínimo |
-| Reparo repetido | Executar Restaurar materiais originais novamente | Zero correções quando os vínculos já estiverem certos; importação estável |
-| Pipeline e entrada | Conferir Graphics, Quality, pacotes e Active Input Handling | URP ativo e New Input System; controles funcionam sem backend legado |
-| Montagem das cenas | Executar Preparar projeto duas vezes | Primeira execução preenche as 17 hierarquias; segunda preserva cenas já preparadas |
-| Edição individual | Mover um distrator e a câmera de HunterStage, salvar, preparar e jogar | Posições editadas preservadas e usadas pelo jogo |
-| Recriação explícita | Numa cópia de teste, cancelar e depois confirmar Recriar cenas | Cancelar preserva; confirmar restaura o catálogo nas 17 cenas; Main não muda |
-| Cenas abertas | Preparar com uma cena de conteúdo ainda não montada aberta | Preparação segura e restauração do conjunto de cenas abertas |
-| Abertura | Jogar a partir de Main | Quarto ao fundo, título, Iniciar, Opções e Como jogar; sem seletores de mundos na abertura |
-| Atalhos | Começar por clique, Enter e Espaço; testar também outros botões selecionados | Uma transição por ação; o atalho não substitui Opções/Como jogar |
-| Quarto | Clicar no baú, nave e heroína, também pelos rótulos | Mundos corretos; entradas afastadas e progresso 0–18 por mundo |
-| Busca | Visitar todas as nove telas e encontrar seis objetos em cada uma | Uma contagem por ID, sem nome/destaque automático ao passar o mouse; coleta com reação |
-| Dificuldade | Pedir a uma pessoa sem roteiro que complete a primeira busca | Charada compreensível e desafio de observação; ajustar posição/tamanho se necessário |
-| Enquadramento | Inspecionar 54 alvos, entradas e peças, em 1440×900 e 1280×720 | Malhas clicáveis, texto legível e nenhum alvo oculto pela interface |
-| Oclusão | Clicar no obstáculo à frente de um alvo | Clique não atravessa a superfície |
-| Dicas | Pedir as três etapas de ajuda para cada um dos seis versos | Contexto, localização e destaque final, sem perder progresso |
-| Caminho | Voltar de cada busca e escolher entradas | Cenário intermediário visível; rotas seguintes inicialmente fechadas |
-| Uso de peças | Tentar uma peça ausente, origem incompleta, peça errada e peça correta | Só a correta, com busca de origem completa, abre a passagem; objeto colocado fica visível |
-| Persistência de passagem | Abrir uma passagem, trocar mundo e reiniciar o jogo | Passagem aberta e peça colocada preservadas |
-| Troca de cena | Alternar menus, buscas, caminhos e desafios ao menos 30 vezes | Uma cena de conteúdo, uma sessão, um EventSystem e um AudioListener; sem duplicar luzes ou UI |
-| Pausa/opções | Pausar em busca e caminho; ajustar movimento/áudio; voltar por botão e Esc | Retorno à mesma cena e progresso; sem carregamento concorrente |
-| UI sobre mundo | Fechar caderno, leitura ou pausa com alvo atrás do botão | O mesmo clique não coleta o alvo |
-| Narração | Atribuir uma gravação de seis versos; ouvir, parar, repetir e trocar cena | Áudio correspondente; interrupção sem sobreposição; volumes independentes |
-| Leitura sem áudio | Usar Ler juntos nas nove buscas | Seis versos completos; retornar preserva a busca |
-| Leitura automática | Ativar e visitar telas com e sem clipe | Reproduz somente clipes presentes; texto sempre disponível |
-| Baú final | Depois dos 18 alvos, tentar senha incorreta e 243 | Nova tentativa; selo apenas com resposta correta |
-| Sinais finais | Rever, clicar durante demonstração, errar, repetir e acertar | Entrada bloqueada na demonstração; sequência reinicia corretamente |
-| Associação final | Tentar ferramenta errada e depois as três corretas | Acertos preservados, sem reutilização indevida |
-| Saída do desafio | Sair durante sinais ou após uma tentativa | Coroutine interrompida; retorno ao caminho ou busca de origem |
-| Movimento reduzido | Habilitar e coletar/interagir/trocar telas | Sem pulos, rotações e foco animado; ações mantêm resultado claro |
-| Foco/dispositivos | Alt+Tab durante sinais; testar ausência de mouse ou teclado | Retorno utilizável e nenhuma referência nula de dispositivo |
-| Save anterior | Carregar save v0.7 | IDs antigos preservados; conclusões sem os 18 alvos novos são filtradas; passagens ainda por resolver |
-| Reinício | Reiniciar um mundo, depois cancelar e confirmar Novo jogo | Reinício parcial preserva outros mundos; confirmação geral limpa só este jogo |
-| Save danificado | Em instalação de teste, corromper somente a chave principal | Recuperação do backup e mensagem; partida utilizável |
-| Vitória | Completar os três mundos em sequência | Três selos, mensagem final e retorno funcional |
-| Build Windows | Compilar e executar toda a pasta de distribuição fora do editor | Aventura completa, salvamento e saída funcionam sem Unity aberto |
-| Saída | Cancelar e confirmar Sair, no quarto e na pausa | Cancelar retorna; confirmar encerra o executável ou apenas o Play Mode no editor |
+| Importação | Abrir cópia nova, aguardar pacotes, preparar e verificar | Sem erros CS0200, CUBE/2D, ciclo de importação ou versões antigas de importadores |
+| Pato FBX | Inspecionar no quarto e na estação | Textura original com olhos/bico, normais corretas, sem material rosa; escala e colisores válidos |
+| Reparo repetido | Restaurar materiais novamente sem mudanças | Nenhuma correção desnecessária nem novo ciclo de importação |
+| Cenas | Preparar duas vezes e abrir uma busca | Primeira montagem cria grupos editáveis; segunda preserva alterações manuais |
+| Objetos condicionais | Resolver mecanismo numa cena preparada | Peça aparece sem componente duplicado ou referência nula; não aparece antes da solução |
+| Abertura | Main → Iniciar, Opções e Como jogar | Título e quarto; retorno correto dos painéis |
+| Entradas | Clicar nas três maquetes do quarto | Mundo correspondente; nenhuma lista de destinos sobre o cenário |
+| Travessia | Percorrer entrada → busca 1 → busca 2 → busca 3 → entrada e voltar | Somente conexões físicas; passagens seguintes bloqueadas até seus requisitos |
+| Atalho | Tentar da entrada à busca 3 antes/depois do segundo mecanismo | Bloqueio inicialmente; atalho utilizável depois |
+| Mecanismos | Clicar sem peça, com charada incompleta e depois completa | Mensagens adequadas; ação só após requisitos; peça montada e movimento visível |
+| Movimento reduzido | Resolver com a opção ligada/desligada | Mesmo resultado, imediatamente quando reduzido; sem acumular deslocamentos ao abrir opções |
+| Busca | Coletar seis alvos em cada uma das nove maquetes | Sem duplicação, objetos visíveis/clicáveis, descoberta e save corretos |
+| Mouse neutro | Passar por alvo e decoração comum | Mesmo texto e ausência de destaque exclusivo do alvo |
+| Aproximação | Usar roda sobre diferentes regiões e botão direito | Aproximação independente de alvo; restaura enquadramento; não funciona através de UI |
+| Oclusão | Clicar em superfície que esteja à frente de um alvo | O clique não atravessa a superfície |
+| Dificuldade | Jogador novo completa a primeira busca | Registrar tempo, erros e dicas; ajustar composição se for trivial ou frustrante |
+| Dicas/charada | Testar seis botões, leitura ampliada e fonte em 1280×720 | Versos completos, ordem correta, ajuda gradual sem perder progresso |
+| Narração | Atribuir clipe da estação atualizado; ouvir/parar/trocar cena | Texto e voz correspondem; fala para ao mudar de cena ou pausar |
+| Pausa e opções | Abrir em busca e entrada, ajustar e voltar por Esc | Retorna à cena atual sem duplicar a sessão |
+| UI sobre alvo | Fechar painel com objeto atrás do botão | O mesmo clique não coleta o alvo |
+| Desafios | Resolver senha, sequência e associação, incluindo erros e saídas | Repetição possível, selo correto e saída física retorna à terceira busca |
+| Carregamento | Trocar de cena 30 vezes | Uma sessão, um EventSystem, um AudioListener, sem salas acumuladas |
+| Save v0.8 | Carregar descobertas e passagens antigas | IDs, selos válidos e mecanismos abertos preservados |
+| Reinício | Reiniciar um mundo e cancelar/confirmar novo jogo | Outros mundos preservados no parcial; cancelamento não apaga dados |
+| Recuperação | Corromper somente a chave principal em instalação de teste | Backup recuperado ou nova partida utilizável com aviso |
+| Windows | Compilar e executar fora do editor | Jogo completo, saída, save, janela e áudio funcionam |
 
-Para corrupção controlada, use apenas `OlhosDeCacador.v1` e `OlhosDeCacador.v1.backup` numa instalação de teste. Não use `PlayerPrefs.DeleteAll()`.
+Chaves de save: `OlhosDeCacador.v1` e `OlhosDeCacador.v1.backup`. Para testes de corrupção, use cópia isolada; não use PlayerPrefs.DeleteAll().
 
-## Desempenho e diagnóstico
+## Desempenho e limites visuais
 
-Meta de trabalho: **60 FPS**, ainda sem medição. Registre hardware, frame time, draw calls, triângulos, memória e picos em trocas de cena. Verifique a memória após muitas trocas. Ajuste sombras, materiais e densidade com evidência do Profiler; preserve a oclusão dos cliques.
+Meta de trabalho: 60 FPS, ainda sem medição. Registre hardware, frame time, draw calls, triângulos, memória e picos de carregamento. Confira também a memória após muitas trocas. A aproximação ajuda a observar alvos pequenos, mas não substitui acessibilidade ou playtest.
 
-- **Cena sem objetos no editor:** execute Preparar projeto; consulte [CENAS.md](CENAS.md). As cenas do ZIP ainda precisam da primeira montagem no Unity.
-- **Mudança no catálogo não apareceu:** a preparação preserva cenas montadas. Edite a cena ou use a recriação explícita, guardando alterações próprias.
-- **Material rosa/cinza:** aguarde URP, execute Preparar projeto e Verificar conteudo. Modelos usam 2D/Repeat; não use Clamp nos robôs.
-- **Conteúdo antigo ou referências ausentes:** instale a revisão completa conforme [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md); scripts, cenas, catálogo e assets formam a mesma versão.
-- **Narração antiga:** regrave os nove roteiros de [NARRACAO.md](NARRACAO.md); os IDs iguais não tornam o áudio de dois alvos compatível com seis.
-- **Outro erro:** registre a primeira mensagem completa do Console, com arquivo e linha, e a ação que a produziu.
+A maioria dos modelos continua estilizada. O novo pato acrescenta geometria e textura mais detalhadas; a entrega não afirma que todos os assets tenham deixado de ser poligonais. Todas as malhas são trianguladas pelo renderer; o objetivo visual é brinquedos reconhecíveis e maquetes coerentes.
+
+Para atualizar cenas e gravações sem restaurar o fluxo antigo, siga [ATUALIZACAO_V09.md](ATUALIZACAO_V09.md). Para hierarquias vazias antes da primeira preparação, siga [CENAS.md](CENAS.md).

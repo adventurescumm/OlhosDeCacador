@@ -90,8 +90,8 @@ namespace OlhosDeCacador.Editor
                     child.SetParent(prop == null ? architecture : !string.IsNullOrEmpty(prop.data.id) ? targets :
                         !string.IsNullOrEmpty(prop.data.action) && prop.data.action != "inspect" ? links : decoration, true);
                 }
-                foreach (var target in view.Root.GetComponentsInChildren<HuntTarget>()) UnityEngine.Object.DestroyImmediate(target);
-                foreach (var spot in view.Root.GetComponentsInChildren<WorldHotspot>()) UnityEngine.Object.DestroyImmediate(spot);
+                foreach (var target in view.Root.GetComponentsInChildren<HuntTarget>(true)) UnityEngine.Object.DestroyImmediate(target);
+                foreach (var spot in view.Root.GetComponentsInChildren<WorldHotspot>(true)) UnityEngine.Object.DestroyImmediate(spot);
                 PersistPrimitiveMaterials(view.Root);
                 RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
                 RenderSettings.ambientLight = new Color(.42f, .44f, .52f); RenderSettings.skybox = null;

@@ -1,10 +1,10 @@
-# Sua voz em Olhos de Caçador — v0.8
+# Sua voz em Olhos de Caçador — v0.9
 
 Atualizado em 13/11/2026 para Unity 6000.6.4f1 e Windows. Há **nove charadas, cada uma com seis versos e seis objetos**. Os nove IDs de sala continuam iguais, mas os textos foram ampliados: gravações da v0.7, com apenas dois alvos, precisam ser refeitas. O pacote não contém voz gerada nem gravações de narrador.
 
 ## Onde a narração aparece
 
-A abertura mostra Iniciar, Opções e Como jogar sobre o quarto. Iniciar leva à seleção: baú à esquerda, nave sobre a mesa e heroína à direita. Cada mundo começa numa cena de caminho, que conecta suas três buscas e o desafio final. Consulte [CENAS.md](CENAS.md) para os nomes das cenas.
+A abertura mostra Iniciar, Opções e Como jogar sobre o quarto. Iniciar permite explorar três maquetes: vila do faroeste à esquerda, nave sobre a mesa e cidade à direita. Dentro de cada mundo, clique nas portas, trilhos e pontes para passar entre cenários; não há menu de destinos. Consulte [CENAS.md](CENAS.md) para os nomes das cenas.
 
 A voz gravada é usada **somente nas nove buscas**. No caminho, no quarto, nas passagens e nos desafios, as instruções são texto e podem ser lidas ao vivo. Essas cenas não acrescentam campos ao banco de narração.
 
@@ -33,7 +33,7 @@ O texto de jogo vem de `Assets/Resources/Hunter/catalog.json`; o Inspector mostr
 | Parar leitura | Interrompe; ao ouvir novamente, começa do início, sem retomar o ponto anterior. |
 | Sem gravação | Botão desabilitado quando não existe clipe; Ler juntos continua disponível. |
 | Encontrar um objeto | A voz continua; o efeito de descoberta pode tocar junto. |
-| Voltar ao Caminho, mudar de cena, abrir pausa/caderno/leitura ou desafio | A fala é interrompida. Não continua tocando na cena seguinte. |
+| Atravessar uma passagem, mudar de cena, abrir pausa/caderno/leitura ou desafio | A fala é interrompida. Não continua tocando na cena seguinte. |
 | Alt+Tab ou perda de foco | Interrompe a voz; voltar à janela não a reinicia sozinho. |
 
 As gravações não se sobrepõem. A voz é opcional e não é necessária para resolver as passagens ou os desafios.
@@ -42,15 +42,17 @@ As gravações não se sobrepõem. A voz é opcional e não é necessária para 
 
 Abra Opções na abertura/quarto, ou **Pausa > Opções de áudio e movimento** durante a aventura. **Sons dos brinquedos** e **Voz do narrador** têm volumes independentes; o silêncio geral afeta ambos. As preferências são guardadas.
 
-**Leitura automática** começa desligada numa instalação sem preferências anteriores. Quando ativada, toca ao entrar numa busca e ao retornar à busca após pausa, caderno ou Ler juntos, se houver clipe e volume. Não toca no caminho nem no quarto. Voltar de um desafio agora leva ao caminho; a próxima busca visitada terá sua própria leitura. Objetos já encontrados não impedem a repetição da charada.
+**Leitura automática** começa desligada numa instalação sem preferências anteriores. Quando ativada, toca ao entrar numa busca e ao retornar à busca após pausa, caderno ou Ler juntos, se houver clipe e volume. Não toca no caminho nem no quarto. A saída física do desafio retorna à última busca, cuja leitura pode recomeçar se a opção automática estiver ativa. Objetos já encontrados não impedem a repetição da charada.
 
 Para narrar ao vivo enquanto alguém procura, use os versos na faixa inferior. Ler juntos ocupa a tela e precisa ser fechado para retomar os cliques no cenário. Desative Leitura automática ou deixe somente Voz do narrador em zero para evitar fala gravada junto da sua. Movimento reduzido não altera os versos nem o áudio.
 
 ## Migrar gravações anteriores
 
-Guarde os áudios antigos e seus `.meta` numa cópia do projeto. Os GUIDs preservam referências, mas **não tornam uma gravação antiga compatível com os seis alvos novos**. Regrave os nove textos abaixo e atribua os novos clipes ao banco da v0.8. Se mantiver o mesmo arquivo para preservar um vínculo, substitua também seu conteúdo de áudio pela leitura nova.
+**Da v0.8 para a v0.9:** somente a última linha de `faroeste_estacao` mudou, para o pato de borracha. Regrave essa charada; as outras oito mantêm os mesmos textos. Compare os roteiros antes de reutilizar seus clipes.
 
-Não substitua o banco e o catálogo atuais por cópias antigas: isso restauraria roteiros de quatro versos e removeria dados dos caminhos. Para personalizações, combine os novos textos e campos conscientemente. Veja [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md).
+Guarde os áudios antigos e seus `.meta` numa cópia do projeto. Os GUIDs preservam referências, mas **não tornam uma gravação antiga compatível com os seis alvos novos**. Regrave os nove textos abaixo e atribua os novos clipes ao banco atual. Se mantiver o mesmo arquivo para preservar um vínculo, substitua também seu conteúdo de áudio pela leitura nova.
+
+Não substitua o banco e o catálogo atuais por cópias antigas: isso restauraria roteiros de quatro versos e removeria dados dos caminhos. Para personalizações, combine os novos textos e campos conscientemente. Veja [ATUALIZACAO_V09.md](ATUALIZACAO_V09.md).
 
 Os sete AudioImporters corrigidos pertencem aos efeitos originais. `Tools/repair_importer_metadata.py` atua nos assets do manifesto, não em gravações particulares. Importe sua voz normalmente pelo Unity, conservando os metadados que ele gerar.
 
@@ -65,7 +67,7 @@ ID: `faroeste_estacao`
 > Uma roda pede outra viagem,  
 > uma maçã se esconde na bagagem.  
 > Rosquinha com confeitos eu vou procurar,  
-> e um biscoito de gente quer me acompanhar.  
+> e um pato de borracha quer me acompanhar.  
 
 ### Salão do Suco
 

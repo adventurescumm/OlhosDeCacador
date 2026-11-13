@@ -134,8 +134,8 @@ def main():
  changed=[]
  for entry in files:
   asset=ROOT/entry['file']; ext=asset.suffix.lower()
-  if ext not in {'.obj','.ogg','.wav','.mp3'}: continue
-  kind,minimum,body=('ModelImporter',25,MODEL) if ext=='.obj' else ('AudioImporter',6,AUDIO)
+  if ext not in {'.obj','.fbx','.ogg','.wav','.mp3'}: continue
+  kind,minimum,body=('ModelImporter',25,MODEL) if ext in {'.obj','.fbx'} else ('AudioImporter',6,AUDIO)
   meta=Path(str(asset)+'.meta'); text=meta.read_text()
   guid=re.search(r'^guid: ([a-f0-9]{32})$',text,re.M)
   if not guid: raise ValueError('GUID absent; refusing to replace: '+str(meta))

@@ -15,8 +15,10 @@ namespace OlhosDeCacador.Editor
         internal const string Models = "Assets/Resources/Hunter/Models/";
         internal const string Materials = "Assets/Resources/Hunter/Materials/";
         internal const string UI = "Assets/Resources/Hunter/UI/";
+        [Serializable] sealed class MaterialBindings { public ModelBinding[] materials; }
+        [Serializable] sealed class ModelBinding { public string model, name; }
         bool IsModel => assetPath.StartsWith(Models, StringComparison.Ordinal);
-        public override uint GetVersion() => 8;
+        public override uint GetVersion() => 9;
         internal static Material OriginalMaterial(string modelPath, string materialName)
         {
             string model = modelPath.Substring(Models.Length);
@@ -28,7 +30,10 @@ namespace OlhosDeCacador.Editor
         {
             bool changed = false;
             var current = model.GetExternalObjectMap();
-            foreach (string name in File.ReadLines(path).Where(l => l.StartsWith("usemtl ")).Select(l => l.Substring(7).Trim()).Distinct())
+            var bindings = JsonUtility.FromJson<MaterialBindings>(File.ReadAllText("Assets/Resources/Hunter/material-bindings.json"));
+            string asset = path.Substring(Models.Length);
+            asset = asset.Substring(0, asset.LastIndexOf('.'));
+            foreach (string name in bindings.materials.Where(b => b.model == asset).Select(b => b.name).Distinct())
             {
                 var material = OriginalMaterial(path, name);
                 if (material == null) continue; // Leave unrelated/older models without a shipped material alone.
@@ -47,7 +52,7 @@ namespace OlhosDeCacador.Editor
             model.isReadable = false; model.addCollider = false;
             // Smooth lighting across rounded toy surfaces, retaining sharp right-angle edges.
             // This changes import shading only: source vertices, UVs and artwork remain untouched.
-            model.importNormals = ModelImporterNormals.Calculate;
+            model.importNormals = assetPath.EndsWith(".fbx", StringComparison.OrdinalIgnoreCase) ? ModelImporterNormals.Import : ModelImporterNormals.Calculate;
             model.normalSmoothingSource = ModelImporterNormalSmoothingSource.FromAngle;
             model.normalSmoothingAngle = 75;
             // Only importer settings here. Mutating external remaps during import can restart it.
@@ -68,7 +73,7 @@ namespace OlhosDeCacador.Editor
             bool ui = path.StartsWith(UI, StringComparison.Ordinal);
             if (!ui && !path.StartsWith(Models, StringComparison.Ordinal)) return false;
             var type = ui ? TextureImporterType.Sprite : TextureImporterType.Default;
-            bool toyPack = path.Contains("/furniture-kit/") || path.Contains("/toy-car-kit/") || path.Contains("/food-kit/");
+            bool toyPack = path.Contains("/furniture-kit/") || path.Contains("/toy-car-kit/") || path.Contains("/food-kit/") || path.Contains("/polyhaven-duck/");
             var filter = ui || toyPack ? FilterMode.Bilinear : FilterMode.Point;
             var wrap = ui ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
             string name = Path.GetFileNameWithoutExtension(path);
@@ -125,7 +130,7 @@ namespace OlhosDeCacador.Editor
                 foreach (string folder in new[] { HunterImporter.Models, HunterImporter.UI })
                 {
                     if (!Directory.Exists(folder)) continue;
-                    foreach (string file in Directory.GetFiles(folder, "*.png", SearchOption.AllDirectories))
+                    foreach (string file in Directory.GetFiles(folder, "*", SearchOption.AllDirectories).Where(p => p.EndsWith(".png") || p.EndsWith(".jpg") || p.EndsWith(".exr")))
                     {
                         string path = file.Replace('\\', '/');
                         var texture = AssetImporter.GetAtPath(path) as TextureImporter;
@@ -163,7 +168,7 @@ namespace OlhosDeCacador.Editor
                 }
                 if (materials > 0) AssetDatabase.SaveAssets();
                 // Persist remaps only after all textures and materials are available.
-                foreach (string file in Directory.GetFiles(HunterImporter.Models, "*.obj", SearchOption.AllDirectories))
+                foreach (string file in Directory.GetFiles(HunterImporter.Models, "*", SearchOption.AllDirectories).Where(p => p.EndsWith(".obj") || p.EndsWith(".fbx")))
                 {
                     string path = file.Replace('\\', '/');
                     var model = AssetImporter.GetAtPath(path) as ModelImporter;

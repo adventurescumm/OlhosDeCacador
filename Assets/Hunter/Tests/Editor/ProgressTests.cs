@@ -87,6 +87,35 @@ namespace OlhosDeCacador.Tests
             foreach (int v in new[] { 2, 0, 3, 1 }) Assert.IsTrue(s.Press(v));
             Assert.IsTrue(s.Complete); Assert.IsFalse(s.Press(1)); s.Reset(); Assert.AreEqual(0, s.Position);
         }
+        [Test] public void PhysicalPassagesRejectTeleportAndRespectLockedShortcuts()
+        {
+            var p = new Progress(catalog);
+            foreach (var map in catalog.maps)
+            {
+                Assert.IsTrue(p.CanTraverse(map, map.junction, map.rooms[0].id));
+                Assert.IsFalse(p.CanTraverse(map, map.junction, map.rooms[1].id));
+                Assert.IsFalse(p.CanTraverse(map, map.junction, map.rooms[2].id));
+                Assert.IsFalse(p.CanTraverse(map, map.rooms[1], "quarto"));
+                Assert.IsTrue(p.CanTraverse(map, map.junction, "quarto"));
+            }
+        }
+        [Test] public void EveryPhysicalPassageHasAReturnAndWorksAfterProgression()
+        {
+            var p = new Progress(catalog);
+            foreach (var map in catalog.maps)
+            {
+                foreach (var target in map.Targets) p.Collect(target.id);
+                foreach (var gate in map.gates) p.Use(map, gate.id, gate.tokenId);
+                var scenes = map.rooms.Concat(new[] { map.junction, map.challenge }).ToArray();
+                foreach (var scene in scenes)
+                foreach (var exit in scene.objects.Where(x => x.action == "exit"))
+                {
+                    Assert.IsTrue(p.CanTraverse(map, scene, exit.destination));
+                    if (exit.destination != "quarto")
+                        Assert.IsTrue(scenes.First(r => r.id == exit.destination).objects.Any(x => x.action == "exit" && x.destination == scene.id));
+                }
+            }
+        }
         [Test] public void LockAndMatchingValidateCompleteSolutions()
         {
             Assert.IsFalse(PuzzleRules.Combination(new[] { 2, 4 }, new[] { 2, 4, 3 }));

@@ -15,6 +15,9 @@ namespace OlhosDeCacador
         string lastMessage = "";
         Vector3 focusPoint;
         float focusUntil, focusBlend;
+        float magnification = 1;
+        Vector3 magnifierOffset;
+        void ResetMagnifier() { magnification = 1; magnifierOffset = Vector3.zero; }
         readonly List<WorldLabel> worldLabels = new List<WorldLabel>();
         sealed class WorldLabel { public RectTransform rect; public WorldHotspot spot; public float width; }
 
@@ -34,7 +37,7 @@ namespace OlhosDeCacador
             float scale = Mathf.Min(Screen.width / 1440f, Screen.height / 900f);
             float left = (Screen.width - 1440 * scale) * .5f, bottom = (Screen.height - 900 * scale) * .5f;
             float top = mode == Mode.Title ? 0 : 56;
-            float height = mode == Mode.Title ? 900 : mode == Mode.Menu ? 744 : (mode == Mode.Explore || mode == Mode.Junction) ? 674 : 704;
+            float height = mode == Mode.Title ? 900 : mode == Mode.Menu ? 744 : mode == Mode.Junction ? 754 : mode == Mode.Explore ? 674 : 704;
             worldCamera.rect = new Rect(left / Screen.width, (bottom + (900 - top - height) * scale) / Screen.height,
                 1440 * scale / Screen.width, height * scale / Screen.height);
             Vector3 eye = viewingShelf ? new Vector3(0, 8, -13.6f) : Position(currentStage?.camera, new Vector3(0, 6.3f, -9.2f));
@@ -50,6 +53,8 @@ namespace OlhosDeCacador
             eye += (focusPoint - look) * (.22f * focusBlend);
             look = Vector3.Lerp(look, focusPoint, .22f * focusBlend);
             if (!reduceMotion && transition > 0 && !viewingShelf) eye.x += .18f * transition / .35f;
+            if (mode == Mode.Explore || mode == Mode.Junction || mode == Mode.Puzzle)
+            { eye += magnifierOffset; look += magnifierOffset; fov /= magnification; }
             worldCamera.fieldOfView = fov - 2 * focusBlend;
             worldCamera.transform.position = eye; worldCamera.transform.LookAt(look);
             foreach (var label in worldLabels)
@@ -82,6 +87,26 @@ namespace OlhosDeCacador
             if (mouse == null) { ClearWorldHover(); return; }
             var pointer = mouse.position.ReadValue();
             if (PointerOverUI(pointer) || !worldCamera.pixelRect.Contains(pointer)) { ClearWorldHover(); return; }
+            if (mouse.rightButton.wasPressedThisFrame) ResetMagnifier();
+            float wheel = mouse.scroll.ReadValue().y;
+            if (mode != Mode.Menu && Mathf.Abs(wheel) > .01f)
+            {
+                float previous = magnification;
+                magnification = Mathf.Clamp(magnification + Mathf.Sign(wheel) * .2f, 1, 1.8f);
+                if (magnification <= 1) magnifierOffset = Vector3.zero;
+                else if (magnification > previous)
+                {
+                    var ray = worldCamera.ScreenPointToRay(pointer);
+                    var plane = new Plane(Vector3.up, new Vector3(0, .5f, 0));
+                    if (plane.Raycast(ray, out float distance))
+                    {
+                        var targetPoint = ray.GetPoint(distance);
+                        var center = Position(currentStage.lookAt, Vector3.zero);
+                        magnifierOffset = new Vector3(Mathf.Clamp(targetPoint.x - center.x, -2.2f, 2.2f), 0, Mathf.Clamp(targetPoint.z - center.z, -1.5f, 1.5f)) * .65f;
+                    }
+                }
+                UpdateStageCamera(false);
+            }
             HuntTarget target = null; WorldHotspot spot = null;
             if (Physics.Raycast(worldCamera.ScreenPointToRay(pointer), out var hit, 60))
             {
@@ -95,7 +120,7 @@ namespace OlhosDeCacador
                 hoveredSpot = spot;
                 if (spot != null) spot.Hover(true);
             }
-            if (spot != null && hoverText != null) hoverText.text = spot.Data.label;
+            if (spot != null && hoverText != null && spot.Data.action != "inspect") hoverText.text = spot.Data.label;
             if (mouse.leftButton.wasPressedThisFrame)
             {
                 if (target != null) Collect(target);
@@ -103,7 +128,7 @@ namespace OlhosDeCacador
                 else if (mode == Mode.Explore && hit.collider != null) Tell("Esse brinquedo não está na charada deste cantinho.");
             }
         }
-        string ChallengeInvitation() => "Volte ao caminho para o desafio final!";
+        string ChallengeInvitation() => "O mecanismo final está na última maquete. Siga as passagens!";
         void Activate(WorldHotspot spot)
         {
             if (spot == null) return;
@@ -112,21 +137,10 @@ namespace OlhosDeCacador
             {
                 EnterMap(catalog.maps.First(m => m.id == data.destination)); return;
             }
-            if (mode == Mode.Explore || mode == Mode.Junction)
+            if (mode == Mode.Explore || mode == Mode.Junction || mode == Mode.Puzzle)
             {
-                if (data.action == "junction") { ShowJunction(); return; }
+                if (data.action == "exit") { FollowPassage(spot); return; }
                 if (data.action == "gate") { UseGate(spot); return; }
-                if (data.action == "travel")
-                {
-                    int next = Array.FindIndex(map.rooms, r => r.id == data.destination);
-                    if (next >= 0)
-                    {
-                        if (!progress.CanVisit(map, data.destination)) { Tell("Este caminho precisa de uma peça. Observe os brinquedos aqui e complete a busca anterior."); return; }
-                        Tap(); roomIndex = next; selectedTarget = null; LoadRoom();
-                    }
-                    return;
-                }
-                if (data.action == "puzzle") { OpenPuzzle(); return; }
             }
             if (data.action == "inspect" && (mode == Mode.Menu || mode == Mode.Explore || mode == Mode.Junction))
             {

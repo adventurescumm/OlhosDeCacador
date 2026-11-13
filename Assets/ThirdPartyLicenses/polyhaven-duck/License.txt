@@ -1,0 +1,7 @@
+Rubber Duck Toy by Plat251 — Poly Haven
+https://polyhaven.com/a/rubber_duck_toy
+License: CC0 1.0 Universal
+https://polyhaven.com/license
+https://creativecommons.org/publicdomain/zero/1.0/
+Powered by Poly Haven (asset files discovered through the public API).
+Source FBX and texture bytes are unchanged.

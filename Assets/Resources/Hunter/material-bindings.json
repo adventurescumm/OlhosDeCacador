@@ -2951,6 +2951,222 @@
         1
       ],
       "texture": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png"
+    },
+    {
+      "model": "furniture-kit/computerKeyboard",
+      "name": "metalDark",
+      "color": [
+        0.3058824,
+        0.3882353,
+        0.3882353,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/computerKeyboard/metalDark.mat"
+    },
+    {
+      "model": "furniture-kit/computerKeyboard",
+      "name": "metalMedium",
+      "color": [
+        0.3686275,
+        0.4666667,
+        0.4666667,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/computerKeyboard/metalMedium.mat"
+    },
+    {
+      "model": "furniture-kit/doorwayFront",
+      "name": "carpetWhite",
+      "color": [
+        0.972549,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/doorwayFront/carpetWhite.mat"
+    },
+    {
+      "model": "furniture-kit/doorwayFront",
+      "name": "metal",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/doorwayFront/metal.mat"
+    },
+    {
+      "model": "furniture-kit/doorwayFront",
+      "name": "metalDark",
+      "color": [
+        0.3058824,
+        0.3882353,
+        0.3882353,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/doorwayFront/metalDark.mat"
+    },
+    {
+      "model": "furniture-kit/doorwayFront",
+      "name": "glass",
+      "color": [
+        0.6980392,
+        0.827451,
+        0.7686275,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/doorwayFront/glass.mat"
+    },
+    {
+      "model": "furniture-kit/pottedPlant",
+      "name": "wood",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pottedPlant/wood.mat"
+    },
+    {
+      "model": "furniture-kit/pottedPlant",
+      "name": "woodDark",
+      "color": [
+        0.678,
+        0.4559477,
+        0.2990306,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pottedPlant/woodDark.mat"
+    },
+    {
+      "model": "furniture-kit/pottedPlant",
+      "name": "plant",
+      "color": [
+        0.1819598,
+        0.8207547,
+        0.5758286,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/pottedPlant/plant.mat"
+    },
+    {
+      "model": "furniture-kit/sideTableDrawers",
+      "name": "wood",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/sideTableDrawers/wood.mat"
+    },
+    {
+      "model": "furniture-kit/sideTableDrawers",
+      "name": "_defaultMat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/sideTableDrawers/_defaultMat.mat"
+    },
+    {
+      "model": "furniture-kit/sideTableDrawers",
+      "name": "metal",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/sideTableDrawers/metal.mat"
+    },
+    {
+      "model": "furniture-kit/stairsOpen",
+      "name": "woodDark",
+      "color": [
+        0.678,
+        0.4559477,
+        0.2990306,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/stairsOpen/woodDark.mat"
+    },
+    {
+      "model": "furniture-kit/stairsOpen",
+      "name": "metal",
+      "color": [
+        0.7406105,
+        0.8228667,
+        0.8396226,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/stairsOpen/metal.mat"
+    },
+    {
+      "model": "furniture-kit/stairsOpen",
+      "name": "wood",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/stairsOpen/wood.mat"
+    },
+    {
+      "model": "furniture-kit/tableCloth",
+      "name": "wood",
+      "color": [
+        0.8962264,
+        0.6015712,
+        0.3931559,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/tableCloth/wood.mat"
+    },
+    {
+      "model": "furniture-kit/tableCloth",
+      "name": "carpet",
+      "color": [
+        0.9433962,
+        0.367176,
+        0.3426486,
+        1
+      ],
+      "texture": "",
+      "material": "Assets/Resources/Hunter/Materials/furniture-kit/tableCloth/carpet.mat"
+    },
+    {
+      "model": "polyhaven-duck/rubber_duck_toy_1k",
+      "name": "rubber_duck_toy",
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
+      "material": "Assets/Resources/Hunter/Materials/polyhaven-duck/rubber_duck_toy_1k/rubber_duck_toy.mat"
     }
   ]
 }

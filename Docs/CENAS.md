@@ -1,4 +1,4 @@
-# Cenas e edição no Unity — v0.8
+# Cenas e edição no Unity — v0.9
 
 O projeto usa **18 cenas `.unity`**. `Main` inicia a sessão; as outras 17 representam a abertura, o quarto e os cinco espaços de cada mundo. As trocas usam `SceneManager.LoadSceneAsync` em modo Single. O controlador, as câmeras, a interface, o áudio e o progresso ficam em um único objeto persistente.
 
@@ -10,11 +10,17 @@ Todos os caminhos abaixo são relativos a `Assets/Hunter/Scenes/`.
 | --- | --- | --- |
 | Raiz | `Main.unity` | Inicialização da sessão e entrada do build Windows |
 | `Menus/` | `inicio.unity`, `quarto.unity` | Título com Iniciar/Opções/Como jogar; escolha dos mundos no quarto |
-| `faroeste/` | `faroeste_caminho.unity`, `faroeste_estacao.unity`, `faroeste_salao.unity`, `faroeste_mina.unity`, `faroeste_desafio.unity` | Caminho do Quintal, três buscas e baú final |
-| `espaco/` | `espaco_caminho.unity`, `espaco_base.unity`, `espaco_jardim.unity`, `espaco_garagem.unity`, `espaco_desafio.unity` | Corredor das Estrelas, três buscas e sequência final |
-| `herois/` | `herois_caminho.unity`, `herois_praca.unity`, `herois_ponte.unity`, `herois_quartel.unity`, `herois_desafio.unity` | Avenida dos Brinquedos, três buscas e associação final |
+| `faroeste/` | `faroeste_caminho.unity`, `faroeste_estacao.unity`, `faroeste_salao.unity`, `faroeste_mina.unity`, `faroeste_desafio.unity` | Entrada da vila, três maquetes de busca e baú final |
+| `espaco/` | `espaco_caminho.unity`, `espaco_base.unity`, `espaco_jardim.unity`, `espaco_garagem.unity`, `espaco_desafio.unity` | Pátio de pouso, três maquetes de busca e sequência final |
+| `herois/` | `herois_caminho.unity`, `herois_praca.unity`, `herois_ponte.unity`, `herois_quartel.unity`, `herois_desafio.unity` | Entrada da cidade, três maquetes de busca e associação final |
 
 Opções, Como jogar, pausa, caderno e leitura ampliada são painéis sobre a cena de origem. Fechá-los retorna ao contexto anterior. A vitória aparece na própria cena do desafio concluído.
+
+## Mapa interconectado
+
+Cada mundo forma um circuito: entrada ↔ primeira busca ↔ segunda busca ↔ terceira busca ↔ entrada. A terceira busca também se liga ao desafio final. Os mecanismos das primeiras duas buscas liberam as etapas seguintes; a ligação entre entrada e terceira busca funciona como atalho depois do progresso. O quarto só é acessível pela passagem na entrada. Não há botões flutuantes de destinos nem seleção de salas na interface.
+
+`PropData.action = "exit"` define uma passagem física; `destination` contém o ID da cena vizinha. A ação `gate` usa a peça encontrada e movimenta os objetos ligados ao mesmo campo `gate`; `showAfter` revela a peça montada. O catálogo precisa ter destinos recíprocos. O verificador confere esse circuito.
 
 ## Primeira preparação
 
@@ -27,7 +33,7 @@ Opções, Como jogar, pausa, caderno e leitura ampliada são painéis sobre a ce
 Depois da primeira preparação, cada cena de conteúdo possui:
 
 - **00 — Configuração:** componente `HunterStage`, com ID, posição da câmera, ponto observado, campo de visão e referência ao cenário.
-- **01 — Cenário editável / Arquitetura e iluminação:** sala, prateleiras, luzinhas primitivas e luz local.
+- **01 — Cenário editável / Arquitetura e iluminação:** bases de maquete, patamares, rios e caminhos primitivos; o quarto mantém paredes e luzinhas.
 - **Brinquedos e decoração:** modelos originais que compõem o ambiente.
 - **Objetos da charada:** seis objetos identificados nas cenas de busca.
 - **Passagens e mecanismos:** entradas, destinos e peças interativas.
@@ -37,6 +43,8 @@ As configurações de materiais criadas para a arquitetura primitiva ficam em `A
 ## Como editar
 
 Mova, gire ou redimensione os objetos na cena preparada e salve a cena. O jogo usa essas posições e a câmera de `HunterStage` ao carregá-la. O componente `HunterSceneProp` mantém a identidade e a ação de cada brinquedo; preserve IDs de alvos e destinos de passagens.
+
+O campo `geometry` descreve as primitivas arquitetônicas de cada maquete; modelos artísticos continuam vindos dos downloads. `openedOffset` e `openedRotation` indicam como um mecanismo se move ao abrir, relativamente à posição editada.
 
 Os textos, regras, peças necessárias e charadas continuam em `Assets/Resources/Hunter/catalog.json`. Mudar o campo `asset` de um objeto já montado não substitui sua malha automaticamente: atualize o catálogo e recrie a cena, ou substitua conscientemente o modelo na hierarquia, mantendo os dados e colisores correspondentes.
 

@@ -64,6 +64,12 @@
       "pack": "lilita-one",
       "source": "https://github.com/google/fonts/tree/main/ofl/lilitaone",
       "license": "SIL Open Font License 1.1"
+    },
+    {
+      "pack": "polyhaven-duck",
+      "source": "https://polyhaven.com/a/rubber_duck_toy",
+      "author": "Plat251",
+      "license": "CC0 1.0"
     }
   ],
   "files": [
@@ -1611,6 +1617,96 @@
       "file": "Assets/Resources/Hunter/UI/LilitaOne-Regular.ttf",
       "source": "downloads/lilita-one/LilitaOne-Regular.ttf",
       "sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerKeyboard.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/computerKeyboard.obj",
+      "sha256": "e33668db75a2cb9bc6ae64e1f062810d570aebb12f8ac58e13a63074b4cb652e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerKeyboard.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/computerKeyboard.mtl",
+      "sha256": "e445dc0b0ed0651fae2afb35a0581a9dd259bfff0a1c68f0edfcf11ba80e02ed"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/doorwayFront.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/doorwayFront.obj",
+      "sha256": "1caf521e55aaa9edd781c6875e4d9b87d7ae2c8b5bcd82da0b8ccc052e6047a8"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/doorwayFront.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/doorwayFront.mtl",
+      "sha256": "2bdbdf6641df240d456c57632adbd7b41b413189e0a7b12dc266b9820eb066c2"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pottedPlant.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/pottedPlant.obj",
+      "sha256": "839e75290814756dee97e479fa462a7477cecda06db0707a520dc0f29130fc02"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/pottedPlant.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/pottedPlant.mtl",
+      "sha256": "a0b3de40d67b0a085f9fd94d45ae357ba6196f84e48fe08a67fdc43b64319211"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/sideTableDrawers.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/sideTableDrawers.obj",
+      "sha256": "69b289480ad079aa1d7bfe41d3237b188e65c12263a9ed07d03e04cfa2f0f451"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/sideTableDrawers.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/sideTableDrawers.mtl",
+      "sha256": "d7ddf6f77f3738a8dea89ba74e5e1248db84f72b6d61e8271096bde1d927e266"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/stairsOpen.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/stairsOpen.obj",
+      "sha256": "ee9359c46dfeef5fc77270d45040555186aba042995d3454198305eb3f6f948b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/stairsOpen.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/stairsOpen.mtl",
+      "sha256": "4a5b77b940ca3631e9a8de90b33f39e538065f1813249e2dd582e4d318b7fbd2"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/tableCloth.obj",
+      "source": "downloads/furniture-kit/Models/OBJ format/tableCloth.obj",
+      "sha256": "f4a903e12deb72122348bed876237b4dc8cd0416cc4a580e36d101d7b93d253b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/furniture-kit/tableCloth.mtl",
+      "source": "downloads/furniture-kit/Models/OBJ format/tableCloth.mtl",
+      "sha256": "1153157e639a95f01be9266437a34d8aff562b07a019f3fec1e923f1c505aaf6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/rubber_duck_toy_1k.fbx",
+      "source": "downloads/polyhaven-duck/rubber_duck_toy_1k.fbx",
+      "sha256": "8e14ea0471654e5d9536c438213e9edae686ebeb352d30cabdf7ab0c4b47a04d",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/rubber_duck_toy/rubber_duck_toy_1k.fbx"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
+      "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
+      "sha256": "c968d6185c3ec57a430818e6af85c2ba2880c7ee19ccb1a0171730926175cfd6",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rubber_duck_toy/rubber_duck_toy_diff_1k.jpg"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_metal_1k.exr",
+      "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_metal_1k.exr",
+      "sha256": "3c1f32ec014206b15a8510837ff535efb002ecb206b86278aa7bf28f256c5f93",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_metal_1k.exr"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_nor_gl_1k.exr",
+      "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_nor_gl_1k.exr",
+      "sha256": "05e61a7c61de9a432ab1a2abee0b9f0f524e6964fad9d74f389583cc72f7a954",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_nor_gl_1k.exr"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_rough_1k.exr",
+      "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_rough_1k.exr",
+      "sha256": "226fcf30f2ef64690bd273ae19f3a279736a51c931c0586246249592622bc883",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_rough_1k.exr"
     }
   ]
 }

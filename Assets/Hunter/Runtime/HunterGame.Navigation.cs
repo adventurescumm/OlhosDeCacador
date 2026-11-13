@@ -6,16 +6,15 @@ namespace OlhosDeCacador
 {
     public sealed partial class HunterGame
     {
-        string selectedPiece;
-
+        // This is a physical arrival scene, not a destination selector.
         void ShowJunction()
         {
             if (map == null) { ShowMenu(); return; }
             if (RouteTo(map.junction.id, ShowJunction, room != null)) return;
             StopSignal(); StopNarration(); ClearWorldHover(); CloseChallenge();
             room?.Dispose(); shelf?.Dispose(); shelf = null; viewingShelf = false;
-            roomIndex = -1; currentStage = map.junction; focusUntil = 0; focusBlend = 0;
-            selectedPiece = null; messageUntil = 0; lastMessage = "";
+            roomIndex = -1; currentStage = map.junction; ResetMagnifier(); focusUntil = 0; focusBlend = 0;
+            messageUntil = 0; lastMessage = "";
             try
             {
                 room = new RoomView(map, currentStage, progress, reduceMotion);
@@ -25,64 +24,41 @@ namespace OlhosDeCacador
             }
             catch (Exception e) { ShowError(e); }
         }
-
         void DrawJunction()
         {
             mode = Mode.Junction; ui.Clear(); worldLabels.Clear(); listenButton = null;
             var accent = RoomView.Hex(currentStage.color);
             ui.Panel(0, 0, 1440, 56, accent);
-            ui.Label(currentStage.name, 24, 8, 710, 40, 29, Color.white, true);
-            ui.Label(progress.Count(map) + " / " + map.Targets.Count() + " descobertas", 746, 16, 260, 32, 20, HunterUI.Paper);
-            ui.Button("Quarto", 1030, 8, 180, 40, ShowMenu, HunterUI.Teal, true, 19);
+            ui.Label(currentStage.name, 24, 8, 720, 40, 29, Color.white, true);
+            ui.Label(progress.Count(map) + " / 18 descobertas", 830, 14, 340, 32, 21, HunterUI.Paper);
             ui.Button("Pausa", 1230, 8, 186, 40, ShowPause, HunterUI.Plum, true, 19);
-            ui.Panel(0, 730, 1440, 170, accent); ui.Sheet(12, 738, 1416, 150);
-            ui.Label("PEÇAS DA AVENTURA", 30, 749, 620, 32, 25, accent, true);
-            ui.Label("Complete um cantinho, escolha sua peça e clique no brinquedo que precisa dela.", 30, 785, 1010, 30, 19, HunterUI.Ink);
-            for (int i = 0; i < map.gates.Length; i++)
-            {
-                var gate = map.gates[i]; var target = map.Targets.First(p => p.id == gate.tokenId);
-                bool placed = progress.Opened(gate.id), foundPiece = progress.Has(gate.tokenId);
-                bool ready = !placed && foundPiece && progress.RoomReady(map.rooms[gate.sourceRoom]);
-                string label = placed ? "Colocada: " + target.label : (foundPiece ? "Usar: " : "Procurar: ") + target.label;
-                ui.Button(label, 30 + i * 495, 828, 478, 46,
-                    () => { selectedPiece = gate.tokenId; Tap(); DrawJunction(); Tell("Peça escolhida. Clique no brinquedo do cenário que precisa dela."); },
-                    selectedPiece == gate.tokenId ? HunterUI.Plum : i == 0 ? HunterUI.Teal : RoomView.Hex("#B74E6A"), ready, 19);
-            }
-            ui.Button("Desafio final", 1052, 806, 340, 66, OpenPuzzle, RoomView.Hex("#73549E"), progress.Ready(map) && !progress.Solved(map), 25);
-            ui.Panel(280, 684, 880, 34, new Color(.08f, .10f, .21f, .82f));
-            hoverText = ui.Label("Os brinquedos grandes guardam caminhos para depois. Investigue!", 292, 686, 856, 30, 18, Color.white, false, TextAnchor.MiddleCenter);
-            foreach (var spot in room.Hotspots)
-            {
-                if (spot.Data.action == "travel")
-                {
-                    bool open = progress.CanVisit(map, spot.Data.destination);
-                    WorldButton(spot, (open ? "Ir: " : "Fechado: ") + spot.Data.label, open ? HunterUI.Teal : RoomView.Hex("#805D78"), 290);
-                }
-                else if (spot.Data.action == "gate")
-                    WorldButton(spot, progress.Opened(spot.Data.destination) ? "Peça no lugar!" : spot.Data.label, RoomView.Hex("#AF4A68"), 260);
-                else if (spot.Data.action == "puzzle") WorldButton(spot, spot.Data.label, HunterUI.Plum, 230);
-            }
+            ui.Panel(0, 810, 1440, 90, HunterUI.Paper);
+            ui.Label("Cada passagem faz parte deste pequeno mundo.", 30, 818, 1380, 30, 25, accent, true, TextAnchor.MiddleCenter);
+            hoverText = ui.Label("Clique nas portas, trilhos e pontes. A roda do mouse aproxima.", 50, 855, 1340, 32, 20, HunterUI.Ink, false, TextAnchor.MiddleCenter);
         }
-
+        void FollowPassage(WorldHotspot spot)
+        {
+            string destination = spot.Data.destination;
+            if (!progress.CanTraverse(map, currentStage, destination))
+            {
+                spot.React(); Tell(destination == map.challenge.id ? "O final espera pelos dezoito tesouros e pelas duas passagens consertadas." : "Esta passagem ainda não funciona. Investigue o mecanismo na maquete anterior."); return;
+            }
+            Tap();
+            if (destination == "quarto") { ShowMenu(); return; }
+            if (destination == map.challenge.id) { OpenPuzzle(); return; }
+            if (destination == map.junction.id) { ShowJunction(); return; }
+            roomIndex = Array.FindIndex(map.rooms, r => r.id == destination);
+            selectedTarget = null; LoadRoom();
+        }
         void UseGate(WorldHotspot spot)
         {
             var gate = map.gates.First(g => g.id == spot.Data.destination);
-            if (progress.Opened(gate.id)) { spot.React(); Tell("Este brinquedo já está pronto! O caminho seguinte está aberto."); return; }
-            if (string.IsNullOrEmpty(selectedPiece))
-            {
-                spot.React(); Tell(gate.hint + " Primeiro complete os seis objetos do cantinho anterior."); return;
-            }
-            if (!progress.Use(map, gate.id, selectedPiece))
-            {
-                Play(wrong); Tell("Essa peça ainda não resolve aqui. " + gate.hint); return;
-            }
-            Save(); Play(found);
-            RouteTo(map.junction.id, () =>
-            {
-                ShowJunction();
-                var placed = room.Hotspots.First(h => h.Data.action == "gate" && h.Data.destination == gate.id);
-                placed.React(); Tell("Deu certo! " + map.rooms.First(r => r.id == gate.roomId).name + " está aberto. A peça ficou no cenário.");
-            }, true);
+            if (progress.Opened(gate.id)) { spot.React(); Tell("Está funcionando! A passagem ao lado leva a " + map.rooms.First(r => r.id == gate.roomId).name + "."); return; }
+            if (!progress.Has(gate.tokenId)) { spot.React(); Tell(gate.hint); return; }
+            if (!progress.RoomReady(map.rooms[gate.sourceRoom])) { Tell("Você já encontrou a peça. Complete os seis objetos da charada antes de montá-la."); return; }
+            if (!progress.Use(map, gate.id, gate.tokenId)) return;
+            Save(); Play(found); room.ApplyMechanisms(progress, !reduceMotion);
+            Tell("A peça encaixou! Observe a maquete: a passagem para " + map.rooms.First(r => r.id == gate.roomId).name + " está aberta.");
         }
     }
 }

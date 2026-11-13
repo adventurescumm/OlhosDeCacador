@@ -26,7 +26,7 @@ namespace OlhosDeCacador.Editor
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
             PlayerSettings.allowFullscreenSwitch = true;
             PlayerSettings.resizableWindow = true; PlayerSettings.runInBackground = false;
-            PlayerSettings.bundleVersion = "0.8.0";
+            PlayerSettings.bundleVersion = "0.9.0";
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
             // Use only Input System Package (New); the editor may require a restart.
@@ -151,20 +151,22 @@ namespace OlhosDeCacador.Editor
                 {
                     if (room.objects.Count(p => !string.IsNullOrEmpty(p.id)) != 6 || room.riddle.Split('\n').Length != 6)
                         throw new BuildFailedException("São necessários seis alvos e seis versos: " + room.id);
-                    if (room.objects.Count(p => p.action == "junction") != 1)
-                        throw new BuildFailedException("Passagem de retorno ausente: " + room.id);
+                    if (room.objects.Count(p => p.action == "exit") < 2)
+                        throw new BuildFailedException("Cada maquete precisa de pelo menos duas passagens físicas: " + room.id);
                 }
-                var exits = map.junction.objects.Where(p => p.action == "travel").Select(p => p.destination).OrderBy(x => x);
-                if (!exits.SequenceEqual(map.rooms.Select(r => r.id).OrderBy(x => x)))
-                    throw new BuildFailedException("O caminho precisa conectar os três cantinhos: " + map.id);
-                if (map.junction.objects.Count(p => p.action == "puzzle") != 1)
-                    throw new BuildFailedException("Entrada do desafio final ausente: " + map.id);
+                var stages = map.rooms.Concat(new[] { map.junction, map.challenge }).ToArray();
+                foreach (var stage in stages)
+                foreach (var passage in stage.objects.Where(p => p.action == "exit"))
+                    if (passage.destination != "quarto" && !stages.Any(r => r.id == passage.destination))
+                        throw new BuildFailedException("Passagem sem destino: " + stage.id + " / " + passage.destination);
+                if (!map.junction.objects.Any(p => p.action == "exit" && p.destination == "quarto"))
+                    throw new BuildFailedException("A entrada do mundo precisa retornar ao quarto.");
                 foreach (var gate in map.gates)
                 {
                     if (gate.sourceRoom < 0 || gate.sourceRoom > 1 || gate.roomId != map.rooms[gate.sourceRoom + 1].id ||
                         !map.rooms[gate.sourceRoom].objects.Any(p => p.id == gate.tokenId) ||
-                        map.junction.objects.Count(p => p.action == "gate" && p.destination == gate.id) != 1)
-                        throw new BuildFailedException("Peça ou passagem inválida: " + gate.id);
+                        stages.Sum(r => r.objects.Count(p => p.action == "gate" && p.destination == gate.id)) != 1)
+                        throw new BuildFailedException("Peça ou mecanismo inválido: " + gate.id);
                 }
                 foreach (string action in map.puzzle == "lock" ? new[] { "digit" } : map.puzzle == "memory" ? new[] { "signal" } : new[] { "supply", "destination" })
                 {
@@ -179,9 +181,11 @@ namespace OlhosDeCacador.Editor
                     throw new BuildFailedException("Enquadramento inválido: " + stage.id);
                 foreach (var prop in stage.objects)
                 {
-                    string path = HunterImporter.Models + prop.asset + ".obj";
-                    if (AssetDatabase.LoadAssetAtPath<GameObject>(path) == null)
-                        throw new BuildFailedException("Modelo ausente: " + path);
+                    // Match RoomView's extension-free Resources lookup: models may be OBJ or FBX.
+                    var model = Resources.Load<GameObject>("Hunter/Models/" + prop.asset);
+                    if (model == null)
+                        throw new BuildFailedException("Modelo ausente ou não importado: " + HunterImporter.Models + prop.asset + " (OBJ/FBX). Aguarde a importação terminar.");
+                    string path = AssetDatabase.GetAssetPath(model);
                     ValidateImporterVersion(path, "ModelImporter", 25);
                 }
             }
@@ -204,7 +208,8 @@ namespace OlhosDeCacador.Editor
             if (!BuildPipeline.IsBuildTargetSupported(BuildPipeline.GetBuildTargetGroup(target), target))
                 throw new BuildFailedException("Instale o módulo " + target + " pelo Unity Hub.");
             Prepare(); Validate(); Directory.CreateDirectory(Path.GetDirectoryName(path));
-            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = new[] { Scene }, locationPathName = path, target = target, options = BuildOptions.None });
+            var scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray();
+            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions { scenes = scenes, locationPathName = path, target = target, options = BuildOptions.None });
             if (report.summary.result != BuildResult.Succeeded) throw new BuildFailedException("A compilação falhou. Veja o Console.");
             Debug.Log("Build concluído: " + Path.GetFullPath(path));
         }

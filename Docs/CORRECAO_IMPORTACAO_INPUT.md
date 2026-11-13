@@ -1,6 +1,6 @@
 # Correção de importação e Input System — v0.6
 
-Este guia registra a migração da v0.6. Para instalar a versão atual com mais objetos, caminhos e cenas separadas, siga [ATUALIZACAO_V08.md](ATUALIZACAO_V08.md). A correção posterior dos metadados está registrada em [CORRECAO_IMPORTADORES.md](CORRECAO_IMPORTADORES.md).
+Este guia registra a migração da v0.6. Para instalar a versão atual com mais objetos, caminhos e cenas separadas, siga [ATUALIZACAO_V09.md](ATUALIZACAO_V09.md). A correção posterior dos metadados está registrada em [CORRECAO_IMPORTADORES.md](CORRECAO_IMPORTADORES.md).
 
 Unity **6000.6.4f1**, URP **17.6.0**, Input System **1.20.1**, destino **Windows x64**.
 

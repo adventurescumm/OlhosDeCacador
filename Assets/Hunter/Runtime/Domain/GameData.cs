@@ -23,6 +23,7 @@ namespace OlhosDeCacador
         public float[] camera, lookAt;
         public float fieldOfView;
         public PropData[] objects;
+        public PrimitiveData[] geometry = Array.Empty<PrimitiveData>();
     }
     [Serializable] public sealed class GateData
     {
@@ -35,6 +36,16 @@ namespace OlhosDeCacador
         public string action, destination, reaction;
         public int value;
         public float x, y, z, size, rotation;
+        public float tiltX, tiltZ;
+        public string gate, landmark, showAfter;
+        public float[] openedOffset, openedRotation;
+    }
+    // Only primitive room/plinth shapes; artwork always comes from downloaded models.
+    [Serializable] public sealed class PrimitiveData
+    {
+        public string name, shape, color;
+        public float x, y, z, width, height, depth, rotation;
+        public bool decorative;
     }
     [Serializable] public sealed class SaveData
     {
@@ -69,6 +80,14 @@ namespace OlhosDeCacador
         public bool Opened(string gate) => Data.opened.Contains(gate);
         public bool CanVisit(MapData map, string roomId) => map.rooms.Any(r => r.id == roomId) &&
             !(map.gates ?? Array.Empty<GateData>()).Any(g => g.roomId == roomId && !Opened(g.id));
+        public bool CanTraverse(MapData map, RoomData from, string destination)
+        {
+            if (from == null || !from.objects.Any(p => p.action == "exit" && p.destination == destination)) return false;
+            if (destination == "quarto") return from == map.junction;
+            if (destination == map.junction.id) return true;
+            if (destination == map.challenge.id) return Ready(map) && map.gates.All(g => Opened(g.id));
+            return CanVisit(map, destination);
+        }
         public bool Use(MapData map, string gateId, string tokenId)
         {
             var gate = (map.gates ?? Array.Empty<GateData>()).FirstOrDefault(g => g.id == gateId);

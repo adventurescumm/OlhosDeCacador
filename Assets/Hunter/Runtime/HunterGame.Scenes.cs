@@ -48,7 +48,8 @@ namespace OlhosDeCacador
             if (map == null) { ShowTitle(); return; }
             roomIndex = Array.FindIndex(map.rooms, r => r.id == id);
             if (roomIndex >= 0) { LoadRoom(); return; }
-            if (id == map.challenge.id && progress.Ready(map) && !progress.Solved(map)) OpenPuzzle();
+            if (id == map.challenge.id && progress.Ready(map) && map.gates.All(g => progress.Opened(g.id)) && !progress.Solved(map))
+            { roomIndex = map.rooms.Length - 1; OpenPuzzle(); }
             else ShowJunction();
         }
         void RestartSession()

@@ -23,49 +23,54 @@ namespace OlhosDeCacador
             {
                 if (!authored)
                 {
-                    var floor = RoomMaterial(string.IsNullOrEmpty(room.floor) ? map.floor : room.floor);
-                    var wall = RoomMaterial(string.IsNullOrEmpty(room.wall) ? map.wall : room.wall);
-                    var edge = RoomMaterial(string.IsNullOrEmpty(room.color) ? map.color : room.color);
-                    var cream = RoomMaterial("#FFF0CB"); var coral = RoomMaterial("#E991A8");
-                    float width = room.width > 0 ? room.width : 12, depth = room.depth > 0 ? room.depth : 8;
-                    float back = depth * .5f;
-                    Box("Piso do quarto", new Vector3(0, -.15f, 0), new Vector3(width, .3f, depth), floor);
-                    Box("Parede do fundo", new Vector3(0, 2.7f, back), new Vector3(width, 5.4f, .16f), wall);
-                    Box("Parede esquerda", new Vector3(-width * .5f, 2, 1), new Vector3(.16f, 4, depth - 2), wall);
-                    Box("Parede direita", new Vector3(width * .5f, 2, 1), new Vector3(.16f, 4, depth - 2), edge);
-                    Box("Rodapé", new Vector3(0, .16f, back - .14f), new Vector3(width, .32f, .22f), cream);
-                    Box("Moldura alta", new Vector3(0, 5.1f, back - .1f), new Vector3(width, .15f, .2f), cream);
-                    // Permitted primitive architectural details; all furniture and toys are downloaded models.
-                    for (int i = 0; i < 12; i++)
-                        Box("Friso da parede", new Vector3(-width * .5f + .5f + i * (width - 1) / 11, .9f, back - .1f), new Vector3(.055f, 1.5f, .08f), cream);
-                    if (room.layout == "search")
+                    if (room.geometry != null && room.geometry.Length > 0)
+                        foreach (var shape in room.geometry) Architecture(shape);
+                    else
                     {
-                        Box("Prateleira de brinquedos", new Vector3(0, 1.69f, 2.65f), new Vector3(11.3f, .16f, 1.0f), edge);
-                        Box("Filete da prateleira", new Vector3(0, 1.72f, 2.13f), new Vector3(11.4f, .12f, .1f), cream);
+                        var floor = RoomMaterial(string.IsNullOrEmpty(room.floor) ? map.floor : room.floor);
+                        var wall = RoomMaterial(string.IsNullOrEmpty(room.wall) ? map.wall : room.wall);
+                        var edge = RoomMaterial(string.IsNullOrEmpty(room.color) ? map.color : room.color);
+                        var cream = RoomMaterial("#FFF0CB"); var coral = RoomMaterial("#E991A8");
+                        float width = room.width > 0 ? room.width : 12, depth = room.depth > 0 ? room.depth : 8;
+                        float back = depth * .5f;
+                        Box("Piso do quarto", new Vector3(0, -.15f, 0), new Vector3(width, .3f, depth), floor);
+                        Box("Parede do fundo", new Vector3(0, 2.7f, back), new Vector3(width, 5.4f, .16f), wall);
+                        Box("Parede esquerda", new Vector3(-width * .5f, 2, 1), new Vector3(.16f, 4, depth - 2), wall);
+                        Box("Parede direita", new Vector3(width * .5f, 2, 1), new Vector3(.16f, 4, depth - 2), edge);
+                        Box("Rodapé", new Vector3(0, .16f, back - .14f), new Vector3(width, .32f, .22f), cream);
+                        Box("Moldura alta", new Vector3(0, 5.1f, back - .1f), new Vector3(width, .15f, .2f), cream);
+                        // Permitted primitive architectural details; all furniture and toys are downloaded models.
+                        for (int i = 0; i < 12; i++)
+                            Box("Friso da parede", new Vector3(-width * .5f + .5f + i * (width - 1) / 11, .9f, back - .1f), new Vector3(.055f, 1.5f, .08f), cream);
+                        if (room.layout == "search")
+                        {
+                            Box("Prateleira de brinquedos", new Vector3(0, 1.69f, 2.65f), new Vector3(11.3f, .16f, 1.0f), edge);
+                            Box("Filete da prateleira", new Vector3(0, 1.72f, 2.13f), new Vector3(11.4f, .12f, .1f), cream);
+                        }
+                        if (room.layout == "bedroom")
+                        {
+                            Box("Faixa de cor na parede", new Vector3(0, 1.8f, back - .11f), new Vector3(width, .3f, .08f), coral);
+                            Box("Prateleira alta", new Vector3(-4, 3.3f, back - .6f), new Vector3(4.5f, .12f, 1.0f), cream);
+                        }
+                        var cord = RoomMaterial("#DAC2A2");
+                        Box("Fio das luzinhas", new Vector3(0, 4.5f, back - .28f), new Vector3(width - .8f, .025f, .025f), cord);
+                        string[] bulbColors = { "#FFD586", "#ECA6BC", "#9DE3CF", "#B8B0EF" };
+                        for (int i = 0; i < 12; i++)
+                        {
+                            var ball = GameObject.CreatePrimitive(PrimitiveType.Sphere); ball.name = "Luzinha de festa";
+                            ball.transform.SetParent(Root.transform, false);
+                            ball.transform.localPosition = new Vector3(-width * .5f + .65f + i * (width - 1.3f) / 11, 4.43f, back - .28f);
+                            ball.transform.localScale = Vector3.one * .18f;
+                            var glow = RoomMaterial(bulbColors[i % bulbColors.Length]);
+                            glow.EnableKeyword("_EMISSION"); glow.SetColor("_EmissionColor", Hex(bulbColors[i % bulbColors.Length]) * .35f);
+                            ball.GetComponent<Renderer>().sharedMaterial = glow;
+                            ball.GetComponent<Collider>().enabled = false;
+                        }
+                        var lamp = new GameObject("Luz quente do quarto", typeof(Light)); lamp.transform.SetParent(Root.transform, false);
+                        lamp.transform.localPosition = new Vector3(-3.5f, 4, -.5f);
+                        var bulb = lamp.GetComponent<Light>(); bulb.type = LightType.Point; bulb.range = 13; bulb.intensity = 1.7f;
+                        bulb.color = Hex("#FFE4BB"); bulb.shadows = LightShadows.None;
                     }
-                    if (room.layout == "bedroom")
-                    {
-                        Box("Faixa de cor na parede", new Vector3(0, 1.8f, back - .11f), new Vector3(width, .3f, .08f), coral);
-                        Box("Prateleira alta", new Vector3(-4, 3.3f, back - .6f), new Vector3(4.5f, .12f, 1.0f), cream);
-                    }
-                    var cord = RoomMaterial("#DAC2A2");
-                    Box("Fio das luzinhas", new Vector3(0, 4.5f, back - .28f), new Vector3(width - .8f, .025f, .025f), cord);
-                    string[] bulbColors = { "#FFD586", "#ECA6BC", "#9DE3CF", "#B8B0EF" };
-                    for (int i = 0; i < 12; i++)
-                    {
-                        var ball = GameObject.CreatePrimitive(PrimitiveType.Sphere); ball.name = "Luzinha de festa";
-                        ball.transform.SetParent(Root.transform, false);
-                        ball.transform.localPosition = new Vector3(-width * .5f + .65f + i * (width - 1.3f) / 11, 4.43f, back - .28f);
-                        ball.transform.localScale = Vector3.one * .18f;
-                        var glow = RoomMaterial(bulbColors[i % bulbColors.Length]);
-                        glow.EnableKeyword("_EMISSION"); glow.SetColor("_EmissionColor", Hex(bulbColors[i % bulbColors.Length]) * .35f);
-                        ball.GetComponent<Renderer>().sharedMaterial = glow;
-                        ball.GetComponent<Collider>().enabled = false;
-                    }
-                    var lamp = new GameObject("Luz quente do quarto", typeof(Light)); lamp.transform.SetParent(Root.transform, false);
-                    lamp.transform.localPosition = new Vector3(-3.5f, 4, -.5f);
-                    var bulb = lamp.GetComponent<Light>(); bulb.type = LightType.Point; bulb.range = 13; bulb.intensity = 1.7f;
-                    bulb.color = Hex("#FFE4BB"); bulb.shadows = LightShadows.None;
                     foreach (var p in room.objects)
                     {
                         if (!string.IsNullOrEmpty(p.id) && progress.Has(p.id)) continue;
@@ -82,22 +87,28 @@ namespace OlhosDeCacador
                         Bind(item.gameObject, item.data, reduceMotion);
                     }
                 }
-                if (room == map.junction && map.gates != null)
-                    foreach (var gate in map.gates)
-                        if (progress.Opened(gate.id))
-                        {
-                            var destination = Hotspots.Find(h => h.Data.action == "gate" && h.Data.destination == gate.id);
-                            var token = System.Linq.Enumerable.First(map.Targets, p => p.id == gate.tokenId);
-                            if (destination != null)
-                            {
-                                var placement = Root.transform.InverseTransformPoint(destination.transform.TransformPoint(new Vector3(.65f, .15f, -.65f)));
-                                Add(new PropData { asset = token.asset, x = placement.x, y = placement.y,
-                                    z = placement.z, size = .65f, action = "inspect", label = "Peça colocada: " + token.label }, reduceMotion);
-                            }
-                        }
+                ApplyMechanisms(progress, false);
                 Physics.SyncTransforms();
             }
             catch { Dispose(); throw; }
+        }
+        void Architecture(PrimitiveData p)
+        {
+            var kind = p.shape == "sphere" ? PrimitiveType.Sphere : p.shape == "cylinder" ? PrimitiveType.Cylinder : PrimitiveType.Cube;
+            var go = GameObject.CreatePrimitive(kind); go.name = p.name;
+            go.transform.SetParent(Root.transform, false);
+            go.transform.localPosition = new Vector3(p.x, p.y, p.z);
+            go.transform.localRotation = Quaternion.Euler(0, p.rotation, 0);
+            go.transform.localScale = new Vector3(p.width, p.height / (kind == PrimitiveType.Cylinder ? 2 : 1), p.depth);
+            go.GetComponent<Renderer>().sharedMaterial = RoomMaterial(p.color);
+            go.GetComponent<Collider>().enabled = !p.decorative;
+        }
+        public void ApplyMechanisms(Progress progress, bool animate)
+        {
+            foreach (var spot in Hotspots)
+                if (!string.IsNullOrEmpty(spot.Data.gate)) spot.SetOpen(progress.Opened(spot.Data.gate), animate);
+            foreach (var item in Root.GetComponentsInChildren<HunterSceneProp>(true))
+                if (!string.IsNullOrEmpty(item.data.showAfter)) item.gameObject.SetActive(progress.Opened(item.data.showAfter));
         }
         Material RoomMaterial(string color)
         {
@@ -143,7 +154,7 @@ namespace OlhosDeCacador
                 collider.sharedMesh = mesh.sharedMesh;
             }
             wrapper.transform.localPosition = new Vector3(p.x, p.y, p.z);
-            wrapper.transform.localRotation = Quaternion.Euler(0, p.rotation, 0);
+            wrapper.transform.localRotation = Quaternion.Euler(p.tiltX, p.rotation, p.tiltZ);
             wrapper.AddComponent<HunterSceneProp>().data = p;
             Bind(wrapper, p, reduceMotion);
         }

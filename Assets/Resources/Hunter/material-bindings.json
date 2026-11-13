@@ -1,0 +1,2008 @@
+{
+  "materials": [
+    {
+      "model": "blocky-characters/character-d",
+      "name": "texture-d",
+      "material": "Assets/Resources/Hunter/Materials/blocky-characters/character-d/texture-d.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-d.png"
+    },
+    {
+      "model": "blocky-characters/character-g",
+      "name": "texture-g",
+      "material": "Assets/Resources/Hunter/Materials/blocky-characters/character-g/texture-g.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-g.png"
+    },
+    {
+      "model": "blocky-characters/character-h",
+      "name": "texture-h",
+      "material": "Assets/Resources/Hunter/Materials/blocky-characters/character-h/texture-h.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-h.png"
+    },
+    {
+      "model": "city-kit-commercial/building-a",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-a/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-b",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-b/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-c",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-c/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-d",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-d/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-e",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-e/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-f",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-f/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-skyscraper-a",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-skyscraper-a/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/building-skyscraper-c",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/building-skyscraper-c/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/detail-parasol-a",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/detail-parasol-a/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "city-kit-commercial/detail-parasol-b",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/city-kit-commercial/detail-parasol-b/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png"
+    },
+    {
+      "model": "nature-kit/bridge_wood",
+      "name": "stone",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/bridge_wood/stone.mat",
+      "color": [
+        0.7215686,
+        0.8862745,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/bridge_wood",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/bridge_wood/wood.mat",
+      "color": [
+        1.0,
+        0.5568628,
+        0.3843137,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/bridge_wood",
+      "name": "woodBark",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/bridge_wood/woodBark.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/cactus_short",
+      "name": "leafsGreen",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/cactus_short/leafsGreen.mat",
+      "color": [
+        0.1607843,
+        0.7882353,
+        0.6705883,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/cactus_tall",
+      "name": "leafsGreen",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/cactus_tall/leafsGreen.mat",
+      "color": [
+        0.1607843,
+        0.7882353,
+        0.6705883,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/fence_simple",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/fence_simple/wood.mat",
+      "color": [
+        1.0,
+        0.5568628,
+        0.3843137,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/fence_simple",
+      "name": "woodDark",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/fence_simple/woodDark.mat",
+      "color": [
+        0.7686275,
+        0.427451,
+        0.2941177,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/flower_redA",
+      "name": "colorRed",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/flower_redA/colorRed.mat",
+      "color": [
+        0.8784314,
+        0.2901961,
+        0.3137255,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/flower_redA",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/flower_redA/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/flower_yellowA",
+      "name": "colorYellow",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/flower_yellowA/colorYellow.mat",
+      "color": [
+        0.9960784,
+        0.6941177,
+        0.2784314,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/flower_yellowA",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/flower_yellowA/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/plant_bush",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/plant_bush/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/pot_large",
+      "name": "wood",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/pot_large/wood.mat",
+      "color": [
+        1.0,
+        0.5568628,
+        0.3843137,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/pot_large",
+      "name": "woodBarkDark",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/pot_large/woodBarkDark.mat",
+      "color": [
+        0.8,
+        0.4627451,
+        0.3686275,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_largeA",
+      "name": "dirt",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_largeA/dirt.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_largeA",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_largeA/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_largeB",
+      "name": "_defaultMat",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_largeB/_defaultMat.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_largeB",
+      "name": "dirt",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_largeB/dirt.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_largeB",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_largeB/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_smallA",
+      "name": "dirt",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_smallA/dirt.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_smallA",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_smallA/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_smallB",
+      "name": "dirt",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_smallB/dirt.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/rock_smallB",
+      "name": "grass",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/rock_smallB/grass.mat",
+      "color": [
+        0.172549,
+        0.8470588,
+        0.7215686,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/tree_small",
+      "name": "leafsGreen",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/tree_small/leafsGreen.mat",
+      "color": [
+        0.1607843,
+        0.7882353,
+        0.6705883,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "nature-kit/tree_small",
+      "name": "woodBark",
+      "material": "Assets/Resources/Hunter/Materials/nature-kit/tree_small/woodBark.mat",
+      "color": [
+        0.8862745,
+        0.5137255,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/alien",
+      "name": "crystal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/alien/crystal.mat",
+      "color": [
+        0.1862318,
+        0.8773585,
+        0.5934362,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/alien",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/alien/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/alien",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/alien/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/alien",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/alien/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/alien",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/alien/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "rockDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/rockDark.mat",
+      "color": [
+        0.6980392,
+        0.372549,
+        0.2627451,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautA",
+      "name": "skin",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautA/skin.mat",
+      "color": [
+        1.0,
+        0.7647059,
+        0.6117647,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautB",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautB/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautB",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautB/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautB",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautB/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautB",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautB/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/astronautB",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/astronautB/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrel",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrel/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrel",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrel/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels_rail",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels_rail/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels_rail",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels_rail/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/barrels_rail",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/barrels_rail/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_cargoA",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_cargoA/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_cargoA",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_cargoA/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_cargoA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_cargoA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_cargoA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_cargoA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_speederA",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_speederA/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_speederA",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_speederA/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_speederA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_speederA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craft_speederA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craft_speederA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craterLarge",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craterLarge/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/craterLarge",
+      "name": "rockDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/craterLarge/rockDark.mat",
+      "color": [
+        0.6980392,
+        0.372549,
+        0.2627451,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_chair",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_chair/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_chair",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_chair/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_chair",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_chair/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_chairStool",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_chairStool/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_chairStool",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_chairStool/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_computer",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_computer/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_computer",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_computer/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/desk_computer",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/desk_computer/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_roundA",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_roundA/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_roundA",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_roundA/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_roundA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_roundA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_roundA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_roundA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_smallA",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_smallA/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_smallA",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_smallA/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_smallA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_smallA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/hangar_smallA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/hangar_smallA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_barrel",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_barrel/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_barrel",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_barrel/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_barrel",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_barrel/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_barrel",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_barrel/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_generator",
+      "name": "_defaultMat",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_generator/_defaultMat.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_generator",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_generator/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_generator",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_generator/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_generator",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_generator/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_generator",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_generator/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_wireless",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_wireless/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_wireless",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_wireless/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_wireless",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_wireless/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/machine_wireless",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/machine_wireless/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/meteor",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/meteor/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/meteor_detailed",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/meteor_detailed/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/meteor_half",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/meteor_half/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_corner",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_corner/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_corner",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_corner/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_end",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_end/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_end",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_end/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_end",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_end/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_straight",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_straight/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_straight",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_straight/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/pipe_straight",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/pipe_straight/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/platform_low",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/platform_low/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/platform_low",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/platform_low/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/platform_low",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/platform_low/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystals",
+      "name": "crystal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystals/crystal.mat",
+      "color": [
+        0.1862318,
+        0.8773585,
+        0.5934362,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystals",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystals/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystals",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystals/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystalsLargeA",
+      "name": "crystal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystalsLargeA/crystal.mat",
+      "color": [
+        0.1862318,
+        0.8773585,
+        0.5934362,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystalsLargeA",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystalsLargeA/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_crystalsLargeA",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_crystalsLargeA/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_largeB",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_largeB/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rock_largeB",
+      "name": "rockTrack",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rock_largeB/rockTrack.mat",
+      "color": [
+        0.9811321,
+        0.5809683,
+        0.4489142,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rocket_fuelA",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rocket_fuelA/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rocket_fuelA",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rocket_fuelA/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rocks_smallA",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rocks_smallA/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rocks_smallB",
+      "name": "rock",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rocks_smallB/rock.mat",
+      "color": [
+        0.9098039,
+        0.5176471,
+        0.3882353,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rover",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rover/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rover",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rover/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rover",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rover/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/rover",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/rover/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish",
+      "name": "_defaultMat",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish/_defaultMat.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish_detailed",
+      "name": "_defaultMat",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish_detailed/_defaultMat.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish_detailed",
+      "name": "dark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish_detailed/dark.mat",
+      "color": [
+        0.2745098,
+        0.2980392,
+        0.3411765,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish_detailed",
+      "name": "metal",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish_detailed/metal.mat",
+      "color": [
+        0.8431373,
+        0.8705882,
+        0.9098039,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish_detailed",
+      "name": "metalDark",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish_detailed/metalDark.mat",
+      "color": [
+        0.6750623,
+        0.7100219,
+        0.7735849,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "space-kit/satelliteDish_detailed",
+      "name": "metalRed",
+      "material": "Assets/Resources/Hunter/Materials/space-kit/satelliteDish_detailed/metalRed.mat",
+      "color": [
+        1.0,
+        0.6285242,
+        0.2028302,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "survival-kit/barrel-open",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/barrel-open/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/barrel",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/barrel/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/bedroll-frame",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/bedroll-frame/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/bottle-large",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/bottle-large/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/bottle",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/bottle/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/box-large",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/box-large/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/box-open",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/box-open/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/box",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/box/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/bucket",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/bucket/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/campfire-pit",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/campfire-pit/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/chest",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/chest/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/fence",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/fence/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/fish",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/fish/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/resource-planks",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/resource-planks/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/signpost",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/signpost/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/structure-roof",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/structure-roof/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/structure",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/structure/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/tent",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/tent/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/tool-hammer",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/tool-hammer/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/tool-pickaxe",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/tool-pickaxe/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/tree-log-small",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/tree-log-small/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/tree-log",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/tree-log/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    },
+    {
+      "model": "survival-kit/workbench",
+      "name": "colormap",
+      "material": "Assets/Resources/Hunter/Materials/survival-kit/workbench/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dabc07db825fba8b5d3f7db7991e30, type: 3}
+  m_Name: NarrationBank
+  m_EditorClassIdentifier:
+  readings:
+  - roomId: faroeste_estacao
+    recordingScript: "Na estação, a aventura já vai começar.\nProcuro um balde para água levar.\nUma garrafinha resolveu se esconder.\nOlhos de caçador, quem consegue ver?"
+    clip: {fileID: 0}
+  - roomId: faroeste_salao
+    recordingScript: "No salão do suco, há uma festa no ar.\nUm martelo de brinquedo veio ajudar.\nE um peixe sem rio, que coisa engraçada!\nEncontre os dois para seguir a jornada."
+    clip: {fileID: 0}
+  - roomId: faroeste_mina
+    recordingScript: "Na mina dos brilhos, vamos procurar:\nUma picareta pronta para trabalhar.\nUma garrafa grandona espera no chão.\nDois novos tesouros para a coleção!"
+    clip: {fileID: 0}
+  - roomId: espaco_base
+    recordingScript: "Nossa base de papelão já pode decolar.\nUm astronauta de bolso quer viajar.\nUma antena curiosa escuta a imensidão.\nAche os dois para começar a missão!"
+    clip: {fileID: 0}
+  - roomId: espaco_jardim
+    recordingScript: "No jardim de meteoros, quem veio passear?\nUm visitante simpático de outro lugar.\nUm meteoro cheio de marcas caiu por aqui.\nProcure bem os dois: será que estão ali?"
+    clip: {fileID: 0}
+  - roomId: espaco_garagem
+    recordingScript: "Na garagem das naves, já é hora de partir.\nUma nave pequenininha quer se divertir.\nO segundo tripulante espera a contagem.\nEncontre os dois e prepare a viagem!"
+    clip: {fileID: 0}
+  - roomId: herois_praca
+    recordingScript: "Na praça dos blocos, que grande animação!\nA Capitã Faísca está de prontidão.\nUm balde leva água para a flor crescer.\nAche os dois: ajudar é um superpoder!"
+    clip: {fileID: 0}
+  - roomId: herois_ponte
+    recordingScript: "Na ponte de brinquedo, a turma vai passar.\nUm martelo bem pequeno vem para consertar.\nO Robô Violeta quer dar uma mão.\nEncontre os dois e complete a missão!"
+    clip: {fileID: 0}
+  - roomId: herois_quartel
+    recordingScript: "No quartel das ideias, já toca o chamado.\nUm comunicador espera ser encontrado.\nUm ajudante amarelinho quer participar.\nAche os dois: a cidade vamos ajudar!"
+    clip: {fileID: 0}

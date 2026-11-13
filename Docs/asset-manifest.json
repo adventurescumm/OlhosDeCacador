@@ -1,0 +1,998 @@
+{
+  "packs": [
+    {
+      "pack": "survival-kit",
+      "source": "https://kenney.nl/assets/survival-kit",
+      "zip_sha256": "c3586341b5932c87eb43d75d915434f47daed168b17ed36a03e8ca9977c7443e",
+      "bytes": 1948174
+    },
+    {
+      "pack": "nature-kit",
+      "source": "https://kenney.nl/assets/nature-kit",
+      "zip_sha256": "fa7974a0d342bfe63c38664ba9f8ec1a4aab8ea25f099bdc56870e33588c4d9d",
+      "bytes": 10537521
+    },
+    {
+      "pack": "space-kit",
+      "source": "https://kenney.nl/assets/space-kit",
+      "zip_sha256": "d5d7cdf2635ed5a43a9187deaf409b6f47484e402321128341d3c3698e9ef4d9",
+      "bytes": 6677531
+    },
+    {
+      "pack": "city-kit-commercial",
+      "source": "https://kenney.nl/assets/city-kit-commercial",
+      "zip_sha256": "f8b09b081c2bb88bcc126e2dec1cb40fd0dad7e7e591b6c26aaefe96fb35276b",
+      "bytes": 4096974
+    },
+    {
+      "pack": "blocky-characters",
+      "source": "https://kenney.nl/assets/blocky-characters",
+      "zip_sha256": "5e123859aa0c1598342b600c6db197024a1d63eb9ec531398b310725f589887e",
+      "bytes": 2148510
+    },
+    {
+      "pack": "ui-audio",
+      "source": "https://kenney.nl/assets/ui-audio",
+      "zip_sha256": "946fc23a63d535d693eb31b2eabb80c8c28d6351e2186b344ceb71b2cb1d5eb6",
+      "bytes": 411949
+    },
+    {
+      "pack": "ui-pack-adventure",
+      "source": "https://kenney.nl/assets/ui-pack-adventure",
+      "zip_sha256": "982e8ab66842509ee9214f9c2038e594cbe029f19d1dc177fecaad3b41a67ed3",
+      "bytes": 577463
+    }
+  ],
+  "files": [
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-h.obj",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-h.obj",
+      "sha256": "ade50aaae36aa6991c6b0e2a5b9bca832a6dc4ef8e71ac5c6825a8147026743a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-h.mtl",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-h.mtl",
+      "sha256": "5c60cf0f629c1d94492987cf7e3959b1affe31510402ed2e5671c4679ddd5ac1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-h.png",
+      "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-h.png",
+      "sha256": "7d908f3f12ac56b3debc5036dd962e2151c151f7a379cb37fe757a6ab4147536"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-a.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-a.obj",
+      "sha256": "ec5b3bbf725be6ea792b0cc7b543d11ac8659811264500037d2cdc398632f2ce"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-a.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-a.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/Textures/colormap.png",
+      "sha256": "191bec3889aaaca5018380038fecc129ebb5c2182879a099b7b538b3fa050b5d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-b.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-b.obj",
+      "sha256": "d5f4344d5be797a6ed93641d4159a630de093e0517b4b8435d9789cea141bd62"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-b.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-b.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-c.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-c.obj",
+      "sha256": "e7bc3677c9f7ee66a0459bc99fa6c69f60b7f9338165d91ccfd1f2ca1fcac9bd"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-c.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-c.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-d.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-d.obj",
+      "sha256": "9d0e71d3a3703a171961443ea1b6ec34f67a93d90731e261eb3394fe19a78147"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-d.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-d.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-e.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-e.obj",
+      "sha256": "4cd4f36a1914d98e9f75825727f117f41a4c11fee284c88cc2fe0c3404a1df51"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-e.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-e.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-f.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-f.obj",
+      "sha256": "c7398b3f2b9458f56c080fee9d977ae617ed283dc5f768dfcc61133b423fdccf"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-f.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-f.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-a.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-a.obj",
+      "sha256": "0a3704d13705c2f692166d2edb3a31105a7b42f9b4c90996ce19440e276e6c9f"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-a.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-a.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-c.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-c.obj",
+      "sha256": "c586b8beda8cdcc28f34e8c8d25af0fbfa49a5712c83da1228c1739ffd9ef8c1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-c.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-c.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-a.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-a.obj",
+      "sha256": "e31474f76f0898efe50733b783ec599ea11fc55ae93b2e45dc38650a0f75b375"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-a.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-a.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-b.obj",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-b.obj",
+      "sha256": "29f20da6119e527793f473ee8a2012a6b5deaf8959dbd40ffc0f6c6c0b848e79"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-b.mtl",
+      "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-b.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/bridge_wood.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/bridge_wood.obj",
+      "sha256": "876a7836950740997d05733f39f0533359d890bd114015fc13a8c9d059beb4fd"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/bridge_wood.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/bridge_wood.mtl",
+      "sha256": "20207ce4b250313db94013354e2ad19402419c5cf33d699ff331a2a409f53b12"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_short.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/cactus_short.obj",
+      "sha256": "0f4a63e933432a8e3a09e67be333461cc0397c849bb312704c39a87242d68d4e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_short.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/cactus_short.mtl",
+      "sha256": "df409a06731706f40b6b36eeaae085e2500009721c2098063e80cf045c464952"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_tall.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/cactus_tall.obj",
+      "sha256": "ba4ac8ba42d829689154f55bf5eff01308357d5d97c67582d6b566a981372273"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_tall.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/cactus_tall.mtl",
+      "sha256": "df409a06731706f40b6b36eeaae085e2500009721c2098063e80cf045c464952"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/fence_simple.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/fence_simple.obj",
+      "sha256": "fa29015d17fd89bb29b221235883089b6ee8eed0e949989740445c3b0cba9fba"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/fence_simple.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/fence_simple.mtl",
+      "sha256": "3b03b52eebf8ddc01804cb28de43b537c0d0b4ea61a99bad235e2a3c904aed89"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_redA.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/flower_redA.obj",
+      "sha256": "50bcfeb7b6f8c361bc7e61ce55dfd0cc61ad95073351026476207b0db93c3121"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_redA.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/flower_redA.mtl",
+      "sha256": "0c9ad4852b07f6c3b8d1b1d54ed2c19ce48828f259c6fb900c1ced26ba645b53"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_yellowA.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/flower_yellowA.obj",
+      "sha256": "09a81fe229ab3d60e7c3a080b39d9cbbe379af44ce4b646139c2081550692cb2"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_yellowA.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/flower_yellowA.mtl",
+      "sha256": "ca4a55c6fd87ce8026d1a8beba9c87fb88b22dff30619f8b80d329a6116cdbc9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/plant_bush.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/plant_bush.obj",
+      "sha256": "23e2015330dc397c4ebf799902560e7bb10016482f0d73cbd29d9d4d4b160f1b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/plant_bush.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/plant_bush.mtl",
+      "sha256": "b186368ad09ddb6673f90f63c45ecac3f793b36fe14f96bd62e6d44922e7e874"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/pot_large.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/pot_large.obj",
+      "sha256": "b09d20516edd4f389a550fa50fe248e347f928e8c5ff6b5e8da45edd51617d48"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/pot_large.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/pot_large.mtl",
+      "sha256": "a534b2f77e98658563684e0ad5870b4ee2f1cd92aa37796f24bec3610f98a11c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeA.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_largeA.obj",
+      "sha256": "60e4896f0bb0077ce820aa842e48a4f50d089a0d39e38d56cbf1bd7286882136"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeA.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_largeA.mtl",
+      "sha256": "b1f406513a297dd69c38653fd9b9de390123ff45242be9bf204f775d9e88c98c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeB.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_largeB.obj",
+      "sha256": "928bea598f682d280893da179d6a060a2019c7b4af72d1e1c4af9ef87ca33535"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeB.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_largeB.mtl",
+      "sha256": "e866ef7615bf6de9e3ae697d05275cc6bc31145bec66f74af8a44bebd5536fe9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallA.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_smallA.obj",
+      "sha256": "d2f74c6f2b8f4c49c875644e3e7ee95d2dced6c75feef14ee6547e4ca0c8fbd9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallA.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_smallA.mtl",
+      "sha256": "86d10214ce28199e4134d718b5df04356f295c63705435369565dcbd003c8971"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallB.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_smallB.obj",
+      "sha256": "089f79d84a08ff513dfacfd6fb930d5f33be31936675276aebdc873fdffcebaf"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallB.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/rock_smallB.mtl",
+      "sha256": "86d10214ce28199e4134d718b5df04356f295c63705435369565dcbd003c8971"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/tree_small.obj",
+      "source": "downloads/nature-kit/Models/OBJ format/tree_small.obj",
+      "sha256": "6de93224609f4430626eeff88a7692d36d48232546a9e503a773f9200f334a80"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/nature-kit/tree_small.mtl",
+      "source": "downloads/nature-kit/Models/OBJ format/tree_small.mtl",
+      "sha256": "2f754b719f8d7902d7940fe5f5216fe24cfaf0f021ce3533cace85cee7d0ce44"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/alien.obj",
+      "source": "downloads/space-kit/Models/OBJ format/alien.obj",
+      "sha256": "ccdbb987926231ea2a3631cc5b552b34cb1ea875cd7395cb6e643f7cec0ee09d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/alien.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/alien.mtl",
+      "sha256": "e087640cac88e120f9fedc427c821bb62771b8d7bf914e4dcb6cd577edd9a0f6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/astronautA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/astronautA.obj",
+      "sha256": "6c462609a8ee02e42713e4d21900dbb65fb7383d91205641070f4f7ebd069a1a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/astronautA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/astronautA.mtl",
+      "sha256": "f846dd64bc3f364c2f73135808f3cbc1560ce71cf7fad4bcbf19d6e1945a65a1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/astronautB.obj",
+      "source": "downloads/space-kit/Models/OBJ format/astronautB.obj",
+      "sha256": "875d4ccd0f2255e7b0b1b6f9b8d30e3e734de9837bf8cc3ab89e763a8ad3ee20"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/astronautB.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/astronautB.mtl",
+      "sha256": "5e3c72990492323e8349b4a31e3473653ab3ba655b1a6b1696e51e07565bb281"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrel.obj",
+      "source": "downloads/space-kit/Models/OBJ format/barrel.obj",
+      "sha256": "b973227160fbad3d4e31bb573bf5d5dc1369df83bc241a0ea9a143df3fa4b595"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrel.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/barrel.mtl",
+      "sha256": "d1fe9287aaed7f653eb92a878b514c62cb4d4702008e4d14ea29645dad6f226b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrels.obj",
+      "source": "downloads/space-kit/Models/OBJ format/barrels.obj",
+      "sha256": "e7fea2599c5dacbdbcc3dd7a7ad4605dabc63943b9a1a6d9b39e8e269b8c5e98"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrels.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/barrels.mtl",
+      "sha256": "1e3feccef04f5e40a57ac21d7a142b4da8d5df0b09f5d2e6726c4b272a432a28"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrels_rail.obj",
+      "source": "downloads/space-kit/Models/OBJ format/barrels_rail.obj",
+      "sha256": "51f6f46f6878242f0e5a11d0295a006099ebbec43777ef7def4efddd1f490181"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/barrels_rail.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/barrels_rail.mtl",
+      "sha256": "a7488b28c3724941d54087a27ba05eefea15279bd8ea8e54eedc51250b9c3927"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craft_cargoA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/craft_cargoA.obj",
+      "sha256": "2aa478d18910492bf21d10157c13c634dcbfea41d34a4b9ee50f19821ac7aa6e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craft_cargoA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/craft_cargoA.mtl",
+      "sha256": "55b70dda67f3f03bf41467da7e459a813895e4202d21ee7969b5b8a65fba1b75"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craft_speederA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/craft_speederA.obj",
+      "sha256": "534e1b1198be654d2925d6a785531974213ac8b43ae05c02aecfeb905c0166fc"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craft_speederA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/craft_speederA.mtl",
+      "sha256": "91d172e7a3359183581919a7b5d2e6327f63388942e23dbd1a26ef714415c0e3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craterLarge.obj",
+      "source": "downloads/space-kit/Models/OBJ format/craterLarge.obj",
+      "sha256": "1af6591f3be7df8a922f1246f32b7e44ffea41f9796072b0b68376b1423ea346"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/craterLarge.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/craterLarge.mtl",
+      "sha256": "1c89a6f5aa32460ba4976946c1e389ce0b5c85374443994f0285d96fd733f281"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chair.obj",
+      "source": "downloads/space-kit/Models/OBJ format/desk_chair.obj",
+      "sha256": "3e76b9859b7d079bc529287f6f0d9ed9ef34bd0151175483c5848cf2984b1298"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chair.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/desk_chair.mtl",
+      "sha256": "4f18604357d2fe8bf6ef6ead25a763ec82c264bbc2fafef7a4fddfda9411165a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chairStool.obj",
+      "source": "downloads/space-kit/Models/OBJ format/desk_chairStool.obj",
+      "sha256": "fbf74771b58977d7fd4b3c4a2064865d35aa716fbdafbb8d4417cf4d92d2e7aa"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chairStool.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/desk_chairStool.mtl",
+      "sha256": "95895d02f2437219772305a021eb91cd7c06194f7ada2b45d937730d7c9d87fa"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_computer.obj",
+      "source": "downloads/space-kit/Models/OBJ format/desk_computer.obj",
+      "sha256": "19cdb452f56250f7b92c327ade46249f2958bcb5c25826b0b9dd3b435c0bfbf7"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/desk_computer.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/desk_computer.mtl",
+      "sha256": "8b4d47ce152513dc141f4a5b92e4bd7da7821be52552a99108b13451f2d5c432"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_roundA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/hangar_roundA.obj",
+      "sha256": "f7114507ab334a98a7b1711b6487398af36be8f53b3be46425f6eb738c1ee838"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_roundA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/hangar_roundA.mtl",
+      "sha256": "00aebd519b57121159dd3e308556612a9bc21840e3acee44441bb637ec74df3a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_smallA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/hangar_smallA.obj",
+      "sha256": "553128d70d004f418c7c69afc5166db79c7520fab543437f135d2cda25d5becb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_smallA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/hangar_smallA.mtl",
+      "sha256": "c78a271aa833ffe57a16cba3e6c9bed3a069ecc85cd1bd44b9c4dfba3deb1367"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_barrel.obj",
+      "source": "downloads/space-kit/Models/OBJ format/machine_barrel.obj",
+      "sha256": "03f824bee5d0519cfd3877dd145c950ed0536afeb6cce1a2171d90c9175bc413"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_barrel.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/machine_barrel.mtl",
+      "sha256": "ab77aeb3a6791cd59e2c082018c32d0ff371aba0152cf456ba71c14a56576230"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_generator.obj",
+      "source": "downloads/space-kit/Models/OBJ format/machine_generator.obj",
+      "sha256": "cb235a40d4cfe8fcb9471fd6fd7b993187adb8c186d49bf248600ae171700945"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_generator.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/machine_generator.mtl",
+      "sha256": "901a3d5a79a8ace64fbec40db8e8fecb9173ae1b0997c40a8e00a709d5e3fa2d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_wireless.obj",
+      "source": "downloads/space-kit/Models/OBJ format/machine_wireless.obj",
+      "sha256": "3aab9663a1b8790ddc96f295d4198d662034422894978f3ec1e5c7e30ad44243"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/machine_wireless.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/machine_wireless.mtl",
+      "sha256": "c78a271aa833ffe57a16cba3e6c9bed3a069ecc85cd1bd44b9c4dfba3deb1367"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor.obj",
+      "source": "downloads/space-kit/Models/OBJ format/meteor.obj",
+      "sha256": "0c0d99df405d0b1c583e395f2bbeb3b610707f175c6fa01e3adefd54a2fd7fd7"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/meteor.mtl",
+      "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_detailed.obj",
+      "source": "downloads/space-kit/Models/OBJ format/meteor_detailed.obj",
+      "sha256": "bd934e6f7d483d6e60e580d04a0c66a2c590e52310b2f7de19677697c1097c79"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_detailed.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/meteor_detailed.mtl",
+      "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_half.obj",
+      "source": "downloads/space-kit/Models/OBJ format/meteor_half.obj",
+      "sha256": "97f37437fb0e02dcae202111021432eae567d2b00290d06e4325e4bdfd295a73"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_half.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/meteor_half.mtl",
+      "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_corner.obj",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_corner.obj",
+      "sha256": "4a33929bb97ab6bdbe870bbf3a485c80a9797f99052f6364e810420b5e4eb8c5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_corner.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_corner.mtl",
+      "sha256": "f0c4687cdf2426b7d248408f64f098e1a489529d765ace69e404ff5d31231ae0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_end.obj",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_end.obj",
+      "sha256": "7fb933adc737897d6cd5c73f84efe455f0e7c21114a835df6f8c3206adb72c02"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_end.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_end.mtl",
+      "sha256": "f1131066d3cdc671b79f7799d5ddf194b25b0027381aea415d8c91d24e0190ba"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_straight.obj",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_straight.obj",
+      "sha256": "29afe7fa99861e1e83fb21587d1573170696ac2b4f341ae0491ba5708701a25e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_straight.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/pipe_straight.mtl",
+      "sha256": "f1131066d3cdc671b79f7799d5ddf194b25b0027381aea415d8c91d24e0190ba"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/platform_low.obj",
+      "source": "downloads/space-kit/Models/OBJ format/platform_low.obj",
+      "sha256": "34d50cf16ca655a4ec6c0d947bc459b8e143b193253f46f50983bf80ae219b58"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/platform_low.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/platform_low.mtl",
+      "sha256": "f2dc384b26d60fe7f4b645f35d963f410b0d85b2d738aaa4d63049f43b06f559"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rock.obj",
+      "sha256": "322806bb2b616ced880e27361a25ec2233fdc233f7642efbdf3de34fb8722be0"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rock.mtl",
+      "sha256": "3866bde6b5c5e5fa05775c22d45ca7fd8086411ddb9ca0542e1abf4f231ec255"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystals.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rock_crystals.obj",
+      "sha256": "a599efe79c167933938f996315a9a41b9ff399bcc11b30dc487038352fa3f504"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystals.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rock_crystals.mtl",
+      "sha256": "cc04456cdc1d5ccf28d3e76d152aa6fb710a8a838436153058ae751e1322659e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystalsLargeA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rock_crystalsLargeA.obj",
+      "sha256": "65d1b92b6d2f23e81286999b9887bd42aec7ef943f0fa3a2cfc3bb6312edeb6c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystalsLargeA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rock_crystalsLargeA.mtl",
+      "sha256": "cc04456cdc1d5ccf28d3e76d152aa6fb710a8a838436153058ae751e1322659e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_largeB.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rock_largeB.obj",
+      "sha256": "bff49f3db60b2638bfec357e566795b58e5bab7bb306c5520cddecad5e80ae59"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rock_largeB.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rock_largeB.mtl",
+      "sha256": "3866bde6b5c5e5fa05775c22d45ca7fd8086411ddb9ca0542e1abf4f231ec255"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocket_fuelA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rocket_fuelA.obj",
+      "sha256": "53f83c675728d51a12014724d413a7a264ae893512189313553581e1135bfa87"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocket_fuelA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rocket_fuelA.mtl",
+      "sha256": "583541d566dd5edba66cc8e2353e379bdc3de155cd21e173fab33fe9a9248a52"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallA.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rocks_smallA.obj",
+      "sha256": "bb4f66336c638e7580645f32b950ba41b904be9cbb16e804378122b8afc04827"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallA.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rocks_smallA.mtl",
+      "sha256": "d3f54402b0d723a5a7e2096930ed949b365fb7f7d1fd770a3754f2f01a3ae7e9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallB.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rocks_smallB.obj",
+      "sha256": "00fa9325b4703fd1a9587976394e35578226926a0892918df05d3de061db4c88"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallB.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rocks_smallB.mtl",
+      "sha256": "d3f54402b0d723a5a7e2096930ed949b365fb7f7d1fd770a3754f2f01a3ae7e9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rover.obj",
+      "source": "downloads/space-kit/Models/OBJ format/rover.obj",
+      "sha256": "e5ec326be88beedb4725886cb317497e150d527d2c6903b148044eaa352d1e37"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/rover.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/rover.mtl",
+      "sha256": "8599d05033c8fc7dab2d99ec71e3a3a04160e5dcdcfaafb83fad75ed3e9d12db"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish.obj",
+      "source": "downloads/space-kit/Models/OBJ format/satelliteDish.obj",
+      "sha256": "cabd92b8c6593ba4d188af8af6d334a54e7825a650f6a1e89ba230d97213eaa7"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/satelliteDish.mtl",
+      "sha256": "190d4537da134db4e5cf4fc987a1553dd4e1a57337da2b0845865e4d3cfaf0f8"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish_detailed.obj",
+      "source": "downloads/space-kit/Models/OBJ format/satelliteDish_detailed.obj",
+      "sha256": "d6b4eb54086bd13a37f3403558e396eb4b780bda5edf89c21bc833fbe570221f"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish_detailed.mtl",
+      "source": "downloads/space-kit/Models/OBJ format/satelliteDish_detailed.mtl",
+      "sha256": "eb33ee40c696104771700188aa11f8858416db34150589bb815013345fca6b72"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/barrel.obj",
+      "sha256": "64a085b059fd01c9f748380a766ee144d096e37a16196c3230eb713b662db123"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/barrel.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png",
+      "source": "downloads/survival-kit/Models/OBJ format/Textures/colormap.png",
+      "sha256": "6ca023be9f12e8c2358fcf94320c8a894b4c05a3dd0bad1f5c268312053caca1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel-open.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/barrel-open.obj",
+      "sha256": "017351df2a8ebc41569011b6110c1025043768ccf8f1d1d41429879502d5ada2"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel-open.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/barrel-open.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bedroll-frame.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/bedroll-frame.obj",
+      "sha256": "578e10aaf517197bc0e79ab154ebdfc4ad6482a9e504e927dcdee3c352705b30"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bedroll-frame.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/bedroll-frame.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/bottle.obj",
+      "sha256": "eeff2dd611663857af7c85808f807d87e21e4ac6346bc55178dce60fc34a6bee"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/bottle.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle-large.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/bottle-large.obj",
+      "sha256": "3f6ca17260bdb8543bd6780ff7e4339f416a37f362a15b6089e16f98a959c6f6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle-large.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/bottle-large.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/box.obj",
+      "sha256": "fcae73b5e2c39816796f34f9d2aa8ebeb344b7494a191a2ab9a7d46dc50c5fd4"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/box.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box-large.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/box-large.obj",
+      "sha256": "98bb14c15a32b902da44cccf94d2a470357a1ef1291b252bfced7d4ee649f4e7"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box-large.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/box-large.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box-open.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/box-open.obj",
+      "sha256": "bcb125f3dfa5df86d70e40582c391c83c18747aa904dd1f107013e923bf4b62c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/box-open.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/box-open.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bucket.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/bucket.obj",
+      "sha256": "899f5d0e43218fab5759c86953320532d7f1832837c67e80f771023b6aba654e"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/bucket.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/bucket.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/campfire-pit.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/campfire-pit.obj",
+      "sha256": "436db0e5879012fb19fbd4e5788e7cfeed4497f8e5dcd4d4bf80bfdb9df29e47"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/campfire-pit.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/campfire-pit.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/chest.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/chest.obj",
+      "sha256": "893779a973dc2fe4ce88a824893ad7408e1130aa82e0b1afb5128495374345eb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/chest.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/chest.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/fence.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/fence.obj",
+      "sha256": "571924e322f39d16eafdd73a8b14c7bba9f3788aa78d5607ff38eec89e9fdb9d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/fence.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/fence.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/fish.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/fish.obj",
+      "sha256": "862f0b43ec17d168062b35c32da89c97a8641fb17932bfe4ced3e204a56affcd"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/fish.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/fish.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/resource-planks.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/resource-planks.obj",
+      "sha256": "4eb53222baddb56cf986c38ddb789341c911550a90cac319c689e18ec095771c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/resource-planks.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/resource-planks.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/signpost.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/signpost.obj",
+      "sha256": "eedd82df87c082d63a6f3464bfa35397ccfff799bdf6fafbc0d75a7fb14a4f9c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/signpost.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/signpost.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/structure.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/structure.obj",
+      "sha256": "123c3fe313fb6d52b44546c864ce7b1d70748a06ba659c481e6b425057d021a1"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/structure.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/structure.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/structure-roof.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/structure-roof.obj",
+      "sha256": "b5ed112d9849400790dd5e10b24c2e559d9c708a81f55832dc707b3bb14e956c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/structure-roof.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/structure-roof.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tent.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/tent.obj",
+      "sha256": "87479f276837ff0aa11bdfa220e9919cb8120b2499f868f9c9432291586a6f51"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tent.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/tent.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-hammer.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/tool-hammer.obj",
+      "sha256": "448b531208ab7fa1d4c44041a6ca26734e8c805f8284d39f8e72c863f30f55d6"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-hammer.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/tool-hammer.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-pickaxe.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/tool-pickaxe.obj",
+      "sha256": "6b4525eaf713eb528887d5a13f5293a0b29673f903ba4e1d049ad1384a93d74d"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-pickaxe.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/tool-pickaxe.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/tree-log.obj",
+      "sha256": "e7ce23e220360007d374771f57bab882ff1cf238c7883bd190e52f5e138b2540"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/tree-log.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log-small.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/tree-log-small.obj",
+      "sha256": "5bd51b9df1e4ddae761cb4e9fd92f886be0f7be080d93dff72a3fc33b94182b4"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log-small.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/tree-log-small.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/workbench.obj",
+      "source": "downloads/survival-kit/Models/OBJ format/workbench.obj",
+      "sha256": "5f7fbb03a9d97300da10873dee4d3cbed6c94bfa8a328396947a7673ee0b81a3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/survival-kit/workbench.mtl",
+      "source": "downloads/survival-kit/Models/OBJ format/workbench.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/click1.ogg",
+      "source": "downloads/ui-audio/Audio/click1.ogg",
+      "sha256": "59175ac17cd49a68dd736285738441287636112a84a6f7ce0d89921bda5a5360"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/click3.ogg",
+      "source": "downloads/ui-audio/Audio/click3.ogg",
+      "sha256": "e3e7fc7ccd9c5cfdf77bffa05aee10d4973812076c76dc889ba2b16ea434127f"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/switch1.ogg",
+      "source": "downloads/ui-audio/Audio/switch1.ogg",
+      "sha256": "efdd1d1e2904fb2d81259cd96bb80101caceae94be02baa4b5310714a6708b19"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/switch4.ogg",
+      "source": "downloads/ui-audio/Audio/switch4.ogg",
+      "sha256": "687a42c24e5d25be1a256f35a439fe858548fe76d43ccfb17db546618b0d36db"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/switch7.ogg",
+      "source": "downloads/ui-audio/Audio/switch7.ogg",
+      "sha256": "7a3032d1dae63d1096cf2f1e59cb43e598d5229dcb9617e9d3fb13e96c78d5f2"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/switch10.ogg",
+      "source": "downloads/ui-audio/Audio/switch10.ogg",
+      "sha256": "bf61b3f3af39b2c680e70ee2f791786edd2bca2016ea683947059f079849bbf3"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Audio/rollover1.ogg",
+      "source": "downloads/ui-audio/Audio/rollover1.ogg",
+      "sha256": "4eb47e2e1540c44847b47a89825e21335c820a4e54cacf8c4c1eb5100e36af42"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_brown.png",
+      "source": "PNG/Double/panel_brown.png",
+      "sha256": "e5bcda84c20a4d2f44082a9ab8094c959b339cfaffa21e67fcb6b4b6a7f09d36"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_brown_dark.png",
+      "source": "PNG/Double/panel_brown_dark.png",
+      "sha256": "8d29384105ed980877ac42b945a81070d99df9bac7c951d802e38fd38426da5b"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_brown_corners_a.png",
+      "source": "PNG/Double/panel_brown_corners_a.png",
+      "sha256": "9f897ce868fe35af019a9f200c06f174bb79af0b36f5c532ae25c575f18c9241"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_grey_blue.png",
+      "source": "PNG/Double/panel_grey_blue.png",
+      "sha256": "63901af632ee3cf7d97071b51cdfc9331998fbe598667dcba396e80fdc1e174a"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_grey_green.png",
+      "source": "PNG/Double/panel_grey_green.png",
+      "sha256": "a78188eea74f049fdfa5b4988f8b3c282db4b8baa6084d03999856616f7944bb"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_grey_red.png",
+      "source": "PNG/Double/panel_grey_red.png",
+      "sha256": "8c46e14bc57136bcc84e0908f00a35ff6aa55f0cd9d84ac60b764bacd3a23435"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/panel_border_brown.png",
+      "source": "PNG/Double/panel_border_brown.png",
+      "sha256": "4de63a263833223f0ffa1789114403537b2d876e454dd40f1e516f31332bb3e9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/banner_classic_curtain.png",
+      "source": "PNG/Double/banner_classic_curtain.png",
+      "sha256": "2878ed8d7ca2821dd314135b77e616136dfc3e1078529840c1e290c77e3038e8"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/banner_hanging.png",
+      "source": "PNG/Double/banner_hanging.png",
+      "sha256": "b736f04cd3bbe7e3d33338b3b13ee4eca4887ffaca160e58a91fd5432d4d91fe"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/minimap_icon_star_yellow.png",
+      "source": "PNG/Double/minimap_icon_star_yellow.png",
+      "sha256": "a5c1a3ccc796c07d5e225cb14af90850396cc58fd9ddf5efd93f0bd689914166"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/minimap_icon_star_white.png",
+      "source": "PNG/Double/minimap_icon_star_white.png",
+      "sha256": "cab5c1bd9f12be5e8928fc9b1a90c14a60b90d319409ff1d43958b83f6abf280"
+    },
+    {
+      "file": "Assets/Resources/Hunter/UI/minimap_icon_jewel_yellow.png",
+      "source": "PNG/Double/minimap_icon_jewel_yellow.png",
+      "sha256": "882e85259e27194bd188cf2ef411c9a2ad70ce1fe7107b3fa13c7d93e222c799"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-g.obj",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-g.obj",
+      "sha256": "285a7ad4b8dd66a179d85cdb4610935c30f559ecf30d0beb3abae7c7cb4c3f8c"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-g.mtl",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-g.mtl",
+      "sha256": "0f3c77448a2146e9a61c9b7a88fcb67a0c82f43afc33941a52b4edbbf81d13e5"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-g.png",
+      "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-g.png",
+      "sha256": "cce3f8d545625998c27e91016672366eb84f21bbc520f8227022c23d0dd557fc"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-d.obj",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-d.obj",
+      "sha256": "e7c1f60fd67eb6066fd04b04f88d6c4271d31d04b64c1e5361b7b9384b2b65f9"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-d.mtl",
+      "source": "downloads/blocky-characters/Models/OBJ format/character-d.mtl",
+      "sha256": "7804d6cdb361ffa315e7e09dd57bd5d049fbaa8a9fea9734912fc60a7ecdfa93"
+    },
+    {
+      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-d.png",
+      "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-d.png",
+      "sha256": "c61bc29ec4d96229b979fc9196500afac13c2b448bbab1085832354fb4ef849a"
+    }
+  ]
+}

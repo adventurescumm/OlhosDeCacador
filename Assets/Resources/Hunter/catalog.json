@@ -121,7 +121,8 @@
               "size": 0.95,
               "rotation": 180,
               "action": "inspect",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "survival-kit/bucket",
@@ -134,7 +135,8 @@
               "label": "Um balde para a viagem",
               "clue": "A placa do cacto diz: o PRIMEIRO número é 2.",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "survival-kit/bottle",
@@ -147,7 +149,8 @@
               "label": "A garrafinha esquecida",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "spin"
+              "reaction": "spin",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "toy-car-kit/wheel-medium",
@@ -160,7 +163,8 @@
               "label": "Uma roda de borracha",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactWood_light_000"
             },
             {
               "asset": "food-kit/apple",
@@ -173,7 +177,8 @@
               "label": "Uma maçã de brinquedo",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/donut-sprinkles",
@@ -186,7 +191,8 @@
               "label": "Uma rosquinha confeitada",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "polyhaven-duck/rubber_duck_toy_1k",
@@ -199,7 +205,8 @@
               "label": "Um patinho de borracha",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "survival-kit/fish",
@@ -812,7 +819,8 @@
                 -1.0,
                 0.0,
                 1.0
-              ]
+              ],
+              "sound": "impact-sounds/impactWood_light_000"
             },
             {
               "asset": "nature-kit/cactus_short",
@@ -885,21 +893,51 @@
               "z": -2.1,
               "size": 0.7,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-worker",
+              "id": "",
+              "label": "Ferroviário de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 1.65,
+              "y": 0,
+              "z": -0.5,
+              "size": 1.3,
+              "rotation": 30,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-b",
+              "id": "",
+              "label": "Boneca esperando o trem",
+              "clue": "",
+              "hint": "",
+              "x": -1.8,
+              "y": 0,
+              "z": 1.1,
+              "size": 1.25,
+              "rotation": 340,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "faroeste_estacao",
           "riddle": "Um balde quer água levar,\numa garrafinha veio passear.\nUma roda pede outra viagem,\numa maçã se esconde na bagagem.\nRosquinha com confeitos eu vou procurar,\ne um pato de borracha quer me acompanhar.",
           "camera": [
             -0.7,
-            7.3,
-            -12.3
+            6.424,
+            -11.439
           ],
           "lookAt": [
-            0,
-            0.65,
+            0.0,
+            0.85,
             0.1
           ],
-          "fieldOfView": 42,
+          "fieldOfView": 35.6,
           "layout": "diorama",
           "floor": "#E2B782",
           "wall": "#6F9DA8",
@@ -1139,7 +1177,8 @@
               "label": "Um martelo de faz de conta",
               "clue": "O bilhete do salão diz: o SEGUNDO número é 4.",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "survival-kit/fish",
@@ -1152,7 +1191,8 @@
               "label": "Um peixe fora da água",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/cup-tea",
@@ -1165,7 +1205,8 @@
               "label": "Uma xícara de chá",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "food-kit/cookie-chocolate",
@@ -1178,7 +1219,8 @@
               "label": "Um biscoito com chocolate",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/banana",
@@ -1191,7 +1233,8 @@
               "label": "Uma banana curva",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "furniture-kit/books",
@@ -1204,7 +1247,8 @@
               "label": "Uma pilha de livros",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactWood_light_000"
             },
             {
               "asset": "toy-car-kit/wheel-large",
@@ -1842,7 +1886,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "nature-kit/cactus_short",
@@ -1915,21 +1960,51 @@
               "z": -2.1,
               "size": 0.7,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-female-e",
+              "id": "",
+              "label": "Dona do salão de suco",
+              "clue": "",
+              "hint": "",
+              "x": 0.1,
+              "y": 0,
+              "z": 0.5,
+              "size": 1.35,
+              "rotation": 0,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-male-a",
+              "id": "",
+              "label": "Visitante de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 3.2,
+              "y": 0,
+              "z": 0.3,
+              "size": 1.3,
+              "rotation": 40,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "faroeste_salao",
           "riddle": "Um martelo quer ajudar,\num peixe sem rio veio brincar.\nXícara de chá para a visita,\nbiscoito com chocolate na pista.\nUma banana curva eu quero achar,\ne livros empilhados para imaginar.",
           "camera": [
             1.1,
-            7.7,
-            -11.8
+            6.776,
+            -10.974
           ],
           "lookAt": [
-            0,
-            1,
+            0.0,
+            0.85,
             0.2
           ],
-          "fieldOfView": 43,
+          "fieldOfView": 35.8,
           "layout": "diorama",
           "floor": "#E9BE9C",
           "wall": "#6F9DA8",
@@ -2131,7 +2206,8 @@
               "label": "A picareta do explorador",
               "clue": "A pedra da mina diz: o TERCEIRO número é 3.",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "spin"
+              "reaction": "spin",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "survival-kit/bottle-large",
@@ -2144,7 +2220,8 @@
               "label": "Uma garrafa grandona",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "toy-car-kit/item-coin-gold",
@@ -2157,7 +2234,8 @@
               "label": "Uma moeda dourada",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactBell_heavy_000"
             },
             {
               "asset": "food-kit/mushroom",
@@ -2170,7 +2248,8 @@
               "label": "Um cogumelo de brinquedo",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "space-kit/rock_crystals",
@@ -2183,7 +2262,8 @@
               "label": "Um grupo de cristais",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactBell_heavy_000"
             },
             {
               "asset": "food-kit/carrot",
@@ -2196,7 +2276,8 @@
               "label": "Uma cenoura comprida",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "survival-kit/fish",
@@ -2851,21 +2932,51 @@
               "z": -2.1,
               "size": 0.7,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-worker",
+              "id": "",
+              "label": "Minerador de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 1.5,
+              "y": 0,
+              "z": -1.4,
+              "size": 1.2,
+              "rotation": 0,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-d",
+              "id": "",
+              "label": "Exploradora de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": -1.15,
+              "y": 0,
+              "z": -0.7,
+              "size": 1.2,
+              "rotation": 345,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "faroeste_mina",
           "riddle": "Uma picareta quer trabalhar,\numa garrafa grandona vou encontrar.\nMoeda dourada vale um tesouro,\ncogumelo de mentira não é ouro.\nCristais juntinhos brilham no caminho,\ne uma cenoura espera num cantinho.",
           "camera": [
-            -1,
-            7.5,
-            -12.5
+            -1.0,
+            6.6,
+            -11.625
           ],
           "lookAt": [
-            0,
-            0.7,
+            0.0,
+            0.85,
             0.4
           ],
-          "fieldOfView": 42,
+          "fieldOfView": 36.0,
           "layout": "diorama",
           "floor": "#A7C5BC",
           "wall": "#6F9DA8",
@@ -3255,16 +3366,16 @@
           }
         ],
         "camera": [
-          0,
-          7.4,
-          -12
+          0.0,
+          6.512,
+          -11.16
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 42,
+        "fieldOfView": 36.5,
         "layout": "diorama",
         "floor": "#A7C5BC",
         "wall": "#6F9DA8",
@@ -3356,16 +3467,16 @@
         "width": 14,
         "depth": 10,
         "camera": [
-          0,
-          8,
-          -13
+          0.0,
+          7.04,
+          -12.09
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 43,
+        "fieldOfView": 27,
         "objects": [
           {
             "asset": "survival-kit/structure",
@@ -3504,6 +3615,36 @@
             "z": -2.4,
             "size": 1.1,
             "rotation": 0
+          },
+          {
+            "asset": "mini-characters/character-male-e",
+            "id": "",
+            "label": "Morador da vila",
+            "clue": "",
+            "hint": "",
+            "x": -1.8,
+            "y": 0,
+            "z": 0.4,
+            "size": 1.3,
+            "rotation": 0,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
+          },
+          {
+            "asset": "mini-characters/character-female-d",
+            "id": "",
+            "label": "Boneca viajante",
+            "clue": "",
+            "hint": "",
+            "x": 2.2,
+            "y": 0,
+            "z": -0.9,
+            "size": 1.25,
+            "rotation": 0,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
           }
         ],
         "geometry": [
@@ -3685,7 +3826,8 @@
               "label": "O astronauta de bolso",
               "clue": "Os sinais têm nome: Lua, Sol, Estrela e Planeta.",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "space-kit/satelliteDish",
@@ -3698,7 +3840,8 @@
               "label": "Uma antena curiosa",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "spin"
+              "reaction": "spin",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "toy-car-kit/vehicle-racer",
@@ -3711,7 +3854,8 @@
               "label": "Um carrinho de corrida",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "furniture-kit/computerMouse",
@@ -3724,7 +3868,8 @@
               "label": "Um mouse de computador",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/lollypop",
@@ -3737,7 +3882,8 @@
               "label": "Um pirulito redondo",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "furniture-kit/lampRoundTable",
@@ -3750,7 +3896,8 @@
               "label": "Um abajur de cúpula redonda",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "space-kit/barrel",
@@ -4387,7 +4534,8 @@
                 0,
                 0.25,
                 0
-              ]
+              ],
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "space-kit/rock",
@@ -4460,21 +4608,51 @@
               "z": -2.2,
               "size": 0.8,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-male-f",
+              "id": "",
+              "label": "Comandante de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": -0.1,
+              "y": 0,
+              "z": 1.8,
+              "size": 1.2,
+              "rotation": 0,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-e",
+              "id": "",
+              "label": "Cientista de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 1.2,
+              "y": 0,
+              "z": -1.9,
+              "size": 1.2,
+              "rotation": 15,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "espaco_base",
           "riddle": "Um astronauta de bolso vai viajar,\numa antena curiosa quer escutar.\nCarrinho de corrida perdeu a direção,\num mouse apareceu nesta missão.\nPirulito redondo parece um planeta,\ne um abajur redondo ilumina a descoberta.",
           "camera": [
-            1,
-            8.3,
-            -12.2
+            1.0,
+            7.304,
+            -11.346
           ],
           "lookAt": [
-            0,
-            0.8,
+            0.0,
+            0.85,
             0.3
           ],
-          "fieldOfView": 43,
+          "fieldOfView": 34.5,
           "layout": "diorama",
           "floor": "#B3BFDC",
           "wall": "#424A77",
@@ -4689,7 +4867,8 @@
               "label": "Um visitante simpático",
               "clue": "Observe o painel antes de tentar repetir.",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "space-kit/meteor_detailed",
@@ -4702,7 +4881,8 @@
               "label": "O meteoro cheio de marcas",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "spin"
+              "reaction": "spin",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "furniture-kit/radio",
@@ -4715,7 +4895,8 @@
               "label": "Um rádio de brinquedo",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "food-kit/orange",
@@ -4728,7 +4909,8 @@
               "label": "Uma laranja redonda",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/eggplant",
@@ -4741,7 +4923,8 @@
               "label": "Uma berinjela de brinquedo",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "space-kit/rock_crystals",
@@ -4754,7 +4937,8 @@
               "label": "Um grupo de cristais",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactBell_heavy_000"
             },
             {
               "asset": "toy-car-kit/item-coin-silver",
@@ -5403,7 +5587,8 @@
                 -1.0,
                 0.0,
                 1.0
-              ]
+              ],
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "space-kit/rock",
@@ -5476,21 +5661,51 @@
               "z": -2.2,
               "size": 0.8,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-female-b",
+              "id": "",
+              "label": "Exploradora do jardim",
+              "clue": "",
+              "hint": "",
+              "x": -1.2,
+              "y": 0,
+              "z": -1.6,
+              "size": 1.2,
+              "rotation": 10,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-male-c",
+              "id": "",
+              "label": "Visitante das estrelas",
+              "clue": "",
+              "hint": "",
+              "x": 2,
+              "y": 0,
+              "z": 1.3,
+              "size": 1.25,
+              "rotation": 345,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "espaco_jardim",
           "riddle": "Um visitante de outro lugar,\num meteoro com marcas veio pousar.\nUm rádio de brinquedo guarda o sinal,\numa laranja parece um sol especial.\nBerinjela virou nave na imaginação,\ne cristais juntinhos completam a missão.",
           "camera": [
             -0.8,
-            8.5,
-            -12.6
+            7.48,
+            -11.718
           ],
           "lookAt": [
-            0,
-            0.6,
+            0.0,
+            0.85,
             0.2
           ],
-          "fieldOfView": 42,
+          "fieldOfView": 32.4,
           "layout": "diorama",
           "floor": "#8FBDCF",
           "wall": "#424A77",
@@ -5780,7 +5995,8 @@
               "label": "A nave pequenininha",
               "clue": "Você pode assistir à sequência quantas vezes quiser.",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "launch"
+              "reaction": "launch",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "space-kit/astronautB",
@@ -5793,7 +6009,8 @@
               "label": "O segundo tripulante",
               "clue": "",
               "hint": "Observe a pilha de recipientes na frente do hangar.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "toy-car-kit/wheel-small",
@@ -5806,7 +6023,8 @@
               "label": "Uma rodinha solta",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactWood_light_000"
             },
             {
               "asset": "furniture-kit/pillowBlue",
@@ -5819,7 +6037,8 @@
               "label": "Uma almofada azul",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/cherries",
@@ -5832,7 +6051,8 @@
               "label": "Duas cerejas juntinhas",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/ice-cream-cup",
@@ -5845,7 +6065,8 @@
               "label": "Um sorvete no copinho",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "furniture-kit/computerMouse",
@@ -6536,21 +6757,51 @@
               "z": -2.2,
               "size": 0.8,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-worker",
+              "id": "",
+              "label": "Mecânico da nave",
+              "clue": "",
+              "hint": "",
+              "x": -1.8,
+              "y": 0,
+              "z": -0.5,
+              "size": 1.25,
+              "rotation": 20,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-a",
+              "id": "",
+              "label": "Pilota de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 1.1,
+              "y": 0,
+              "z": 1.7,
+              "size": 1.2,
+              "rotation": 355,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "espaco_garagem",
           "riddle": "Uma nave pequenina vai partir,\num segundo tripulante quer se divertir.\nUma rodinha solta precisa voltar,\nalmofada azul é boa para descansar.\nDuas cerejas juntinhas fazem par,\ne sorvete no copinho eu quero encontrar.",
           "camera": [
             0.8,
-            7.3,
-            -12.3
+            6.424,
+            -11.439
           ],
           "lookAt": [
-            0,
-            0.8,
+            0.0,
+            0.85,
             0.2
           ],
-          "fieldOfView": 43,
+          "fieldOfView": 36.5,
           "layout": "diorama",
           "floor": "#D8B5DA",
           "wall": "#424A77",
@@ -6869,19 +7120,33 @@
             "rotation": 0,
             "action": "exit",
             "destination": "espaco_garagem"
+          },
+          {
+            "asset": "survival-kit/workbench",
+            "id": "",
+            "label": "Rádio: ouvir e repetir a sequência",
+            "clue": "",
+            "hint": "",
+            "x": 0,
+            "y": 0,
+            "z": -2.3,
+            "size": 1.25,
+            "rotation": 180,
+            "action": "replay",
+            "reaction": "tip"
           }
         ],
         "camera": [
-          0,
-          7.4,
-          -12
+          0.0,
+          6.512,
+          -11.16
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 42,
+        "fieldOfView": 36.5,
         "layout": "diorama",
         "floor": "#D8B5DA",
         "wall": "#424A77",
@@ -6973,16 +7238,16 @@
         "width": 14,
         "depth": 10,
         "camera": [
-          0,
-          8,
-          -13
+          0.0,
+          7.04,
+          -12.09
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 43,
+        "fieldOfView": 27,
         "objects": [
           {
             "asset": "space-kit/hangar_smallA",
@@ -7121,6 +7386,36 @@
             "z": -2.4,
             "size": 1.1,
             "rotation": 0
+          },
+          {
+            "asset": "mini-characters/character-female-a",
+            "id": "",
+            "label": "Comandante da expedição",
+            "clue": "",
+            "hint": "",
+            "x": -2.65,
+            "y": 0,
+            "z": -2.25,
+            "size": 1.3,
+            "rotation": 350,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
+          },
+          {
+            "asset": "mini-characters/character-male-f",
+            "id": "",
+            "label": "Piloto de brinquedo",
+            "clue": "",
+            "hint": "",
+            "x": 2.65,
+            "y": 0,
+            "z": -2.25,
+            "size": 1.25,
+            "rotation": 25,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
           }
         ],
         "geometry": [
@@ -7289,7 +7584,8 @@
               "label": "A Capitã Faísca",
               "clue": "Na praça, as flores estão com sede.",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "survival-kit/bucket",
@@ -7302,7 +7598,8 @@
               "label": "Água para a pracinha",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "toy-car-kit/vehicle-truck",
@@ -7315,7 +7612,8 @@
               "label": "Um caminhão de brinquedo",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/watermelon",
@@ -7328,7 +7626,8 @@
               "label": "Uma melancia de brinquedo",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "furniture-kit/books",
@@ -7341,7 +7640,8 @@
               "label": "Uma pilha de livros",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactWood_light_000"
             },
             {
               "asset": "food-kit/cupcake",
@@ -7354,7 +7654,8 @@
               "label": "Um bolinho de festa",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "toy-car-kit/vehicle-suv",
@@ -8003,7 +8304,8 @@
                 0,
                 0.25,
                 0
-              ]
+              ],
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "nature-kit/tree_small",
@@ -8064,21 +8366,51 @@
               "z": 0.7,
               "size": 1.2,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-female-b",
+              "id": "",
+              "label": "Heroína da praça",
+              "clue": "",
+              "hint": "",
+              "x": 1.5,
+              "y": 0,
+              "z": 0.1,
+              "size": 1.3,
+              "rotation": 0,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-male-e",
+              "id": "",
+              "label": "Morador da cidade",
+              "clue": "",
+              "hint": "",
+              "x": -3,
+              "y": 0,
+              "z": -0.55,
+              "size": 1.2,
+              "rotation": 345,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "herois_praca",
           "riddle": "A Capitã Faísca está de prontidão,\num balde leva água para a missão.\nCaminhão de brinquedo veio trabalhar,\nmelancia de mentira quer participar.\nLivros empilhados guardam uma aventura,\ne um bolinho de festa completa a procura.",
           "camera": [
             -0.7,
-            7.5,
-            -12.8
+            6.6,
+            -11.904
           ],
           "lookAt": [
-            0,
-            0.9,
+            0.0,
+            0.85,
             0.3
           ],
-          "fieldOfView": 43,
+          "fieldOfView": 34.0,
           "layout": "diorama",
           "floor": "#C5D6AA",
           "wall": "#648C9A",
@@ -8358,7 +8690,8 @@
               "label": "A ferramenta do conserto",
               "clue": "A ponte precisa de um pequeno conserto.",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "tip"
+              "reaction": "tip",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "blocky-characters/character-h",
@@ -8371,7 +8704,8 @@
               "label": "O Robô Violeta",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "food-kit/ginger-bread",
@@ -8384,7 +8718,8 @@
               "label": "Um biscoito em forma de gente",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/pear",
@@ -8397,7 +8732,8 @@
               "label": "Uma pera de brinquedo",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "toy-car-kit/item-cone",
@@ -8410,7 +8746,8 @@
               "label": "Um cone de trânsito",
               "clue": "",
               "hint": "Procure na ilha pequena do jardim, perto do rio.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/mug",
@@ -8423,7 +8760,8 @@
               "label": "Uma caneca com alça",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactGlass_light_000"
             },
             {
               "asset": "food-kit/cupcake",
@@ -9049,7 +9387,8 @@
                 0,
                 0,
                 0
-              ]
+              ],
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "nature-kit/tree_small",
@@ -9110,21 +9449,51 @@
               "z": 0.7,
               "size": 1.2,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-worker",
+              "id": "",
+              "label": "Construtor da ponte",
+              "clue": "",
+              "hint": "",
+              "x": 2.45,
+              "y": 0,
+              "z": -1.9,
+              "size": 1.25,
+              "rotation": 20,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-e",
+              "id": "",
+              "label": "Boneca passeando",
+              "clue": "",
+              "hint": "",
+              "x": 4.9,
+              "y": 0.6,
+              "z": -0.05,
+              "size": 1.2,
+              "rotation": 350,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "herois_ponte",
           "riddle": "Um martelo pequeno pode consertar,\no Robô Violeta veio ajudar.\nBiscoito de gente observa a ponte,\numa pera se esconde no horizonte.\nUm cone de trânsito pede atenção,\ne caneca com alça espera uma mão.",
           "camera": [
-            1,
-            8.5,
-            -12.5
+            1.0,
+            7.48,
+            -11.625
           ],
           "lookAt": [
-            0,
-            0.7,
+            0.0,
+            0.85,
             0.2
           ],
-          "fieldOfView": 42,
+          "fieldOfView": 33.1,
           "layout": "diorama",
           "floor": "#B1CFCE",
           "wall": "#648C9A",
@@ -9430,7 +9799,8 @@
               "label": "O comunicador da liga",
               "clue": "O quartel precisa enviar uma mensagem.",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "spin"
+              "reaction": "spin",
+              "sound": "impact-sounds/impactMetal_light_000"
             },
             {
               "asset": "blocky-characters/character-d",
@@ -9443,7 +9813,8 @@
               "label": "O ajudante amarelinho",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "sci-fi-sounds/computerNoise_000"
             },
             {
               "asset": "toy-car-kit/vehicle-speedster",
@@ -9456,7 +9827,8 @@
               "label": "Um carro de corrida",
               "clue": "",
               "hint": "Procure junto aos brinquedos da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/ginger-bread",
@@ -9469,7 +9841,8 @@
               "label": "Um biscoito em forma de gente",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da esquerda.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "food-kit/popsicle",
@@ -9482,7 +9855,8 @@
               "label": "Um picolé no palito",
               "clue": "",
               "hint": "Observe os detalhes do lado direito.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "furniture-kit/lampSquareTable",
@@ -9495,7 +9869,8 @@
               "label": "Um abajur de cúpula quadrada",
               "clue": "",
               "hint": "Observe os objetos nos patamares e móveis da direita.",
-              "reaction": "hop"
+              "reaction": "hop",
+              "sound": "impact-sounds/impactSoft_medium_000"
             },
             {
               "asset": "toy-car-kit/vehicle-suv",
@@ -10174,21 +10549,51 @@
               "z": 0.7,
               "size": 1.2,
               "rotation": 0
+            },
+            {
+              "asset": "mini-characters/character-knight",
+              "id": "",
+              "label": "Guardião de brinquedo",
+              "clue": "",
+              "hint": "",
+              "x": 1.8,
+              "y": 0,
+              "z": 0.1,
+              "size": 1.3,
+              "rotation": 355,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
+            },
+            {
+              "asset": "mini-characters/character-female-a",
+              "id": "",
+              "label": "Heroína do quartel",
+              "clue": "",
+              "hint": "",
+              "x": -2.2,
+              "y": 0,
+              "z": 0.5,
+              "size": 1.3,
+              "rotation": 10,
+              "action": "inspect",
+              "reaction": "tip",
+              "sound": "impact-sounds/impactSoft_medium_000"
             }
           ],
           "id": "herois_quartel",
           "riddle": "Um comunicador quer ser encontrado,\num ajudante amarelinho está ao lado.\nCarro de corrida chegou à reunião,\nbiscoito de gente entrou na missão.\nUm picolé no palito quer participar,\ne abajur quadrado ilumina o lugar.",
           "camera": [
             -0.8,
-            8,
-            -12.8
+            7.04,
+            -11.904
           ],
           "lookAt": [
-            0,
-            0.9,
+            0.0,
+            0.85,
             0.2
           ],
-          "fieldOfView": 43,
+          "fieldOfView": 34.5,
           "layout": "diorama",
           "floor": "#D8B6C9",
           "wall": "#648C9A",
@@ -10649,16 +11054,16 @@
           }
         ],
         "camera": [
-          0,
-          7.4,
-          -12
+          0.0,
+          6.512,
+          -11.16
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 42,
+        "fieldOfView": 36.5,
         "layout": "diorama",
         "floor": "#D8B6C9",
         "wall": "#648C9A",
@@ -10750,16 +11155,16 @@
         "width": 14,
         "depth": 10,
         "camera": [
-          0,
-          8,
-          -13
+          0.0,
+          7.04,
+          -12.09
         ],
         "lookAt": [
-          0,
-          0.7,
+          0.0,
+          0.8,
           0.1
         ],
-        "fieldOfView": 43,
+        "fieldOfView": 27,
         "objects": [
           {
             "asset": "furniture-kit/doorwayFront",
@@ -10898,6 +11303,36 @@
             "z": -2.4,
             "size": 1.1,
             "rotation": 0
+          },
+          {
+            "asset": "mini-characters/character-knight",
+            "id": "",
+            "label": "Boneco de armadura",
+            "clue": "",
+            "hint": "",
+            "x": -1.8,
+            "y": 0,
+            "z": 0.8,
+            "size": 1.3,
+            "rotation": 0,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
+          },
+          {
+            "asset": "mini-characters/character-female-d",
+            "id": "",
+            "label": "Heroína do faz de conta",
+            "clue": "",
+            "hint": "",
+            "x": 2.2,
+            "y": 0,
+            "z": -0.6,
+            "size": 1.3,
+            "rotation": 10,
+            "action": "inspect",
+            "reaction": "tip",
+            "sound": "impact-sounds/impactSoft_medium_000"
           }
         ],
         "geometry": [
@@ -11479,6 +11914,36 @@
         "z": -3.5,
         "size": 1.1,
         "rotation": 180
+      },
+      {
+        "asset": "mini-characters/character-female-a",
+        "id": "",
+        "label": "Boneca do quarto",
+        "clue": "",
+        "hint": "",
+        "x": -1.1,
+        "y": 0,
+        "z": -1,
+        "size": 1.35,
+        "rotation": 0,
+        "action": "inspect",
+        "reaction": "tip",
+        "sound": "impact-sounds/impactSoft_medium_000"
+      },
+      {
+        "asset": "mini-characters/character-male-c",
+        "id": "",
+        "label": "Boneco de aventura",
+        "clue": "",
+        "hint": "",
+        "x": 3,
+        "y": 0,
+        "z": -1.9,
+        "size": 1.25,
+        "rotation": 20,
+        "action": "inspect",
+        "reaction": "tip",
+        "sound": "impact-sounds/impactSoft_medium_000"
       }
     ]
   }

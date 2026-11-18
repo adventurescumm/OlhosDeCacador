@@ -67,7 +67,7 @@ for stage in all_stages:
  for prop in stage['objects']:
   model_path=root/'Assets/Resources/Hunter/Models'/prop['asset']
   assert model_path.with_suffix('.obj').is_file() or model_path.with_suffix('.fbx').is_file(),prop['asset']
-  assert prop.get('action','') in ['', 'exit', 'gate', 'inspect', 'world', 'digit', 'unlock', 'signal', 'supply', 'destination', 'celebrate']
+  assert prop.get('action','') in ['', 'exit', 'gate', 'inspect', 'world', 'digit', 'unlock', 'signal', 'supply', 'destination', 'celebrate', 'replay']
   if prop['id']:assert prop.get('reaction') in ['hop','tip','spin','launch']
 for asset in manifest['files']:
  path=root/asset['file'];assert path.is_file(),str(path)
@@ -149,7 +149,7 @@ assert packages['com.unity.render-pipelines.universal']=='17.6.0'
 assert packages['com.unity.inputsystem']=='1.20.1'
 player=(root/'ProjectSettings/ProjectSettings.asset').read_text()
 assert re.search(r'^  activeInputHandler: 1$',player,re.M)
-assert re.search(r'^  bundleVersion: 0.9.0$',player,re.M)
+assert re.search(r'^  bundleVersion: 0.10.0$',player,re.M)
 game=(root/'Assets/Hunter/Runtime/HunterGame.cs').read_text()
 assert 'typeof(InputSystemUIInputModule)' in game
 world=(root/'Assets/Hunter/Runtime/HunterGame.World.cs').read_text()
@@ -189,6 +189,28 @@ for scene in scenes:
  assert scene.relative_to(root).as_posix() in build
  assert asset_guid(scene.relative_to(root).as_posix()) in build
  if scene.stem!='Main':assert 'stageId: '+scene.stem in scene.read_text()
+# Every scene and inspectable toy has a valid source-audio reference; no generated clips.
+soundscapes=json.loads((root/'Assets/Resources/Hunter/soundscapes.json').read_text())['stages']
+assert {s['id'] for s in soundscapes}=={s['id'] for s in all_stages}
+assert len(soundscapes)==len(all_stages)
+for stage in soundscapes:
+ assert 0<=stage['ambientGain']<=1 and stage['ambientGap']>=0
+ for field in ['passage','mechanism','discovery','ambient']:
+  if stage[field]:assert (root/'Assets/Resources/Hunter/Audio'/(stage[field]+'.ogg')).is_file(),stage[field]
+for stage in all_stages:
+ for prop in stage['objects']:
+  if prop.get('sound'):assert (root/'Assets/Resources/Hunter/Audio'/(prop['sound']+'.ogg')).is_file(),prop['sound']
+for font in ['Itim-Regular','Boogaloo-Regular']:
+ assert (root/'Assets/Resources/Hunter/UI'/(font+'.ttf')).is_file()
+assert sum(p.get('action')=='replay' for m in catalog['maps'] for p in m['challenge']['objects'])==1
+for scene in scenes:
+ if scene.stem=='Main':continue
+ stage=catalog['hub'] if scene.stem in ['inicio','quarto'] else next(r for r in all_stages if r['id']==scene.stem)
+ data=scene.read_text()
+ for field,key in [('cameraPosition','camera'),('lookAt','lookAt')]:
+  xyz=re.search(r'  '+field+r': \{x: ([^,]+), y: ([^,]+), z: ([^}]+)\}',data)
+  assert xyz and list(map(float,xyz.groups()))==stage[key],(scene,field)
+ assert float(re.search(r'  fieldOfView: ([^\n]+)',data)[1])==stage['fieldOfView']
 # Stable .meta identifiers for every shipped Unity asset, including folders.
 metas=[]
 for path in (root/'Assets').rglob('*'):

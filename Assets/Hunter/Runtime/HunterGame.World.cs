@@ -13,11 +13,18 @@ namespace OlhosDeCacador
         RoomView challengeView;
         WorldHotspot hoveredSpot;
         string lastMessage = "";
-        Vector3 focusPoint;
-        float focusUntil, focusBlend;
-        float magnification = 1;
-        Vector3 magnifierOffset;
-        void ResetMagnifier() { magnification = 1; magnifierOffset = Vector3.zero; }
+        float stageViewportHeight = 900;
+        Image feedbackPanel;
+        void CreateFeedback()
+        {
+            feedbackPanel = ui.Panel(260, 20, 920, 76, new Color(1f, .96f, .86f, .93f));
+            hoverText = ui.Label("", 276, 28, 888, 62, 23, HunterUI.Ink, false, TextAnchor.MiddleCenter);
+            UpdateFeedbackVisibility();
+        }
+        void UpdateFeedbackVisibility()
+        {
+            if (feedbackPanel != null) feedbackPanel.gameObject.SetActive(hoverText != null && !string.IsNullOrEmpty(hoverText.text));
+        }
         readonly List<WorldLabel> worldLabels = new List<WorldLabel>();
         sealed class WorldLabel { public RectTransform rect; public WorldHotspot spot; public float width; }
 
@@ -25,19 +32,16 @@ namespace OlhosDeCacador
         {
             challengeView?.Dispose(); challengeView = null;
         }
-        void FocusOn(Vector3 position, float seconds)
-        {
-            if (reduceMotion) return;
-            focusPoint = position + Vector3.up * .35f; focusUntil = Time.unscaledTime + seconds;
-        }
         static Vector3 Position(float[] coordinates, Vector3 fallback) => coordinates != null && coordinates.Length == 3
             ? new Vector3(coordinates[0], coordinates[1], coordinates[2]) : fallback;
         void UpdateStageCamera(bool advanceAnimation = true)
         {
             float scale = Mathf.Min(Screen.width / 1440f, Screen.height / 900f);
             float left = (Screen.width - 1440 * scale) * .5f, bottom = (Screen.height - 900 * scale) * .5f;
-            float top = mode == Mode.Title ? 0 : 56;
-            float height = mode == Mode.Title ? 900 : mode == Mode.Menu ? 744 : mode == Mode.Junction ? 754 : mode == Mode.Explore ? 674 : 704;
+            const float top = 0;
+            if (mode == Mode.Title || mode == Mode.Menu || mode == Mode.Junction) stageViewportHeight = 900;
+            else if (mode == Mode.Explore || mode == Mode.Puzzle) stageViewportHeight = 760;
+            float height = stageViewportHeight;
             worldCamera.rect = new Rect(left / Screen.width, (bottom + (900 - top - height) * scale) / Screen.height,
                 1440 * scale / Screen.width, height * scale / Screen.height);
             Vector3 eye = viewingShelf ? new Vector3(0, 8, -13.6f) : Position(currentStage?.camera, new Vector3(0, 6.3f, -9.2f));
@@ -47,15 +51,8 @@ namespace OlhosDeCacador
             {
                 eye = HunterStage.Active.cameraPosition; look = HunterStage.Active.lookAt; fov = HunterStage.Active.fieldOfView;
             }
-            bool focus = !reduceMotion && mode == Mode.Explore && Time.unscaledTime < focusUntil;
-            if (advanceAnimation) focusBlend = reduceMotion ? 0 : Mathf.MoveTowards(focusBlend, focus ? 1 : 0, Time.unscaledDeltaTime * 3);
-            // Fixed authored shots; a small focus on a discovery returns to the full composition.
-            eye += (focusPoint - look) * (.22f * focusBlend);
-            look = Vector3.Lerp(look, focusPoint, .22f * focusBlend);
-            if (!reduceMotion && transition > 0 && !viewingShelf) eye.x += .18f * transition / .35f;
-            if (mode == Mode.Explore || mode == Mode.Junction || mode == Mode.Puzzle)
-            { eye += magnifierOffset; look += magnifierOffset; fov /= magnification; }
-            worldCamera.fieldOfView = fov - 2 * focusBlend;
+            // Fixed close composition: no scroll zoom or automatic discovery pan.
+            worldCamera.fieldOfView = fov;
             worldCamera.transform.position = eye; worldCamera.transform.LookAt(look);
             foreach (var label in worldLabels)
             {
@@ -69,7 +66,7 @@ namespace OlhosDeCacador
         }
         void WorldButton(WorldHotspot spot, string text, Color color, float width, bool enabled = true)
         {
-            var button = ui.Button(text, 0, 0, width, 36, () => Activate(spot), color, enabled, 18);
+            var button = ui.Button(text, 0, 0, width, 36, () => Activate(spot), color, enabled, 25);
             worldLabels.Add(new WorldLabel { rect = button.GetComponent<RectTransform>(), spot = spot, width = width });
             UpdateStageCamera(false); // Avoid a frame with newly created labels stacked at the origin.
         }
@@ -87,26 +84,6 @@ namespace OlhosDeCacador
             if (mouse == null) { ClearWorldHover(); return; }
             var pointer = mouse.position.ReadValue();
             if (PointerOverUI(pointer) || !worldCamera.pixelRect.Contains(pointer)) { ClearWorldHover(); return; }
-            if (mouse.rightButton.wasPressedThisFrame) ResetMagnifier();
-            float wheel = mouse.scroll.ReadValue().y;
-            if (mode != Mode.Menu && Mathf.Abs(wheel) > .01f)
-            {
-                float previous = magnification;
-                magnification = Mathf.Clamp(magnification + Mathf.Sign(wheel) * .2f, 1, 1.8f);
-                if (magnification <= 1) magnifierOffset = Vector3.zero;
-                else if (magnification > previous)
-                {
-                    var ray = worldCamera.ScreenPointToRay(pointer);
-                    var plane = new Plane(Vector3.up, new Vector3(0, .5f, 0));
-                    if (plane.Raycast(ray, out float distance))
-                    {
-                        var targetPoint = ray.GetPoint(distance);
-                        var center = Position(currentStage.lookAt, Vector3.zero);
-                        magnifierOffset = new Vector3(Mathf.Clamp(targetPoint.x - center.x, -2.2f, 2.2f), 0, Mathf.Clamp(targetPoint.z - center.z, -1.5f, 1.5f)) * .65f;
-                    }
-                }
-                UpdateStageCamera(false);
-            }
             HuntTarget target = null; WorldHotspot spot = null;
             if (Physics.Raycast(worldCamera.ScreenPointToRay(pointer), out var hit, 60))
             {
@@ -121,6 +98,7 @@ namespace OlhosDeCacador
                 if (spot != null) spot.Hover(true);
             }
             if (spot != null && hoverText != null && spot.Data.action != "inspect") hoverText.text = spot.Data.label;
+            UpdateFeedbackVisibility();
             if (mouse.leftButton.wasPressedThisFrame)
             {
                 if (target != null) Collect(target);
@@ -144,8 +122,10 @@ namespace OlhosDeCacador
             }
             if (data.action == "inspect" && (mode == Mode.Menu || mode == Mode.Explore || mode == Mode.Junction))
             {
-                spot.React(); FocusOn(spot.transform.position, 2); Tap(); Tell(data.label); return;
+                spot.React(); PlayObjectSound(data, false); Tell(data.label); return;
             }
+            if (mode == Mode.Puzzle && data.action == "replay")
+            { StopSignal(); signal = StartCoroutine(ShowSignal()); spot.React(); return; }
             if (mode != Mode.Puzzle || playingSignal) return;
             // Direct mesh clicks and the accessible labels share exactly the same action.
             switch (data.action)

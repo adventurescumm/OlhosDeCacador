@@ -13,7 +13,7 @@ namespace OlhosDeCacador
             if (RouteTo(map.junction.id, ShowJunction, room != null)) return;
             StopSignal(); StopNarration(); ClearWorldHover(); CloseChallenge();
             room?.Dispose(); shelf?.Dispose(); shelf = null; viewingShelf = false;
-            roomIndex = -1; currentStage = map.junction; ResetMagnifier(); focusUntil = 0; focusBlend = 0;
+            roomIndex = -1; currentStage = map.junction; 
             messageUntil = 0; lastMessage = "";
             try
             {
@@ -27,14 +27,8 @@ namespace OlhosDeCacador
         void DrawJunction()
         {
             mode = Mode.Junction; ui.Clear(); worldLabels.Clear(); listenButton = null;
-            var accent = RoomView.Hex(currentStage.color);
-            ui.Panel(0, 0, 1440, 56, accent);
-            ui.Label(currentStage.name, 24, 8, 720, 40, 29, Color.white, true);
-            ui.Label(progress.Count(map) + " / 18 descobertas", 830, 14, 340, 32, 21, HunterUI.Paper);
-            ui.Button("Pausa", 1230, 8, 186, 40, ShowPause, HunterUI.Plum, true, 19);
-            ui.Panel(0, 810, 1440, 90, HunterUI.Paper);
-            ui.Label("Cada passagem faz parte deste pequeno mundo.", 30, 818, 1380, 30, 25, accent, true, TextAnchor.MiddleCenter);
-            hoverText = ui.Label("Clique nas portas, trilhos e pontes. A roda do mouse aproxima.", 50, 855, 1340, 32, 20, HunterUI.Ink, false, TextAnchor.MiddleCenter);
+            ui.Button("Menu", 1310, 18, 108, 42, ShowPause, HunterUI.Plum, true, 21);
+            CreateFeedback();
         }
         void FollowPassage(WorldHotspot spot)
         {
@@ -43,7 +37,7 @@ namespace OlhosDeCacador
             {
                 spot.React(); Tell(destination == map.challenge.id ? "O final espera pelos dezoito tesouros e pelas duas passagens consertadas." : "Esta passagem ainda não funciona. Investigue o mecanismo na maquete anterior."); return;
             }
-            Tap();
+            PlayStageSound("passage");
             if (destination == "quarto") { ShowMenu(); return; }
             if (destination == map.challenge.id) { OpenPuzzle(); return; }
             if (destination == map.junction.id) { ShowJunction(); return; }
@@ -57,7 +51,7 @@ namespace OlhosDeCacador
             if (!progress.Has(gate.tokenId)) { spot.React(); Tell(gate.hint); return; }
             if (!progress.RoomReady(map.rooms[gate.sourceRoom])) { Tell("Você já encontrou a peça. Complete os seis objetos da charada antes de montá-la."); return; }
             if (!progress.Use(map, gate.id, gate.tokenId)) return;
-            Save(); Play(found); room.ApplyMechanisms(progress, !reduceMotion);
+            Save(); PlayStageSound("mechanism"); room.ApplyMechanisms(progress, !reduceMotion);
             Tell("A peça encaixou! Observe a maquete: a passagem para " + map.rooms.First(r => r.id == gate.roomId).name + " está aberta.");
         }
     }

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 30
-  productGUID: ca7ad0f8a4e537b468d5f335133da97b
+  productGUID: 3c6f47dfe8bda4348a6fa0370e95044e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -149,7 +149,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.9.0
+  bundleVersion: 0.10.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

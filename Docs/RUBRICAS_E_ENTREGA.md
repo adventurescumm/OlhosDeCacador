@@ -6,9 +6,9 @@ A matriz abaixo descreve decisões deste protótipo e evidências que a equipe d
 
 | Frente da rubrica | Decisão implementada no código | Evidência para demonstrar | Estado |
 | --- | --- | --- | --- |
-| Controles, câmera e sensação 3D | Câmera de perspectiva fixa; transição curta; seleção por raio; UI separada da área de jogo | Gravar navegação e seleção em nove telas; testar alvos pequenos e oclusão | Teste no Unity pendente |
+| Controles, câmera e sensação 3D | Câmera de perspectiva próxima e fixa; seleção por raio; faixa inferior só com charada, comandos no Menu | Gravar navegação e seleção em nove telas; testar alvos pequenos e oclusão | Teste no Unity pendente |
 | Desempenho, fluidez e colisões | Uma cena de conteúdo ativa; quarto com três entradas; modelos leves; malhas como colisores estáticos; sem física de locomoção | Profiler, cliques em superfícies, troca repetida de telas e sessão completa no executável Windows | Medição pendente |
-| Modelos, materiais e texturas | 148 modelos prontos de oito packs Kenney e um modelo Poly Haven; dois packs adicionais de efeitos e interface; fonte Lilita One; texturas originais; escala normalizada e 264 materiais ligados explicitamente ao conteúdo MTL | Inspecionar as nove telas coloridas, os robôs vermelho/violeta/amarelo, sombras, escala, molduras e faixa de charada | Integridade dos arquivos verificada; aparência Unity pendente |
+| Modelos, materiais e texturas | 158 modelos prontos de oito packs Kenney e um modelo Poly Haven; dois packs adicionais de efeitos e interface; fontes Itim e Boogaloo; texturas originais; escala normalizada e 274 materiais ligados explicitamente ao conteúdo MTL | Inspecionar as nove telas coloridas, os robôs vermelho/violeta/amarelo, sombras, escala, molduras e faixa de charada | Integridade dos arquivos verificada; aparência Unity pendente |
 | Gerenciamento de estados e erros | Progresso por ID; proteção contra duplicação; tentativas ilimitadas; reinício parcial; recuperação de save | Executar testes de domínio e roteiro de falhas; concluir todos os mapas sem reabrir o jogo | 175 verificações do domínio C# passaram fora do Unity; Test Runner pendente |
 
 Como o jogo é point-and-click, travamento de personagem em quinas não se aplica. A evidência equivalente de colisões é respeitar o primeiro obstáculo entre câmera e alvo. Como não há vidas, “falha” significa uma tentativa incorreta de puzzle, com retorno claro para nova tentativa. Se o professor esperar locomoção ou uma tela de derrota literal, alinhar essa interpretação antes de expandir o projeto.
@@ -37,3 +37,7 @@ Como o jogo é point-and-click, travamento de personagem em quinas não se aplic
 - Tela de opções e seleção de mundos no quarto testados em janela e fullscreen.
 
 Nenhum repositório foi criado nem uma publicação foi enviada por esta entrega de arquivos.
+
+## Câmera fixa e a rubrica
+
+O texto da frente 1 pede controles adequados ao gênero, conforto e compreensão do espaço 3D. Não exige roda do mouse, zoom manual ou câmera livre. A v0.10 atende essa intenção com planos próximos, profundidade em perspectiva e navegação por passagens. A retirada do zoom não contradiz um requisito explícito; a evidência deve ser a legibilidade dos objetos e a precisão dos cliques em Play, sem atribuir uma nota antecipada.

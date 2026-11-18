@@ -1,4 +1,4 @@
-# Cenas e edição no Unity — v0.9
+# Cenas e edição no Unity — v0.10
 
 O projeto usa **18 cenas `.unity`**. `Main` inicia a sessão; as outras 17 representam a abertura, o quarto e os cinco espaços de cada mundo. As trocas usam `SceneManager.LoadSceneAsync` em modo Single. O controlador, as câmeras, a interface, o áudio e o progresso ficam em um único objeto persistente.
 
@@ -66,3 +66,9 @@ Os textos, regras, peças necessárias e charadas continuam em `Assets/Resources
 | `Domain/GameData.cs` | Regras de coleta, passagens, conclusão e recuperação do save |
 
 O fluxo de carregamento e a gravação das cenas ainda precisam ser testados no editor. Consulte [VALIDACAO.md](VALIDACAO.md).
+
+## Câmeras e som na v0.10
+
+As câmeras das buscas são próximas e fixas. O viewport de busca/desafio ocupa os primeiros 760 pixels de uma referência 1440 × 900; os últimos 140 são a faixa textual. Entradas e quarto usam a área completa. Camera Position, Look At e Field of View do HunterStage continuam editáveis. Não há zoom da roda nem reposicionamento automático ao encontrar alvos.
+
+`PropData.sound` referencia um clipe original em Hunter/Audio, sem extensão. `soundscapes.json` define os sons de passagens, mecanismos e ambiente por ID de cena. Novos bonecos são props de inspeção sem ID de alvo.

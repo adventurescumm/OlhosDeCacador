@@ -1,4 +1,6 @@
-# Olhos de Caçador — v0.9
+# Olhos de Caçador — v0.10
+
+**v0.10:** câmera próxima sem zoom manual, interface discreta, fontes Itim/Boogaloo, 26 bonecos decorativos e novos efeitos sonoros prontos. Esta atualização altera código, catálogo, câmeras e assets; siga [ATUALIZACAO_V10.md](Docs/ATUALIZACAO_V10.md). A correção OBJ/FBX e o build com 18 cenas continuam incluídos.
 
 Jogo 3D point-and-click para **Windows x64**, **Unity 6000.6.4f1**, **URP 17.6.0** e **Input System 1.20.1 (New)**.
 
@@ -25,16 +27,15 @@ Cada mundo forma um circuito: entrada ↔ busca 1 ↔ busca 2 ↔ busca 3 ↔ en
 | Ação | Controle |
 | --- | --- |
 | Encontrar objeto / atravessar passagem | Clique esquerdo no cenário |
-| Aproximar a região apontada | Roda do mouse |
-| Restaurar visão geral | Botão direito |
-| Pedir uma dica | Dica 1 a 6, conforme o verso |
-| Ler / ouvir | Ler juntos e Ouvir charada |
+| Observar os detalhes | Enquadramento próximo e fixo, sem roda do mouse |
+| Pedir uma dica | Menu → Uma ajudinha → escolher um verso |
+| Ler / ouvir | Menu → Ler juntos / Ouvir charada |
 | Usar peça encontrada | Complete os seis objetos e clique no mecanismo da maquete |
-| Pausar / fechar painel | Esc ou Pausa |
-| Rever pistas | Caderno |
-| Sair do jogo | Sair no quarto ou na pausa; confirmar |
+| Pausar / fechar painel | Esc ou Menu |
+| Rever pistas | Menu → Caderno de pistas |
+| Sair do jogo | Menu → Sair do jogo; confirmar |
 
-Alvos e decoração comum mostram o mesmo texto ao passar o mouse. A aproximação também funciona sobre qualquer região. As dicas são explícitas e progressivas. Clicar errado não apaga progresso.
+Alvos e decoração comum não revelam seus nomes ao passar o mouse. A câmera próxima é fixa; não há zoom, arraste ou movimento automático ao encontrar um objeto. As dicas são explícitas e progressivas. Clicar errado não apaga progresso.
 
 Os mecanismos aparecem antes de poderem ser usados. Ao completar a charada e clicar no brinquedo correspondente, a peça correta é aplicada automaticamente: aparece montada, o brinquedo se move e a próxima passagem abre. O resultado continua após salvar e retornar.
 
@@ -46,15 +47,19 @@ Os mecanismos aparecem antes de poderem ser usados. Ao completar a charada e cli
 
 ## O que mudou visualmente
 
-As nove buscas têm bases espessas sobre uma mesa, patamares, ruas, rios e construções em miniatura. Os objetos estão agrupados em superfícies e cantinhos próprios, com enquadramentos diferentes. São **611 instâncias** nas buscas, incluindo peças que só aparecem depois de resolver mecanismos. A interface mantém cores variadas e Lilita One nos títulos.
+As nove buscas têm bases espessas sobre uma mesa, patamares, ruas, rios e construções em miniatura. Os objetos estão agrupados em superfícies e cantinhos próprios, com enquadramentos diferentes. São **629 instâncias** nas buscas, incluindo peças que só aparecem depois de resolver mecanismos. A faixa inferior mostra somente os seis versos, em Itim, com uma marca colorida para as descobertas. Boogaloo dá personalidade aos títulos e botões. Um pequeno Menu reúne voz, dicas, caderno e opções; o cenário ocupa o restante da tela.
 
-Foram usados novos modelos prontos de mobiliário e um pato de borracha de Poly Haven, com formas arredondadas e textura original. Muitos assets restantes continuam estilizados; suavizar seu sombreamento não aumenta sua geometria. Nenhuma arte ou voz foi gerada.
+Além do mobiliário e do pato original de Poly Haven, há dez modelos Mini Characters de Kenney: bonecos e bonecas com roupas, cabelos e tons de pele variados, incluindo trabalhador e cavaleiro de brinquedo. São 26 instâncias decorativas nas buscas, entradas e quarto. Muitos assets restantes continuam estilizados; suavizar seu sombreamento não aumenta sua geometria. Nenhuma arte ou voz foi gerada.
+
+## Sons dos cenários
+
+São 21 gravações adicionais prontas: madeira, metal, vidro, sinos e passos de Kenney Impact Sounds; portas, computadores e motores de Kenney Sci-fi Sounds; pássaros de isaiah658/OpenGameArt. Objetos usam efeitos ligados ao seu material; passagens e mecanismos têm sons por mundo. Pássaros aparecem na estação, entrada do faroeste e praça; o espaço recebe motores discretos com intervalos. Sons de ambiente baixam durante a voz e param nos painéis. Os arquivos originais foram preservados, sem síntese, corte ou remix. Veja [AUDIO.md](Docs/AUDIO.md).
 
 ## Sua narração
 
 O banco contém nove campos vazios, um por busca. Grave os textos de [NARRACAO.md](Docs/NARRACAO.md), importe seus WAV/OGG e atribua os clipes em `Assets/Resources/Hunter/Narration/NarrationBank.asset`. A voz é opcional; Ler juntos sempre funciona.
 
-**Da v0.8 para a v0.9, somente a charada da estação mudou:** o último verso agora pede um pato de borracha. As outras oito mantêm o texto. Grave novamente a estação antes de reutilizar os clipes. Volumes de voz e efeitos são independentes; leitura automática começa desligada. Trocar de cena ou abrir pausa interrompe a voz.
+**Da v0.9 para a v0.10, nenhum verso mudou.** Você pode reaproveitar as nove gravações. Da v0.8 para a v0.9, somente a charada da estação mudou: o último verso agora pede um pato de borracha. As outras oito mantêm o texto. Grave novamente a estação antes de reutilizar os clipes. Volumes de voz e efeitos são independentes; leitura automática começa desligada. Trocar de cena ou abrir pausa interrompe a voz.
 
 ## Configuração e correções preservadas
 
@@ -62,7 +67,7 @@ O projeto usa exclusivamente Input System Package (New), com `activeInputHandler
 
 Graphics e Quality apontam para HunterURP; HunterRenderer usa Forward, MSAA 2×, HDR desligado e Render Graph. Materiais URP/Lit conservam as cores e texturas originais. As correções de propriedades URP somente leitura, texturas CUBE/2D, reimportação e versões de importadores foram preservadas. O reparo agora também inclui FBX, JPG e EXR.
 
-Os **148 ModelImporters** têm schema 19300 e blocos completos; os **sete AudioImporters** têm schema 6. Não apague os `.meta`. Espere a importação terminar antes de usar os comandos de reparo; não repita Reimport All dentro de um ciclo de importação.
+Os **158 ModelImporters** têm schema 19300 e blocos completos; os **28 AudioImporters** têm schema 6. Não apague os `.meta`. Espere a importação terminar antes de usar os comandos de reparo; não repita Reimport All dentro de um ciclo de importação.
 
 ## Build Windows
 
@@ -75,20 +80,22 @@ O save local usa `OlhosDeCacador.v1`. Os 54 IDs e mecanismos da v0.8 foram prese
 
 ## Assets e autoria
 
-São **147 modelos OBJ e um FBX**, 264 vínculos de materiais e 326 arquivos originais verificados por SHA-256. Geometria, UVs, texturas, efeitos e fonte de terceiros permanecem com os bytes de origem. As formas arquitetônicas usam apenas cubos, esferas e cilindros. Animações movimentam os modelos prontos.
+São **157 modelos OBJ e um FBX**, 274 vínculos de materiais e 370 arquivos originais verificados por SHA-256. Geometria, UVs, texturas, efeitos e fonte de terceiros permanecem com os bytes de origem. As formas arquitetônicas usam apenas cubos, esferas e cilindros. Animações movimentam os modelos prontos.
 
 | Fonte | Conteúdo e licença |
 | --- | --- |
-| [Kenney](https://kenney.nl/assets) | Survival Kit, Nature Kit, Space Kit, City Kit Commercial, Blocky Characters, Furniture Kit, Toy Car Kit, Food Kit, UI Audio e UI Pack Adventure — CC0 |
+| [Kenney](https://kenney.nl/assets) | Survival Kit, Nature Kit, Space Kit, City Kit Commercial, Blocky Characters, Furniture Kit, Toy Car Kit, Food Kit, Mini Characters, UI Audio, Impact Sounds, Sci-fi Sounds e UI Pack Adventure — CC0 |
 | [Rubber Duck Toy — Poly Haven](https://polyhaven.com/a/rubber_duck_toy) | Plat251 — CC0. Powered by Poly Haven |
-| [Lilita One — Google Fonts](https://github.com/google/fonts/tree/main/ofl/lilitaone) | Juan Montoreano — SIL OFL 1.1 |
+| [Itim](https://github.com/google/fonts/tree/main/ofl/itim) e [Boogaloo](https://github.com/google/fonts/tree/main/ofl/boogaloo) | Cadson Demak / Pablo Impallari e John Vargas Beltrán — SIL OFL 1.1. Lilita One permanece no pacote para preservar referências antigas. |
+| [Ambient Bird Sounds](https://opengameart.org/content/ambient-bird-sounds) | isaiah658 — CC0 |
 
 Licenças: `Assets/ThirdPartyLicenses`. Arquivos, hashes e URLs: `Docs/asset-manifest.json`. Conceito solicitado por Gabriel; código e documentação preparados com assistência de IA. Complete os nomes e contribuições da equipe antes da entrega acadêmica.
 
 ## Documentação
 
 - [Cenas e edição](Docs/CENAS.md)
-- [Atualização v0.9](Docs/ATUALIZACAO_V09.md)
+- [Atualização v0.10](Docs/ATUALIZACAO_V10.md)
+- [Sons e fontes](Docs/AUDIO.md)
 - [Narração](Docs/NARRACAO.md)
 - [GDD](Docs/GDD.md)
 - [Validação e roteiro de testes](Docs/VALIDACAO.md)

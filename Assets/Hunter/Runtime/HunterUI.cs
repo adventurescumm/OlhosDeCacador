@@ -25,8 +25,9 @@ namespace OlhosDeCacador
             go.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
             var scaler = go.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1440, 900); scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-            canvas = go.transform; font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-            display = Resources.Load<Font>("Hunter/UI/LilitaOne-Regular") ?? font; Clear();
+            canvas = go.transform;
+            font = Resources.Load<Font>("Hunter/UI/Itim-Regular") ?? Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            display = Resources.Load<Font>("Hunter/UI/Boogaloo-Regular") ?? font; Clear();
         }
         public void Clear()
         {

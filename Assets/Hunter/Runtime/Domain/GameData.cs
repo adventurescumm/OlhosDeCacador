@@ -32,7 +32,7 @@ namespace OlhosDeCacador
     }
     [Serializable] public sealed class PropData
     {
-        public string asset, id, label, clue, hint;
+        public string asset, id, label, clue, hint, sound;
         public string action, destination, reaction;
         public int value;
         public float x, y, z, size, rotation;

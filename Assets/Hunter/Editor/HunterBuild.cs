@@ -26,7 +26,7 @@ namespace OlhosDeCacador.Editor
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
             PlayerSettings.allowFullscreenSwitch = true;
             PlayerSettings.resizableWindow = true; PlayerSettings.runInBackground = false;
-            PlayerSettings.bundleVersion = "0.9.0";
+            PlayerSettings.bundleVersion = "0.10.0";
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
             // Use only Input System Package (New); the editor may require a restart.
@@ -129,7 +129,14 @@ namespace OlhosDeCacador.Editor
                     throw new BuildFailedException("Roteiro de gravação não corresponde à charada: " + room.id);
             foreach (string art in new[] { "panel_brown", "panel_border_brown", "banner_classic_curtain", "minimap_icon_star_yellow" })
                 if (Resources.Load<Sprite>("Hunter/UI/" + art) == null) throw new BuildFailedException("Sprite não importado: " + art);
-            if (Resources.Load<Font>("Hunter/UI/LilitaOne-Regular") == null) throw new BuildFailedException("Fonte Lilita One não importada.");
+            foreach (string font in new[] { "Itim-Regular", "Boogaloo-Regular" })
+                if (Resources.Load<Font>("Hunter/UI/" + font) == null) throw new BuildFailedException("Fonte não importada: " + font);
+            var soundText = Resources.Load<TextAsset>("Hunter/soundscapes");
+            if (soundText == null) throw new BuildFailedException("Catálogo de sons ausente.");
+            var sounds = JsonUtility.FromJson<SoundCatalog>(soundText.text);
+            foreach (var stage in sounds.stages)
+                foreach (var clip in new[] { stage.passage, stage.mechanism, stage.discovery, stage.ambient }.Where(c => !string.IsNullOrEmpty(c)))
+                    if (Resources.Load<AudioClip>("Hunter/Audio/" + clip) == null) throw new BuildFailedException("Som não importado: " + clip);
             int recordings = rooms.Count(r => bank.ForRoom(r.id) != null);
             Debug.Log("Conteúdo íntegro: URP e Input System configurados; 3 mapas, 9 charadas, 54 alvos, materiais URP/Lit com cores e texturas originais; " + recordings + "/9 gravações humanas. Ainda é necessário testar a jogabilidade.");
         }
@@ -187,9 +194,11 @@ namespace OlhosDeCacador.Editor
                         throw new BuildFailedException("Modelo ausente ou não importado: " + HunterImporter.Models + prop.asset + " (OBJ/FBX). Aguarde a importação terminar.");
                     string path = AssetDatabase.GetAssetPath(model);
                     ValidateImporterVersion(path, "ModelImporter", 25);
+                    if (!string.IsNullOrEmpty(prop.sound) && Resources.Load<AudioClip>("Hunter/Audio/" + prop.sound) == null)
+                        throw new BuildFailedException("Som do objeto ausente: " + prop.sound);
                 }
             }
-            foreach (string path in Directory.GetFiles("Assets/Resources/Hunter/Audio", "*.ogg"))
+            foreach (string path in Directory.GetFiles("Assets/Resources/Hunter/Audio", "*.ogg", SearchOption.AllDirectories))
                 ValidateImporterVersion(path, "AudioImporter", 6);
         }
         static void ValidateImporterVersion(string path, string importer, int minimum)

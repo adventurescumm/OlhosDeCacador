@@ -18,7 +18,7 @@ namespace OlhosDeCacador.Editor
         [Serializable] sealed class MaterialBindings { public ModelBinding[] materials; }
         [Serializable] sealed class ModelBinding { public string model, name; }
         bool IsModel => assetPath.StartsWith(Models, StringComparison.Ordinal);
-        public override uint GetVersion() => 9;
+        public override uint GetVersion() => 10;
         internal static Material OriginalMaterial(string modelPath, string materialName)
         {
             string model = modelPath.Substring(Models.Length);
@@ -73,7 +73,7 @@ namespace OlhosDeCacador.Editor
             bool ui = path.StartsWith(UI, StringComparison.Ordinal);
             if (!ui && !path.StartsWith(Models, StringComparison.Ordinal)) return false;
             var type = ui ? TextureImporterType.Sprite : TextureImporterType.Default;
-            bool toyPack = path.Contains("/furniture-kit/") || path.Contains("/toy-car-kit/") || path.Contains("/food-kit/") || path.Contains("/polyhaven-duck/");
+            bool toyPack = path.Contains("/furniture-kit/") || path.Contains("/toy-car-kit/") || path.Contains("/food-kit/") || path.Contains("/polyhaven-duck/") || path.Contains("/mini-characters/");
             var filter = ui || toyPack ? FilterMode.Bilinear : FilterMode.Point;
             var wrap = ui ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
             string name = Path.GetFileNameWithoutExtension(path);

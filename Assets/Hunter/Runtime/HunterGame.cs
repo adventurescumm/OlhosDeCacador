@@ -98,6 +98,7 @@ namespace OlhosDeCacador
                 sound = gameObject.AddComponent<AudioSource>(); sound.playOnAwake = false; sound.volume = effectsVolume;
                 voice = gameObject.AddComponent<AudioSource>(); voice.playOnAwake = false;
                 voice.loop = false; voice.spatialBlend = 0; ApplyAudioSettings();
+                InitializeRoomAudio();
                 click = Clip("click1"); found = Clip("click3"); wrong = Clip("rollover1");
                 notes = new[] { Clip("switch1"), Clip("switch4"), Clip("switch7"), Clip("switch10") };
                 StartAtScene();
@@ -117,45 +118,24 @@ namespace OlhosDeCacador
             camera.allowHDR = false; camera.allowMSAA = true;
         }
         AudioClip Clip(string name) => Resources.Load<AudioClip>("Hunter/Audio/" + name);
-        void Play(AudioClip clip) { if (!muted && clip != null && sound != null) sound.PlayOneShot(clip); }
+        void Play(AudioClip clip) { if (!muted && clip != null && sound != null) sound.PlayOneShot(clip, voice != null && voice.isPlaying ? .35f : .65f); }
         void Tap() => Play(click);
         Progress LoadProgress()
         {
-            var raw = PlayerPrefs.GetString(SaveKey, "");
-            if (string.IsNullOrEmpty(raw)) return new Progress(catalog);
-            try
-            {
-                var parsed = JsonUtility.FromJson<SaveData>(raw);
-                if (parsed == null) throw new ArgumentException("Save vazio.");
-                return new Progress(catalog, parsed);
-            }
-            catch
-            {
-                var backup = PlayerPrefs.GetString(SaveKey + ".backup", "");
-                if (!string.IsNullOrEmpty(backup))
-                {
-                    try
-                    {
-                        var parsed = JsonUtility.FromJson<SaveData>(backup);
-                        if (parsed == null) throw new ArgumentException("Backup vazio.");
-                        var recovered = new Progress(catalog, parsed);
-                        saveWarning = "Seu último progresso válido foi recuperado.";
-                        return recovered;
-                    }
-                    catch { /* Both copies invalid: preserve playability. */ }
-                }
-                saveWarning = "Não foi possível ler o progresso anterior. Uma nova brincadeira está disponível.";
-                return new Progress(catalog);
-            }
+            // Cada execucao comeca com uma nova partida. Nao reutilizar objetos,
+            // mecanismos ou desafios concluidos de execucoes anteriores.
+            // As preferencias de audio/acessibilidade usam chaves separadas.
+            PlayerPrefs.DeleteKey(SaveKey);
+            PlayerPrefs.DeleteKey(SaveKey + ".backup");
+            PlayerPrefs.Save();
+            return new Progress(catalog);
         }
         void Save()
         {
             try
             {
-                // Serialize a validated in-memory state into both slots, never back up a corrupt file.
-                string encoded = JsonUtility.ToJson(progress.Data);
-                PlayerPrefs.SetString(SaveKey + ".backup", encoded);
-                PlayerPrefs.SetString(SaveKey, encoded);
+                // O progresso permanece somente em memoria durante a partida.
+                // Salvar apenas preferencias persistentes entre execucoes.
                 PlayerPrefs.SetInt(SaveKey + ".mute", muted ? 1 : 0);
                 PlayerPrefs.SetInt(SaveKey + ".motion", reduceMotion ? 1 : 0);
                 PlayerPrefs.SetInt(SaveKey + ".autoVoice", autoNarration ? 1 : 0);
@@ -165,14 +145,15 @@ namespace OlhosDeCacador
             }
             catch (Exception e)
             {
-                Debug.LogWarning("Progresso disponível nesta sessão; falha ao salvar: " + e.Message);
-                saveWarning = "Não foi possível salvar neste computador. Você pode continuar nesta sessão.";
+                Debug.LogWarning("Nao foi possivel salvar as preferencias: " + e.Message);
+                saveWarning = "Nao foi possivel salvar as preferencias neste computador.";
             }
         }
         void Update()
         {
             if (worldCamera == null) return;
             UpdateStageCamera();
+            UpdateRoomAudio();
             transition = Mathf.Max(0, transition - Time.unscaledDeltaTime);
             var keyboard = Keyboard.current;
             if (mode == Mode.Title)
@@ -219,18 +200,15 @@ namespace OlhosDeCacador
                 // No automatic enlargement/reveal on hover: the clue, not the cursor, identifies a target.
             }
             if (hoverText != null)
-                hoverText.text = Time.unscaledTime < messageUntil && !string.IsNullOrEmpty(lastMessage) ? lastMessage :
-                    mode == Mode.Menu ? "Clique numa maquete para entrar. Cada brinquedo abre um mundo." :
-                    mode == Mode.Junction ? "Explore as portas e passagens da maquete. A roda do mouse aproxima." :
-                    "Observe os detalhes. A roda do mouse aproxima; botão direito afasta.";
+                hoverText.text = Time.unscaledTime < messageUntil ? lastMessage : "";
+            UpdateFeedbackVisibility();
         }
         void Collect(HuntTarget target)
         {
             var data = target.Data;
             if (!progress.Collect(data.id)) return;
-            FocusOn(target.transform.position, 1.1f);
             SetHover(null); room.Targets.Remove(data.id); target.Celebrate();
-            Save(); Play(found); DrawHUD();
+            Save(); PlayObjectSound(data, true); DrawHUD();
             Tell(progress.Ready(map) ? "Todos encontrados! " + ChallengeInvitation() : "Achei! " + data.label + (string.IsNullOrEmpty(data.clue) ? "" : " • Pista anotada no caderno."));
         }
         float messageUntil;
@@ -247,9 +225,9 @@ namespace OlhosDeCacador
         }
         bool PrepareBedroom(Mode screen)
         {
-            StopSignal(); StopNarration(); CloseChallenge(); ClearWorldHover(); mode = screen; focusUntil = 0; focusBlend = 0;
+            StopSignal(); StopNarration(); CloseChallenge(); ClearWorldHover(); mode = screen; 
             titlePlay = null; titleStars.Clear(); worldLabels.Clear(); room?.Dispose(); shelf?.Dispose(); shelf = null;
-            map = null; roomIndex = -1; viewingShelf = false; currentStage = catalog.hub; ResetMagnifier();
+            map = null; roomIndex = -1; viewingShelf = false; currentStage = catalog.hub; 
             try { room = new RoomView(new MapData { color = "#AD537E", floor = "#E9C696", wall = "#A8CFD8" }, currentStage, progress, reduceMotion); }
             catch (Exception e) { ShowError(e); return false; }
             worldCamera.backgroundColor = RoomView.Hex("#AACBD7"); return true;
@@ -288,15 +266,10 @@ namespace OlhosDeCacador
             if (RouteTo("quarto", ShowMenu, room != null)) return;
             if (!PrepareBedroom(Mode.Menu)) return;
             ui.Clear();
-            ui.Panel(0, 0, 1440, 56, HunterUI.Plum);
-            ui.Label("O QUARTO DAS BRINCADEIRAS", 28, 8, 1000, 42, 29, HunterUI.Paper, true);
-            ui.Button("Tela inicial", 1210, 8, 204, 40, ShowTitle, HunterUI.Teal, true, 19);
-            ui.Panel(0, 800, 1440, 100, RoomView.Hex("#F7DFAD"));
-            hoverText = ui.Label("Qual brinquedo vai abrir sua próxima aventura?", 40, 808, 1360, 30, 21, HunterUI.Ink, false, TextAnchor.MiddleCenter);
-            ui.Button("Opções", 60, 850, 280, 36, () => ShowOptions(ShowMenu), HunterUI.Teal, true, 20);
-            ui.Button("Créditos", 370, 850, 280, 36, () => Credits(ShowMenu), RoomView.Hex("#AF4662"), true, 20);
-            ui.Button("Novo jogo", 680, 850, 340, 36, () => Confirm("Uma nova aventura?", "Isso limpa as descobertas e os caminhos abertos dos três mundos.", () => { progress.ResetAll(); hints.Clear(); Save(); ShowMenu(); }, ShowMenu), RoomView.Hex("#745090"), true, 20);
-            ui.Button("Sair", 1050, 850, 330, 36, () => ConfirmExit(ShowMenu), RoomView.Hex("#93603D"), true, 20);
+            ui.Label("Escolha uma brincadeira", 32, 22, 670, 46, 32, HunterUI.Paper, true);
+            ui.Button("Menu", 1310, 18, 108, 42, ShowPause, HunterUI.Plum, true, 21);
+            ui.Button("Início", 1188, 18, 108, 42, ShowTitle, HunterUI.Teal, true, 21);
+            CreateFeedback();
         }
 
         void EnterMap(MapData selected)
@@ -311,7 +284,7 @@ namespace OlhosDeCacador
             try
             {
                 StopSignal(); StopNarration(); ClearWorldHover(); CloseChallenge(); room?.Dispose();
-                currentStage = map.rooms[roomIndex]; ResetMagnifier(); focusUntil = 0; messageUntil = 0; lastMessage = "";
+                currentStage = map.rooms[roomIndex];  messageUntil = 0; lastMessage = "";
                 room = new RoomView(map, currentStage, progress, reduceMotion);
                 worldCamera.backgroundColor = RoomView.Hex(map.wall);
                 transition = reduceMotion ? 0 : .35f; mode = Mode.Explore; DrawHUD();
@@ -331,42 +304,28 @@ namespace OlhosDeCacador
             }
             if (map == null) { ShowMenu(); return; }
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != map.rooms[roomIndex].id || room == null) { LoadRoom(); return; }
-            CloseChallenge(); currentStage = map.rooms[roomIndex]; focusUntil = 0; room.SetReducedMotion(reduceMotion);
+            CloseChallenge(); currentStage = map.rooms[roomIndex];  room.SetReducedMotion(reduceMotion);
             if (room?.Root != null) room.Root.SetActive(true);
             mode = Mode.Explore; DrawHUD(); if (autoNarration) PlayNarration();
         }
         void DrawHUD()
         {
             mode = Mode.Explore; ui.Clear(); worldLabels.Clear(); listenButton = null;
-            Color accent = RoomView.Hex(currentStage.color);
             var currentRoom = map.rooms[roomIndex];
             var targets = currentRoom.objects.Where(p => !string.IsNullOrEmpty(p.id)).ToArray();
-            int count = targets.Count(p => progress.Has(p.id));
-            ui.Panel(0, 0, 1440, 56, accent);
-            ui.Label(currentRoom.name, 24, 8, 660, 40, 27, Color.white, true);
-            ui.Label(count + " / " + targets.Length + " neste cantinho", 690, 16, 245, 30, 20, HunterUI.Paper);
-            ui.Label("Explore as passagens", 952, 10, 150, 36, 16, Color.white);
-            ui.Button("Caderno", 1110, 8, 150, 40, Notebook, HunterUI.Plum, true, 18);
-            ui.Button("Pausa", 1268, 8, 148, 40, ShowPause, RoomView.Hex("#AE496C"), true, 18);
-            ui.Panel(0, 730, 1440, 170, accent); ui.Sheet(8, 736, 958, 156);
+            // The lower band belongs only to the riddle, as in a picture-book search.
+            ui.Panel(0, 760, 1440, 140, HunterUI.Paper).raycastTarget = true;
+            ui.Panel(0, 760, 1440, 3, RoomView.Hex(currentStage.color));
             string[] lines = currentRoom.riddle.Split('\n');
-            ui.Label(string.Join("\n", lines.Take(3)), 24, 748, 456, 90, 19, HunterUI.Ink);
-            ui.Label(string.Join("\n", lines.Skip(3)), 496, 748, 450, 90, 19, HunterUI.Ink);
-            Color[] colors = { HunterUI.Teal, HunterUI.Plum, RoomView.Hex("#AD4764"), RoomView.Hex("#3C679B"), RoomView.Hex("#8B5B30"), RoomView.Hex("#3E7550") };
-            for (int i = 0; i < targets.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                var target = targets[i]; bool collected = progress.Has(target.id);
-                ui.Button(collected ? "Achei " + (i + 1) : "Dica " + (i + 1), 24 + i * 155, 846, 146, 36,
-                    () => { selectedTarget = target.id; Hint(); }, colors[i % colors.Length], !collected, 18);
+                bool collected = i < targets.Length && progress.Has(targets[i].id);
+                string line = (collected ? "• " : "") + lines[i];
+                ui.Label(line, i < 3 ? 38 : 742, 778 + (i % 3) * 36, 660, 35, 27,
+                    collected ? HunterUI.Teal : HunterUI.Ink);
             }
-            ui.Sheet(978, 736, 438, 156);
-            ui.Label("VOZ DA AVENTURA", 998, 752, 398, 30, 23, accent, true, TextAnchor.MiddleCenter);
-            ui.Button("Ler juntos", 998, 814, 190, 52, ShowReading, HunterUI.Plum, true, 20);
-            listenButton = ui.Button(CurrentReading() != null ? "Ouvir charada" : "Sem gravação", 1200, 814, 194, 52, ToggleNarration, HunterUI.Teal, CurrentReading() != null, 18);
-            if (CurrentReading() == null) listenButton = null;
-            ui.Panel(280, 684, 880, 34, new Color(.08f, .10f, .21f, .82f));
-            hoverText = ui.Label(count == targets.Length ? "Charada completa! Experimente o mecanismo desta maquete." : "Seis tesouros, muitos brinquedos. Observe antes de clicar!", 292, 686, 856, 30, 18, Color.white, false, TextAnchor.MiddleCenter);
-            message = null;
+            ui.Button("Menu", 1310, 18, 108, 42, ShowPause, HunterUI.Plum, true, 21);
+            CreateFeedback(); message = null;
             if (!string.IsNullOrEmpty(saveWarning)) Tell(saveWarning);
         }
 
@@ -386,13 +345,65 @@ namespace OlhosDeCacador
         }
         void ShowPause()
         {
-            StopNarration(); Tap(); mode = Mode.Pause; SetHover(null); ui.Modal("Uma pausa na brincadeira", "Suas descobertas estão guardadas. Volte quando quiser.");
-            ui.Button("Continuar", 242, 354, 956, 62, ReturnToWorld, RoomView.Hex(map.color));
-            ui.Button("Como jogar", 242, 434, 956, 60, () => Help(ShowPause));
-            ui.Button("Recomeçar este mapa", 242, 514, 956, 60, () => Confirm("Recomeçar este mundo?", "Os outros mundos continuam guardados.", () => { progress.ResetMap(map); foreach (var p in map.Targets) hints.Remove(p.id); roomIndex = -1; Save(); ShowJunction(); }, ShowPause));
-            ui.Button("Opções de áudio e movimento", 242, 594, 956, 60, () => ShowOptions(() => { ReturnToWorld(); ShowPause(); }));
-            ui.Button("Sair do jogo", 242, 674, 956, 60, () => ConfirmExit(ShowPause));
+            StopNarration(); Tap(); mode = Mode.Pause; SetHover(null);
+            ui.Modal("Uma pausa na brincadeira", map == null ? "O quarto guarda suas três aventuras." :
+                map.title + " • " + progress.Count(map) + " de 18 descobertas");
+            ui.Button("Continuar", 242, 342, 956, 56, ReturnToWorld, HunterUI.Teal, true, 27);
+            bool searching = map != null && roomIndex >= 0 && currentStage == map.rooms[roomIndex];
+            if (searching)
+            {
+                ui.Button("Ouvir charada", 242, 414, 468, 54, () => { ReturnToWorld(); if (muted || narrationVolume <= 0) Tell("A voz está desligada. Ajuste o volume em Menu > Opções."); else PlayNarration(); }, HunterUI.Plum, CurrentReading() != null);
+                ui.Button("Ler juntos", 730, 414, 468, 54, ShowReading, HunterUI.Plum);
+                ui.Button("Uma ajudinha", 242, 482, 468, 54, ShowHints, HunterUI.Teal);
+                ui.Button("Caderno de pistas", 730, 482, 468, 54, Notebook, HunterUI.Teal);
+            }
+            else
+            {
+                ui.Button("Como jogar", 242, 414, 468, 54, () => Help(ShowPause));
+                ui.Button("Créditos", 730, 414, 468, 54, () => Credits(ShowPause));
+                ui.Label("As portas, pontes e trilhos levam aos próximos cantinhos.", 242, 490, 956, 48, 25);
+            }
+            ui.Button("Opções", 242, 550, 468, 54, () => ShowOptions(ShowPause), HunterUI.Plum);
+            ui.Button("Como jogar", 730, 550, 468, 54, () => Help(ShowPause), HunterUI.Plum);
+            ui.Button(map == null ? "Nova brincadeira" : "Recomeçar este mundo", 242, 618, 468, 54,
+                () => Confirm("Recomeçar?", map == null ? "Isso limpa o progresso dos três mundos." : "Os outros mundos continuam guardados.",
+                    () => { if (map == null) { progress.ResetAll(); hints.Clear(); Save(); ShowMenu(); }
+                        else { progress.ResetMap(map); foreach (var target in map.Targets) hints.Remove(target.id); roomIndex = -1; Save(); ShowJunction(); } }, ShowPause));
+            ui.Button("Sair do jogo", 730, 618, 468, 54, () => ConfirmExit(ShowPause));
         }
+        void ShowHints()
+        {
+            mode = Mode.Dialog; dialogBack = ShowPause;
+            ui.Modal("Uma ajudinha", "Escolha um verso. A primeira dica diz o nome; as seguintes ajudam a localizar o objeto.");
+            var targets = map.rooms[roomIndex].objects.Where(p => !string.IsNullOrEmpty(p.id)).ToArray();
+            string[] lines = map.rooms[roomIndex].riddle.Split('\n');
+            for (int i = 0; i < targets.Length; i++)
+            {
+                var target = targets[i]; bool collected = progress.Has(target.id);
+                ui.Button((collected ? "• " : "") + lines[i], 242, 336 + i * 53, 956, 44,
+                    () => { selectedTarget = target.id; ReturnToWorld(); Hint(); }, HunterUI.Teal, !collected, 23);
+            }
+            // Accessibility fallback: after three hints, a blocked or unclickable
+            // object can be collected without resetting progress or bypassing gates.
+            bool canAssist = !string.IsNullOrEmpty(selectedTarget) &&
+                targets.Any(p => p.id == selectedTarget) && !progress.Has(selectedTarget) &&
+                hints.TryGetValue(selectedTarget, out int hintCount) && hintCount >= 3;
+            ui.Button("Voltar", 242, 674, canAssist ? 468 : 956, 62, ShowPause);
+            if (canAssist)
+                ui.Button("Recolher com ajuda", 730, 674, 468, 62, () =>
+                {
+                    var id = selectedTarget;
+                    ReturnToWorld();
+                    if (room != null && room.Targets.TryGetValue(id, out var instance) && instance != null)
+                        Collect(instance);
+                    else if (progress.Collect(id))
+                    {
+                        Save(); DrawHUD();
+                        Tell("Objeto encontrado com ajuda! Continue a charada.");
+                    }
+                }, HunterUI.Teal, true, 23);
+        }
+
         void ConfirmExit(Action back)
         {
             Confirm("Fechar a caixa de brinquedos?", "Quer sair do jogo e voltar para o Windows?", ExitGame, back, "Sim, sair");
@@ -463,8 +474,8 @@ namespace OlhosDeCacador
         }
         void Help(Action back)
         {
-            StopNarration(); dialogBack = back; mode = Mode.Dialog; ui.Modal("Como jogar", "Entre numa maquete do quarto e explore suas portas, pontes e trilhos.");
-            ui.Label("• Cada maquete esconde SEIS objetos. Leia ou ouça a charada.\n• Clique nas portas, trilhos e pontes para caminhar pelo mundo.\n• Alguns brinquedos só funcionam com uma peça encontrada.\n• Complete a charada e clique no mecanismo para usar a peça.\n• Abra atalhos e volte para observar o que mudou.\n• Roda do mouse: aproximar. Botão direito: visão geral.\n• Dica 1 a 6 ajuda em etapas. Encontre os 18 objetos e o final.", 242, 334, 946, 294, 23);
+            StopSignal(); StopNarration(); dialogBack = back; mode = Mode.Dialog; ui.Modal("Como jogar", "Entre numa maquete do quarto e explore suas portas, pontes e trilhos.");
+            ui.Label("• Cada maquete esconde SEIS objetos. Leia ou ouça a charada.\n• Clique nas portas, trilhos e pontes para caminhar pelo mundo.\n• Alguns brinquedos só funcionam com uma peça encontrada.\n• Complete a charada e clique no mecanismo para usar a peça.\n• Abra atalhos e volte para observar o que mudou.\n• A câmera já fica perto dos brinquedos: basta observar.\n• Menu guarda voz, dicas e caderno. Encontre os 18 objetos.", 242, 334, 946, 294, 23);
             ui.Button("Entendi!", 242, 674, 956, 62, back);
         }
         void Notebook()
@@ -477,7 +488,7 @@ namespace OlhosDeCacador
         void Credits(Action back)
         {
             StopNarration(); dialogBack = back; mode = Mode.Dialog; ui.Modal("Feito para brincar", "Assets prontos de Kenney e Poly Haven; licenças nos arquivos do projeto.");
-            ui.Label("Kenney: Survival, Nature, Space, City, Blocky Characters\nFurniture Kit • Toy Car Kit • Food Kit • UI e áudio\nPato de borracha: Plat251 • CC0 • Powered by Poly Haven\nFonte Lilita One: Juan Montoreano • SIL OFL 1.1\n\nInspiração de gênero: livros I Spy e I Spy: Fantasy.\nNenhum conteúdo desses livros ou jogos foi copiado.\n\nConceito solicitado por Gabriel. Código com assistência de IA.\nA voz da aventura é uma gravação humana opcional.", 242, 338, 950, 320, 22);
+            ui.Label("Kenney: Survival, Nature, Space, City, Blocky Characters\nFurniture • Toy Car • Food • Mini Characters • UI e áudio\nPato de borracha: Plat251 • CC0 • Powered by Poly Haven\nFontes: Itim • Cadson Demak / Pablo Impallari; Boogaloo • John Vargas Beltrán (OFL)\n\nInspiração de gênero: livros I Spy e I Spy: Fantasy.\nNenhum conteúdo desses livros ou jogos foi copiado.\n\nConceito solicitado por Gabriel. Código com assistência de IA.\nSons: Kenney (CC0); pássaros: isaiah658 / OpenGameArt (CC0).", 242, 338, 950, 320, 21);
             ui.Button("Voltar", 242, 674, 956, 62, back);
         }
         void Confirm(string title, string body, Action yes, Action no, string confirmLabel = "Sim, recomeçar")
@@ -497,7 +508,7 @@ namespace OlhosDeCacador
             memory = new MemorySequence(map.solution);
             try
             {
-                currentStage = map.challenge; ResetMagnifier(); focusUntil = 0;
+                currentStage = map.challenge; 
                 if (room != null) room.Root.SetActive(false);
                 challengeView = new RoomView(map, currentStage, progress, reduceMotion);
                 DrawPuzzle();
@@ -506,31 +517,22 @@ namespace OlhosDeCacador
         }
         void DrawPuzzle()
         {
-            mode = Mode.Puzzle; ui.Clear(); worldLabels.Clear();
+            mode = Mode.Puzzle; ui.Clear(); worldLabels.Clear(); listenButton = null;
             Color accent = RoomView.Hex(map.color);
-            ui.Panel(0, 0, 1440, 56, accent);
-            ui.Label(map.puzzleTitle, 28, 10, 1100, 36, 28, Color.white, true);
-            ui.Label("Saída pelo cenário", 1190, 12, 226, 36, 18, Color.white);
-            ui.Panel(0, 760, 1440, 140, accent);
-            ui.Sheet(12, 768, 1416, 120);
-            string intro = map.puzzle == "lock" ? "Clique nas três garrafinhas para mudar os números. Depois clique no baú." :
-                map.puzzle == "memory" ? "Veja quais brinquedos recebem o sinal. Clique neles na mesma ordem." :
-                "Clique numa ferramenta e depois na miniatura do lugar que precisa dela.";
-            ui.Label(intro, 32, 780, 1040, 38, 23, HunterUI.Ink, true);
+            ui.Panel(0, 760, 1440, 140, HunterUI.Paper).raycastTarget = true;
+            ui.Panel(0, 760, 1440, 3, accent);
+            string intro = map.puzzle == "lock" ? "Três garrafinhas guardam a senha. Mude os números e abra o baú." :
+                map.puzzle == "memory" ? "Toque no rádio da frente. Observe os brinquedos e repita os quatro sinais." :
+                "Qual ferramenta ajuda cada lugar? Escolha uma peça e leve-a à miniatura.";
+            ui.Label(intro, 38, 782, 1364, 40, 29, HunterUI.Ink, false, TextAnchor.MiddleCenter);
             puzzleMessage = ui.Label(map.puzzle == "lock" ? "Pistas: " + string.Join("  •  ", map.clues) :
-                map.puzzle == "matching" ? "Praça: flores com sede. Ponte: conserto. Quartel: mensagem." : "Use Assistir / repetir para ouvir e ver a mensagem.", 32, 830, 1040, 50, 19, HunterUI.Ink);
-            if (map.puzzle == "memory") ui.Button("Assistir / repetir", 1100, 790, 296, 68, () => { StopSignal(); signal = StartCoroutine(ShowSignal()); }, accent, true, 23);
-            else ui.Label("Clique na saída para voltar", 1100, 790, 296, 68, 21, HunterUI.Ink);
-            foreach (var spot in challengeView.Hotspots.Where(h => h.Data.action != "exit"))
-            {
-                string label = spot.Data.label;
-                if (spot.Data.action == "digit") label = (spot.Data.value + 1) + "º:  " + digits[spot.Data.value] + "  +";
-                if (spot.Data.action == "supply") label = (selectedSupply == spot.Data.value ? "> " : "") + label;
-                if (spot.Data.action == "destination" && assignments[spot.Data.value] >= 0) label += "  OK";
-                if (spot.Data.action == "inspect" || spot.Data.action == "celebrate") continue;
-                bool enabled = spot.Data.action != "supply" || !assignments.Contains(spot.Data.value);
-                WorldButton(spot, label, spot.Data.action == "supply" && selectedSupply == spot.Data.value ? HunterUI.Plum : accent, 210, enabled);
-            }
+                map.puzzle == "matching" ? (selectedSupply >= 0 ? "Na mão: " + supplies[selectedSupply] : "Praça: flores com sede. Ponte: conserto. Quartel: mensagem.") :
+                "O rádio pode repetir a mensagem quando você precisar.", 38, 835, 1364, 42, 26, HunterUI.Ink, false, TextAnchor.MiddleCenter);
+            ui.Button("Ajuda", 1310, 18, 108, 42, () => Help(DrawPuzzle), HunterUI.Plum, true, 21);
+            CreateFeedback();
+            // Only the changing lock numbers need labels; other puzzle pieces are clicked directly.
+            foreach (var spot in challengeView.Hotspots.Where(h => h.Data.action == "digit"))
+                WorldButton(spot, digits[spot.Data.value].ToString(), HunterUI.Plum, 66);
         }
         IEnumerator ShowSignal()
         {
@@ -550,7 +552,7 @@ namespace OlhosDeCacador
         {
             if (playingSignal) return;
             Play(notes[index]);
-            if (!memory.Press(index)) { puzzleMessage.text = "Tente de novo. Use Assistir / repetir para rever o sinal."; Play(wrong); return; }
+            if (!memory.Press(index)) { puzzleMessage.text = "Tente de novo. Clique no rádio para rever o sinal."; Play(wrong); return; }
             puzzleMessage.text = "Muito bem! " + memory.Position + " de 4 sinais.";
             if (memory.Complete) Win();
         }
@@ -590,8 +592,10 @@ namespace OlhosDeCacador
             ui.Label(exception.Message, 242, 352, 950, 180, 24);
             ui.Button("Tentar novamente", 242, 674, 956, 62, RestartSession);
         }
-        void OnApplicationFocus(bool focused) { if (!focused) StopNarration(); }
-        void OnApplicationPause(bool paused) { if (paused) { StopNarration(); if (progress != null) Save(); } }
+        void OnApplicationFocus(bool focused)
+        { if (!focused) { StopNarration(); if (ambience != null) ambience.Stop(); } }
+        void OnApplicationPause(bool paused)
+        { if (paused) { StopNarration(); if (ambience != null) ambience.Stop(); if (progress != null) Save(); } }
         void OnApplicationQuit() { if (progress != null) Save(); }
         void OnDestroy() { if (Instance == this) Instance = null; StopSignal(); StopNarration(); room?.Dispose(); shelf?.Dispose(); challengeView?.Dispose(); }
     }

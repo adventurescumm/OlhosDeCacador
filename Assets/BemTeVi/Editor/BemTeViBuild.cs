@@ -26,7 +26,7 @@ namespace BemTeVi.Editor
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
             PlayerSettings.allowFullscreenSwitch = true;
             PlayerSettings.resizableWindow = true; PlayerSettings.runInBackground = false;
-            PlayerSettings.bundleVersion = "0.12.0";
+            PlayerSettings.bundleVersion = "0.15.0";
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
             // Use only Input System Package (New); the editor may require a restart.
@@ -159,8 +159,8 @@ namespace BemTeVi.Editor
                 if (map.puzzleRounds == null || map.puzzleRounds.Length != 3 || map.puzzleRounds.Any(r => r.solution == null || r.solution.Length < 3 || r.clues == null || r.clues.Length != 3))
                     throw new BuildFailedException("As três rodadas de mecanismos estão incompletas: " + map.id);
                 if (map.challenge == null) throw new BuildFailedException("Cenário do desafio ausente: " + map.id);
-                if (map.junction == null || map.gates == null || map.gates.Length != 2)
-                    throw new BuildFailedException("Caminho ou duas passagens ausentes: " + map.id);
+                if (map.junction == null || map.junction.layout != "map" || map.gates == null || map.gates.Length != 0)
+                    throw new BuildFailedException("Mapa aberto ausente ou bloqueio por item ainda presente: " + map.id);
                 foreach (var room in map.rooms)
                 {
                     if (room.riddles == null || room.riddles.Length != 3 ||
@@ -171,18 +171,25 @@ namespace BemTeVi.Editor
                 }
                 var stages = map.rooms.Concat(new[] { map.junction, map.challenge }).ToArray();
                 foreach (var stage in stages)
+                {
+                    if (stage.objects.Any(p => p.action == "gate" || !string.IsNullOrEmpty(p.showAfter)))
+                        throw new BuildFailedException("O cenário ainda depende de uma peça: " + stage.id);
+                    if (stage != map.junction && !stage.objects.Any(p => p.action == "exit" && p.destination == map.junction.id))
+                        throw new BuildFailedException("Falta retorno direto ao mapa: " + stage.id);
                 foreach (var passage in stage.objects.Where(p => p.action == "exit"))
+                {
                     if (passage.destination != "quarto" && !stages.Any(r => r.id == passage.destination))
                         throw new BuildFailedException("Passagem sem destino: " + stage.id + " / " + passage.destination);
+                    if (string.IsNullOrEmpty(passage.landmark))
+                        throw new BuildFailedException("Passagem sem placa: " + stage.id);
+                    if (passage.destination != "quarto" && !stages.First(r => r.id == passage.destination).objects.Any(p => p.action == "exit" && p.destination == stage.id))
+                        throw new BuildFailedException("Passagem sem retorno: " + stage.id);
+                }
+                }
                 if (!map.junction.objects.Any(p => p.action == "exit" && p.destination == "quarto"))
                     throw new BuildFailedException("A entrada do mundo precisa retornar ao quarto.");
-                foreach (var gate in map.gates)
-                {
-                    if (gate.sourceRoom < 0 || gate.sourceRoom > 1 || gate.roomId != map.rooms[gate.sourceRoom + 1].id ||
-                        !map.rooms[gate.sourceRoom].objects.Any(p => p.id == gate.tokenId) ||
-                        stages.Sum(r => r.objects.Count(p => p.action == "gate" && p.destination == gate.id)) != 1)
-                        throw new BuildFailedException("Peça ou mecanismo inválido: " + gate.id);
-                }
+                if (map.junction.objects.Count(p => p.action == "exit") != 5)
+                    throw new BuildFailedException("O mapa precisa ligar as três buscas, o desafio e o quarto: " + map.id);
                 foreach (string action in map.puzzle == "lock" ? new[] { "digit" } : map.puzzle == "memory" ? new[] { "signal" } : new[] { "supply", "destination" })
                 {
                     int count = action == "signal" ? 4 : 3;

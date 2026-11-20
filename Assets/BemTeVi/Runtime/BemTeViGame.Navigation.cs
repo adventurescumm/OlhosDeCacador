@@ -6,7 +6,7 @@ namespace BemTeVi
 {
     public sealed partial class BemTeViGame
     {
-        // This is a physical arrival scene, not a destination selector.
+        // Each world has a physical map: every search and the challenge has an open route.
         void ShowJunction()
         {
             if (map == null) { ShowMenu(); return; }
@@ -28,15 +28,28 @@ namespace BemTeVi
         void DrawJunction()
         {
             mode = Mode.Junction; ui.Clear(); worldLabels.Clear(); listenButton = null;
+            ui.Label(currentStage.name, 28, 20, 850, 42, 27, BemTeViUI.Paper, true);
             ui.Button("Menu", 1310, 18, 108, 42, ShowPause, BemTeViUI.Plum, true, 21);
+            DrawPassages(room);
             CreateFeedback();
+        }
+        void DrawPassages(RoomView view)
+        {
+            if (view == null) return;
+            // Destination names are physical plaques on the models, as in the reference halls.
+            if (currentStage != map.junction)
+            {
+                var mapExit = view.Hotspots.FirstOrDefault(h => h.Data.action == "exit" && h.Data.destination == map.junction.id);
+                if (mapExit != null)
+                    ui.Button("Mapa", 1176, 18, 120, 42, () => FollowPassage(mapExit), BemTeViUI.Teal, true, 21);
+            }
         }
         void FollowPassage(WorldHotspot spot)
         {
             string destination = spot.Data.destination;
             if (!progress.CanTraverse(map, currentStage, destination))
             {
-                spot.React(); Tell(destination == map.challenge.id ? "Siga uma das passagens iluminadas." : "Esta passagem ainda não funciona. Investigue o mecanismo na maquete anterior."); return;
+                spot.React(); return;
             }
             PlayStageSound("passage");
             if (destination == "quarto") { ShowMenu(); return; }
@@ -44,15 +57,6 @@ namespace BemTeVi
             if (destination == map.junction.id) { ShowJunction(); return; }
             roomIndex = Array.FindIndex(map.rooms, r => r.id == destination);
             LoadRoom();
-        }
-        void UseGate(WorldHotspot spot)
-        {
-            var gate = map.gates.First(g => g.id == spot.Data.destination);
-            if (progress.Opened(gate.id)) { spot.React(); return; }
-            if (!progress.Has(gate.tokenId)) { spot.React(); PlayObjectSound(spot.Data, false); return; }
-            if (!progress.Use(map, gate.id, gate.tokenId)) return;
-            Save(); PlayStageSound("mechanism"); room.ApplyMechanisms(progress, !reduceMotion);
-
         }
     }
 }

@@ -1,4 +1,4 @@
-# Cenas e edição no Unity — v0.12
+# Cenas e edição no Unity — v0.15
 
 O projeto usa **18 cenas `.unity`**. `Main` inicia a sessão; as outras 17 representam a abertura, o quarto e os cinco espaços de cada mundo. As trocas usam `SceneManager.LoadSceneAsync` em modo Single. O controlador, as câmeras, a interface, o áudio e o progresso ficam em um único objeto persistente.
 
@@ -18,9 +18,9 @@ Opções, Como jogar, pausa, caderno e leitura ampliada são painéis sobre a ce
 
 ## Mapa interconectado
 
-Cada mundo forma um circuito: entrada ↔ primeira busca ↔ segunda busca ↔ terceira busca ↔ entrada. A terceira busca também se liga ao desafio final. Todas as passagens do circuito ficam disponíveis desde o começo. Os mecanismos mudam os brinquedos e montam peças sem bloquear a exploração. O quarto só é acessível pela passagem na entrada. Não há botões flutuantes de destinos nem seleção de salas na interface.
+Cada cena `*_caminho` é um mapa físico com cinco destinos: as três buscas, o desafio e o quarto. Cada busca se liga diretamente ao mapa e às outras duas buscas. A terceira busca também se liga ao desafio. Todos os caminhos ficam disponíveis desde o começo, com placas clicáveis e retorno pelo botão **Mapa**. O quarto é acessível pelo mapa.
 
-`PropData.action = "exit"` define uma passagem física; `destination` contém o ID da cena vizinha. A ação `gate` usa a peça encontrada e movimenta os objetos ligados ao mesmo campo `gate`; `showAfter` revela a peça montada. O catálogo precisa ter destinos recíprocos. O verificador confere esse circuito.
+`PropData.action = "exit"` define uma passagem física; `destination` contém o ID da cena vizinha e `landmark` contém o texto da placa. O catálogo precisa ter destinos recíprocos. Não existem ações `gate` nem objetos condicionados a peças. O verificador confere as conexões e os retornos diretos ao mapa.
 
 ## Primeira preparação
 
@@ -28,7 +28,7 @@ Cada mundo forma um circuito: entrada ↔ primeira busca ↔ segunda busca ↔ t
 2. Execute **Bem-Te-Vi > 1. Preparar projeto**. Além do URP e dos materiais, o comando preenche as cenas ainda não preparadas com os modelos prontos do catálogo, grava seus objetos e registra as 18 cenas no build.
 3. Execute **2. Verificar conteudo**. Abra uma das cenas das pastas acima para editar sua composição.
 
-**O ZIP inclui as 18 cenas com identificadores e enquadramentos, mas a montagem e gravação das hierarquias completas precisam ocorrer no seu Unity.** Este ambiente não possui o editor para executar essa etapa. Enquanto uma cena ainda não foi preparada, o runtime monta seu conteúdo a partir do catálogo ao dar Play.
+As 18 cenas foram reconstruídas no Unity 6000.6.4f1 nesta revisão, incluindo as hierarquias e os enquadramentos. Enquanto uma cena estiver desatualizada, o runtime monta seu conteúdo a partir do catálogo ao dar Play.
 
 Depois da primeira preparação, cada cena de conteúdo possui:
 
@@ -42,13 +42,13 @@ As configurações de materiais criadas para a arquitetura primitiva ficam em `A
 
 ## Como editar
 
-Mova, gire ou redimensione os objetos na cena preparada e salve a cena. O jogo usa essas posições e a câmera de `BemTeViStage` ao carregá-la. O componente `BemTeViSceneProp` mantém a identidade e a ação de cada brinquedo; preserve IDs de alvos e destinos de passagens.
+Mova, gire ou redimensione os objetos na cena preparada e salve a cena. O jogo usa essas posições e a câmera de `BemTeViStage` ao carregá-la. As placas são TextMesh com colisor, incorporadas aos modelos das entradas; as trocas usam fade curto. O componente `BemTeViSceneProp` mantém a identidade e a ação de cada brinquedo; preserve IDs de alvos e destinos de passagens.
 
-O campo `geometry` descreve as primitivas arquitetônicas de cada maquete; modelos artísticos continuam vindos dos downloads. `openedOffset` e `openedRotation` indicam como um mecanismo se move ao abrir, relativamente à posição editada.
+O campo `geometry` descreve as primitivas arquitetônicas de cada maquete; modelos artísticos continuam vindos dos downloads. Os campos antigos `openedOffset` e `openedRotation` permanecem compatíveis com a serialização, mas não são usados pelas passagens atuais.
 
 Os textos, regras, peças necessárias e charadas continuam em `Assets/Resources/BemTeVi/catalog.json`. Mudar o campo `asset` de um objeto já montado não substitui sua malha automaticamente: atualize o catálogo e recrie a cena, ou substitua conscientemente o modelo na hierarquia, mantendo os dados e colisores correspondentes.
 
-**Preparar projeto preserva cenas da versão de conteúdo atual (12); recompõe versões antigas a partir do catálogo.** Para aplicar novamente as posições do catálogo, use **7. Recriar cenas a partir do catalogo**. Esse comando avisa que sobrescreve as alterações manuais das 17 cenas de conteúdo; guarde suas alterações antes de confirmar. `Main`, gravações humanas e saves não são recriados por esse comando.
+**Preparar projeto preserva cenas da versão de conteúdo atual (15); recompõe versões antigas a partir do catálogo.** Para aplicar novamente as posições do catálogo, use **7. Recriar cenas a partir do catalogo**. Esse comando avisa que sobrescreve as alterações manuais das 17 cenas de conteúdo; guarde suas alterações antes de confirmar. `Main`, gravações humanas e saves não são recriados por esse comando.
 
 É possível iniciar o Play numa cena de busca para inspecioná-la diretamente; isso não simula a progressão normal de entrada. Sem jogador selecionado, o jogo abre o título; com um caderno existente, permite iniciar a cena para inspeção. Para testar a aventura completa, comece por `Main`.
 

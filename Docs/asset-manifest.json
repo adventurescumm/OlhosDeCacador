@@ -122,6 +122,27 @@
       "source": "https://kenney.nl/assets/brick-kit",
       "author": "Kenney",
       "license": "CC0 1.0"
+    },
+    {
+      "pack": "marble-kit",
+      "source": "https://kenney.nl/assets/marble-kit",
+      "download": "https://opengameart.org/sites/default/files/kenney_marble-kit.zip",
+      "zip_sha256": "4a289fe77fa4e71b943fb9a0df828a7987e62f665083ea9237d0bd9acd0b6dcb",
+      "bytes": 5339532
+    },
+    {
+      "pack": "pirate-kit",
+      "source": "https://kenney.nl/assets/pirate-kit",
+      "download": "https://opengameart.org/sites/default/files/kenney_pirate-kit_2.1.zip",
+      "zip_sha256": "667ed2caf92954ddb98f7b7cede831fe99ab75063c26b25e23d32715bee9c943",
+      "bytes": 3154665
+    },
+    {
+      "pack": "castle-kit",
+      "source": "https://kenney.nl/assets/castle-kit",
+      "download": "https://opengameart.org/sites/default/files/kenney_castle-kit.zip",
+      "zip_sha256": "921f3f73927bb23106cae34bc21d5ab4b033a9fc120475e96f714a406e3169df",
+      "bytes": 2232589
     }
   ],
   "files": [
@@ -2269,6 +2290,210 @@
       "source": "downloads/bemtevi/brick-kit/Models/OBJ format/round-hq-brick-1x1-round.mtl",
       "url": "https://kenney.nl/assets/brick-kit",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/marble-low.obj",
+      "sha256": "84b0b7a7f60f1e471074f41996104b5bd4d09b6f057c2e3a2f811571d021c16c",
+      "bytes": 4607,
+      "source": "Models/OBJ format/marble-low.obj"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/marble-low.mtl",
+      "sha256": "cedcaaa7b8622bf7dffb8c7bd3ee7570fa355ca578032b4eea04945439d0bb7b",
+      "bytes": 81,
+      "source": "Models/OBJ format/marble-low.mtl"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/marble-center-low.obj",
+      "sha256": "c7502b0a81ff420901d96738942fc15050700e4c747c95742fa10c5097c9fca3",
+      "bytes": 6390,
+      "source": "Models/OBJ format/marble-center-low.obj"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/marble-center-low.mtl",
+      "sha256": "ed29173626ee1757041a294720602d8d8b03ff0cc15a859b81b3adb6462ff3e3",
+      "bytes": 140,
+      "source": "Models/OBJ format/marble-center-low.mtl"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/helix-left.obj",
+      "sha256": "10eb70afdc9d64a02ccb60c8ed05715a811a9b98fb01104d406205c7f7e7b507",
+      "bytes": 69120,
+      "source": "Models/OBJ format/helix-left.obj"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/helix-left.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98,
+      "source": "Models/OBJ format/helix-left.mtl"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/funnel.obj",
+      "sha256": "7573c665ef5760c0425a3b3c4418f8242d170446890d5917ea70a311fedb20fb",
+      "bytes": 2809,
+      "source": "Models/OBJ format/funnel.obj"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/funnel.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98,
+      "source": "Models/OBJ format/funnel.mtl"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/banner.obj",
+      "sha256": "e3d3432a669563e3be7a217f0696076e274f0625cce9d5b617f1025a5f8f6341",
+      "bytes": 4506,
+      "source": "Models/OBJ format/banner.obj"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/banner.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98,
+      "source": "Models/OBJ format/banner.mtl"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/marble-kit/Textures/colormap.png",
+      "sha256": "a802b8c02c0b0cc07654cd8edca30439a9e9d505b10088502169ab3b9cf5e94f",
+      "bytes": 8534,
+      "source": "Models/OBJ format/Textures/colormap.png"
+    },
+    {
+      "file": "Assets/ThirdPartyLicenses/marble-kit/License.txt",
+      "sha256": "052f74c710736c02fa900ffb81b75b4d10728cdcfb093010713f889dc31e9056",
+      "bytes": 713,
+      "source": "License.txt"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/ship-small.obj",
+      "source": "Models/OBJ format/ship-small.obj",
+      "sha256": "44a49973dc19956a7979dc89b73c38e576c9c489f885e11a291653ac9e466376",
+      "bytes": 109586
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/ship-small.mtl",
+      "source": "Models/OBJ format/ship-small.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/boat-row-small.obj",
+      "source": "Models/OBJ format/boat-row-small.obj",
+      "sha256": "a7b0b15c8191a1aaf241997acd3199c3fd37912cf019a307deb3910e2d45596e",
+      "bytes": 12593
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/boat-row-small.mtl",
+      "source": "Models/OBJ format/boat-row-small.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/flag.obj",
+      "source": "Models/OBJ format/flag.obj",
+      "sha256": "ff18ee310ff1e777558d90cf6bfb326e689a1196f641dfcd0f074bf59b15c0a4",
+      "bytes": 12426
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/flag.mtl",
+      "source": "Models/OBJ format/flag.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/cannon-mobile.obj",
+      "source": "Models/OBJ format/cannon-mobile.obj",
+      "sha256": "8a282b1261ec24e3475c5b06e0f5fa321f5d9af63b8e8e2bf4a28e4a354c0c45",
+      "bytes": 41796
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/cannon-mobile.mtl",
+      "source": "Models/OBJ format/cannon-mobile.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/pirate-kit/Textures/colormap.png",
+      "source": "Models/OBJ format/Textures/colormap.png",
+      "sha256": "451e1d7a53b8e76f4b2ee58742e241509fee5f82cf2cee6e3f7aca86ba718abe",
+      "bytes": 10061
+    },
+    {
+      "file": "Assets/ThirdPartyLicenses/pirate-kit/License.txt",
+      "source": "License.txt",
+      "sha256": "5e99246a5a65fa3420a1a1c7a8616f096202c78866f73d7aacfe73c0aab0ca36",
+      "bytes": 699
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/tower-square.obj",
+      "source": "Models/OBJ format/tower-square.obj",
+      "sha256": "5c433d50f97e980e3bbeea0aa8ef328d9f6edeb18f5914b5a64493a5b3d7943b",
+      "bytes": 12099
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/tower-square.mtl",
+      "source": "Models/OBJ format/tower-square.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/tower-square-roof.obj",
+      "source": "Models/OBJ format/tower-square-roof.obj",
+      "sha256": "ffd5aed85a79abe5dbea96d8614ee6d9e8515dbdab38f181cae088308ed039cd",
+      "bytes": 10575
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/tower-square-roof.mtl",
+      "source": "Models/OBJ format/tower-square-roof.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/flag.obj",
+      "source": "Models/OBJ format/flag.obj",
+      "sha256": "085836528530ce3be426c0a15e174e4f823b829bc3825714eaad41036b8694c0",
+      "bytes": 11915
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/flag.mtl",
+      "source": "Models/OBJ format/flag.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/door.obj",
+      "source": "Models/OBJ format/door.obj",
+      "sha256": "f74e22f4c562d55eb2d6afb50143583e9720b076638e9eb8039a26037637a9f9",
+      "bytes": 15440
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/door.mtl",
+      "source": "Models/OBJ format/door.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/stairs-stone.obj",
+      "source": "Models/OBJ format/stairs-stone.obj",
+      "sha256": "1de3c8730d59f544e87eb092fe848a4c8ba5df03c6882e94567b53c170657379",
+      "bytes": 7351
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/stairs-stone.mtl",
+      "source": "Models/OBJ format/stairs-stone.mtl",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060",
+      "bytes": 98
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png",
+      "source": "Models/OBJ format/Textures/colormap.png",
+      "sha256": "66fd49be148f32e88f6c8cace67120250d1943a7856601158ad0ff24651db0b0",
+      "bytes": 7529
+    },
+    {
+      "file": "Assets/ThirdPartyLicenses/castle-kit/License.txt",
+      "source": "License.txt",
+      "sha256": "aac944f18106b3a3e29c6fdeec02523d4cab4c735abc01f5a8fa88a79ae173ef",
+      "bytes": 713
     }
   ]
 }

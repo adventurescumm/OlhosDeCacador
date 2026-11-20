@@ -30,6 +30,7 @@ namespace BemTeVi
         public string Riddle => riddles != null ? riddles[currentRound] : riddle;
         public IEnumerable<PropData> Targets => objects.Where(p => !string.IsNullOrEmpty(p.id) && p.round == currentRound);
         public string layout, floor, wall, color;
+        public string scope;
         public float width = 12, depth = 8;
         public float[] camera, lookAt;
         public float fieldOfView;
@@ -45,6 +46,10 @@ namespace BemTeVi
     {
         public string asset, id, label, clue, sound;
         public string action, destination, reaction;
+        public string idle;
+        // Authoring metadata; these values never reveal a target during play.
+        public string conceals;
+        public float searchExposure;
         public int value, round;
         public float x, y, z, size, rotation;
         public float tiltX, tiltZ;
@@ -56,6 +61,7 @@ namespace BemTeVi
     {
         public string name, shape, color;
         public float x, y, z, width, height, depth, rotation;
+        public float tiltX, tiltZ;
         public bool decorative;
     }
     [Serializable] public sealed class SaveData

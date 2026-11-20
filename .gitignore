@@ -14,3 +14,4 @@ MemoryCaptures/
 .idea/
 !Tools/DomainChecks/*.csproj
 Tools/DomainChecks/bin/
+__pycache__/

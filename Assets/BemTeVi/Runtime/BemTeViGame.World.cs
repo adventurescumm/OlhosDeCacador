@@ -61,12 +61,14 @@ namespace BemTeVi
                 var screen = worldCamera.WorldToScreenPoint(label.spot.transform.position);
                 float x = (screen.x - left) / scale;
                 float y = 900 - (screen.y - bottom) / scale + 12;
-                label.rect.anchoredPosition = new Vector2(Mathf.Clamp(x - label.width * .5f, 12, 1428 - label.width), -Mathf.Clamp(y, 100, mode == Mode.Menu ? 724 : 642));
+                label.rect.anchoredPosition = new Vector2(Mathf.Clamp(x - label.width * .5f, 12, 1428 - label.width), -Mathf.Clamp(y, 110, mode == Mode.Junction ? 830 : mode == Mode.Menu ? 724 : 688));
             }
         }
         void WorldButton(WorldHotspot spot, string text, Color color, float width, bool enabled = true)
         {
-            var button = ui.Button(text, 0, 0, width, 36, () => Activate(spot), color, enabled, 25);
+            var button = ui.Button(text, 0, 0, width, 44, () => Activate(spot), color, enabled, 20);
+            var caption = button.GetComponentInChildren<Text>();
+            caption.resizeTextForBestFit = true; caption.resizeTextMinSize = 16; caption.resizeTextMaxSize = 20;
             worldLabels.Add(new WorldLabel { rect = button.GetComponent<RectTransform>(), spot = spot, width = width });
             UpdateStageCamera(false); // Avoid a frame with newly created labels stacked at the origin.
         }
@@ -97,7 +99,7 @@ namespace BemTeVi
                 hoveredSpot = spot;
                 if (spot != null && spot.Data.action != "inspect") spot.Hover(true);
             }
-            if (spot != null && hoverText != null && spot.Data.action != "inspect") hoverText.text = spot.Data.label;
+            if (spot != null && hoverText != null && spot.Data.action != "inspect" && spot.Data.action != "exit" && spot.Data.action != "world") hoverText.text = spot.Data.label;
             UpdateFeedbackVisibility();
             if (mouse.leftButton.wasPressedThisFrame)
             {
@@ -117,7 +119,6 @@ namespace BemTeVi
             if (mode == Mode.Explore || mode == Mode.Junction || mode == Mode.Puzzle)
             {
                 if (data.action == "exit") { FollowPassage(spot); return; }
-                if (data.action == "gate") { UseGate(spot); return; }
             }
             if (data.action == "inspect" && (mode == Mode.Menu || mode == Mode.Explore || mode == Mode.Junction))
             {

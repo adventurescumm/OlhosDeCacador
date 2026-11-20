@@ -32,7 +32,7 @@ namespace BemTeVi
                 var item = discoveryQueue.Dequeue();
                 var clip = narration != null ? narration.ForDiscovery(item.id) : null;
                 if (clip != null) { voice.clip = clip; voice.Play(); }
-                else systemNarrator.Speak("Você encontrou: " + item.label + ".", narrationVolume);
+                else systemNarrator.Speak(item.label + ".", narrationVolume);
                 while (NarratorSpeaking) yield return null;
                 yield return null;
             }

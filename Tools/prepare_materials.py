@@ -4,7 +4,7 @@ No mesh, texture, UV, source colour, or audio is created or modified.
 Run from any directory; standard library only. Safe to run again.
 """
 from pathlib import Path
-import json, re, uuid
+import json, re, uuid, argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS = ROOT / 'Assets/Resources/BemTeVi/Models'
@@ -26,8 +26,16 @@ def guid(path):
     return value
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--pack', help='Convert one model pack, preserving existing material definitions.')
+    args = parser.parse_args()
     records = []
-    for obj in sorted(MODELS.rglob('*.obj')):
+    bindings = ROOT / 'Assets/Resources/BemTeVi/material-bindings.json'
+    if args.pack:
+        if not re.fullmatch(r'[a-z0-9-]+', args.pack): parser.error('Pack must be a folder name.')
+        records = [r for r in json.loads(bindings.read_text(encoding='utf-8'))['materials']
+                   if not r['model'].startswith(args.pack + '/')]
+    for obj in sorted((MODELS / args.pack if args.pack else MODELS).rglob('*.obj')):
         definitions = {}; current = None
         for line in obj.with_suffix('.mtl').read_text().splitlines():
             words = line.strip().split()
@@ -123,7 +131,7 @@ MonoBehaviour:
             if 'NativeFormatImporter:' not in meta.read_text():
                 meta.write_text(meta.read_text() + 'NativeFormatImporter:\n  externalObjects: {}\n  mainObjectFileID: 2100000\n')
             records.append({'model': asset, 'name': name.strip(), 'material': mat.relative_to(ROOT).as_posix(), **source})
-    (ROOT / 'Assets/Resources/BemTeVi/material-bindings.json').write_text(json.dumps({'materials': records}, ensure_ascii=False, indent=2))
+    bindings.write_text(json.dumps({'materials': records}, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print(f'{len(records)} original material definitions converted to URP/Lit; source art unchanged.')
 
 if __name__ == '__main__': main()

@@ -89,5 +89,26 @@ namespace BemTeVi.Tests
                 finally { ((System.IDisposable)view).Dispose(); }
             }
         }
+
+        [TestCase("sphere")]
+        [TestCase("cylinder")]
+        public void FlatArchitecturalDisksDoNotCreateInvisibleWalls(string shape)
+        {
+            var type = CurrentAssemblies.GetLoadedAssemblies().Select(a => a.GetType("BemTeVi.RoomView")).First(t => t != null);
+            var room = new RoomData { id = "collider_check", name = "Disco de conferência", objects = System.Array.Empty<PropData>(),
+                geometry = new[] { new PrimitiveData { name = "Janela plana", shape = shape, x = 50, z = 3,
+                    width = 2, height = shape == "sphere" ? 2 : .1f, depth = shape == "sphere" ? .1f : 2,
+                    tiltX = shape == "cylinder" ? 90 : 0, color = "#FFFFFF" } } };
+            var view = System.Activator.CreateInstance(type, catalog.maps[0], room, new Progress(catalog), true);
+            try
+            {
+                Physics.SyncTransforms();
+                var ray = new Ray(new Vector3(50, 0, 0), Vector3.forward);
+                Assert.IsFalse(Physics.Raycast(ray, 2.5f), "The flattened disk must not inflate towards the camera.");
+                Assert.IsTrue(Physics.Raycast(ray, out var hit, 4));
+                Assert.That(hit.distance, Is.EqualTo(2.95f).Within(.03f));
+            }
+            finally { ((System.IDisposable)view).Dispose(); }
+        }
     }
 }

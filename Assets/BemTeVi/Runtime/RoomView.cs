@@ -92,12 +92,7 @@ namespace BemTeVi
                 if (!authored) foreach (var passage in Hotspots)
                 {
                     if (passage.Data.action != "exit" && passage.Data.action != "world") continue;
-                    var p = passage.Data;
-                    for (int step = 0; step < 2; step++)
-                    for (int side = -1; side <= 1; side += 2)
-                        Architecture(new PrimitiveData { name = "Seta da passagem", shape = "cube", color = "#FFE096",
-                            x = p.x + side * .16f, y = p.y + .025f, z = p.z - p.size * .32f - .38f - step * .38f,
-                            width = .42f, height = .035f, depth = .095f, rotation = side * 35, decorative = true });
+                    AddPassageSign(passage, room);
                 }
                 ApplyMechanisms(progress, false);
                 Physics.SyncTransforms();
@@ -110,10 +105,44 @@ namespace BemTeVi
             var go = GameObject.CreatePrimitive(kind); go.name = p.name;
             go.transform.SetParent(Root.transform, false);
             go.transform.localPosition = new Vector3(p.x, p.y, p.z);
-            go.transform.localRotation = Quaternion.Euler(0, p.rotation, 0);
+            go.transform.localRotation = Quaternion.Euler(p.tiltX, p.rotation, p.tiltZ);
             go.transform.localScale = new Vector3(p.width, p.height / (kind == PrimitiveType.Cylinder ? 2 : 1), p.depth);
             go.GetComponent<Renderer>().sharedMaterial = RoomMaterial(p.color);
-            go.GetComponent<Collider>().enabled = !p.decorative;
+            if (kind == PrimitiveType.Cube) go.GetComponent<Collider>().enabled = !p.decorative;
+            else
+            {
+                // Capsule/Sphere colliders inflate under nonuniform scale: a flat window
+                // would become an invisible solid ball. Match the visible primitive mesh.
+                var approximate = go.GetComponent<Collider>(); approximate.enabled = false;
+                DestroySceneObject(approximate);
+                var exact = go.AddComponent<MeshCollider>();
+                exact.sharedMesh = go.GetComponent<MeshFilter>().sharedMesh; exact.enabled = !p.decorative;
+            }
+        }
+        void AddPassageSign(WorldHotspot passage, RoomData room)
+        {
+            var data = passage.Data;
+            if (string.IsNullOrEmpty(data.landmark)) return;
+            var sign = new GameObject("Placa — " + data.landmark);
+            sign.transform.SetParent(passage.transform, false);
+            // A small physical plaque beside the entrance, kept clear of the search itself.
+            sign.transform.position = passage.transform.position + new Vector3(0, .12f, -data.size * .35f - .28f);
+            var eye = new Vector3(room.camera[0], room.camera[1], room.camera[2]);
+            sign.transform.rotation = Quaternion.LookRotation(sign.transform.position - eye);
+            var plate = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            plate.name = "Madeira da placa"; plate.transform.SetParent(sign.transform, false);
+            plate.transform.localPosition = new Vector3(0, 0, .035f);
+            plate.transform.localScale = new Vector3(2.6f, .43f, .065f);
+            plate.GetComponent<Renderer>().sharedMaterial = RoomMaterial("#F5DFAD");
+            var label = new GameObject("Destino", typeof(TextMesh)).GetComponent<TextMesh>();
+            label.transform.SetParent(sign.transform, false);
+            label.anchor = TextAnchor.MiddleCenter; label.alignment = TextAlignment.Center;
+            label.font = Resources.Load<Font>("BemTeVi/UI/Itim-Regular");
+            label.fontSize = 64; label.characterSize = .052f;
+            label.color = Hex("#342437"); label.text = data.landmark;
+            label.GetComponent<MeshRenderer>().sharedMaterial = label.font.material;
+            float textWidth = label.GetComponent<Renderer>().bounds.size.magnitude;
+            if (textWidth > .001f) label.transform.localScale = Vector3.one * (2.35f / textWidth);
         }
         public void ApplyMechanisms(Progress progress, bool animate)
         {

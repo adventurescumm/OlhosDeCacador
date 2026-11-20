@@ -1,10 +1,10 @@
-# Bem-Te-Vi — GDD 0.12
+# Bem-Te-Vi — GDD 0.15
 
 Point-and-click 3D de observação para Windows, ambientado num quarto infantil que contém três mundos de faz de conta. Os cenários usam objetos domésticos, comidinhas, bonecos, blocos e trens como arquitetura e habitantes em miniatura. A referência de composição é I Spy Fantasy; seus assets não fazem parte do projeto.
 
 ## Fluxo
 
-Título → cadernos de jogadores → quarto → maquete → circulação livre entre três buscas e um mecanismo final. A entrada tem uma saída para o quarto. Cada mundo forma um circuito com retornos e sem depender da conclusão da sala anterior. Portas, pontes e trilhos com marcas no chão identificam os caminhos; não há menu de níveis sobre as cenas.
+Título → cadernos de jogadores → quarto → mapa em maquete → circulação livre entre três buscas e um desafio final. Cada mapa conecta os cinco destinos, incluindo o quarto. Todas as buscas e desafios têm retorno direto ao mapa, por passagem física ou pelo botão **Mapa**. Caminhos e placas clicáveis identificam os destinos sem depender da conclusão da sala anterior.
 
 São três mundos e três rodadas em cada um. Cada busca apresenta seis versos e seis alvos ativos entre 18 objetos identificados. Todos os objetos estão presentes desde o início. As rodadas mudam os alvos e os versos; os encontrados continuam visíveis. Existem 162 descobertas únicas e nove selos.
 
@@ -18,7 +18,7 @@ São três mundos e três rodadas em cada um. Cada busca apresenta seis versos e
 
 As rodadas finais usam descrições menos literais dos brinquedos. Dificuldade real, legibilidade e duração ainda exigem playtest. Mais objetos e textos indiretos não comprovam equilíbrio por si só.
 
-Seis mecanismos opcionais utilizam peças descobertas sem consumi-las e animam o cenário. O mecanismo final de cada rodada requer as 18 descobertas daquele mundo para conceder o selo. É possível entrar, tentar e sair antes disso.
+As passagens não usam peças nem exigem objetos descobertos. Brinquedos animam ao clique. O desafio final de cada rodada requer as 18 descobertas mencionadas nas charadas daquele mundo para conceder o selo. É possível entrar, tentar e sair antes disso. Os mundos têm 12, 15 e 18 pequenos extras por sala, respectivamente, para ampliar a dificuldade sem aglomerar os alvos.
 
 ## Resposta e apresentação
 
@@ -26,10 +26,10 @@ A descoberta produz uma reação curta e boba — salto, giro, cambalhota, órbi
 
 Não há dicas progressivas, destaque de alvo, coleta assistida ou pop-up de descoberta. Os versos mudam de cor e o narrador confirma o item. Gravações próprias têm prioridade; no Windows, a voz instalada serve como fallback. As charadas e informações descobertas dos mecanismos continuam disponíveis para leitura.
 
-As bases têm camadas de madeira e tinta, painéis de cartão e bordas visíveis no enquadramento. As três miniaturas do quarto ficam agrupadas. A faixa inferior contém apenas a charada; Menu reúne os controles.
+As bases têm camadas de madeira e tinta, painéis de cartão e bordas visíveis no enquadramento. As buscas ocupam bases de 18,8 × 13 unidades, com mesas, prateleiras, terrenos e recipientes em composições distintas. As três miniaturas do quarto ficam agrupadas. A faixa inferior contém a charada; Menu reúne os controles e Mapa retorna aos caminhos de transição.
 
 ## Persistência e limites
 
 Cada jogador tem um caderno automático com rodada, sala, descobertas, mecanismos e estado estável dos puzzles. Há gravação atômica e backup. Tentativas da sequência musical recomeçam ao entrar; não se perde a aventura. Veja SALVAMENTO.md.
 
-O projeto contém fontes e assets; não inclui um executável compilado. Conteúdo e domínio foram verificados fora do Unity. Voz, renderização, testes NUnit e build no Unity permanecem pendentes; consulte VALIDACAO.md.
+O projeto contém fontes e assets; não inclui um executável compilado. Passaram 657 verificações de domínio, 17 testes EditMode e a validação de conteúdo do editor Unity. Foram renderizadas as composições e conferidos os 162 alvos por câmera e raycast. Voz e uma partida completa permanecem pendentes; consulte VALIDACAO.md e ATUALIZACAO_V15.md para os limites e a restauração dos bytes dos assets.

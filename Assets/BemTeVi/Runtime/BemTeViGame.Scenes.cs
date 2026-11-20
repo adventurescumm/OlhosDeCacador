@@ -26,9 +26,14 @@ namespace BemTeVi
         {
             loadingScene = true; mode = Mode.Loading;
             StopSignal(); StopNarration(); ClearWorldHover(); worldLabels.Clear();
+            ui.Clear();
+            var curtain = ui.Panel(0, 0, 1440, 900, new Color(.13f, .10f, .18f, 0));
+            curtain.raycastTarget = true;
+            if (!reduceMotion)
+                for (float elapsed = 0; elapsed < .16f; elapsed += Time.unscaledDeltaTime)
+                { curtain.color = new Color(.13f, .10f, .18f, elapsed / .16f); yield return null; }
+            curtain.color = new Color(.13f, .10f, .18f, 1);
             room?.Dispose(); room = null; CloseChallenge(); shelf?.Dispose(); shelf = null;
-            ui.Clear(); ui.Panel(0, 0, 1440, 900, BemTeViUI.Paper);
-            ui.Label("Abrindo outro cantinho…", 300, 410, 840, 80, 38, BemTeViUI.Plum, true, TextAnchor.MiddleCenter);
             AsyncOperation operation;
             try { operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single); }
             catch (Exception e) { loadingScene = false; ShowError(e); yield break; }
@@ -38,6 +43,15 @@ namespace BemTeVi
             RenderSettings.ambientLight = new Color(.42f, .44f, .52f);
             RenderSettings.skybox = null;
             loadingScene = false; ready();
+            curtain = ui.Panel(0, 0, 1440, 900, new Color(.13f, .10f, .18f, 1));
+            curtain.raycastTarget = true;
+            if (!reduceMotion)
+                for (float elapsed = 0; elapsed < .2f; elapsed += Time.unscaledDeltaTime)
+                {
+                    if (curtain == null) yield break;
+                    curtain.color = new Color(.13f, .10f, .18f, 1-elapsed/.2f); yield return null;
+                }
+            if (curtain != null) Destroy(curtain.gameObject);
         }
         void StartAtScene()
         {

@@ -48,36 +48,39 @@ namespace BemTeVi.Tests
             var copy = new Progress(catalog, JsonUtility.FromJson<SaveData>(JsonUtility.ToJson(p.Data)));
             CollectionAssert.AreEqual(p.Data.found, copy.Data.found);
         }
-        [Test] public void MechanismsNeedTheCorrectPieceButDoNotBlockExploration()
+        [Test] public void EmptyNotebookCanVisitEverySearchAndChallengeFromTheMap()
         {
-            var p = new Progress(catalog); var map = catalog.maps[0]; var gate = map.gates[0];
-            Assert.IsTrue(p.CanVisit(map, map.rooms[0].id)); Assert.IsTrue(p.CanVisit(map, gate.roomId));
-            Assert.IsFalse(p.Use(map, gate.id, gate.tokenId));
-            p.Collect(gate.tokenId);
-            foreach (var t in map.rooms[gate.sourceRoom].objects.Where(t => !string.IsNullOrEmpty(t.id))) p.Collect(t.id);
-            Assert.IsFalse(p.Use(map, gate.id, "wrong")); Assert.IsTrue(p.Use(map, gate.id, gate.tokenId));
-            Assert.IsTrue(p.CanVisit(map, gate.roomId)); Assert.IsFalse(p.Use(map, gate.id, gate.tokenId));
-            Assert.IsTrue(p.Has(gate.tokenId));
+            var p = new Progress(catalog);
+            foreach (var map in catalog.maps)
+            {
+                Assert.IsEmpty(map.gates);
+                foreach (var destination in map.rooms.Concat(new[] { map.challenge }))
+                {
+                    Assert.IsTrue(p.CanTraverse(map, map.junction, destination.id));
+                    Assert.IsTrue(p.CanTraverse(map, destination, map.junction.id));
+                }
+            }
+            Assert.IsEmpty(p.Data.found);
         }
         [Test] public void OldSavesKeepFindsAndInvalidPassagesAreDiscarded()
         {
             var map = catalog.maps[0]; var data = new SaveData { opened = null };
             data.found.Add(map.Targets.First().id);
             var p = new Progress(catalog, data); Assert.AreEqual(1, p.Count(map)); Assert.IsEmpty(p.Data.opened);
-            data.opened.Add(map.gates[0].id); data.opened.Add("missing");
+            data.opened.Add("faroeste_passagem_1"); data.opened.Add("missing");
             Assert.IsEmpty(new Progress(catalog, data).Data.opened);
         }
-        [Test] public void SavedPassagesSurviveReloadAndResetWithTheirOwnWorld()
+        [Test] public void RemovingLegacyGatesPreservesDiscoveriesAndProfileIsolation()
         {
             var p = new Progress(catalog);
             foreach (var map in catalog.maps)
             {
                 foreach (var t in map.Targets) p.Collect(t.id);
-                foreach (var g in map.gates) Assert.IsTrue(p.Use(map, g.id, g.tokenId));
+                p.Data.opened.Add(map.id + "_passagem_1");
             }
             p = new Progress(catalog, JsonUtility.FromJson<SaveData>(JsonUtility.ToJson(p.Data)));
-            Assert.AreEqual(6, p.Data.opened.Count); p.ResetMap(catalog.maps[0]);
-            Assert.AreEqual(4, p.Data.opened.Count); Assert.AreEqual(18, p.Count(catalog.maps[1]));
+            Assert.IsEmpty(p.Data.opened); Assert.AreEqual(54, p.Data.found.Count); p.ResetMap(catalog.maps[0]);
+            Assert.IsEmpty(p.Data.opened); Assert.AreEqual(18, p.Count(catalog.maps[1]));
         }
         [Test] public void WrongMemoryInputResetsOnlyTheSequence()
         {
@@ -93,7 +96,7 @@ namespace BemTeVi.Tests
             foreach (var map in catalog.maps)
             {
                 Assert.IsTrue(p.CanTraverse(map, map.junction, map.rooms[0].id));
-                Assert.IsFalse(p.CanTraverse(map, map.junction, map.rooms[1].id));
+                Assert.IsTrue(p.CanTraverse(map, map.junction, map.rooms[1].id));
                 Assert.IsTrue(p.CanTraverse(map, map.junction, map.rooms[2].id));
                 Assert.IsFalse(p.CanTraverse(map, map.rooms[1], "quarto"));
                 Assert.IsTrue(p.CanTraverse(map, map.junction, "quarto"));

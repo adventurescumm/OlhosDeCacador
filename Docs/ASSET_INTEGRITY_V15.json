@@ -1,0 +1,1222 @@
+{
+  "manifest_sha256": "8292727459acbdddfb0e7fa4106cf52c2ee55999f84841fb8ce18b6cece06c04",
+  "expected_hashes_changed": 0,
+  "repaired": 52,
+  "repaired_total": 202,
+  "recoverable": 52,
+  "unresolved": [],
+  "files": [
+    {
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-h.obj",
+      "previous_sha256": "9828908492dc7bc704382ac4289036914934d3abcc35fcebb0016cd4cbc5f8d3",
+      "restored_sha256": "ade50aaae36aa6991c6b0e2a5b9bca832a6dc4ef8e71ac5c6825a8147026743a",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-a.obj",
+      "previous_sha256": "8ca4451157dacca8bb1756fa9e91d8a5f41a95fe93fd82db5a6018f67d8430e6",
+      "restored_sha256": "ec5b3bbf725be6ea792b0cc7b543d11ac8659811264500037d2cdc398632f2ce",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-b.obj",
+      "previous_sha256": "2089559b0bd7eb7d685755d894bd366c2d2d2d2d71657952f8cd0fc22f838f57",
+      "restored_sha256": "d5f4344d5be797a6ed93641d4159a630de093e0517b4b8435d9789cea141bd62",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-c.obj",
+      "previous_sha256": "4965602331932806eb4b73ed4a9d4984cad97c5eb632c6ac183f3df3578430a2",
+      "restored_sha256": "e7bc3677c9f7ee66a0459bc99fa6c69f60b7f9338165d91ccfd1f2ca1fcac9bd",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-d.obj",
+      "previous_sha256": "a012f3b665f67f600a68b52810ca0ec5de38177af85564b97239c4cdbebdf559",
+      "restored_sha256": "9d0e71d3a3703a171961443ea1b6ec34f67a93d90731e261eb3394fe19a78147",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-e.obj",
+      "previous_sha256": "89099baa32d839ce6817e62064b3d72799dc4e79e53e773a7f04ed033562fc54",
+      "restored_sha256": "4cd4f36a1914d98e9f75825727f117f41a4c11fee284c88cc2fe0c3404a1df51",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-f.obj",
+      "previous_sha256": "c51c0c881974c925825ae4f4cf83db1ba94314ced6d10a83d5f02657819fd61b",
+      "restored_sha256": "c7398b3f2b9458f56c080fee9d977ae617ed283dc5f768dfcc61133b423fdccf",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-a.obj",
+      "previous_sha256": "4010481d4ac359b1e7a53851b16fab2a981255d5c2271e31db90bc6255a2045f",
+      "restored_sha256": "0a3704d13705c2f692166d2edb3a31105a7b42f9b4c90996ce19440e276e6c9f",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-c.obj",
+      "previous_sha256": "ce4bb820593ad48bf6c6642b4662166a50a03db042adc8c2a1d3a912b7807bbf",
+      "restored_sha256": "c586b8beda8cdcc28f34e8c8d25af0fbfa49a5712c83da1228c1739ffd9ef8c1",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-a.obj",
+      "previous_sha256": "db221cbc931741a0abba11c524050f0fdcba67e6577fa7eb42b1aec7a8ddfb0d",
+      "restored_sha256": "e31474f76f0898efe50733b783ec599ea11fc55ae93b2e45dc38650a0f75b375",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-b.obj",
+      "previous_sha256": "e615cec1c9dbb59fa1438feae9656327d0cf07490a129fe2fcd4471ddc529e7b",
+      "restored_sha256": "29f20da6119e527793f473ee8a2012a6b5deaf8959dbd40ffc0f6c6c0b848e79",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/bridge_wood.obj",
+      "previous_sha256": "145ddbbd6076632ea64beceabc4aa68d7586f37cddd787fca4b83a51af396a51",
+      "restored_sha256": "876a7836950740997d05733f39f0533359d890bd114015fc13a8c9d059beb4fd",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_short.obj",
+      "previous_sha256": "e742d7d14cd968e586bce9de95019f932239fb729990c317541e814e8c421ad7",
+      "restored_sha256": "0f4a63e933432a8e3a09e67be333461cc0397c849bb312704c39a87242d68d4e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_tall.obj",
+      "previous_sha256": "d2eb5d7285ea0d1a04c327dea3eb656b8ed7f8158d66a6e52dbf3c0dcf402546",
+      "restored_sha256": "ba4ac8ba42d829689154f55bf5eff01308357d5d97c67582d6b566a981372273",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/fence_simple.obj",
+      "previous_sha256": "90cfdb46ff12618e19a229add87c50e996883d3c76d94c7a5ea76635d6284abe",
+      "restored_sha256": "fa29015d17fd89bb29b221235883089b6ee8eed0e949989740445c3b0cba9fba",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_redA.obj",
+      "previous_sha256": "a877eea9030f35a73bfd7c9866bd988853e86f6aef7c71b3e7ebe1bfe739554a",
+      "restored_sha256": "50bcfeb7b6f8c361bc7e61ce55dfd0cc61ad95073351026476207b0db93c3121",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_yellowA.obj",
+      "previous_sha256": "5b31abf6b50b0678da1f33bc53a32ecacc465b74ccfa0c116a94202f42a58b8f",
+      "restored_sha256": "09a81fe229ab3d60e7c3a080b39d9cbbe379af44ce4b646139c2081550692cb2",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/plant_bush.obj",
+      "previous_sha256": "1fa6a4dceff6e7a1d52ce0b344486110e12a3d365026b2bfdbc68fe2711a6374",
+      "restored_sha256": "23e2015330dc397c4ebf799902560e7bb10016482f0d73cbd29d9d4d4b160f1b",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/pot_large.obj",
+      "previous_sha256": "acf52a0e7c3f671c17f965e5809305185580a1c3af5f066a487347a0bd762739",
+      "restored_sha256": "b09d20516edd4f389a550fa50fe248e347f928e8c5ff6b5e8da45edd51617d48",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeA.obj",
+      "previous_sha256": "480527d53ad35aae86d012bb130bb49668b4f4abfb6131c1d5de14bc742f51fc",
+      "restored_sha256": "60e4896f0bb0077ce820aa842e48a4f50d089a0d39e38d56cbf1bd7286882136",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeB.obj",
+      "previous_sha256": "2aa48487e78f3abf506c4a57cdd2c9aaf482248e8008cc51fc9b4c220a557dde",
+      "restored_sha256": "928bea598f682d280893da179d6a060a2019c7b4af72d1e1c4af9ef87ca33535",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallA.obj",
+      "previous_sha256": "c8670d2c6019960377c46bf85884a7b4896e60eae408371d766e723d262ca629",
+      "restored_sha256": "d2f74c6f2b8f4c49c875644e3e7ee95d2dced6c75feef14ee6547e4ca0c8fbd9",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallB.obj",
+      "previous_sha256": "a4b117642b9f1c7b3faaaf2d4926539525e89d30238662ce181403f076c55f97",
+      "restored_sha256": "089f79d84a08ff513dfacfd6fb930d5f33be31936675276aebdc873fdffcebaf",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/tree_small.obj",
+      "previous_sha256": "0b52b86db848c24babcd50b62542c441973842ac298cc4b76ed2851fb4dfd2f9",
+      "restored_sha256": "6de93224609f4430626eeff88a7692d36d48232546a9e503a773f9200f334a80",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/alien.obj",
+      "previous_sha256": "bc35173d72472a3d19b5b83d0ea82d7722383d75e68e2006ce4b73baa32bb87c",
+      "restored_sha256": "ccdbb987926231ea2a3631cc5b552b34cb1ea875cd7395cb6e643f7cec0ee09d",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautA.obj",
+      "previous_sha256": "e32121aa1f3488c2420512ed826b7aaed64f1b942e91e1e979ac0987a5f63dbf",
+      "restored_sha256": "6c462609a8ee02e42713e4d21900dbb65fb7383d91205641070f4f7ebd069a1a",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautB.obj",
+      "previous_sha256": "2d00652fbf2b85870c47da5f3f871660ddd09ba4fa2f49be3aa09afd5317f5a5",
+      "restored_sha256": "875d4ccd0f2255e7b0b1b6f9b8d30e3e734de9837bf8cc3ab89e763a8ad3ee20",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrel.obj",
+      "previous_sha256": "f3b47ea350bc36d50b899a3363596b2016386573a15ec0b481d50375da7a9665",
+      "restored_sha256": "b973227160fbad3d4e31bb573bf5d5dc1369df83bc241a0ea9a143df3fa4b595",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels.obj",
+      "previous_sha256": "c92c174e250bef207f823b6ebc2631c3dee472331512c1d5722fcf2fc9b90667",
+      "restored_sha256": "e7fea2599c5dacbdbcc3dd7a7ad4605dabc63943b9a1a6d9b39e8e269b8c5e98",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels_rail.obj",
+      "previous_sha256": "7ddf29f4422dcf00a23b21f46cf95e2d2ff7ee8a378ce2493e0f6b84409cd40a",
+      "restored_sha256": "51f6f46f6878242f0e5a11d0295a006099ebbec43777ef7def4efddd1f490181",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_cargoA.obj",
+      "previous_sha256": "1e63d2ec9ab5bcfe52835639ca7d2eb24b96c7e583bb1500a10a437193a677f8",
+      "restored_sha256": "2aa478d18910492bf21d10157c13c634dcbfea41d34a4b9ee50f19821ac7aa6e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_speederA.obj",
+      "previous_sha256": "4d9b14c6cfd324ea7b089a149da28c5595aec9a8f952345607198ccf58a01a42",
+      "restored_sha256": "534e1b1198be654d2925d6a785531974213ac8b43ae05c02aecfeb905c0166fc",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craterLarge.obj",
+      "previous_sha256": "143da707b810620b18ddacf79d7603a588e7554aa89e8f842b01779707263d61",
+      "restored_sha256": "1af6591f3be7df8a922f1246f32b7e44ffea41f9796072b0b68376b1423ea346",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chair.obj",
+      "previous_sha256": "b19de73924ee97eb28a8c5864695ade67a19416a9424dfb6e626616bdaeed1f6",
+      "restored_sha256": "3e76b9859b7d079bc529287f6f0d9ed9ef34bd0151175483c5848cf2984b1298",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chairStool.obj",
+      "previous_sha256": "f40e95f3caaea36e183316c968f450db61545bd86d979f70824c5e21637590b5",
+      "restored_sha256": "fbf74771b58977d7fd4b3c4a2064865d35aa716fbdafbb8d4417cf4d92d2e7aa",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_computer.obj",
+      "previous_sha256": "c0af64196f3810a35452b0b58eef6fb92849867c91a6f9ba01eb34dbfce79911",
+      "restored_sha256": "19cdb452f56250f7b92c327ade46249f2958bcb5c25826b0b9dd3b435c0bfbf7",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_roundA.obj",
+      "previous_sha256": "fb6669999cc9766381452070a6dc0cd7873ad763a51b24e5a9cd9ca0f76365eb",
+      "restored_sha256": "f7114507ab334a98a7b1711b6487398af36be8f53b3be46425f6eb738c1ee838",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_smallA.obj",
+      "previous_sha256": "ddc61fb4e1ed03f79794c8c773e63920a26a10300d650afdb54d07cd883c2859",
+      "restored_sha256": "553128d70d004f418c7c69afc5166db79c7520fab543437f135d2cda25d5becb",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_barrel.obj",
+      "previous_sha256": "a51555c726f0d5e49737a902ed56080c1230d0e6366a26806cd63a4df46253c2",
+      "restored_sha256": "03f824bee5d0519cfd3877dd145c950ed0536afeb6cce1a2171d90c9175bc413",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_generator.obj",
+      "previous_sha256": "042fcc81dbdac211a796d0280a07b9c5e969180ec70d90dad1f928f833856519",
+      "restored_sha256": "cb235a40d4cfe8fcb9471fd6fd7b993187adb8c186d49bf248600ae171700945",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_wireless.obj",
+      "previous_sha256": "9e9687d204c2ecf5eb255113359083aa05d331ffec3978d6b7dd6d44bfe20ed8",
+      "restored_sha256": "3aab9663a1b8790ddc96f295d4198d662034422894978f3ec1e5c7e30ad44243",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor.obj",
+      "previous_sha256": "58e8edb6719a3cc2d93e4af643de7fdf2a97bb594eaaeb0eb5b3cbc70632b000",
+      "restored_sha256": "0c0d99df405d0b1c583e395f2bbeb3b610707f175c6fa01e3adefd54a2fd7fd7",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_detailed.obj",
+      "previous_sha256": "9a547c27ef6af0946de85d97fc5a3c37c870ff0827df2fa4a94cc8a08d1c3afd",
+      "restored_sha256": "bd934e6f7d483d6e60e580d04a0c66a2c590e52310b2f7de19677697c1097c79",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_half.obj",
+      "previous_sha256": "5dca5c6737250b71a87645a3000ca0786869d80d94129afb4e588da1ad6c3220",
+      "restored_sha256": "97f37437fb0e02dcae202111021432eae567d2b00290d06e4325e4bdfd295a73",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_corner.obj",
+      "previous_sha256": "b4649ed8fc1f3664421ba8365bed802ebcc2259f54ccd869452f5eeef2de8063",
+      "restored_sha256": "4a33929bb97ab6bdbe870bbf3a485c80a9797f99052f6364e810420b5e4eb8c5",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_end.obj",
+      "previous_sha256": "60492d50539411046e7e3907cbde3946f0d3e6a257b9763ab3aa7b4318e5a904",
+      "restored_sha256": "7fb933adc737897d6cd5c73f84efe455f0e7c21114a835df6f8c3206adb72c02",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_straight.obj",
+      "previous_sha256": "965d5d8776870fc882d8b3ba3784cce354db957e383405eb7e24884c8fcd5e38",
+      "restored_sha256": "29afe7fa99861e1e83fb21587d1573170696ac2b4f341ae0491ba5708701a25e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/platform_low.obj",
+      "previous_sha256": "8f5dd5309b76aa7194d8d8d82f770d2c756b4c42284537b00e19fbc0506082a0",
+      "restored_sha256": "34d50cf16ca655a4ec6c0d947bc459b8e143b193253f46f50983bf80ae219b58",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock.obj",
+      "previous_sha256": "79e99b13d85e36568f37dbd75d1d48f92f4390c21dcb5b3300c9b1adfaa2a0ca",
+      "restored_sha256": "322806bb2b616ced880e27361a25ec2233fdc233f7642efbdf3de34fb8722be0",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystals.obj",
+      "previous_sha256": "7a9b75d234263034db50a27bd0f536a3a4d1c3ff296ea28e40caf1b85c70efe3",
+      "restored_sha256": "a599efe79c167933938f996315a9a41b9ff399bcc11b30dc487038352fa3f504",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystalsLargeA.obj",
+      "previous_sha256": "797636a6e6923b2a34724fdf708f0f69e9e543a122bde6902e11ee221ab673a3",
+      "restored_sha256": "65d1b92b6d2f23e81286999b9887bd42aec7ef943f0fa3a2cfc3bb6312edeb6c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_largeB.obj",
+      "previous_sha256": "d79d37e8450ef3bd353b95463d83583fde790c87bf8bc6fc90bec66d1b754955",
+      "restored_sha256": "bff49f3db60b2638bfec357e566795b58e5bab7bb306c5520cddecad5e80ae59",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocket_fuelA.obj",
+      "previous_sha256": "b5eb3e8c804f7131dbc9026f628668ebb0baa8dc70bb73b93e824f7201f39252",
+      "restored_sha256": "53f83c675728d51a12014724d413a7a264ae893512189313553581e1135bfa87",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallA.obj",
+      "previous_sha256": "ac557427e55a827cc8c047e1bad802e10146db2c5aae3acba99d794f15e86505",
+      "restored_sha256": "bb4f66336c638e7580645f32b950ba41b904be9cbb16e804378122b8afc04827",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallB.obj",
+      "previous_sha256": "5de319345a89022de22d82a11e8510f2ecdd2d38c74f7d5408dc70f6cd22b934",
+      "restored_sha256": "00fa9325b4703fd1a9587976394e35578226926a0892918df05d3de061db4c88",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rover.obj",
+      "previous_sha256": "72b9bc75ec6857d89d3d0a30a170a91ecb0d2a4759846220e652cdc1eff3606e",
+      "restored_sha256": "e5ec326be88beedb4725886cb317497e150d527d2c6903b148044eaa352d1e37",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish.obj",
+      "previous_sha256": "20a693a0fe436b2e6f0fc90b7a4005d132b173a91ed4b1c021c659847a3ae0cd",
+      "restored_sha256": "cabd92b8c6593ba4d188af8af6d334a54e7825a650f6a1e89ba230d97213eaa7",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish_detailed.obj",
+      "previous_sha256": "ba17f1a56b3beb57670beebfc925fd2254de39666929211ae6b70527b9eecd5a",
+      "restored_sha256": "d6b4eb54086bd13a37f3403558e396eb4b780bda5edf89c21bc833fbe570221f",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel.obj",
+      "previous_sha256": "b0def1ff55eb453e09530dd542c5475883ca84dd936fa959032427ea42abf057",
+      "restored_sha256": "64a085b059fd01c9f748380a766ee144d096e37a16196c3230eb713b662db123",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel-open.obj",
+      "previous_sha256": "f9dd3e3fe99bcf5433624f95739e1e7200528a45a6451f0198777961785ce907",
+      "restored_sha256": "017351df2a8ebc41569011b6110c1025043768ccf8f1d1d41429879502d5ada2",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bedroll-frame.obj",
+      "previous_sha256": "bea62d85dfe1ca862e917d9fe17a17cfa8a7bc9aeeec6de151fc6430618578f2",
+      "restored_sha256": "578e10aaf517197bc0e79ab154ebdfc4ad6482a9e504e927dcdee3c352705b30",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle.obj",
+      "previous_sha256": "f87ad6ee039fcd1d5e7d22ff6bfea7e9f5c9678ce7c35380d1c946e664789342",
+      "restored_sha256": "eeff2dd611663857af7c85808f807d87e21e4ac6346bc55178dce60fc34a6bee",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle-large.obj",
+      "previous_sha256": "3f74e6140bd0099aeefcc39c08a823a60fe69a7bfdfac44b94fbc4b963b2b5ce",
+      "restored_sha256": "3f6ca17260bdb8543bd6780ff7e4339f416a37f362a15b6089e16f98a959c6f6",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box.obj",
+      "previous_sha256": "b149491cae18f870fc8000e9f39502a536da45ce229e05d9d348b6922663cbf1",
+      "restored_sha256": "fcae73b5e2c39816796f34f9d2aa8ebeb344b7494a191a2ab9a7d46dc50c5fd4",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-large.obj",
+      "previous_sha256": "fcec4aa6d180460ea23aefce266b39b358a4e2083e11a4d1abc35917470e954e",
+      "restored_sha256": "98bb14c15a32b902da44cccf94d2a470357a1ef1291b252bfced7d4ee649f4e7",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-open.obj",
+      "previous_sha256": "6da228daf6ddc32bc39b578d422408a99a49249232f961b2b1e1662f3f7e7f05",
+      "restored_sha256": "bcb125f3dfa5df86d70e40582c391c83c18747aa904dd1f107013e923bf4b62c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bucket.obj",
+      "previous_sha256": "b509b54ee86abc14113c4493d181c3c9ed223b753f4a5e8a1dc26e96862f38f9",
+      "restored_sha256": "899f5d0e43218fab5759c86953320532d7f1832837c67e80f771023b6aba654e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/campfire-pit.obj",
+      "previous_sha256": "3db4963961f2561b959e71cdde2bf62042edb782653407aa7bd0151bcda63028",
+      "restored_sha256": "436db0e5879012fb19fbd4e5788e7cfeed4497f8e5dcd4d4bf80bfdb9df29e47",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/chest.obj",
+      "previous_sha256": "032790ea057a205b483d69bcf367472412b87e9534b1b14b7497f22d68cd00b0",
+      "restored_sha256": "893779a973dc2fe4ce88a824893ad7408e1130aa82e0b1afb5128495374345eb",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fence.obj",
+      "previous_sha256": "60ed57dbd90ac1c993be10819f2fa597702ee3fb06b3af5137d0aa0173779773",
+      "restored_sha256": "571924e322f39d16eafdd73a8b14c7bba9f3788aa78d5607ff38eec89e9fdb9d",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fish.obj",
+      "previous_sha256": "f354b42292aa4864fc0ae16fed6ecac552b2e1b635ff7f818464330aa65b0625",
+      "restored_sha256": "862f0b43ec17d168062b35c32da89c97a8641fb17932bfe4ced3e204a56affcd",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/resource-planks.obj",
+      "previous_sha256": "f1289719b77de39e6f5742b8c9baf96e9a7e8ce6a16bfd5ab5fecafb302ec177",
+      "restored_sha256": "4eb53222baddb56cf986c38ddb789341c911550a90cac319c689e18ec095771c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/signpost.obj",
+      "previous_sha256": "60a8f50ff966f1a0e9b73f0c1772875dc43a272b805798f01ac9de8d69be9cb9",
+      "restored_sha256": "eedd82df87c082d63a6f3464bfa35397ccfff799bdf6fafbc0d75a7fb14a4f9c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure.obj",
+      "previous_sha256": "55bb94900aa8b6f372aa2af1d86b6c6eeac3c6349f117507ec4a904997d41599",
+      "restored_sha256": "123c3fe313fb6d52b44546c864ce7b1d70748a06ba659c481e6b425057d021a1",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure-roof.obj",
+      "previous_sha256": "0e4c54bd381f86fd77cb6620e4a899d637c1245c1761921977afa94a6b9ee3ff",
+      "restored_sha256": "b5ed112d9849400790dd5e10b24c2e559d9c708a81f55832dc707b3bb14e956c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tent.obj",
+      "previous_sha256": "674ce3aa3fd8dcc574a540673784d2b810af5c3c09a9dc1eb262d903872a9a7e",
+      "restored_sha256": "87479f276837ff0aa11bdfa220e9919cb8120b2499f868f9c9432291586a6f51",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-hammer.obj",
+      "previous_sha256": "c0908e2ba47fde1af9b7283dcc9fc061e59c4402e351c343350baa749208490d",
+      "restored_sha256": "448b531208ab7fa1d4c44041a6ca26734e8c805f8284d39f8e72c863f30f55d6",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-pickaxe.obj",
+      "previous_sha256": "74a47b37864c6f9208c2766a53fcb7d20ad1902a3b8a4e6055c163f6f6fbcc6b",
+      "restored_sha256": "6b4525eaf713eb528887d5a13f5293a0b29673f903ba4e1d049ad1384a93d74d",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log.obj",
+      "previous_sha256": "22b667d8027b0426e4c6c90099e7929ccd6b5c9fbdc1ae5c0a13a4093be40c86",
+      "restored_sha256": "e7ce23e220360007d374771f57bab882ff1cf238c7883bd190e52f5e138b2540",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log-small.obj",
+      "previous_sha256": "2770fbfd0aa801b6ca84fd7c1c21cc6ee583790574e58db2e08c5d160fa5a8a7",
+      "restored_sha256": "5bd51b9df1e4ddae761cb4e9fd92f886be0f7be080d93dff72a3fc33b94182b4",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/workbench.obj",
+      "previous_sha256": "53702524d284c9ec665717a34f4e2c9679a0a1c91bb55eaaae565ee116f174c8",
+      "restored_sha256": "5f7fbb03a9d97300da10873dee4d3cbed6c94bfa8a328396947a7673ee0b81a3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-g.obj",
+      "previous_sha256": "61b68302c12d0cdab8694934897c76e91ce80ea5499ec9a4e3146f0f06d545ca",
+      "restored_sha256": "285a7ad4b8dd66a179d85cdb4610935c30f559ecf30d0beb3abae7c7cb4c3f8c",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-d.obj",
+      "previous_sha256": "33a0830ffd07a8e6a4b29dcd4977d0cffc4f40b199e030a192acca7be019be69",
+      "restored_sha256": "e7c1f60fd67eb6066fd04b04f88d6c4271d31d04b64c1e5361b7b9384b2b65f9",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/apple.obj",
+      "previous_sha256": "f9efef616e05c8e1b09163b61da9af453c17c4ac6d4dd24a73c442b75af3c598",
+      "restored_sha256": "cb8d02f0860a426bdefa373d748ab6f4a65cfbbd757db3275e68738cdd2fa5ad",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/banana.obj",
+      "previous_sha256": "24b22cf74724c6394ed1eb69b3481c7f33b9e862e30c87edac2d0f7b46584855",
+      "restored_sha256": "b676ad8dfd2d3a5b8d4496c6da5b4e487a5fe0f3a24825bfdcff5ef60d3c6a54",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/carrot.obj",
+      "previous_sha256": "068f700601e902a50e6a19833346555a82a0b4ab92989a62166f1ce5f538b15a",
+      "restored_sha256": "23792b149cb22222317ff7aa811e9b040ca19fa6a1093dc630d16a5d73300c69",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cherries.obj",
+      "previous_sha256": "0a199718bd2e9aaafc35686b419fb3569077595d0bd7e449a8a2a3f9c9e8f97a",
+      "restored_sha256": "d3e073561fe4993d27f614484950aa017d0928efcb0b549de22a319440cd0c04",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie.obj",
+      "previous_sha256": "e52878c90ed6d34427a8e596c73e0885c5569002bf80e687c922d663867a0597",
+      "restored_sha256": "7b2ba4847492305ded015826da5654a595d731aaed18841b77199e1ed2454513",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie-chocolate.obj",
+      "previous_sha256": "37a711e735b9ed167033e4d961ba9db8070ba22d7c7609f296ed104031488fbb",
+      "restored_sha256": "6ffdf84e5fd0540f791a8bd63817cee8ceabb288067a3d46625048d3c48cf484",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup.obj",
+      "previous_sha256": "b295c6cac8b698631eda4f962165dacf7453e1d88e309bd2a057bbf68ab1c5b0",
+      "restored_sha256": "27fc5a5e6cda8fe4d518cf56da5a909fdd766b3d4cdd6e5c3a5bfac4b90ecdca",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup-tea.obj",
+      "previous_sha256": "e5fdbd74885dc938b6417e3fd2562a887e0d69b14c1ee25778ccc7926b0438af",
+      "restored_sha256": "f4559941485e1a2ea99aea58dcd04cc10adbf45c50f291bed94ee258299232c3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cupcake.obj",
+      "previous_sha256": "e7cdb55a411a369188ae65f9fa64de28ff98b4d12bfa1048d13580e5b01d4c8d",
+      "restored_sha256": "d12cdf69f588393cd7c6d479746f261587a3d866812b535b09417c0dd1cfd550",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut.obj",
+      "previous_sha256": "b0cc74c0c87cf73a50973623e6d7508a4a33cbadac140de9af6e97dab0edc53b",
+      "restored_sha256": "b9ab244700e1e7f0a93e2ffbdee9d7c956592e590b9a98807cb6399a90185695",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-chocolate.obj",
+      "previous_sha256": "5b5959b4eb80ba67d0e60fcd3260726f4b0d12fd96c5c665f575af5ddf47dd19",
+      "restored_sha256": "8bd3b60a2a230c7fee685bd155d5c08721d333a1f2d28e6d2f394500794876bb",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-sprinkles.obj",
+      "previous_sha256": "7c9540b16b2ecf54813d454c95bb640240150534c50daea4da0ac5cce179f64a",
+      "restored_sha256": "7695804cc9aeefc5ca20fe79d7a537ad5390da169d81141c2cb24cc29461876e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/eggplant.obj",
+      "previous_sha256": "03e44cc66ffecc0f716efd984a3da21f5b62c4d473a7eee801aa1555f63e7d75",
+      "restored_sha256": "55d54111ec37520b5fcb87e3af5c3e0b4b47f88c40de4f5d1411aa3cea5c172d",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ginger-bread.obj",
+      "previous_sha256": "3efa37b1bfe662bd81763fa1b6abcbfb8cab1b55a774431244ba7fa0d009e7d3",
+      "restored_sha256": "29b31752f22ae533ee09a6c6c690868a0f923c14491333e1229f67d306979b9b",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ice-cream-cup.obj",
+      "previous_sha256": "bf624bc12a21d4e1f7b5944391eaeba0b6a7d42defd66255c9600d2934018ce5",
+      "restored_sha256": "2b93606c23d15ae5843e32df268ae9713899415eaeae416e9ff9313b703cae31",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/lollypop.obj",
+      "previous_sha256": "1ac42ef47cd829ffc548280f925ab6ac487bbf842aa6bc81c585ad61096c94df",
+      "restored_sha256": "2ba12380b8a9171e14a72ac9c640de4050bd6e5d7a8658446de1b0c5052ea679",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mug.obj",
+      "previous_sha256": "9b53b787a748aa381a2d95b7be6c3f653687f0a9814a6de30b5c18fb89999951",
+      "restored_sha256": "8ac2081089f43a4ca52836d5b3598d3c97dd94893232b3663bd623ef4ab91183",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mushroom.obj",
+      "previous_sha256": "ad044d01dc8e6e822173a52db526978f26834d5fcce40dbb7bf6a5448e71225a",
+      "restored_sha256": "abe856209ebde07bb8dd937f64999fd42235fc27324431850d2e405d28541968",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/orange.obj",
+      "previous_sha256": "8a95295c1992b8e06c6a29966639b13ba466e185d380c27adb8345c7b4f3f6ee",
+      "restored_sha256": "b8e4f2019d980db840a63a374cf646a5a2216d2443ed0d9882cd6571b49e82f3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/pear.obj",
+      "previous_sha256": "a5e5959fb2658bdb25f8058e38b76a55e465ad09ea8e36bf45c8787a85b5592c",
+      "restored_sha256": "a6558dd5af90bdd1a84245e45fbae25e5973cb251fa0632fc103d1d0556be7dd",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/popsicle.obj",
+      "previous_sha256": "016f050b0ff171eb264c9df634f6d95bf585be81daa9ba822dd666bdb3a2eb8e",
+      "restored_sha256": "50ff258efbf0135c94aac625127fca524b956d58fb2024d95ff6db8dba5e4242",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/strawberry.obj",
+      "previous_sha256": "57f309482575f1b36b5ecc25ad80f8fb4671126a83671b02f23c017d073a4916",
+      "restored_sha256": "1be28091f09494cf22194638d3f92f0159072b55af6ba66c285db22739a2e4bf",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/watermelon.obj",
+      "previous_sha256": "127401eceaf1ded69f5de2bc204ae920876c013bf4230da5a789fa77727878ad",
+      "restored_sha256": "a104af3a607723f2dd77afd5a173889cc7acf96679b1b358b423a8572c3798c3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-gold.obj",
+      "previous_sha256": "d5402ba401ef867dac578949dcb0fa467dffde6c671944b8d822d8bfa63dc9c2",
+      "restored_sha256": "ddd73145c9e64b2faf925597153202e6318adc65a5f543f7c0ad1291c20e28af",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-silver.obj",
+      "previous_sha256": "72c160b9df8c6aac3bcc787d43b6a9d0fd9b16967470ada70b1736178bd40f7e",
+      "restored_sha256": "dd1c7a39b0ef3071c856b31ad376b0a8d1b1ed1f8bfc1a1ba207bd03f8399ebf",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-cone.obj",
+      "previous_sha256": "939f60d50d0901cacd37a3130ee8374ec13fce6102e1b39f5d7d6cdaa0f43d3b",
+      "restored_sha256": "c5f330b509bbece12b2f10c9b858146944ae90bf87143ad4161c68bf1dceb7ef",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-looping.obj",
+      "previous_sha256": "6472658cc758780854b258c1af25e7476123eb1f836e3f097f655afff002f94b",
+      "restored_sha256": "3bf63a5f6e1c6015ffdb68799b042c9f1248bd51d1717e498f7be03830a082eb",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-straight.obj",
+      "previous_sha256": "02fb01440812a2fa5708c6a6fdbcfbc6427b320df710ebadc15ea786203a7d8e",
+      "restored_sha256": "157e3e9d4a51325d0578455d96d251750a8864bb2e293dbe47dca40139680211",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-curve.obj",
+      "previous_sha256": "7f1f1363171fbc4402fe187e50076b223947da549e5561b304f601af20fe2d1f",
+      "restored_sha256": "c967be1d992411e304fee3f8a7e5e5cddac3f246e724beb7ab92e045620c39a5",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-straight.obj",
+      "previous_sha256": "ade9c86454029406987e8295ba933e33418f3e3a9cec86e24e2c7664c5e83654",
+      "restored_sha256": "98e13e60bd2f85973102907fd0e8217268eb7eb567ae14c1dfd52032d7656883",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer.obj",
+      "previous_sha256": "f0d73b85b91212e42922c282fe35cd8864be9be4f9fac351e93f7fee45125619",
+      "restored_sha256": "5b7165c5547832eb2d00b4723acd06853d6aef3ef075c4fb30913ed46a48c8de",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer-low.obj",
+      "previous_sha256": "3cbc0f5997478c20c6f0b1f0a52dada84b20de903364a90ed1eb10256637c8aa",
+      "restored_sha256": "271739ac4a03695fdd40dcf0e619ef68002b10c3ee8959cee3d39f701a86a46e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-speedster.obj",
+      "previous_sha256": "0c5e37b365e387ddd2076b0009f8d730113bea19ae73b10136f4b0114b26bd80",
+      "restored_sha256": "9528d425f4713918c841800e889c4c220aff42818f6dd7e35e961dd39089e7cb",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-suv.obj",
+      "previous_sha256": "99a06113712c9d59b8e994d5f7e1d651ae50f7c4181772ab1dd5248dc352626d",
+      "restored_sha256": "7925174af14264dcbee6435b8ae34e400d0a2b03c54a55500e29c37489db6816",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-truck.obj",
+      "previous_sha256": "18b3742a42289b160ab580ad70261664c2ab0ece85265de70232f5f6e025c966",
+      "restored_sha256": "cc5473fe55ef868654014133cef931c62dd8f2411be542f1db1fe34da3f9c711",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-large.obj",
+      "previous_sha256": "03e9b69391e58a674f12ba74bd65f1734723b288b8ee133027146b4ae70c13b9",
+      "restored_sha256": "8ad25cf20a043159f7e82bfc437d4fe1c2042e381836a5db74ad6862db78a892",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-medium.obj",
+      "previous_sha256": "ea4276eefc641186546fab01cee05f39cd497d4884612e341ee3df8275199b4a",
+      "restored_sha256": "5c9f1dc41f0531d1539fa0a3f14ccce10268e2a474f8d6d16458e18a807467b9",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-small.obj",
+      "previous_sha256": "3906504bd29d01036a8b58081005910d334e2850139f24e5197938ae2807dd47",
+      "restored_sha256": "9723dba1de58118a3100ea93214fde3a4a1cd52c6185263ca49779e8e8add779",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-a.obj",
+      "previous_sha256": "7c1c649a822be5b67439632f6276adbd5d001ee9a9630ef07ab5916edc76512c",
+      "restored_sha256": "de1d327c92fad3920a0e47cc3fc9516dd7bbcddf39d3006921a8ee8e216df1c8",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-c.obj",
+      "previous_sha256": "6e70bafb3d2939bd4f693d5743a3ec3332aa9d0ccee0f221b07eeb7836bea2ee",
+      "restored_sha256": "97cf90d2ec485d1dd8239912f1c9a881679111622e25399bec64e9e8dcd5dc2a",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-e.obj",
+      "previous_sha256": "1292c97ac8cf6e69fd511b898adee5311459bdd37f97f2c5bf42f9c786ab6645",
+      "restored_sha256": "582adc9246d5630334cbf6ab479175556cfb88226084614c61fe664b8b3c6483",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-f.obj",
+      "previous_sha256": "2a26b20629f228ddcaf61f68fa93cd36b50aa8daccd6ebeff359a95f753efea8",
+      "restored_sha256": "0bb19bc9ec1f30c77be3047f1a87800bc8347c41a28935e0a74f1d82d47b2f4f",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-a.obj",
+      "previous_sha256": "ed0c11356743d1e32520ce63edb93bf3bf41c8b26234d6ac7a83d1bcc8ac1cb1",
+      "restored_sha256": "df64700a24f59b3b6ab354ff4217b96fd0586836f9b5f0a80dae6236dbaf31d4",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-b.obj",
+      "previous_sha256": "79ab5eb4ba5a1373d7daa8f42ec76c836dd8f12d540aaef566a47b59ef42d0df",
+      "restored_sha256": "de82df7be067875836efe99dd629b16ac72dde6a2895f531874ce155a29511a5",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-d.obj",
+      "previous_sha256": "5480437659b2c5261eac95565dec2e968fa85c9b840023ac7155f3a7f55c126a",
+      "restored_sha256": "f5828abbb0a0040a0ae766eb44081af48a00bc6278a9242829dcba5eedb2af33",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-e.obj",
+      "previous_sha256": "6b3398d48f8a6093cfa871c631313ae481db2b46087de4e9d72973245035f07e",
+      "restored_sha256": "f7bd09e1ffd9eac1e8905235cffaef690250e17821d6bed713b70a512a9f52b9",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-worker.obj",
+      "previous_sha256": "fa5e8ab738124f7aacfd610bfe6a3be3f01a8f54f83103c9d4f6ee38ddbeb2a8",
+      "restored_sha256": "119564dc8da0c88af576b43b8b55a9b60dbe682859869ed042dfefdbb75889fe",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-knight.obj",
+      "previous_sha256": "3d3c5b1dfae19ae0258bfe533e1e9f53d996c2a11984a2719dcc5fa6dacae89e",
+      "restored_sha256": "e20c548b1fdf8f33470302bfb0c8a5ea8c716e2fa8606c607585d2d7c7b559d1",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-locomotive.obj",
+      "previous_sha256": "8990e69de7b7e1d4439f2f38efe630c63a048df8d61f96a24203f5fdc2b1b2c0",
+      "restored_sha256": "aed5bbe5b1045e31f5ad163325a67c3918c3858a1ec17e19e816d55eab3f52a3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-wagon.obj",
+      "previous_sha256": "6efe5d4d293284546ed4764e0e19c5d29503c92c6541ce389c58377972205642",
+      "restored_sha256": "3ef92c5e9af36d81eb7e78febe01f68f716c1a13f76ab46ac3a94d5c8eb4f3b1",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-a-round.obj",
+      "previous_sha256": "04c37258e966fe05f22f75aa3ae4bc989948c0ba2180eedb3e92316b765d4e94",
+      "restored_sha256": "1b8ddb37f5c18f966588cdf02df6a4ea64ddb643eae31f13d1ea1703ec12eeb5",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-b-cube.obj",
+      "previous_sha256": "3a8aa31de21f1b853a19b77f4a55a42fc637154addded9de3e7c537d4c8023be",
+      "restored_sha256": "fb855cd6d3541b07c2875faeb322cf5311dd82220beb8adf007cec8f30b01f28",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/nutcracker.obj",
+      "previous_sha256": "54bc41dc1937cff442f5477c0ac668368c3d40c789b5354d4466dc110286907a",
+      "restored_sha256": "8f3b777e2462ff6b4fb3321ba45a34ab30438c47af7522c447697960b7d84e0f",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/reindeer.obj",
+      "previous_sha256": "f8b0cb88c6c5bd2bb19f08971533f8889cd790429fe829b0f5d4ddf90de33b5e",
+      "restored_sha256": "c1d2642b77eb5d46160421229aed525c9bb02754f1704efd530806437848d609",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-red.obj",
+      "previous_sha256": "9275009ca07a11a07f2c32e2629eba2d499cd0ad10e8c7bdf03dfd226df5a020",
+      "restored_sha256": "7893b86c795efc515d1ce5389f3c622c28c504f283588365a9ce61b4fbd67666",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-green.obj",
+      "previous_sha256": "9dcf8361e5a2b85cc4e408b33afeadf9f5c79474c970ea6ac7ebbd4a1d514f50",
+      "restored_sha256": "fddd04c3160ea377a0a69c9558b988a391099756802effa3049723cb3e7d5a13",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lantern.obj",
+      "previous_sha256": "cfc9ddf87a5b3577922891c012d2506440afcbd99feb50546ac0fb5d46eac955",
+      "restored_sha256": "6dc6658e2f9b78cefbdccd758063e3074e33717fe1e8f673fa9d5b0b3435148e",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/gingerbread-woman.obj",
+      "previous_sha256": "092a8bad1801660ae3ea8a436c45f44fc79105a5a063b609e9d25ac22f66f24c",
+      "restored_sha256": "69b18b3019da06ffec97c9ddde465feba8ee7f90d5031f57ea5842036fa24efd",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowman-hat.obj",
+      "previous_sha256": "a155de8dc68025b2118d764f806f4aafb1058385c07c27f2ee845e218871fc48",
+      "restored_sha256": "32ccf1ea5fdeb04f3e94f21bf70eec9f75ee9dee7bf68f8de08479bb5ab22710",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/sock-green.obj",
+      "previous_sha256": "0ec1b5d719f4b20e22967163172301358e790341b97d20d313508b73ffaa84a4",
+      "restored_sha256": "91c374621a81f93417d004a3f8ebb538b9678a2083a4f80fbfe52ca54a893be4",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowflake-c.obj",
+      "previous_sha256": "b202cb85f0037d7bd26b3d5be9214ed11d2fc67709f455f1a6ec9cfaee3906c6",
+      "restored_sha256": "14bdd249a73e56e366aaf824ee9bee28bfaa1c53745f7de86108edb5b541c664",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lights-colored.obj",
+      "previous_sha256": "c1aa9b8371a866fe904a8fdccd5e6ecc4f2fb8076783f58eea7f9101e32dcdfd",
+      "restored_sha256": "e7b74f86762827ead0c1ddca24e3d8224de30cf17296a9b9e791fb4c71bd66c3",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-tram-round.obj",
+      "previous_sha256": "81877fa98f876a466eeca39f68f6f74efde0ba304d1a2e4d15e41ce3bf2e1f65",
+      "restored_sha256": "210e518facc8ad5ea2fd72d561872a6a2328e7569898d6d1ba09573ae2e9abae",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-carriage-tank.obj",
+      "previous_sha256": "5f932841606491d15826df5b471d381617252fdd84476af10e0d6b1b6a36c9ce",
+      "restored_sha256": "65aff4985f0d32343dbaa349168eff750e23d79019ef6240500d34e343a47afe",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/railroad-curve.obj",
+      "previous_sha256": "270d0df6e4f8c1b39f7305d12b1a60860ce0830c7c473dfa3459c67ba6abd9d0",
+      "restored_sha256": "0834097d6dd61d1a308eec356bb4e4fd728594189502944071e8ff44f032095b",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-2x4.obj",
+      "previous_sha256": "b21f631a0d3196f16ac96abace6a65222581ccf67340a09bfd008b5901f1bc68",
+      "restored_sha256": "84161d6d084d3a3bb3f6b996bb0708d004074478c6bf1b8fbbac15326803ba79",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-1x1-round.obj",
+      "previous_sha256": "4b32b9dff7011736e5fd9ec110c43e46fd7304a7fe516e06ca4c9a6015339ed4",
+      "restored_sha256": "7e423e2494f985af031a17617f45b10e9e461068ea2d9c0659ceb2edbb5266b1",
+      "method": "recover_mixed_exporter_line_endings"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bear.obj",
+      "previous_sha256": "4a709ec10a67457e9552ba860609b82578fc584218333cd957e07c2a2cbf92f3",
+      "restored_sha256": "3dd342716531b4e2e7889293d0b67e1b8968928df61f2cc0e67056f6b661877a",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bear.mtl",
+      "previous_sha256": "a5f257633078ed847930fe367b500c63a02ea3b0847a61b62ecb47bd3e721316",
+      "restored_sha256": "9feebaa9671009643d13a793d32f3ab99024462231f488194c44486579da94b8",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bedSingle.obj",
+      "previous_sha256": "b5ddad181e50dbcb15c2266e6b7a530bb29ff1914d9ac9a68a93bf67c437cdf9",
+      "restored_sha256": "e93bf273166e0cbe5699cff5f95dd90da4c2c25d48931d92b1f9e077d60a9814",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bedSingle.mtl",
+      "previous_sha256": "99cca7e9cdb494628b547ece760bcbd6a323e45b4111504c7bb4791def38876f",
+      "restored_sha256": "c68f3b5128ae18ed9a1723a1363b1c56cbbb17ae12de246de26af761ec822fc0",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpen.obj",
+      "previous_sha256": "36c5d222f6895550afa4f2b724b8d83fdabd4892bacfd86858dd76043527183a",
+      "restored_sha256": "c582b0306529553018eb5a9f58eef35c7383e566a0613d32dea41612cfaded8c",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpen.mtl",
+      "previous_sha256": "9e288bee18bb8b6b628dec6d8d8acbaba02d65903f607a1be6681b4207798c0b",
+      "restored_sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpenLow.obj",
+      "previous_sha256": "d0b4b032e287f93f73cb4ecbcac0f26b8b3a9e00239e7facca6ab8b50b8fe871",
+      "restored_sha256": "bee575ba5ba4f2c7cb77c688d98c83d7bbfa70d1f6f80717afaa5586f04b018a",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpenLow.mtl",
+      "previous_sha256": "9e288bee18bb8b6b628dec6d8d8acbaba02d65903f607a1be6681b4207798c0b",
+      "restored_sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/books.obj",
+      "previous_sha256": "2211437712dc0255d36bc89ade6934a77c382f6dc4db62ec540f088eca038ad2",
+      "restored_sha256": "619b78970d787db48f7562c51ed5c85239d61ce075e32f0c2b486bbaa736a479",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/books.mtl",
+      "previous_sha256": "dba59cd7097c0bce2fafeb198974f8238bcf1ff1953f705c9963bfe2b79182d4",
+      "restored_sha256": "4c4124eba54d96842cbc27861696001bdda52abcf5e0f0e786732924c5bd61e0",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/cardboardBoxOpen.obj",
+      "previous_sha256": "fb2648293e79ac5a0bf61952ac198bebce90276066cee0a0674482781eaacfad",
+      "restored_sha256": "21fc2e5b06dd1f267074381a30a5d5945626996b96d6016b5ba3a9bd245272f0",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/cardboardBoxOpen.mtl",
+      "previous_sha256": "0ac68702597c9259a08a93077fdd83875d9d0d2daa228fe77400cdecd07be7af",
+      "restored_sha256": "aeb33dfccdf381881fd065ef5724709610fe7748f818090a755b4eb46002a952",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairDesk.obj",
+      "previous_sha256": "4d9400ce184bb64bbe5a048bcec3097eca8e63ab4060ecde5577359b11c5fb6d",
+      "restored_sha256": "2e4448333f39ceda9f3e90f02236463e34fbae80d470084ae2009541c16c89c6",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairDesk.mtl",
+      "previous_sha256": "5b386859e4c30699e5dd2c48a917831211cf021ab27d73faf0bd226b304a8a35",
+      "restored_sha256": "6d45d00e9569fe5b1abc4c9fb1caedc99cb7b519cdcd09a1377ecd8cb79f6f53",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairRounded.obj",
+      "previous_sha256": "5abbe282fe273105058c65c501ae26bef4e0cf53537da61b4b1464068782dce6",
+      "restored_sha256": "7f42548c11c2aa8e56e03e74f6e7ce36d062171797da76e39851008d74806f4c",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairRounded.mtl",
+      "previous_sha256": "9e288bee18bb8b6b628dec6d8d8acbaba02d65903f607a1be6681b4207798c0b",
+      "restored_sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerMouse.obj",
+      "previous_sha256": "fa90703f0d6feb1354c6b9f7aba9cfc1ee0925a526b72a93215ad4db79e2f9f1",
+      "restored_sha256": "f48d88fb9d1c4f79843e03a446f13b57d65dbe884095135cd907e96511d85dca",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerMouse.mtl",
+      "previous_sha256": "f0907a71c7d8b0efe0b82263176fedbe89b9f30b9e5e9203feb6107c5a124128",
+      "restored_sha256": "8d2aea496efc3f8575ef22d6a134ec39d0e0d7b32f2f6b1fae125ffb244824a1",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/desk.obj",
+      "previous_sha256": "f2e91a029658568362c1bb6bf79bd9ea8070dd227724b5b15ab60bc2859d7852",
+      "restored_sha256": "5591258c26d1311a99ddb7b73e1e9ca48492afa102757d51fd9b3686e3fbff7e",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/desk.mtl",
+      "previous_sha256": "f6919949f439a07368fde523f4a0da3d4881efbbaa4d432679224edc86c8c2ff",
+      "restored_sha256": "5e5596841db7ef51c29d073c80e432ccca5240d0fc966255a0cb1fbcec3f6dc0",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundFloor.obj",
+      "previous_sha256": "2a8b3be59245c45b8463546a88667ef863634656ce17e06423dc85c1a5cd363c",
+      "restored_sha256": "65b7be5588a17293cbb4f59773e71cf860106022e0fc2c63be73bdfe38c63a86",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundFloor.mtl",
+      "previous_sha256": "cb39439009258a877019be2ef8b9c876ca5477c8ad300eaaf4639371ed0343fb",
+      "restored_sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundTable.obj",
+      "previous_sha256": "b873b0327d416740885fa43aef119e04293313558c5a7b80f6921aacd44ce5f1",
+      "restored_sha256": "3d5f74dc94552c722404c21f64f0f14b0b873771fbd4918eecc3898de65d2831",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundTable.mtl",
+      "previous_sha256": "cb39439009258a877019be2ef8b9c876ca5477c8ad300eaaf4639371ed0343fb",
+      "restored_sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampSquareTable.obj",
+      "previous_sha256": "ce4ca2c11d8291686adeb2d7d38e03a1726f1ffc1a2ad9493b8fee1bdde4ca00",
+      "restored_sha256": "d76db315ff17fd6f157226e1dbbc3c778e61b14fec8b1169b1aed25e5919cd19",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampSquareTable.mtl",
+      "previous_sha256": "704bf7d630e67c62f64a82747acac8bc9472d3d55aaf88f10560b284b3ca3900",
+      "restored_sha256": "9b1c81ac53aa626c47641c9e89d632360b5c833c9050b56641388af543d96dbe",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillow.obj",
+      "previous_sha256": "d94c1c6467e12c25e0e56b24005bbde04ac5f5ced3be031d73a54ac8b379aab7",
+      "restored_sha256": "58d7f8896d23db772280bf433f8a2dbfcd23b7b117ba9ff016299660eb5b0eaa",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillow.mtl",
+      "previous_sha256": "5c315e057755e537da430dc164c72e0211b11ee72b2facf49bca0de0ac63c74e",
+      "restored_sha256": "3e6f3744b0011c35dbf4da0a92bbbb26ccdee052501c2e3da216e58c961e4d80",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlue.obj",
+      "previous_sha256": "4d3535cfa767dbce63d39bbab70495fc0e5642bbbb423f019c692d901ba6a580",
+      "restored_sha256": "2759512bbccb695f22f22b549f7f58435ab74497dac586bca67d30935ad61b9a",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlue.mtl",
+      "previous_sha256": "cc89e8dae6de9d2f1299f4877b3eeedcc3e5e216d1e81d05adc415282a1d1721",
+      "restored_sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlueLong.obj",
+      "previous_sha256": "290a308e780df9f051555048ab0b854694d1fde8a08530f0711c123ff76396f9",
+      "restored_sha256": "e62bc0eece83457000d3c0b33b4bd47e5ef439d3a152465ee36629d3c3a1ffdf",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlueLong.mtl",
+      "previous_sha256": "cc89e8dae6de9d2f1299f4877b3eeedcc3e5e216d1e81d05adc415282a1d1721",
+      "restored_sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/radio.obj",
+      "previous_sha256": "31ae2f852f83d8e48aac515bfe164dbddbfa3cf2f94dc6aaa28e1762a40c6a93",
+      "restored_sha256": "a595663a057462eb9a3db3e45bd03f823f9410e6d4fc6f62cd5024bf6d1060e6",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/radio.mtl",
+      "previous_sha256": "f336dcf52bb12a80ed462c85ccabe173e85b7c1e505a4403eb6793a5067bcce7",
+      "restored_sha256": "709c74fe716dc8ef9195ab195db6ab657d0232951153a1ec86e96b86869e8913",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRound.obj",
+      "previous_sha256": "4640df36da2bac88bb967895145388663ab6a6cb7405a25340eabdc95279c62b",
+      "restored_sha256": "676ecbeaa49d6dca45414854db76df9f3d1b5a74f93b966cb258e1356d2f926d",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRound.mtl",
+      "previous_sha256": "5a44791aed44fae1a784375f0732a37dac2ba33d31a60f550114630476144292",
+      "restored_sha256": "9ff56ef802c85b11af44277aea9c49e1129d8aee4b5f9fd277e9cf9be8010069",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRounded.obj",
+      "previous_sha256": "2fddee781873c8052ba47a99825121c59dff2ff75804ab9c01e1a8d2d83ff47f",
+      "restored_sha256": "e8156efe2e8a6383138bce27bfc60350ee67de50ff2230b38ffd135e68981c60",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRounded.mtl",
+      "previous_sha256": "a379c1e3d69dbe3251b284e4da4e778b75e3ca379287843018894be313e42b58",
+      "restored_sha256": "61484c56e3faaad7857ef2673d85eabd710e138a0fb18517e26ad47413a75b50",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/wallWindow.obj",
+      "previous_sha256": "c60391d73001423e4125a033b921189b0d0c447b11551de5d94613792d207a33",
+      "restored_sha256": "a36ec164158c63df3d0250a57fc6a94472e7137d7f4cc428eb24e7641e553977",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/wallWindow.mtl",
+      "previous_sha256": "95d07bdd0bf2312260cda6731eb7640a7f2a7279652592e81b70847b18b1d7f2",
+      "restored_sha256": "6d0557a8be7dd9d13f888b746c5a9e37031af128cf45e0ef428dfcd1789867f9",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerKeyboard.obj",
+      "previous_sha256": "6d0b1cf2cf610b211bc1ce174dac1b5a7167f6217511b9028fcc61268fd72c53",
+      "restored_sha256": "e33668db75a2cb9bc6ae64e1f062810d570aebb12f8ac58e13a63074b4cb652e",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerKeyboard.mtl",
+      "previous_sha256": "a6d7c831dc194284590b0777036387d1e6a64a6d029fa0be71f1b8fb8678929a",
+      "restored_sha256": "e445dc0b0ed0651fae2afb35a0581a9dd259bfff0a1c68f0edfcf11ba80e02ed",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/doorwayFront.obj",
+      "previous_sha256": "070275c5556d9d83343ba3f7839d2981ffdd4ec104be551cbb65731fe006ab3b",
+      "restored_sha256": "1caf521e55aaa9edd781c6875e4d9b87d7ae2c8b5bcd82da0b8ccc052e6047a8",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/doorwayFront.mtl",
+      "previous_sha256": "d19cac27d1db1625e13d81e357792c598a398ab097cb791eec530d76ef191b0c",
+      "restored_sha256": "2bdbdf6641df240d456c57632adbd7b41b413189e0a7b12dc266b9820eb066c2",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pottedPlant.obj",
+      "previous_sha256": "04a499ef1717e56ccf5b3c88eb740b3cd4463440352149b604270021dab6bb9d",
+      "restored_sha256": "839e75290814756dee97e479fa462a7477cecda06db0707a520dc0f29130fc02",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pottedPlant.mtl",
+      "previous_sha256": "c0ac87c7a042fbd5e5603880ddfb96a3a79e5f4d72a7a057b20ca26655c5feed",
+      "restored_sha256": "a0b3de40d67b0a085f9fd94d45ae357ba6196f84e48fe08a67fdc43b64319211",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/sideTableDrawers.obj",
+      "previous_sha256": "d9d3706a33ca8a7b9c86a581ab4c0e093d64835c120eb4f5b517228cf7b0f74e",
+      "restored_sha256": "69b289480ad079aa1d7bfe41d3237b188e65c12263a9ed07d03e04cfa2f0f451",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/sideTableDrawers.mtl",
+      "previous_sha256": "b267ea7d4b89ea24e82ee56fdd45567b59d34666c2c3cc60ecd9342e84598719",
+      "restored_sha256": "d7ddf6f77f3738a8dea89ba74e5e1248db84f72b6d61e8271096bde1d927e266",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/stairsOpen.obj",
+      "previous_sha256": "4106affa63521e3c37278bedf19740168772317e417650598a23d2f01e20479e",
+      "restored_sha256": "ee9359c46dfeef5fc77270d45040555186aba042995d3454198305eb3f6f948b",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/stairsOpen.mtl",
+      "previous_sha256": "a74e5e0623110a59a252a287ffedab92834deef4409ee768511b095a20fe56d7",
+      "restored_sha256": "4a5b77b940ca3631e9a8de90b33f39e538065f1813249e2dd582e4d318b7fbd2",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/tableCloth.obj",
+      "previous_sha256": "292cb9dabf3d8cab6f6bbf9b58ca974577db12bb36ee960721395bbb202c5e57",
+      "restored_sha256": "f4a903e12deb72122348bed876237b4dc8cd0416cc4a580e36d101d7b93d253b",
+      "method": "restore_original_lf"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/tableCloth.mtl",
+      "previous_sha256": "d178c6b62d225b4257ff27a758fd23b47a3f722fa5c757a0cc56d1881752cdec",
+      "restored_sha256": "1153157e639a95f01be9266437a34d8aff562b07a019f3fec1e923f1c505aaf6",
+      "method": "restore_original_lf"
+    }
+  ]
+}

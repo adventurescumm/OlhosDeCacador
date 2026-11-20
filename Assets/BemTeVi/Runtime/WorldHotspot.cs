@@ -52,16 +52,17 @@ namespace BemTeVi
             float elapsed = 1 - t;
             bool reacting = t > 0 && animate;
             Vector3 playful = Vector3.zero;
+            float idle = animate && !string.IsNullOrEmpty(Data.idle) ? Mathf.Sin(Time.unscaledTime * 1.6f + Data.x) : 0;
             if (reacting && Data.reaction == "orbit")
                 playful = new Vector3(Mathf.Sin(elapsed * Mathf.PI * 2) * .55f, wave * .5f, (1 - Mathf.Cos(elapsed * Mathf.PI * 2)) * .25f);
             transform.localPosition = Vector3.Lerp(restPosition, travelFrom, travel) + playful + Vector3.up *
-                (wave * (Data.reaction == "launch" ? 1.4f : Data.reaction == "somersault" ? .8f : .18f) + Mathf.Sin(travel * Mathf.PI) * .5f);
+                (wave * (Data.reaction == "launch" ? 1.4f : Data.reaction == "somersault" ? .8f : .18f) + Mathf.Sin(travel * Mathf.PI) * .5f + (Data.idle == "bob" ? idle * .08f : 0));
             Quaternion flourish = Quaternion.identity;
             if (reacting)
                 flourish = Data.reaction == "somersault" ? Quaternion.Euler(elapsed * 360, 0, 0) :
                     Data.reaction == "spin" ? Quaternion.Euler(0, elapsed * 360, 0) :
                     Quaternion.Euler(0, 0, wave * Mathf.Sin(t * 12) * 12);
-            transform.localRotation = Quaternion.Slerp(restRotation, travelRotation, travel) * flourish;
+            transform.localRotation = Quaternion.Slerp(restRotation, travelRotation, travel) * flourish * Quaternion.Euler(0, 0, Data.idle == "sway" ? idle * 3 : 0);
             float feedback = 1 + (hovered ? .025f : 0) + (Time.unscaledTime < markedUntil ? .10f : 0);
             Vector3 stretch = reacting && Data.reaction == "squash" ? new Vector3(1 + wave * .22f, 1 - wave * .25f, 1 + wave * .22f) : Vector3.one;
             transform.localScale = Vector3.Scale(restScale, stretch) * feedback;

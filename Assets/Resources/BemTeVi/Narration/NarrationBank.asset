@@ -15,111 +15,111 @@ MonoBehaviour:
   readings:
   - roomId: faroeste_estacao
     round: 0
-    recordingScript: "Um balde quer água levar,\numa garrafinha veio passear.\nUma roda pede outra viagem,\numa maçã se esconde na bagagem.\nRosquinha com confeitos eu vou procurar,\ne um pato de borracha quer me acompanhar."
+    recordingScript: "Uma alça faz ponte sobre um poço de levar água;\nUma garrafinha verde, de pescoço fino e comprido;\nUma roda sem carro, esperando para rodar;\nUma maçã redondinha com um cabinho no alto;\nUm anel coberto de pequenos confeitos;\nUm nadador de borracha que tem bico de pato."
     clip: {fileID: 0}
   - roomId: faroeste_salao
     round: 0
-    recordingScript: "Um martelo quer ajudar,\num peixe sem rio veio brincar.\nXícara de chá para a visita,\nbiscoito com chocolate na pista.\nUma banana curva eu quero achar,\ne livros empilhados para imaginar."
+    recordingScript: "Uma cabeça pesada presa num cabo de consertar;\nUm peixe fora da água, parado sem se afogar;\nUma xícara pequena que trouxe seu próprio pires;\nUm biscoito com pintinhas de chocolate;\nUma fruta amarela que desenha uma meia-lua;\nVárias histórias apertadinhas numa pilha de livros."
     clip: {fileID: 0}
   - roomId: faroeste_mina
     round: 0
-    recordingScript: "Uma picareta quer trabalhar,\numa garrafa grandona vou encontrar.\nMoeda dourada vale um tesouro,\ncogumelo de mentira não é ouro.\nCristais juntinhos brilham no caminho,\ne uma cenoura espera num cantinho."
+    recordingScript: "Duas pontas de cavar se equilibram num cabo;\nA garrafa mais alta, que não cresce nem um fio;\nUm pequeno sol de ouro que cabe no bolso;\nUm chapéu de cogumelo que cresceu sem chover;\nPedrinhas pontudas reunidas num só cristal;\nUma raiz comprida que veste folhas no cabelo."
     clip: {fileID: 0}
   - roomId: faroeste_estacao
     round: 1
-    recordingScript: "Uma pera de brinquedo veio de carona.\nA caneca com alça espera sua dona.\nUm caixote pequeno guarda uma viagem.\nUma lanterna clareia a bagagem.\nO trenzinho colorido quer partir.\nUma boneca de biscoito veio sorrir."
+    recordingScript: "Uma pera de barriga larga e pescoço estreito;\nUma caneca guarda um abraço em sua alça;\nUm caixote de madeira, com quinas para contar;\nUma lanterninha com janelas e alça para levar;\nO primeiro do trenzinho, que puxa sem cansar;\nUma boneca de biscoito com saia para rodar."
     clip: {fileID: 0}
   - roomId: faroeste_salao
     round: 1
-    recordingScript: "Uma maçã foi convidada para o chá.\nA cenoura de brinquedo também está lá.\nConfeitos coloridos enfeitam uma rosquinha.\nUma garrafinha espera uma mãozinha.\nUm barril sem tampa serve de esconderijo.\nUma roda sem carro busca um abrigo."
+    recordingScript: "Uma maçã redondinha com um cabinho no alto;\nUma raiz comprida que veste folhas no cabelo;\nUm anel coberto de pequenos confeitos;\nUma garrafinha verde, de pescoço fino e comprido;\nUm barril de boca aberta que esqueceu sua tampa;\nUma roda sem carro, esperando para rodar."
     clip: {fileID: 0}
   - roomId: faroeste_mina
     round: 1
-    recordingScript: "Um balde veio visitar a escavação.\nLivros empilhados contam outra missão.\nUma xícara traz chá para o mineiro.\nCaneca com alça espera um companheiro.\nUm biscoito com chocolate deixou farelinhos.\nUma banana faz curva entre os caminhos."
+    recordingScript: "Uma alça faz ponte sobre um poço de levar água;\nVárias histórias apertadinhas numa pilha de livros;\nUma xícara pequena que trouxe seu próprio pires;\nUma caneca guarda um abraço em sua alça;\nUm biscoito com pintinhas de chocolate;\nUma fruta amarela que desenha uma meia-lua."
     clip: {fileID: 0}
   - roomId: faroeste_estacao
     round: 2
-    recordingScript: "Soldado durinho, sem guerra nem quartel.\nUm doce faz curva, vermelho feito um pincel.\nRedondo e embrulhado, escondo uma surpresa.\nTenho um pé, mas não caminho pela mesa.\nNão derreto neste sol de faz de conta.\nLevo galhos na cabeça e não sou uma planta."
+    recordingScript: "Um soldadinho duro que nasceu para quebrar nozes;\nUm doce de bengala com listrinhas vermelhas;\nUm presente que esqueceu de ter quinas;\nUma meia verde esperando um pé de brinquedo;\nUma estrelinha de inverno que nunca derrete;\nUma rena de brinquedo, com galhinhos na cabeça."
     clip: {fileID: 0}
   - roomId: faroeste_salao
     round: 2
-    recordingScript: "Sou bengala listrada, mas não ajudo a andar.\nTenho laço e seis faces, quem vai me desembrulhar?\nVisto um chapéu, mas meu corpo devia derreter.\nGuardo luz numa casinha para você ver.\nAndo sobre trilhos, levando a vizinhança.\nSou uma garrafa com rodas nesta andança."
+    recordingScript: "Uma bengala doce com listrinhas verdes;\nUm presente quadradinho vestido com um laço;\nTrês bolas de neve que saíram de chapéu;\nUma lanterninha com janelas e alça para levar;\nUm bonde arredondado que passeia sem trilhos;\nUm vagão com uma barriga de tanque."
     clip: {fileID: 0}
   - roomId: faroeste_mina
     round: 2
-    recordingScript: "Cristal de inverno, sem frio neste chão.\nUma menina de massa entrou na mineração.\nMinha cabeça tem galhos, meus pés não têm raiz.\nUm círculo com laço promete algo feliz.\nVim vestido de soldado, sou madeira de brincar.\nSem motor, preciso de alguém para me puxar."
+    recordingScript: "Uma estrelinha de inverno que nunca derrete;\nUma boneca de biscoito com saia para rodar;\nUma rena de brinquedo, com galhinhos na cabeça;\nUm presente que esqueceu de ter quinas;\nUm soldadinho duro que nasceu para quebrar nozes;\nUm vagão espera alguém puxar a brincadeira."
     clip: {fileID: 0}
   - roomId: espaco_base
     round: 0
-    recordingScript: "Um astronauta de bolso vai viajar,\numa antena curiosa quer escutar.\nCarrinho de corrida perdeu a direção,\num mouse apareceu nesta missão.\nPirulito redondo parece um planeta,\ne um abajur redondo ilumina a descoberta."
+    recordingScript: "Um astronauta veste sua roupa de visitar estrelas;\nUma tigela de antena escuta o céu em silêncio;\nUm carrinho de corrida que nunca pede gasolina;\nUm rato de computador sem bigodes nem rabo;\nUm doce redondinho se equilibra num palito;\nUm abajur de chapéu redondo clareia a brincadeira."
     clip: {fileID: 0}
   - roomId: espaco_jardim
     round: 0
-    recordingScript: "Um visitante de outro lugar,\num meteoro com marcas veio pousar.\nUm rádio de brinquedo guarda o sinal,\numa laranja parece um sol especial.\nBerinjela virou nave na imaginação,\ne cristais juntinhos completam a missão."
+    recordingScript: "Um visitante de outro mundo perdeu sua nave;\nUm meteoro marcado caiu sem fazer barulho;\nUma caixa de rádio espera uma canção;\nUma laranja redondinha brinca de ser um sol;\nUma berinjela veste um gorro de folhas;\nPedrinhas pontudas reunidas num só cristal."
     clip: {fileID: 0}
   - roomId: espaco_garagem
     round: 0
-    recordingScript: "Uma nave pequenina vai partir,\num segundo tripulante quer se divertir.\nUma rodinha solta precisa voltar,\nalmofada azul é boa para descansar.\nDuas cerejas juntinhas fazem par,\ne sorvete no copinho eu quero encontrar."
+    recordingScript: "Uma nave pequenina tem pressa de decolar;\nUm piloto de capacete pronto para outra galáxia;\nA rodinha pequena que perdeu seu carrinho;\nUma almofada azul espera um cochilo de boneco;\nDuas frutinhas dividem o mesmo cabinho;\nUm sorvete no copinho que não quer derreter."
     clip: {fileID: 0}
   - roomId: espaco_base
     round: 1
-    recordingScript: "Um peixe de brinquedo quer ser astronauta.\nDuas cerejas se juntaram nesta pauta.\nUma taça de sorvete refresca a estação.\nLivros empilhados ensinam a missão.\nUma berinjela roxa veio viajar.\nUma lanterna tenta o céu iluminar."
+    recordingScript: "Um peixe fora da água, parado sem se afogar;\nDuas frutinhas dividem o mesmo cabinho;\nUm sorvete no copinho que não quer derreter;\nVárias histórias apertadinhas numa pilha de livros;\nUma berinjela veste um gorro de folhas;\nUma lanterninha com janelas e alça para levar."
     clip: {fileID: 0}
   - roomId: espaco_jardim
     round: 1
-    recordingScript: "Uma cenoura brotou neste jardim.\nUm biscoito com chocolate sorri para mim.\nUma caneca com alça visita as flores.\nA boneca de massa trouxe novos sabores.\nUm trem de brinquedo chegou devagar.\nUma melancia veio aqui passear."
+    recordingScript: "Uma raiz comprida que veste folhas no cabelo;\nUm biscoito com pintinhas de chocolate;\nUma caneca guarda um abraço em sua alça;\nUma boneca de biscoito com saia para rodar;\nO primeiro do trenzinho, que puxa sem cansar;\nUma fatia de melancia sorri com suas sementinhas."
     clip: {fileID: 0}
   - roomId: espaco_garagem
     round: 1
-    recordingScript: "Uma maçã vermelha espera o conserto.\nUma pera também quer ficar por perto.\nUm pirulito parece placa de atenção.\nLivros empilhados trazem instrução.\nUma lanterna visita a oficina espacial.\nUm vagão estacionou longe do quintal."
+    recordingScript: "Uma maçã redondinha com um cabinho no alto;\nUma pera de barriga larga e pescoço estreito;\nUm doce redondinho se equilibra num palito;\nVárias histórias apertadinhas numa pilha de livros;\nUma lanterninha com janelas e alça para levar;\nUm vagão espera alguém puxar a brincadeira."
     clip: {fileID: 0}
   - roomId: espaco_base
     round: 2
-    recordingScript: "Planeta embrulhado? Um laço me denuncia.\nEstrela geladinha que o sol derreteria.\nUm guarda de madeira patrulha o universo.\nUm gancho listrado adoça este verso.\nUm ônibus de trilhos perdeu sua cidade.\nGalhos sem folhas passeiam sem gravidade."
+    recordingScript: "Um presente que esqueceu de ter quinas;\nUma estrelinha de inverno que nunca derrete;\nUm soldadinho duro que nasceu para quebrar nozes;\nUm doce de bengala com listrinhas vermelhas;\nUm bonde arredondado que passeia sem trilhos;\nUma rena de brinquedo, com galhinhos na cabeça."
     clip: {fileID: 0}
   - roomId: espaco_jardim
     round: 2
-    recordingScript: "Bengala de doce imitando uma plantinha.\nUma roupa de um pé se perdeu sozinha.\nMeu chapéu não me protege deste calor.\nCaixa com laço, sem revelar seu interior.\nUm tonel sobre rodas pede uma estação.\nTeclas sem piano esperam sua mão."
+    recordingScript: "Uma bengala doce com listrinhas verdes;\nUma meia verde esperando um pé de brinquedo;\nTrês bolas de neve que saíram de chapéu;\nUm presente quadradinho vestido com um laço;\nUm vagão com uma barriga de tanque;\nUm teclado tem muitas teclas e nenhuma música."
     clip: {fileID: 0}
   - roomId: espaco_garagem
     round: 2
-    recordingScript: "Feita de massa, não posso pilotar.\nNeve de mentira veio nos visitar.\nSoldadinho de madeira cuida da partida.\nMeu laço esconde uma surpresa arredondada.\nSou doce e listrada, dobrada na ponta.\nUm bicho com galhos nesta nave de faz de conta."
+    recordingScript: "Uma boneca de biscoito com saia para rodar;\nUma estrelinha de inverno que nunca derrete;\nUm soldadinho duro que nasceu para quebrar nozes;\nUm presente que esqueceu de ter quinas;\nUm doce de bengala com listrinhas vermelhas;\nUma rena de brinquedo, com galhinhos na cabeça."
     clip: {fileID: 0}
   - roomId: herois_praca
     round: 0
-    recordingScript: "A Capitã Faísca está de prontidão,\num balde leva água para a missão.\nCaminhão de brinquedo veio trabalhar,\nmelancia de mentira quer participar.\nLivros empilhados guardam uma aventura,\ne um bolinho de festa completa a procura."
+    recordingScript: "A Capitã Faísca está pronta para outra aventura;\nUma alça faz ponte sobre um poço de levar água;\nUm caminhão pequeno leva uma carga imaginária;\nUma fatia de melancia sorri com suas sementinhas;\nVárias histórias apertadinhas numa pilha de livros;\nUm bolinho de festa usa um chapéu de cobertura."
     clip: {fileID: 0}
   - roomId: herois_ponte
     round: 0
-    recordingScript: "Um martelo pequeno pode consertar,\no Robô Violeta veio ajudar.\nBiscoito de gente observa a ponte,\numa pera se esconde no horizonte.\nUm cone de trânsito pede atenção,\ne caneca com alça espera uma mão."
+    recordingScript: "Uma cabeça pesada presa num cabo de consertar;\nO Robô Violeta não precisa descansar;\nUm biscoito tem braços e duas perninhas para andar;\nUma pera de barriga larga e pescoço estreito;\nUm cone de trânsito tem ponta e pé quadrado;\nUma caneca guarda um abraço em sua alça."
     clip: {fileID: 0}
   - roomId: herois_quartel
     round: 0
-    recordingScript: "Um comunicador quer ser encontrado,\num ajudante amarelinho está ao lado.\nCarro de corrida chegou à reunião,\nbiscoito de gente entrou na missão.\nUm picolé no palito quer participar,\ne abajur quadrado ilumina o lugar."
+    recordingScript: "Um comunicador aponta sua antena para longe;\nUm ajudante amarelinho veio fazer companhia;\nUm carro baixinho com pressa de brincar;\nUm biscoito tem braços e duas perninhas para andar;\nUm picolé no palito que não faz nenhuma poça;\nUm abajur com chapéu de quatro cantinhos."
     clip: {fileID: 0}
   - roomId: herois_praca
     round: 1
-    recordingScript: "Um morango vermelho visita a cidade.\nUm biscoito redondo pede amizade.\nUma almofada azul espera um cochilo.\nUma lanterna deixa o herói tranquilo.\nUm trenzinho colorido chama a população.\nUma pera de brinquedo assiste à missão."
+    recordingScript: "Um morango tem pontinhos e uma coroa de folhas;\nUm biscoito redondo faz de conta que é uma roda;\nUma almofada azul espera um cochilo de boneco;\nUma lanterninha com janelas e alça para levar;\nO primeiro do trenzinho, que puxa sem cansar;\nUma pera de barriga larga e pescoço estreito."
     clip: {fileID: 0}
   - roomId: herois_ponte
     round: 1
-    recordingScript: "Um bolinho de festa observa o rio.\nLivros empilhados contam um desafio.\nUm balde veio ajudar na construção.\nUm morango entrou nesta missão.\nUma boneca de massa quer atravessar.\nUma lanterna mostra por onde passar."
+    recordingScript: "Um bolinho de festa usa um chapéu de cobertura;\nVárias histórias apertadinhas numa pilha de livros;\nUma alça faz ponte sobre um poço de levar água;\nUm morango tem pontinhos e uma coroa de folhas;\nUma boneca de biscoito com saia para rodar;\nUma lanterninha com janelas e alça para levar."
     clip: {fileID: 0}
   - roomId: herois_quartel
     round: 1
-    recordingScript: "Duas cerejas vieram à reunião.\nUma laranja redonda deseja uma missão.\nUma taça de sorvete pede proteção.\nUma almofada azul aguarda o plantão.\nUma lanterna acompanha o vigia.\nUm trem de brinquedo traz a companhia."
+    recordingScript: "Duas frutinhas dividem o mesmo cabinho;\nUma laranja redondinha brinca de ser um sol;\nUm sorvete no copinho que não quer derreter;\nUma almofada azul espera um cochilo de boneco;\nUma lanterninha com janelas e alça para levar;\nO primeiro do trenzinho, que puxa sem cansar."
     clip: {fileID: 0}
   - roomId: herois_praca
     round: 2
-    recordingScript: "Uniforme de madeira, guardião sem poder.\nUm gancho de açúcar tenta se esconder.\nSeis faces e um laço, segredo bem guardado.\nGalhos na cabeça, um visitante inesperado.\nRoupa para um pé que esqueceu de caminhar.\nUm transporte de trilhos veio nos salvar."
+    recordingScript: "Um soldadinho duro que nasceu para quebrar nozes;\nUm doce de bengala com listrinhas vermelhas;\nUm presente quadradinho vestido com um laço;\nUma rena de brinquedo, com galhinhos na cabeça;\nUma meia verde esperando um pé de brinquedo;\nUm bonde arredondado que passeia sem trilhos."
     clip: {fileID: 0}
   - roomId: herois_ponte
     round: 2
-    recordingScript: "Sou estrela de inverno, sem molhar o chão.\nSou redondo, tenho laço e guardo um presentão.\nBengala com listras, meu segredo é ser doce.\nFico de chapéu onde a neve nunca trouxe.\nTenho rodas, mas dependo de outra força.\nUm tanque de viagem espera uma locomotiva."
+    recordingScript: "Uma estrelinha de inverno que nunca derrete;\nUm presente que esqueceu de ter quinas;\nUma bengala doce com listrinhas verdes;\nTrês bolas de neve que saíram de chapéu;\nUm vagão espera alguém puxar a brincadeira;\nUm vagão com uma barriga de tanque."
     clip: {fileID: 0}
   - roomId: herois_quartel
     round: 2
-    recordingScript: "Sou guardião de madeira, parado no quartel.\nNão sou árvore, mas levo galhos até o céu.\nSurpresa arredondada, amarrada com carinho.\nCurva de açúcar espera num cantinho.\nUma estrela que prefere o frio ao verão.\nLevo a turma sobre trilhos, sem sair do chão."
+    recordingScript: "Um soldadinho duro que nasceu para quebrar nozes;\nUma rena de brinquedo, com galhinhos na cabeça;\nUm presente que esqueceu de ter quinas;\nUma bengala doce com listrinhas verdes;\nUma estrelinha de inverno que nunca derrete;\nUm bonde arredondado que passeia sem trilhos."
     clip: {fileID: 0}
   discoveries:
   - itemId: west_bucket

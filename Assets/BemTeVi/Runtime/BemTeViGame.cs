@@ -146,7 +146,8 @@ namespace BemTeVi
                 if (mode == Mode.Explore || mode == Mode.Junction) ShowPause();
                 else if (mode == Mode.Options) optionsBack?.Invoke();
                 else if (mode == Mode.Dialog) (dialogBack ?? ReturnToWorld).Invoke();
-                else if (mode == Mode.Pause || mode == Mode.Puzzle) ReturnToWorld();
+                else if (mode == Mode.Puzzle) ShowJunction();
+                else if (mode == Mode.Pause) ReturnToWorld();
                 else if (mode == Mode.Menu) ShowTitle();
                 else if (mode == Mode.Profiles) ShowTitle();
                 else if (mode == Mode.Victory) ShowJunction();
@@ -265,6 +266,8 @@ namespace BemTeVi
         void ReturnToWorld()
         {
             StopSignal(); Tap();
+            if (map != null && currentStage == map.challenge && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == map.challenge.id)
+            { if (challengeView != null) { challengeView.SetReducedMotion(reduceMotion); DrawPuzzle(); } else OpenPuzzle(); return; }
             if (map != null && roomIndex < 0)
             {
                 if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == map.junction.id && room != null)
@@ -290,18 +293,19 @@ namespace BemTeVi
             for (int i = 0; i < lines.Length; i++)
             {
                 bool collected = i < targets.Length && progress.Has(targets[i].id);
-                string line = (collected ? "• " : "") + lines[i];
+                string line = lines[i];
                 ui.Label(line, i < 3 ? 38 : 742, 778 + (i % 3) * 36, 660, 35, 27,
                     collected ? BemTeViUI.Teal : BemTeViUI.Ink);
             }
             ui.Button("Menu", 1310, 18, 108, 42, ShowPause, BemTeViUI.Plum, true, 21);
+            DrawPassages(room);
             CreateFeedback(); message = null;
             if (!string.IsNullOrEmpty(saveWarning)) Tell(saveWarning);
         }
 
         void ShowPause()
         {
-            StopNarration(); Tap(); mode = Mode.Pause; SetHover(null);
+            StopSignal(); StopNarration(); Tap(); mode = Mode.Pause; SetHover(null);
             ui.Modal("Uma pausa na brincadeira", map == null ? "O quarto guarda suas três aventuras." :
                 map.title + " • Rodada " + (map.currentRound + 1) + "/3 • " + progress.Count(map) + " de 18 descobertas");
             ui.Button("Continuar", 242, 342, 956, 56, ReturnToWorld, BemTeViUI.Teal, true, 27);
@@ -401,7 +405,7 @@ namespace BemTeVi
         void Help(Action back)
         {
             StopSignal(); StopNarration(); dialogBack = back; mode = Mode.Dialog; ui.Modal("Como jogar", "Entre numa maquete do quarto e explore suas portas, pontes e trilhos.");
-            ui.Label("• Cada maquete esconde SEIS objetos. Leia ou ouça a charada.\n• Clique nas portas, trilhos e pontes para caminhar pelo mundo.\n• Alguns brinquedos só funcionam com uma peça encontrada.\n• Você pode sair e tentar outra sala a qualquer momento.\n• Abra atalhos e volte para observar o que mudou.\n• A câmera já fica perto dos brinquedos: basta observar.\n• São três rodadas por mundo, cada uma com 18 novos alvos.", 242, 334, 946, 294, 23);
+            ui.Label("• Cada sala tem SEIS objetos na charada. Leia ou ouça os versos.\n• O mapa liga as três buscas e o desafio de cada mundo.\n• Clique nas placas das passagens ou no botão Mapa.\n• Todos os caminhos estão abertos desde o começo.\n• Pode deixar uma busca pela metade e tentar outra sala.\n• A voz confirma cada descoberta; o brinquedo fica no lugar.\n• São três rodadas por mundo, com 18 descobertas em cada uma.", 242, 334, 946, 294, 23);
             ui.Button("Entendi!", 242, 674, 956, 62, back);
         }
         void Notebook()
@@ -451,7 +455,8 @@ namespace BemTeVi
             puzzleMessage = ui.Label(map.puzzle == "lock" ? "Pistas: " + string.Join("  •  ", map.Targets.Where(p => progress.Has(p.id) && !string.IsNullOrEmpty(p.clue)).Select(p => p.clue)) :
                 map.puzzle == "matching" ? (selectedSupply >= 0 ? "Na mão: " + supplies[selectedSupply] : string.Join("  •  ", map.Clues)) :
                 "O rádio pode repetir a mensagem quando você precisar.", 38, 835, 1364, 42, 26, BemTeViUI.Ink, false, TextAnchor.MiddleCenter);
-            ui.Button("Ajuda", 1310, 18, 108, 42, () => Help(DrawPuzzle), BemTeViUI.Plum, true, 21);
+            ui.Button("Menu", 1310, 18, 108, 42, ShowPause, BemTeViUI.Plum, true, 21);
+            DrawPassages(challengeView);
             CreateFeedback();
             // Only the changing lock numbers need labels; other puzzle pieces are clicked directly.
             foreach (var spot in challengeView.Hotspots.Where(h => h.Data.action == "digit"))

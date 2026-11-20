@@ -10,7 +10,7 @@ namespace BemTeVi
         public Vector3 cameraPosition;
         public Vector3 lookAt;
         [Range(20, 60)] public float fieldOfView = 40;
-        public const int ContentVersion = 12;
+        public const int ContentVersion = 15;
         public int contentVersion;
         public bool baked;
         public GameObject contentRoot;
@@ -20,7 +20,7 @@ namespace BemTeVi
             Active = this;
             if (contentVersion != ContentVersion && contentRoot != null)
             {
-                // The catalog migration retains all existing placements and adds the new toys.
+                // Rebuild outdated layouts from the catalog, keeping stable discovery IDs.
                 contentRoot.SetActive(false); Destroy(contentRoot); contentRoot = null;
             }
             if (BemTeViGame.Instance == null) new GameObject("Sessão persistente — Bem-Te-Vi").AddComponent<BemTeViGame>();

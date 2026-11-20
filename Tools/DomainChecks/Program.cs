@@ -22,6 +22,18 @@ static class Checks
         Check(catalog.maps.SelectMany(m => m.AllTargets).Count() == 162, "162 targets");
         foreach (var map in catalog.maps)
         {
+            Check(map.gates.Length == 0, "No token gates");
+            foreach (var destination in map.rooms.Concat(new[] { map.challenge }))
+            {
+                Check(progress.CanTraverse(map, map.junction, destination.id), "Empty notebook can leave map");
+                Check(progress.CanTraverse(map, destination, map.junction.id), "Unfinished search can return to map");
+            }
+        }
+        progress.Data.opened.Add("faroeste_passagem_1");
+        progress = new Progress(catalog, Decode<SaveData>(Encode(progress.Data)));
+        Check(progress.Data.opened.Count == 0, "Legacy gate flags are discarded safely");
+        foreach (var map in catalog.maps)
+        {
             for (int round = 0; round < 3; round++)
             {
                 Check(map.currentRound == round, "Round order");
@@ -34,8 +46,6 @@ static class Checks
                     Check(progress.Collect(target.id), "New discovery");
                     Check(!progress.Collect(target.id), "Repeat click");
                 }
-                if (round == 0) foreach (var gate in map.gates)
-                { Check(progress.Use(map, gate.id, gate.tokenId), "Gate opens"); Check(!progress.Use(map, gate.id, gate.tokenId), "Gate idempotent"); }
                 Check(progress.Complete(map), "Round completion");
                 progress = new Progress(catalog, Decode<SaveData>(Encode(progress.Data)));
                 Check(progress.CompletedRounds(map) == round + 1, "Round survives save");
@@ -44,7 +54,7 @@ static class Checks
         Check(progress.Finished, "Nine rounds finish");
         Check(progress.Data.found.Count == 162, "All discoveries retained");
         progress.ResetMap(catalog.maps[0]);
-        Check(progress.Data.found.Count == 108 && progress.Data.solved.Count == 6 && progress.Data.opened.Count == 4, "Reset one world isolated");
+        Check(progress.Data.found.Count == 108 && progress.Data.solved.Count == 6 && progress.Data.opened.Count == 0, "Reset one world isolated");
         Check(catalog.maps[0].currentRound == 0 && catalog.maps[1].currentRound == 2, "Reset rounds isolated");
         foreach(var map in catalog.maps)
         foreach(var stage in map.rooms.Concat(new[] { map.junction, map.challenge }))

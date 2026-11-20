@@ -3515,6 +3515,186 @@
       ],
       "texture": "Assets/Resources/BemTeVi/Models/brick-kit/Textures/colormap.png",
       "material": "Assets/Resources/BemTeVi/Materials/brick-kit/round-hq-brick-1x1-round/colormap.mat"
+    },
+    {
+      "model": "marble-kit/banner",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/banner/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/marble-kit/Textures/colormap.png"
+    },
+    {
+      "model": "marble-kit/funnel",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/funnel/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/marble-kit/Textures/colormap.png"
+    },
+    {
+      "model": "marble-kit/helix-left",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/helix-left/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/marble-kit/Textures/colormap.png"
+    },
+    {
+      "model": "marble-kit/marble-center-low",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/marble-center-low/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/marble-kit/Textures/colormap.png"
+    },
+    {
+      "model": "marble-kit/marble-center-low",
+      "name": "glass",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/marble-center-low/glass.mat",
+      "color": [
+        0.8820755,
+        0.9321463,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "marble-kit/marble-low",
+      "name": "glass",
+      "material": "Assets/Resources/BemTeVi/Materials/marble-kit/marble-low/glass.mat",
+      "color": [
+        0.8820755,
+        0.9321463,
+        1.0,
+        1
+      ],
+      "texture": ""
+    },
+    {
+      "model": "pirate-kit/boat-row-small",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/pirate-kit/boat-row-small/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/pirate-kit/Textures/colormap.png"
+    },
+    {
+      "model": "pirate-kit/cannon-mobile",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/pirate-kit/cannon-mobile/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/pirate-kit/Textures/colormap.png"
+    },
+    {
+      "model": "pirate-kit/flag",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/pirate-kit/flag/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/pirate-kit/Textures/colormap.png"
+    },
+    {
+      "model": "pirate-kit/ship-small",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/pirate-kit/ship-small/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/pirate-kit/Textures/colormap.png"
+    },
+    {
+      "model": "castle-kit/door",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/castle-kit/door/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png"
+    },
+    {
+      "model": "castle-kit/flag",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/castle-kit/flag/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png"
+    },
+    {
+      "model": "castle-kit/stairs-stone",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/castle-kit/stairs-stone/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png"
+    },
+    {
+      "model": "castle-kit/tower-square-roof",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/castle-kit/tower-square-roof/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png"
+    },
+    {
+      "model": "castle-kit/tower-square",
+      "name": "colormap",
+      "material": "Assets/Resources/BemTeVi/Materials/castle-kit/tower-square/colormap.mat",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1
+      ],
+      "texture": "Assets/Resources/BemTeVi/Models/castle-kit/Textures/colormap.png"
     }
   ]
 }

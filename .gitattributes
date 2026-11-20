@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.cs text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.obj -text
+*.mtl -text
+*.fbx binary
+*.png binary
+*.jpg binary
+*.ogg binary
+*.ttf binary
+Assets/ThirdPartyLicenses/** -text

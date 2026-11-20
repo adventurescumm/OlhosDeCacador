@@ -4,7 +4,7 @@ Unity **6000.6.4f1**, Windows x64, URP 17.6.0 e Input System 1.20.1 (New) perman
 
 1. Preserve sua cópia anterior, inclusive gravações e cenas editadas.
 2. Extraia esta revisão em uma pasta nova e abra-a no editor indicado.
-3. Aguarde a importação; abra Main e execute **Olhos de Cacador > 1. Preparar projeto**, depois **2. Verificar conteudo**.
+3. Aguarde a importação; abra Main e execute **Bem-Te-Vi > 1. Preparar projeto**, depois **2. Verificar conteudo**.
 4. A primeira preparação monta as hierarquias das 17 cenas de conteúdo. Inicie por Main para testar a progressão normal.
 
 As 18 cenas e seus GUIDs foram preservados. As composições mudaram: não copie cenas já montadas da v0.8 sobre as novas, pois elas contêm os antigos seletores. Caso combine alterações manualmente, use o catálogo e os dados novos de passagens. Preparar projeto preserva cenas já montadas; **7. Recriar cenas a partir do catalogo** substitui suas alterações de composição após confirmação explícita.
@@ -20,7 +20,7 @@ As 18 cenas e seus GUIDs foram preservados. As composições mudaram: não copie
 
 ## Save e voz
 
-Os 54 IDs e a chave OlhosDeCacador.v1 continuam iguais. Descobertas, selos e mecanismos abertos da v0.8 são mantidos. Reinício parcial ainda limpa somente o mundo escolhido. Para experimentar todos os mecanismos novos, use Recomeçar este mapa em uma cópia de teste.
+Os 54 IDs e a chave BemTeVi.v1 continuam iguais. Descobertas, selos e mecanismos abertos da v0.8 são mantidos. Reinício parcial ainda limpa somente o mundo escolhido. Para experimentar todos os mecanismos novos, use Recomeçar este mapa em uma cópia de teste.
 
 Somente o último verso de `faroeste_estacao` mudou: agora pede um pato de borracha. O ID técnico `west_bear` é conservado para compatibilidade de save, mas seu nome visível e modelo correspondem ao pato. Regrave a charada da estação; as outras oito gravações da v0.8 podem ser reaproveitadas. Veja NARRACAO.md.
 

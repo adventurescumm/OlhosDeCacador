@@ -104,1907 +104,2171 @@
       "source": "https://opengameart.org/content/ambient-bird-sounds",
       "author": "isaiah658",
       "license": "CC0 1.0"
+    },
+    {
+      "pack": "holiday-kit",
+      "source": "https://kenney.nl/assets/holiday-kit",
+      "author": "Kenney",
+      "license": "CC0 1.0"
+    },
+    {
+      "pack": "train-kit",
+      "source": "https://kenney.nl/assets/train-kit",
+      "author": "Kenney",
+      "license": "CC0 1.0"
+    },
+    {
+      "pack": "brick-kit",
+      "source": "https://kenney.nl/assets/brick-kit",
+      "author": "Kenney",
+      "license": "CC0 1.0"
     }
   ],
   "files": [
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-h.obj",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-h.obj",
       "source": "downloads/blocky-characters/Models/OBJ format/character-h.obj",
       "sha256": "ade50aaae36aa6991c6b0e2a5b9bca832a6dc4ef8e71ac5c6825a8147026743a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-h.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-h.mtl",
       "source": "downloads/blocky-characters/Models/OBJ format/character-h.mtl",
       "sha256": "5c60cf0f629c1d94492987cf7e3959b1affe31510402ed2e5671c4679ddd5ac1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-h.png",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/Textures/texture-h.png",
       "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-h.png",
       "sha256": "7d908f3f12ac56b3debc5036dd962e2151c151f7a379cb37fe757a6ab4147536"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-a.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-a.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-a.obj",
       "sha256": "ec5b3bbf725be6ea792b0cc7b543d11ac8659811264500037d2cdc398632f2ce"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-a.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-a.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-a.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/Textures/colormap.png",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/Textures/colormap.png",
       "source": "downloads/city-kit-commercial/Models/OBJ format/Textures/colormap.png",
       "sha256": "191bec3889aaaca5018380038fecc129ebb5c2182879a099b7b538b3fa050b5d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-b.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-b.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-b.obj",
       "sha256": "d5f4344d5be797a6ed93641d4159a630de093e0517b4b8435d9789cea141bd62"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-b.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-b.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-b.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-c.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-c.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-c.obj",
       "sha256": "e7bc3677c9f7ee66a0459bc99fa6c69f60b7f9338165d91ccfd1f2ca1fcac9bd"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-c.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-c.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-c.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-d.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-d.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-d.obj",
       "sha256": "9d0e71d3a3703a171961443ea1b6ec34f67a93d90731e261eb3394fe19a78147"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-d.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-d.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-d.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-e.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-e.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-e.obj",
       "sha256": "4cd4f36a1914d98e9f75825727f117f41a4c11fee284c88cc2fe0c3404a1df51"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-e.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-e.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-e.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-f.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-f.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-f.obj",
       "sha256": "c7398b3f2b9458f56c080fee9d977ae617ed283dc5f768dfcc61133b423fdccf"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-f.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-f.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-f.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-a.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-a.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-a.obj",
       "sha256": "0a3704d13705c2f692166d2edb3a31105a7b42f9b4c90996ce19440e276e6c9f"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-a.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-a.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-a.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-c.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-c.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-c.obj",
       "sha256": "c586b8beda8cdcc28f34e8c8d25af0fbfa49a5712c83da1228c1739ffd9ef8c1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/building-skyscraper-c.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/building-skyscraper-c.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/building-skyscraper-c.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-a.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-a.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-a.obj",
       "sha256": "e31474f76f0898efe50733b783ec599ea11fc55ae93b2e45dc38650a0f75b375"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-a.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-a.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-a.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-b.obj",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-b.obj",
       "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-b.obj",
       "sha256": "29f20da6119e527793f473ee8a2012a6b5deaf8959dbd40ffc0f6c6c0b848e79"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/city-kit-commercial/detail-parasol-b.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/city-kit-commercial/detail-parasol-b.mtl",
       "source": "downloads/city-kit-commercial/Models/OBJ format/detail-parasol-b.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/bridge_wood.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/bridge_wood.obj",
       "source": "downloads/nature-kit/Models/OBJ format/bridge_wood.obj",
       "sha256": "876a7836950740997d05733f39f0533359d890bd114015fc13a8c9d059beb4fd"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/bridge_wood.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/bridge_wood.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/bridge_wood.mtl",
       "sha256": "20207ce4b250313db94013354e2ad19402419c5cf33d699ff331a2a409f53b12"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_short.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_short.obj",
       "source": "downloads/nature-kit/Models/OBJ format/cactus_short.obj",
       "sha256": "0f4a63e933432a8e3a09e67be333461cc0397c849bb312704c39a87242d68d4e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_short.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_short.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/cactus_short.mtl",
       "sha256": "df409a06731706f40b6b36eeaae085e2500009721c2098063e80cf045c464952"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_tall.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_tall.obj",
       "source": "downloads/nature-kit/Models/OBJ format/cactus_tall.obj",
       "sha256": "ba4ac8ba42d829689154f55bf5eff01308357d5d97c67582d6b566a981372273"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/cactus_tall.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/cactus_tall.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/cactus_tall.mtl",
       "sha256": "df409a06731706f40b6b36eeaae085e2500009721c2098063e80cf045c464952"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/fence_simple.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/fence_simple.obj",
       "source": "downloads/nature-kit/Models/OBJ format/fence_simple.obj",
       "sha256": "fa29015d17fd89bb29b221235883089b6ee8eed0e949989740445c3b0cba9fba"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/fence_simple.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/fence_simple.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/fence_simple.mtl",
       "sha256": "3b03b52eebf8ddc01804cb28de43b537c0d0b4ea61a99bad235e2a3c904aed89"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_redA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_redA.obj",
       "source": "downloads/nature-kit/Models/OBJ format/flower_redA.obj",
       "sha256": "50bcfeb7b6f8c361bc7e61ce55dfd0cc61ad95073351026476207b0db93c3121"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_redA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_redA.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/flower_redA.mtl",
       "sha256": "0c9ad4852b07f6c3b8d1b1d54ed2c19ce48828f259c6fb900c1ced26ba645b53"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_yellowA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_yellowA.obj",
       "source": "downloads/nature-kit/Models/OBJ format/flower_yellowA.obj",
       "sha256": "09a81fe229ab3d60e7c3a080b39d9cbbe379af44ce4b646139c2081550692cb2"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/flower_yellowA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/flower_yellowA.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/flower_yellowA.mtl",
       "sha256": "ca4a55c6fd87ce8026d1a8beba9c87fb88b22dff30619f8b80d329a6116cdbc9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/plant_bush.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/plant_bush.obj",
       "source": "downloads/nature-kit/Models/OBJ format/plant_bush.obj",
       "sha256": "23e2015330dc397c4ebf799902560e7bb10016482f0d73cbd29d9d4d4b160f1b"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/plant_bush.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/plant_bush.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/plant_bush.mtl",
       "sha256": "b186368ad09ddb6673f90f63c45ecac3f793b36fe14f96bd62e6d44922e7e874"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/pot_large.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/pot_large.obj",
       "source": "downloads/nature-kit/Models/OBJ format/pot_large.obj",
       "sha256": "b09d20516edd4f389a550fa50fe248e347f928e8c5ff6b5e8da45edd51617d48"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/pot_large.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/pot_large.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/pot_large.mtl",
       "sha256": "a534b2f77e98658563684e0ad5870b4ee2f1cd92aa37796f24bec3610f98a11c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeA.obj",
       "source": "downloads/nature-kit/Models/OBJ format/rock_largeA.obj",
       "sha256": "60e4896f0bb0077ce820aa842e48a4f50d089a0d39e38d56cbf1bd7286882136"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeA.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/rock_largeA.mtl",
       "sha256": "b1f406513a297dd69c38653fd9b9de390123ff45242be9bf204f775d9e88c98c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeB.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeB.obj",
       "source": "downloads/nature-kit/Models/OBJ format/rock_largeB.obj",
       "sha256": "928bea598f682d280893da179d6a060a2019c7b4af72d1e1c4af9ef87ca33535"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_largeB.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_largeB.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/rock_largeB.mtl",
       "sha256": "e866ef7615bf6de9e3ae697d05275cc6bc31145bec66f74af8a44bebd5536fe9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallA.obj",
       "source": "downloads/nature-kit/Models/OBJ format/rock_smallA.obj",
       "sha256": "d2f74c6f2b8f4c49c875644e3e7ee95d2dced6c75feef14ee6547e4ca0c8fbd9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallA.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/rock_smallA.mtl",
       "sha256": "86d10214ce28199e4134d718b5df04356f295c63705435369565dcbd003c8971"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallB.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallB.obj",
       "source": "downloads/nature-kit/Models/OBJ format/rock_smallB.obj",
       "sha256": "089f79d84a08ff513dfacfd6fb930d5f33be31936675276aebdc873fdffcebaf"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/rock_smallB.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/rock_smallB.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/rock_smallB.mtl",
       "sha256": "86d10214ce28199e4134d718b5df04356f295c63705435369565dcbd003c8971"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/tree_small.obj",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/tree_small.obj",
       "source": "downloads/nature-kit/Models/OBJ format/tree_small.obj",
       "sha256": "6de93224609f4430626eeff88a7692d36d48232546a9e503a773f9200f334a80"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/nature-kit/tree_small.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/nature-kit/tree_small.mtl",
       "source": "downloads/nature-kit/Models/OBJ format/tree_small.mtl",
       "sha256": "2f754b719f8d7902d7940fe5f5216fe24cfaf0f021ce3533cace85cee7d0ce44"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/alien.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/alien.obj",
       "source": "downloads/space-kit/Models/OBJ format/alien.obj",
       "sha256": "ccdbb987926231ea2a3631cc5b552b34cb1ea875cd7395cb6e643f7cec0ee09d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/alien.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/alien.mtl",
       "source": "downloads/space-kit/Models/OBJ format/alien.mtl",
       "sha256": "e087640cac88e120f9fedc427c821bb62771b8d7bf914e4dcb6cd577edd9a0f6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/astronautA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautA.obj",
       "source": "downloads/space-kit/Models/OBJ format/astronautA.obj",
       "sha256": "6c462609a8ee02e42713e4d21900dbb65fb7383d91205641070f4f7ebd069a1a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/astronautA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/astronautA.mtl",
       "sha256": "f846dd64bc3f364c2f73135808f3cbc1560ce71cf7fad4bcbf19d6e1945a65a1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/astronautB.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautB.obj",
       "source": "downloads/space-kit/Models/OBJ format/astronautB.obj",
       "sha256": "875d4ccd0f2255e7b0b1b6f9b8d30e3e734de9837bf8cc3ab89e763a8ad3ee20"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/astronautB.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/astronautB.mtl",
       "source": "downloads/space-kit/Models/OBJ format/astronautB.mtl",
       "sha256": "5e3c72990492323e8349b4a31e3473653ab3ba655b1a6b1696e51e07565bb281"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrel.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrel.obj",
       "source": "downloads/space-kit/Models/OBJ format/barrel.obj",
       "sha256": "b973227160fbad3d4e31bb573bf5d5dc1369df83bc241a0ea9a143df3fa4b595"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrel.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrel.mtl",
       "source": "downloads/space-kit/Models/OBJ format/barrel.mtl",
       "sha256": "d1fe9287aaed7f653eb92a878b514c62cb4d4702008e4d14ea29645dad6f226b"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrels.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels.obj",
       "source": "downloads/space-kit/Models/OBJ format/barrels.obj",
       "sha256": "e7fea2599c5dacbdbcc3dd7a7ad4605dabc63943b9a1a6d9b39e8e269b8c5e98"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrels.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels.mtl",
       "source": "downloads/space-kit/Models/OBJ format/barrels.mtl",
       "sha256": "1e3feccef04f5e40a57ac21d7a142b4da8d5df0b09f5d2e6726c4b272a432a28"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrels_rail.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels_rail.obj",
       "source": "downloads/space-kit/Models/OBJ format/barrels_rail.obj",
       "sha256": "51f6f46f6878242f0e5a11d0295a006099ebbec43777ef7def4efddd1f490181"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/barrels_rail.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/barrels_rail.mtl",
       "source": "downloads/space-kit/Models/OBJ format/barrels_rail.mtl",
       "sha256": "a7488b28c3724941d54087a27ba05eefea15279bd8ea8e54eedc51250b9c3927"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craft_cargoA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_cargoA.obj",
       "source": "downloads/space-kit/Models/OBJ format/craft_cargoA.obj",
       "sha256": "2aa478d18910492bf21d10157c13c634dcbfea41d34a4b9ee50f19821ac7aa6e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craft_cargoA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_cargoA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/craft_cargoA.mtl",
       "sha256": "55b70dda67f3f03bf41467da7e459a813895e4202d21ee7969b5b8a65fba1b75"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craft_speederA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_speederA.obj",
       "source": "downloads/space-kit/Models/OBJ format/craft_speederA.obj",
       "sha256": "534e1b1198be654d2925d6a785531974213ac8b43ae05c02aecfeb905c0166fc"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craft_speederA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craft_speederA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/craft_speederA.mtl",
       "sha256": "91d172e7a3359183581919a7b5d2e6327f63388942e23dbd1a26ef714415c0e3"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craterLarge.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craterLarge.obj",
       "source": "downloads/space-kit/Models/OBJ format/craterLarge.obj",
       "sha256": "1af6591f3be7df8a922f1246f32b7e44ffea41f9796072b0b68376b1423ea346"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/craterLarge.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/craterLarge.mtl",
       "source": "downloads/space-kit/Models/OBJ format/craterLarge.mtl",
       "sha256": "1c89a6f5aa32460ba4976946c1e389ce0b5c85374443994f0285d96fd733f281"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chair.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chair.obj",
       "source": "downloads/space-kit/Models/OBJ format/desk_chair.obj",
       "sha256": "3e76b9859b7d079bc529287f6f0d9ed9ef34bd0151175483c5848cf2984b1298"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chair.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chair.mtl",
       "source": "downloads/space-kit/Models/OBJ format/desk_chair.mtl",
       "sha256": "4f18604357d2fe8bf6ef6ead25a763ec82c264bbc2fafef7a4fddfda9411165a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chairStool.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chairStool.obj",
       "source": "downloads/space-kit/Models/OBJ format/desk_chairStool.obj",
       "sha256": "fbf74771b58977d7fd4b3c4a2064865d35aa716fbdafbb8d4417cf4d92d2e7aa"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_chairStool.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_chairStool.mtl",
       "source": "downloads/space-kit/Models/OBJ format/desk_chairStool.mtl",
       "sha256": "95895d02f2437219772305a021eb91cd7c06194f7ada2b45d937730d7c9d87fa"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_computer.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_computer.obj",
       "source": "downloads/space-kit/Models/OBJ format/desk_computer.obj",
       "sha256": "19cdb452f56250f7b92c327ade46249f2958bcb5c25826b0b9dd3b435c0bfbf7"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/desk_computer.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/desk_computer.mtl",
       "source": "downloads/space-kit/Models/OBJ format/desk_computer.mtl",
       "sha256": "8b4d47ce152513dc141f4a5b92e4bd7da7821be52552a99108b13451f2d5c432"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_roundA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_roundA.obj",
       "source": "downloads/space-kit/Models/OBJ format/hangar_roundA.obj",
       "sha256": "f7114507ab334a98a7b1711b6487398af36be8f53b3be46425f6eb738c1ee838"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_roundA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_roundA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/hangar_roundA.mtl",
       "sha256": "00aebd519b57121159dd3e308556612a9bc21840e3acee44441bb637ec74df3a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_smallA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_smallA.obj",
       "source": "downloads/space-kit/Models/OBJ format/hangar_smallA.obj",
       "sha256": "553128d70d004f418c7c69afc5166db79c7520fab543437f135d2cda25d5becb"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/hangar_smallA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/hangar_smallA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/hangar_smallA.mtl",
       "sha256": "c78a271aa833ffe57a16cba3e6c9bed3a069ecc85cd1bd44b9c4dfba3deb1367"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_barrel.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_barrel.obj",
       "source": "downloads/space-kit/Models/OBJ format/machine_barrel.obj",
       "sha256": "03f824bee5d0519cfd3877dd145c950ed0536afeb6cce1a2171d90c9175bc413"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_barrel.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_barrel.mtl",
       "source": "downloads/space-kit/Models/OBJ format/machine_barrel.mtl",
       "sha256": "ab77aeb3a6791cd59e2c082018c32d0ff371aba0152cf456ba71c14a56576230"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_generator.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_generator.obj",
       "source": "downloads/space-kit/Models/OBJ format/machine_generator.obj",
       "sha256": "cb235a40d4cfe8fcb9471fd6fd7b993187adb8c186d49bf248600ae171700945"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_generator.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_generator.mtl",
       "source": "downloads/space-kit/Models/OBJ format/machine_generator.mtl",
       "sha256": "901a3d5a79a8ace64fbec40db8e8fecb9173ae1b0997c40a8e00a709d5e3fa2d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_wireless.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_wireless.obj",
       "source": "downloads/space-kit/Models/OBJ format/machine_wireless.obj",
       "sha256": "3aab9663a1b8790ddc96f295d4198d662034422894978f3ec1e5c7e30ad44243"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/machine_wireless.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/machine_wireless.mtl",
       "source": "downloads/space-kit/Models/OBJ format/machine_wireless.mtl",
       "sha256": "c78a271aa833ffe57a16cba3e6c9bed3a069ecc85cd1bd44b9c4dfba3deb1367"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor.obj",
       "source": "downloads/space-kit/Models/OBJ format/meteor.obj",
       "sha256": "0c0d99df405d0b1c583e395f2bbeb3b610707f175c6fa01e3adefd54a2fd7fd7"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor.mtl",
       "source": "downloads/space-kit/Models/OBJ format/meteor.mtl",
       "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_detailed.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_detailed.obj",
       "source": "downloads/space-kit/Models/OBJ format/meteor_detailed.obj",
       "sha256": "bd934e6f7d483d6e60e580d04a0c66a2c590e52310b2f7de19677697c1097c79"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_detailed.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_detailed.mtl",
       "source": "downloads/space-kit/Models/OBJ format/meteor_detailed.mtl",
       "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_half.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_half.obj",
       "source": "downloads/space-kit/Models/OBJ format/meteor_half.obj",
       "sha256": "97f37437fb0e02dcae202111021432eae567d2b00290d06e4325e4bdfd295a73"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/meteor_half.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/meteor_half.mtl",
       "source": "downloads/space-kit/Models/OBJ format/meteor_half.mtl",
       "sha256": "a820a15e18413e5db05e7bd704e2edaf8ad32f6b6e046984f404fcdb6f473566"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_corner.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_corner.obj",
       "source": "downloads/space-kit/Models/OBJ format/pipe_corner.obj",
       "sha256": "4a33929bb97ab6bdbe870bbf3a485c80a9797f99052f6364e810420b5e4eb8c5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_corner.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_corner.mtl",
       "source": "downloads/space-kit/Models/OBJ format/pipe_corner.mtl",
       "sha256": "f0c4687cdf2426b7d248408f64f098e1a489529d765ace69e404ff5d31231ae0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_end.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_end.obj",
       "source": "downloads/space-kit/Models/OBJ format/pipe_end.obj",
       "sha256": "7fb933adc737897d6cd5c73f84efe455f0e7c21114a835df6f8c3206adb72c02"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_end.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_end.mtl",
       "source": "downloads/space-kit/Models/OBJ format/pipe_end.mtl",
       "sha256": "f1131066d3cdc671b79f7799d5ddf194b25b0027381aea415d8c91d24e0190ba"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_straight.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_straight.obj",
       "source": "downloads/space-kit/Models/OBJ format/pipe_straight.obj",
       "sha256": "29afe7fa99861e1e83fb21587d1573170696ac2b4f341ae0491ba5708701a25e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/pipe_straight.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/pipe_straight.mtl",
       "source": "downloads/space-kit/Models/OBJ format/pipe_straight.mtl",
       "sha256": "f1131066d3cdc671b79f7799d5ddf194b25b0027381aea415d8c91d24e0190ba"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/platform_low.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/platform_low.obj",
       "source": "downloads/space-kit/Models/OBJ format/platform_low.obj",
       "sha256": "34d50cf16ca655a4ec6c0d947bc459b8e143b193253f46f50983bf80ae219b58"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/platform_low.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/platform_low.mtl",
       "source": "downloads/space-kit/Models/OBJ format/platform_low.mtl",
       "sha256": "f2dc384b26d60fe7f4b645f35d963f410b0d85b2d738aaa4d63049f43b06f559"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock.obj",
       "source": "downloads/space-kit/Models/OBJ format/rock.obj",
       "sha256": "322806bb2b616ced880e27361a25ec2233fdc233f7642efbdf3de34fb8722be0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rock.mtl",
       "sha256": "3866bde6b5c5e5fa05775c22d45ca7fd8086411ddb9ca0542e1abf4f231ec255"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystals.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystals.obj",
       "source": "downloads/space-kit/Models/OBJ format/rock_crystals.obj",
       "sha256": "a599efe79c167933938f996315a9a41b9ff399bcc11b30dc487038352fa3f504"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystals.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystals.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rock_crystals.mtl",
       "sha256": "cc04456cdc1d5ccf28d3e76d152aa6fb710a8a838436153058ae751e1322659e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystalsLargeA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystalsLargeA.obj",
       "source": "downloads/space-kit/Models/OBJ format/rock_crystalsLargeA.obj",
       "sha256": "65d1b92b6d2f23e81286999b9887bd42aec7ef943f0fa3a2cfc3bb6312edeb6c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_crystalsLargeA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_crystalsLargeA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rock_crystalsLargeA.mtl",
       "sha256": "cc04456cdc1d5ccf28d3e76d152aa6fb710a8a838436153058ae751e1322659e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_largeB.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_largeB.obj",
       "source": "downloads/space-kit/Models/OBJ format/rock_largeB.obj",
       "sha256": "bff49f3db60b2638bfec357e566795b58e5bab7bb306c5520cddecad5e80ae59"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rock_largeB.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rock_largeB.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rock_largeB.mtl",
       "sha256": "3866bde6b5c5e5fa05775c22d45ca7fd8086411ddb9ca0542e1abf4f231ec255"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocket_fuelA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocket_fuelA.obj",
       "source": "downloads/space-kit/Models/OBJ format/rocket_fuelA.obj",
       "sha256": "53f83c675728d51a12014724d413a7a264ae893512189313553581e1135bfa87"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocket_fuelA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocket_fuelA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rocket_fuelA.mtl",
       "sha256": "583541d566dd5edba66cc8e2353e379bdc3de155cd21e173fab33fe9a9248a52"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallA.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallA.obj",
       "source": "downloads/space-kit/Models/OBJ format/rocks_smallA.obj",
       "sha256": "bb4f66336c638e7580645f32b950ba41b904be9cbb16e804378122b8afc04827"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallA.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallA.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rocks_smallA.mtl",
       "sha256": "d3f54402b0d723a5a7e2096930ed949b365fb7f7d1fd770a3754f2f01a3ae7e9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallB.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallB.obj",
       "source": "downloads/space-kit/Models/OBJ format/rocks_smallB.obj",
       "sha256": "00fa9325b4703fd1a9587976394e35578226926a0892918df05d3de061db4c88"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rocks_smallB.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rocks_smallB.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rocks_smallB.mtl",
       "sha256": "d3f54402b0d723a5a7e2096930ed949b365fb7f7d1fd770a3754f2f01a3ae7e9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rover.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rover.obj",
       "source": "downloads/space-kit/Models/OBJ format/rover.obj",
       "sha256": "e5ec326be88beedb4725886cb317497e150d527d2c6903b148044eaa352d1e37"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/rover.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/rover.mtl",
       "source": "downloads/space-kit/Models/OBJ format/rover.mtl",
       "sha256": "8599d05033c8fc7dab2d99ec71e3a3a04160e5dcdcfaafb83fad75ed3e9d12db"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish.obj",
       "source": "downloads/space-kit/Models/OBJ format/satelliteDish.obj",
       "sha256": "cabd92b8c6593ba4d188af8af6d334a54e7825a650f6a1e89ba230d97213eaa7"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish.mtl",
       "source": "downloads/space-kit/Models/OBJ format/satelliteDish.mtl",
       "sha256": "190d4537da134db4e5cf4fc987a1553dd4e1a57337da2b0845865e4d3cfaf0f8"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish_detailed.obj",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish_detailed.obj",
       "source": "downloads/space-kit/Models/OBJ format/satelliteDish_detailed.obj",
       "sha256": "d6b4eb54086bd13a37f3403558e396eb4b780bda5edf89c21bc833fbe570221f"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/space-kit/satelliteDish_detailed.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/space-kit/satelliteDish_detailed.mtl",
       "source": "downloads/space-kit/Models/OBJ format/satelliteDish_detailed.mtl",
       "sha256": "eb33ee40c696104771700188aa11f8858416db34150589bb815013345fca6b72"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel.obj",
       "source": "downloads/survival-kit/Models/OBJ format/barrel.obj",
       "sha256": "64a085b059fd01c9f748380a766ee144d096e37a16196c3230eb713b662db123"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/barrel.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/Textures/colormap.png",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/Textures/colormap.png",
       "source": "downloads/survival-kit/Models/OBJ format/Textures/colormap.png",
       "sha256": "6ca023be9f12e8c2358fcf94320c8a894b4c05a3dd0bad1f5c268312053caca1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel-open.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel-open.obj",
       "source": "downloads/survival-kit/Models/OBJ format/barrel-open.obj",
       "sha256": "017351df2a8ebc41569011b6110c1025043768ccf8f1d1d41429879502d5ada2"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/barrel-open.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/barrel-open.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/barrel-open.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bedroll-frame.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bedroll-frame.obj",
       "source": "downloads/survival-kit/Models/OBJ format/bedroll-frame.obj",
       "sha256": "578e10aaf517197bc0e79ab154ebdfc4ad6482a9e504e927dcdee3c352705b30"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bedroll-frame.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bedroll-frame.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/bedroll-frame.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle.obj",
       "source": "downloads/survival-kit/Models/OBJ format/bottle.obj",
       "sha256": "eeff2dd611663857af7c85808f807d87e21e4ac6346bc55178dce60fc34a6bee"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/bottle.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle-large.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle-large.obj",
       "source": "downloads/survival-kit/Models/OBJ format/bottle-large.obj",
       "sha256": "3f6ca17260bdb8543bd6780ff7e4339f416a37f362a15b6089e16f98a959c6f6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bottle-large.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bottle-large.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/bottle-large.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box.obj",
       "source": "downloads/survival-kit/Models/OBJ format/box.obj",
       "sha256": "fcae73b5e2c39816796f34f9d2aa8ebeb344b7494a191a2ab9a7d46dc50c5fd4"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/box.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box-large.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-large.obj",
       "source": "downloads/survival-kit/Models/OBJ format/box-large.obj",
       "sha256": "98bb14c15a32b902da44cccf94d2a470357a1ef1291b252bfced7d4ee649f4e7"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box-large.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-large.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/box-large.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box-open.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-open.obj",
       "source": "downloads/survival-kit/Models/OBJ format/box-open.obj",
       "sha256": "bcb125f3dfa5df86d70e40582c391c83c18747aa904dd1f107013e923bf4b62c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/box-open.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/box-open.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/box-open.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bucket.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bucket.obj",
       "source": "downloads/survival-kit/Models/OBJ format/bucket.obj",
       "sha256": "899f5d0e43218fab5759c86953320532d7f1832837c67e80f771023b6aba654e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/bucket.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/bucket.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/bucket.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/campfire-pit.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/campfire-pit.obj",
       "source": "downloads/survival-kit/Models/OBJ format/campfire-pit.obj",
       "sha256": "436db0e5879012fb19fbd4e5788e7cfeed4497f8e5dcd4d4bf80bfdb9df29e47"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/campfire-pit.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/campfire-pit.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/campfire-pit.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/chest.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/chest.obj",
       "source": "downloads/survival-kit/Models/OBJ format/chest.obj",
       "sha256": "893779a973dc2fe4ce88a824893ad7408e1130aa82e0b1afb5128495374345eb"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/chest.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/chest.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/chest.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/fence.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fence.obj",
       "source": "downloads/survival-kit/Models/OBJ format/fence.obj",
       "sha256": "571924e322f39d16eafdd73a8b14c7bba9f3788aa78d5607ff38eec89e9fdb9d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/fence.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fence.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/fence.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/fish.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fish.obj",
       "source": "downloads/survival-kit/Models/OBJ format/fish.obj",
       "sha256": "862f0b43ec17d168062b35c32da89c97a8641fb17932bfe4ced3e204a56affcd"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/fish.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/fish.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/fish.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/resource-planks.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/resource-planks.obj",
       "source": "downloads/survival-kit/Models/OBJ format/resource-planks.obj",
       "sha256": "4eb53222baddb56cf986c38ddb789341c911550a90cac319c689e18ec095771c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/resource-planks.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/resource-planks.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/resource-planks.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/signpost.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/signpost.obj",
       "source": "downloads/survival-kit/Models/OBJ format/signpost.obj",
       "sha256": "eedd82df87c082d63a6f3464bfa35397ccfff799bdf6fafbc0d75a7fb14a4f9c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/signpost.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/signpost.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/signpost.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/structure.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure.obj",
       "source": "downloads/survival-kit/Models/OBJ format/structure.obj",
       "sha256": "123c3fe313fb6d52b44546c864ce7b1d70748a06ba659c481e6b425057d021a1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/structure.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/structure.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/structure-roof.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure-roof.obj",
       "source": "downloads/survival-kit/Models/OBJ format/structure-roof.obj",
       "sha256": "b5ed112d9849400790dd5e10b24c2e559d9c708a81f55832dc707b3bb14e956c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/structure-roof.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/structure-roof.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/structure-roof.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tent.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tent.obj",
       "source": "downloads/survival-kit/Models/OBJ format/tent.obj",
       "sha256": "87479f276837ff0aa11bdfa220e9919cb8120b2499f868f9c9432291586a6f51"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tent.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tent.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/tent.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-hammer.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-hammer.obj",
       "source": "downloads/survival-kit/Models/OBJ format/tool-hammer.obj",
       "sha256": "448b531208ab7fa1d4c44041a6ca26734e8c805f8284d39f8e72c863f30f55d6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-hammer.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-hammer.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/tool-hammer.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-pickaxe.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-pickaxe.obj",
       "source": "downloads/survival-kit/Models/OBJ format/tool-pickaxe.obj",
       "sha256": "6b4525eaf713eb528887d5a13f5293a0b29673f903ba4e1d049ad1384a93d74d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tool-pickaxe.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tool-pickaxe.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/tool-pickaxe.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log.obj",
       "source": "downloads/survival-kit/Models/OBJ format/tree-log.obj",
       "sha256": "e7ce23e220360007d374771f57bab882ff1cf238c7883bd190e52f5e138b2540"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/tree-log.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log-small.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log-small.obj",
       "source": "downloads/survival-kit/Models/OBJ format/tree-log-small.obj",
       "sha256": "5bd51b9df1e4ddae761cb4e9fd92f886be0f7be080d93dff72a3fc33b94182b4"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/tree-log-small.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/tree-log-small.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/tree-log-small.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/workbench.obj",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/workbench.obj",
       "source": "downloads/survival-kit/Models/OBJ format/workbench.obj",
       "sha256": "5f7fbb03a9d97300da10873dee4d3cbed6c94bfa8a328396947a7673ee0b81a3"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/survival-kit/workbench.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/survival-kit/workbench.mtl",
       "source": "downloads/survival-kit/Models/OBJ format/workbench.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/click1.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/click1.ogg",
       "source": "downloads/ui-audio/Audio/click1.ogg",
       "sha256": "59175ac17cd49a68dd736285738441287636112a84a6f7ce0d89921bda5a5360"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/click3.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/click3.ogg",
       "source": "downloads/ui-audio/Audio/click3.ogg",
       "sha256": "e3e7fc7ccd9c5cfdf77bffa05aee10d4973812076c76dc889ba2b16ea434127f"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/switch1.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/switch1.ogg",
       "source": "downloads/ui-audio/Audio/switch1.ogg",
       "sha256": "efdd1d1e2904fb2d81259cd96bb80101caceae94be02baa4b5310714a6708b19"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/switch4.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/switch4.ogg",
       "source": "downloads/ui-audio/Audio/switch4.ogg",
       "sha256": "687a42c24e5d25be1a256f35a439fe858548fe76d43ccfb17db546618b0d36db"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/switch7.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/switch7.ogg",
       "source": "downloads/ui-audio/Audio/switch7.ogg",
       "sha256": "7a3032d1dae63d1096cf2f1e59cb43e598d5229dcb9617e9d3fb13e96c78d5f2"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/switch10.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/switch10.ogg",
       "source": "downloads/ui-audio/Audio/switch10.ogg",
       "sha256": "bf61b3f3af39b2c680e70ee2f791786edd2bca2016ea683947059f079849bbf3"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/rollover1.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/rollover1.ogg",
       "source": "downloads/ui-audio/Audio/rollover1.ogg",
       "sha256": "4eb47e2e1540c44847b47a89825e21335c820a4e54cacf8c4c1eb5100e36af42"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_brown.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_brown.png",
       "source": "PNG/Double/panel_brown.png",
       "sha256": "e5bcda84c20a4d2f44082a9ab8094c959b339cfaffa21e67fcb6b4b6a7f09d36"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_brown_dark.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_brown_dark.png",
       "source": "PNG/Double/panel_brown_dark.png",
       "sha256": "8d29384105ed980877ac42b945a81070d99df9bac7c951d802e38fd38426da5b"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_brown_corners_a.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_brown_corners_a.png",
       "source": "PNG/Double/panel_brown_corners_a.png",
       "sha256": "9f897ce868fe35af019a9f200c06f174bb79af0b36f5c532ae25c575f18c9241"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_grey_blue.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_grey_blue.png",
       "source": "PNG/Double/panel_grey_blue.png",
       "sha256": "63901af632ee3cf7d97071b51cdfc9331998fbe598667dcba396e80fdc1e174a"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_grey_green.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_grey_green.png",
       "source": "PNG/Double/panel_grey_green.png",
       "sha256": "a78188eea74f049fdfa5b4988f8b3c282db4b8baa6084d03999856616f7944bb"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_grey_red.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_grey_red.png",
       "source": "PNG/Double/panel_grey_red.png",
       "sha256": "8c46e14bc57136bcc84e0908f00a35ff6aa55f0cd9d84ac60b764bacd3a23435"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/panel_border_brown.png",
+      "file": "Assets/Resources/BemTeVi/UI/panel_border_brown.png",
       "source": "PNG/Double/panel_border_brown.png",
       "sha256": "4de63a263833223f0ffa1789114403537b2d876e454dd40f1e516f31332bb3e9"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/banner_classic_curtain.png",
+      "file": "Assets/Resources/BemTeVi/UI/banner_classic_curtain.png",
       "source": "PNG/Double/banner_classic_curtain.png",
       "sha256": "2878ed8d7ca2821dd314135b77e616136dfc3e1078529840c1e290c77e3038e8"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/banner_hanging.png",
+      "file": "Assets/Resources/BemTeVi/UI/banner_hanging.png",
       "source": "PNG/Double/banner_hanging.png",
       "sha256": "b736f04cd3bbe7e3d33338b3b13ee4eca4887ffaca160e58a91fd5432d4d91fe"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/minimap_icon_star_yellow.png",
+      "file": "Assets/Resources/BemTeVi/UI/minimap_icon_star_yellow.png",
       "source": "PNG/Double/minimap_icon_star_yellow.png",
       "sha256": "a5c1a3ccc796c07d5e225cb14af90850396cc58fd9ddf5efd93f0bd689914166"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/minimap_icon_star_white.png",
+      "file": "Assets/Resources/BemTeVi/UI/minimap_icon_star_white.png",
       "source": "PNG/Double/minimap_icon_star_white.png",
       "sha256": "cab5c1bd9f12be5e8928fc9b1a90c14a60b90d319409ff1d43958b83f6abf280"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/minimap_icon_jewel_yellow.png",
+      "file": "Assets/Resources/BemTeVi/UI/minimap_icon_jewel_yellow.png",
       "source": "PNG/Double/minimap_icon_jewel_yellow.png",
       "sha256": "882e85259e27194bd188cf2ef411c9a2ad70ce1fe7107b3fa13c7d93e222c799"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-g.obj",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-g.obj",
       "source": "downloads/blocky-characters/Models/OBJ format/character-g.obj",
       "sha256": "285a7ad4b8dd66a179d85cdb4610935c30f559ecf30d0beb3abae7c7cb4c3f8c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-g.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-g.mtl",
       "source": "downloads/blocky-characters/Models/OBJ format/character-g.mtl",
       "sha256": "0f3c77448a2146e9a61c9b7a88fcb67a0c82f43afc33941a52b4edbbf81d13e5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-g.png",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/Textures/texture-g.png",
       "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-g.png",
       "sha256": "cce3f8d545625998c27e91016672366eb84f21bbc520f8227022c23d0dd557fc"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-d.obj",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-d.obj",
       "source": "downloads/blocky-characters/Models/OBJ format/character-d.obj",
       "sha256": "e7c1f60fd67eb6066fd04b04f88d6c4271d31d04b64c1e5361b7b9384b2b65f9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/character-d.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/character-d.mtl",
       "source": "downloads/blocky-characters/Models/OBJ format/character-d.mtl",
       "sha256": "7804d6cdb361ffa315e7e09dd57bd5d049fbaa8a9fea9734912fc60a7ecdfa93"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/blocky-characters/Textures/texture-d.png",
+      "file": "Assets/Resources/BemTeVi/Models/blocky-characters/Textures/texture-d.png",
       "source": "downloads/blocky-characters/Models/OBJ format/Textures/texture-d.png",
       "sha256": "c61bc29ec4d96229b979fc9196500afac13c2b448bbab1085832354fb4ef849a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/apple.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/apple.obj",
       "source": "downloads/food-kit/Models/OBJ format/apple.obj",
       "sha256": "cb8d02f0860a426bdefa373d748ab6f4a65cfbbd757db3275e68738cdd2fa5ad"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/apple.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/apple.mtl",
       "source": "downloads/food-kit/Models/OBJ format/apple.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/Textures/colormap.png",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/Textures/colormap.png",
       "source": "downloads/food-kit/Models/OBJ format/Textures/colormap.png",
       "sha256": "75baf74d9483a0fc56ac21ceba346fbe16fc24a2a1bf0524c53e6bbe802e1153"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/banana.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/banana.obj",
       "source": "downloads/food-kit/Models/OBJ format/banana.obj",
       "sha256": "b676ad8dfd2d3a5b8d4496c6da5b4e487a5fe0f3a24825bfdcff5ef60d3c6a54"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/banana.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/banana.mtl",
       "source": "downloads/food-kit/Models/OBJ format/banana.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/carrot.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/carrot.obj",
       "source": "downloads/food-kit/Models/OBJ format/carrot.obj",
       "sha256": "23792b149cb22222317ff7aa811e9b040ca19fa6a1093dc630d16a5d73300c69"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/carrot.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/carrot.mtl",
       "source": "downloads/food-kit/Models/OBJ format/carrot.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cherries.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cherries.obj",
       "source": "downloads/food-kit/Models/OBJ format/cherries.obj",
       "sha256": "d3e073561fe4993d27f614484950aa017d0928efcb0b549de22a319440cd0c04"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cherries.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cherries.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cherries.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cookie.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie.obj",
       "source": "downloads/food-kit/Models/OBJ format/cookie.obj",
       "sha256": "7b2ba4847492305ded015826da5654a595d731aaed18841b77199e1ed2454513"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cookie.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cookie.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cookie-chocolate.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie-chocolate.obj",
       "source": "downloads/food-kit/Models/OBJ format/cookie-chocolate.obj",
       "sha256": "6ffdf84e5fd0540f791a8bd63817cee8ceabb288067a3d46625048d3c48cf484"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cookie-chocolate.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cookie-chocolate.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cookie-chocolate.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cup.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup.obj",
       "source": "downloads/food-kit/Models/OBJ format/cup.obj",
       "sha256": "27fc5a5e6cda8fe4d518cf56da5a909fdd766b3d4cdd6e5c3a5bfac4b90ecdca"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cup.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cup.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cup-tea.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup-tea.obj",
       "source": "downloads/food-kit/Models/OBJ format/cup-tea.obj",
       "sha256": "f4559941485e1a2ea99aea58dcd04cc10adbf45c50f291bed94ee258299232c3"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cup-tea.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cup-tea.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cup-tea.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cupcake.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cupcake.obj",
       "source": "downloads/food-kit/Models/OBJ format/cupcake.obj",
       "sha256": "d12cdf69f588393cd7c6d479746f261587a3d866812b535b09417c0dd1cfd550"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/cupcake.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/cupcake.mtl",
       "source": "downloads/food-kit/Models/OBJ format/cupcake.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut.obj",
       "source": "downloads/food-kit/Models/OBJ format/donut.obj",
       "sha256": "b9ab244700e1e7f0a93e2ffbdee9d7c956592e590b9a98807cb6399a90185695"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut.mtl",
       "source": "downloads/food-kit/Models/OBJ format/donut.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut-chocolate.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-chocolate.obj",
       "source": "downloads/food-kit/Models/OBJ format/donut-chocolate.obj",
       "sha256": "8bd3b60a2a230c7fee685bd155d5c08721d333a1f2d28e6d2f394500794876bb"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut-chocolate.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-chocolate.mtl",
       "source": "downloads/food-kit/Models/OBJ format/donut-chocolate.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut-sprinkles.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-sprinkles.obj",
       "source": "downloads/food-kit/Models/OBJ format/donut-sprinkles.obj",
       "sha256": "7695804cc9aeefc5ca20fe79d7a537ad5390da169d81141c2cb24cc29461876e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/donut-sprinkles.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/donut-sprinkles.mtl",
       "source": "downloads/food-kit/Models/OBJ format/donut-sprinkles.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/eggplant.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/eggplant.obj",
       "source": "downloads/food-kit/Models/OBJ format/eggplant.obj",
       "sha256": "55d54111ec37520b5fcb87e3af5c3e0b4b47f88c40de4f5d1411aa3cea5c172d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/eggplant.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/eggplant.mtl",
       "source": "downloads/food-kit/Models/OBJ format/eggplant.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/ginger-bread.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ginger-bread.obj",
       "source": "downloads/food-kit/Models/OBJ format/ginger-bread.obj",
       "sha256": "29b31752f22ae533ee09a6c6c690868a0f923c14491333e1229f67d306979b9b"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/ginger-bread.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ginger-bread.mtl",
       "source": "downloads/food-kit/Models/OBJ format/ginger-bread.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/ice-cream-cup.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ice-cream-cup.obj",
       "source": "downloads/food-kit/Models/OBJ format/ice-cream-cup.obj",
       "sha256": "2b93606c23d15ae5843e32df268ae9713899415eaeae416e9ff9313b703cae31"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/ice-cream-cup.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/ice-cream-cup.mtl",
       "source": "downloads/food-kit/Models/OBJ format/ice-cream-cup.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/lollypop.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/lollypop.obj",
       "source": "downloads/food-kit/Models/OBJ format/lollypop.obj",
       "sha256": "2ba12380b8a9171e14a72ac9c640de4050bd6e5d7a8658446de1b0c5052ea679"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/lollypop.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/lollypop.mtl",
       "source": "downloads/food-kit/Models/OBJ format/lollypop.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/mug.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mug.obj",
       "source": "downloads/food-kit/Models/OBJ format/mug.obj",
       "sha256": "8ac2081089f43a4ca52836d5b3598d3c97dd94893232b3663bd623ef4ab91183"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/mug.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mug.mtl",
       "source": "downloads/food-kit/Models/OBJ format/mug.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/mushroom.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mushroom.obj",
       "source": "downloads/food-kit/Models/OBJ format/mushroom.obj",
       "sha256": "abe856209ebde07bb8dd937f64999fd42235fc27324431850d2e405d28541968"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/mushroom.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/mushroom.mtl",
       "source": "downloads/food-kit/Models/OBJ format/mushroom.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/orange.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/orange.obj",
       "source": "downloads/food-kit/Models/OBJ format/orange.obj",
       "sha256": "b8e4f2019d980db840a63a374cf646a5a2216d2443ed0d9882cd6571b49e82f3"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/orange.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/orange.mtl",
       "source": "downloads/food-kit/Models/OBJ format/orange.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/pear.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/pear.obj",
       "source": "downloads/food-kit/Models/OBJ format/pear.obj",
       "sha256": "a6558dd5af90bdd1a84245e45fbae25e5973cb251fa0632fc103d1d0556be7dd"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/pear.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/pear.mtl",
       "source": "downloads/food-kit/Models/OBJ format/pear.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/popsicle.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/popsicle.obj",
       "source": "downloads/food-kit/Models/OBJ format/popsicle.obj",
       "sha256": "50ff258efbf0135c94aac625127fca524b956d58fb2024d95ff6db8dba5e4242"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/popsicle.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/popsicle.mtl",
       "source": "downloads/food-kit/Models/OBJ format/popsicle.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/strawberry.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/strawberry.obj",
       "source": "downloads/food-kit/Models/OBJ format/strawberry.obj",
       "sha256": "1be28091f09494cf22194638d3f92f0159072b55af6ba66c285db22739a2e4bf"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/strawberry.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/strawberry.mtl",
       "source": "downloads/food-kit/Models/OBJ format/strawberry.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/watermelon.obj",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/watermelon.obj",
       "source": "downloads/food-kit/Models/OBJ format/watermelon.obj",
       "sha256": "a104af3a607723f2dd77afd5a173889cc7acf96679b1b358b423a8572c3798c3"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/food-kit/watermelon.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/food-kit/watermelon.mtl",
       "source": "downloads/food-kit/Models/OBJ format/watermelon.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bear.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bear.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/bear.obj",
       "sha256": "3dd342716531b4e2e7889293d0b67e1b8968928df61f2cc0e67056f6b661877a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bear.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bear.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/bear.mtl",
       "sha256": "9feebaa9671009643d13a793d32f3ab99024462231f488194c44486579da94b8"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bedSingle.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bedSingle.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/bedSingle.obj",
       "sha256": "e93bf273166e0cbe5699cff5f95dd90da4c2c25d48931d92b1f9e077d60a9814"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bedSingle.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bedSingle.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/bedSingle.mtl",
       "sha256": "c68f3b5128ae18ed9a1723a1363b1c56cbbb17ae12de246de26af761ec822fc0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpen.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpen.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpen.obj",
       "sha256": "c582b0306529553018eb5a9f58eef35c7383e566a0613d32dea41612cfaded8c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpen.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpen.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpen.mtl",
       "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpenLow.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpenLow.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpenLow.obj",
       "sha256": "bee575ba5ba4f2c7cb77c688d98c83d7bbfa70d1f6f80717afaa5586f04b018a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/bookcaseOpenLow.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/bookcaseOpenLow.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/bookcaseOpenLow.mtl",
       "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/books.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/books.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/books.obj",
       "sha256": "619b78970d787db48f7562c51ed5c85239d61ce075e32f0c2b486bbaa736a479"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/books.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/books.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/books.mtl",
       "sha256": "4c4124eba54d96842cbc27861696001bdda52abcf5e0f0e786732924c5bd61e0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/cardboardBoxOpen.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/cardboardBoxOpen.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/cardboardBoxOpen.obj",
       "sha256": "21fc2e5b06dd1f267074381a30a5d5945626996b96d6016b5ba3a9bd245272f0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/cardboardBoxOpen.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/cardboardBoxOpen.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/cardboardBoxOpen.mtl",
       "sha256": "aeb33dfccdf381881fd065ef5724709610fe7748f818090a755b4eb46002a952"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairDesk.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairDesk.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/chairDesk.obj",
       "sha256": "2e4448333f39ceda9f3e90f02236463e34fbae80d470084ae2009541c16c89c6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairDesk.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairDesk.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/chairDesk.mtl",
       "sha256": "6d45d00e9569fe5b1abc4c9fb1caedc99cb7b519cdcd09a1377ecd8cb79f6f53"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairRounded.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairRounded.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/chairRounded.obj",
       "sha256": "7f42548c11c2aa8e56e03e74f6e7ce36d062171797da76e39851008d74806f4c"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/chairRounded.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/chairRounded.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/chairRounded.mtl",
       "sha256": "eb2bffff6262d9b032d9ae1de51467559b6a03da66cd68ac5ecd34ecd004c0c5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerMouse.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerMouse.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/computerMouse.obj",
       "sha256": "f48d88fb9d1c4f79843e03a446f13b57d65dbe884095135cd907e96511d85dca"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerMouse.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerMouse.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/computerMouse.mtl",
       "sha256": "8d2aea496efc3f8575ef22d6a134ec39d0e0d7b32f2f6b1fae125ffb244824a1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/desk.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/desk.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/desk.obj",
       "sha256": "5591258c26d1311a99ddb7b73e1e9ca48492afa102757d51fd9b3686e3fbff7e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/desk.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/desk.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/desk.mtl",
       "sha256": "5e5596841db7ef51c29d073c80e432ccca5240d0fc966255a0cb1fbcec3f6dc0"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundFloor.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundFloor.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/lampRoundFloor.obj",
       "sha256": "65b7be5588a17293cbb4f59773e71cf860106022e0fc2c63be73bdfe38c63a86"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundFloor.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundFloor.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/lampRoundFloor.mtl",
       "sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundTable.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundTable.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/lampRoundTable.obj",
       "sha256": "3d5f74dc94552c722404c21f64f0f14b0b873771fbd4918eecc3898de65d2831"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampRoundTable.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampRoundTable.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/lampRoundTable.mtl",
       "sha256": "21b423cdc4acadf5e6b60e31105c2da6e2bded3c02f0ae94a62c389c91a9fb88"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampSquareTable.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampSquareTable.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/lampSquareTable.obj",
       "sha256": "d76db315ff17fd6f157226e1dbbc3c778e61b14fec8b1169b1aed25e5919cd19"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/lampSquareTable.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/lampSquareTable.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/lampSquareTable.mtl",
       "sha256": "9b1c81ac53aa626c47641c9e89d632360b5c833c9050b56641388af543d96dbe"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillow.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillow.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/pillow.obj",
       "sha256": "58d7f8896d23db772280bf433f8a2dbfcd23b7b117ba9ff016299660eb5b0eaa"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillow.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillow.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/pillow.mtl",
       "sha256": "3e6f3744b0011c35dbf4da0a92bbbb26ccdee052501c2e3da216e58c961e4d80"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlue.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlue.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/pillowBlue.obj",
       "sha256": "2759512bbccb695f22f22b549f7f58435ab74497dac586bca67d30935ad61b9a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlue.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlue.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/pillowBlue.mtl",
       "sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlueLong.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlueLong.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/pillowBlueLong.obj",
       "sha256": "e62bc0eece83457000d3c0b33b4bd47e5ef439d3a152465ee36629d3c3a1ffdf"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pillowBlueLong.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pillowBlueLong.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/pillowBlueLong.mtl",
       "sha256": "c97d8bfb28485922fc4edb9c97cffa4d11d9a75b320055649ab84f7381118bde"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/radio.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/radio.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/radio.obj",
       "sha256": "a595663a057462eb9a3db3e45bd03f823f9410e6d4fc6f62cd5024bf6d1060e6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/radio.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/radio.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/radio.mtl",
       "sha256": "709c74fe716dc8ef9195ab195db6ab657d0232951153a1ec86e96b86869e8913"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRound.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRound.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/rugRound.obj",
       "sha256": "676ecbeaa49d6dca45414854db76df9f3d1b5a74f93b966cb258e1356d2f926d"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRound.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRound.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/rugRound.mtl",
       "sha256": "9ff56ef802c85b11af44277aea9c49e1129d8aee4b5f9fd277e9cf9be8010069"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRounded.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRounded.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/rugRounded.obj",
       "sha256": "e8156efe2e8a6383138bce27bfc60350ee67de50ff2230b38ffd135e68981c60"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/rugRounded.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/rugRounded.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/rugRounded.mtl",
       "sha256": "61484c56e3faaad7857ef2673d85eabd710e138a0fb18517e26ad47413a75b50"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/wallWindow.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/wallWindow.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/wallWindow.obj",
       "sha256": "a36ec164158c63df3d0250a57fc6a94472e7137d7f4cc428eb24e7641e553977"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/wallWindow.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/wallWindow.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/wallWindow.mtl",
       "sha256": "6d0557a8be7dd9d13f888b746c5a9e37031af128cf45e0ef428dfcd1789867f9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-gold.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-gold.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-gold.obj",
       "sha256": "ddd73145c9e64b2faf925597153202e6318adc65a5f543f7c0ad1291c20e28af"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-gold.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-gold.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-gold.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/Textures/colormap.png",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/Textures/colormap.png",
       "source": "downloads/toy-car-kit/Models/OBJ format/Textures/colormap.png",
       "sha256": "0d4947d34ff32acf4a359c7f22ca784e057e7e72f622170a9a77b6fc88fdb70e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-silver.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-silver.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-silver.obj",
       "sha256": "dd1c7a39b0ef3071c856b31ad376b0a8d1b1ed1f8bfc1a1ba207bd03f8399ebf"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-coin-silver.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-coin-silver.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-coin-silver.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-cone.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-cone.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-cone.obj",
       "sha256": "c5f330b509bbece12b2f10c9b858146944ae90bf87143ad4161c68bf1dceb7ef"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/item-cone.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/item-cone.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/item-cone.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-looping.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-looping.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-looping.obj",
       "sha256": "3bf63a5f6e1c6015ffdb68799b042c9f1248bd51d1717e498f7be03830a082eb"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-looping.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-looping.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-looping.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-straight.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-straight.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-straight.obj",
       "sha256": "157e3e9d4a51325d0578455d96d251750a8864bb2e293dbe47dca40139680211"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-narrow-straight.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-narrow-straight.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-narrow-straight.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-curve.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-curve.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-curve.obj",
       "sha256": "c967be1d992411e304fee3f8a7e5e5cddac3f246e724beb7ab92e045620c39a5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-curve.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-curve.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-curve.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-straight.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-straight.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-straight.obj",
       "sha256": "98e13e60bd2f85973102907fd0e8217268eb7eb567ae14c1dfd52032d7656883"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/track-wide-straight.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/track-wide-straight.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/track-wide-straight.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer.obj",
       "sha256": "5b7165c5547832eb2d00b4723acd06853d6aef3ef075c4fb30913ed46a48c8de"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer-low.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer-low.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer-low.obj",
       "sha256": "271739ac4a03695fdd40dcf0e619ef68002b10c3ee8959cee3d39f701a86a46e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-racer-low.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-racer-low.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-racer-low.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-speedster.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-speedster.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-speedster.obj",
       "sha256": "9528d425f4713918c841800e889c4c220aff42818f6dd7e35e961dd39089e7cb"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-speedster.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-speedster.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-speedster.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-suv.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-suv.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-suv.obj",
       "sha256": "7925174af14264dcbee6435b8ae34e400d0a2b03c54a55500e29c37489db6816"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-suv.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-suv.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-suv.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-truck.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-truck.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-truck.obj",
       "sha256": "cc5473fe55ef868654014133cef931c62dd8f2411be542f1db1fe34da3f9c711"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/vehicle-truck.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/vehicle-truck.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/vehicle-truck.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-large.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-large.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-large.obj",
       "sha256": "8ad25cf20a043159f7e82bfc437d4fe1c2042e381836a5db74ad6862db78a892"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-large.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-large.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-large.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-medium.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-medium.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-medium.obj",
       "sha256": "5c9f1dc41f0531d1539fa0a3f14ccce10268e2a474f8d6d16458e18a807467b9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-medium.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-medium.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-medium.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-small.obj",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-small.obj",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-small.obj",
       "sha256": "9723dba1de58118a3100ea93214fde3a4a1cd52c6185263ca49779e8e8add779"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/toy-car-kit/wheel-small.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/toy-car-kit/wheel-small.mtl",
       "source": "downloads/toy-car-kit/Models/OBJ format/wheel-small.mtl",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/LilitaOne-Regular.ttf",
+      "file": "Assets/Resources/BemTeVi/UI/LilitaOne-Regular.ttf",
       "source": "downloads/lilita-one/LilitaOne-Regular.ttf",
       "sha256": "f5b641c45c69d772ee4eda687bc9fda411d5cad6b0b45371491da4580cbc8d59"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerKeyboard.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerKeyboard.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/computerKeyboard.obj",
       "sha256": "e33668db75a2cb9bc6ae64e1f062810d570aebb12f8ac58e13a63074b4cb652e"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/computerKeyboard.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/computerKeyboard.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/computerKeyboard.mtl",
       "sha256": "e445dc0b0ed0651fae2afb35a0581a9dd259bfff0a1c68f0edfcf11ba80e02ed"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/doorwayFront.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/doorwayFront.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/doorwayFront.obj",
       "sha256": "1caf521e55aaa9edd781c6875e4d9b87d7ae2c8b5bcd82da0b8ccc052e6047a8"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/doorwayFront.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/doorwayFront.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/doorwayFront.mtl",
       "sha256": "2bdbdf6641df240d456c57632adbd7b41b413189e0a7b12dc266b9820eb066c2"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pottedPlant.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pottedPlant.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/pottedPlant.obj",
       "sha256": "839e75290814756dee97e479fa462a7477cecda06db0707a520dc0f29130fc02"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/pottedPlant.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/pottedPlant.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/pottedPlant.mtl",
       "sha256": "a0b3de40d67b0a085f9fd94d45ae357ba6196f84e48fe08a67fdc43b64319211"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/sideTableDrawers.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/sideTableDrawers.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/sideTableDrawers.obj",
       "sha256": "69b289480ad079aa1d7bfe41d3237b188e65c12263a9ed07d03e04cfa2f0f451"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/sideTableDrawers.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/sideTableDrawers.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/sideTableDrawers.mtl",
       "sha256": "d7ddf6f77f3738a8dea89ba74e5e1248db84f72b6d61e8271096bde1d927e266"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/stairsOpen.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/stairsOpen.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/stairsOpen.obj",
       "sha256": "ee9359c46dfeef5fc77270d45040555186aba042995d3454198305eb3f6f948b"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/stairsOpen.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/stairsOpen.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/stairsOpen.mtl",
       "sha256": "4a5b77b940ca3631e9a8de90b33f39e538065f1813249e2dd582e4d318b7fbd2"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/tableCloth.obj",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/tableCloth.obj",
       "source": "downloads/furniture-kit/Models/OBJ format/tableCloth.obj",
       "sha256": "f4a903e12deb72122348bed876237b4dc8cd0416cc4a580e36d101d7b93d253b"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/furniture-kit/tableCloth.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/furniture-kit/tableCloth.mtl",
       "source": "downloads/furniture-kit/Models/OBJ format/tableCloth.mtl",
       "sha256": "1153157e639a95f01be9266437a34d8aff562b07a019f3fec1e923f1c505aaf6"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/rubber_duck_toy_1k.fbx",
+      "file": "Assets/Resources/BemTeVi/Models/polyhaven-duck/rubber_duck_toy_1k.fbx",
       "source": "downloads/polyhaven-duck/rubber_duck_toy_1k.fbx",
       "sha256": "8e14ea0471654e5d9536c438213e9edae686ebeb352d30cabdf7ab0c4b47a04d",
       "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/rubber_duck_toy/rubber_duck_toy_1k.fbx"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
+      "file": "Assets/Resources/BemTeVi/Models/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
       "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_diff_1k.jpg",
       "sha256": "c968d6185c3ec57a430818e6af85c2ba2880c7ee19ccb1a0171730926175cfd6",
       "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rubber_duck_toy/rubber_duck_toy_diff_1k.jpg"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_metal_1k.exr",
+      "file": "Assets/Resources/BemTeVi/Models/polyhaven-duck/textures/rubber_duck_toy_metal_1k.exr",
       "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_metal_1k.exr",
       "sha256": "3c1f32ec014206b15a8510837ff535efb002ecb206b86278aa7bf28f256c5f93",
       "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_metal_1k.exr"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_nor_gl_1k.exr",
+      "file": "Assets/Resources/BemTeVi/Models/polyhaven-duck/textures/rubber_duck_toy_nor_gl_1k.exr",
       "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_nor_gl_1k.exr",
       "sha256": "05e61a7c61de9a432ab1a2abee0b9f0f524e6964fad9d74f389583cc72f7a954",
       "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_nor_gl_1k.exr"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/polyhaven-duck/textures/rubber_duck_toy_rough_1k.exr",
+      "file": "Assets/Resources/BemTeVi/Models/polyhaven-duck/textures/rubber_duck_toy_rough_1k.exr",
       "source": "downloads/polyhaven-duck/textures/rubber_duck_toy_rough_1k.exr",
       "sha256": "226fcf30f2ef64690bd273ae19f3a279736a51c931c0586246249592622bc883",
       "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/1k/rubber_duck_toy/rubber_duck_toy_rough_1k.exr"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-a.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-a.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-a.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "de1d327c92fad3920a0e47cc3fc9516dd7bbcddf39d3006921a8ee8e216df1c8"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-a.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-a.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-a.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/Textures/colormap.png",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/Textures/colormap.png",
       "source": "downloads/v10/mini-characters/Models/OBJ format/Textures/colormap.png",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "3aba07b39c13e9fa9a02cba6246fdd9d711bb15702e00e10ad84595b25452f95"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-c.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-c.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-c.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "97cf90d2ec485d1dd8239912f1c9a881679111622e25399bec64e9e8dcd5dc2a"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-c.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-c.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-c.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-e.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-e.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-e.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "582adc9246d5630334cbf6ab479175556cfb88226084614c61fe664b8b3c6483"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-e.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-e.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-e.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-f.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-f.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-f.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "0bb19bc9ec1f30c77be3047f1a87800bc8347c41a28935e0a74f1d82d47b2f4f"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-male-f.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-male-f.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-male-f.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-a.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-a.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-a.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "df64700a24f59b3b6ab354ff4217b96fd0586836f9b5f0a80dae6236dbaf31d4"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-a.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-a.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-a.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-b.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-b.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-b.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "de82df7be067875836efe99dd629b16ac72dde6a2895f531874ce155a29511a5"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-b.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-b.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-b.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-d.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-d.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-d.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "f5828abbb0a0040a0ae766eb44081af48a00bc6278a9242829dcba5eedb2af33"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-d.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-d.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-d.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-e.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-e.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-e.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "f7bd09e1ffd9eac1e8905235cffaef690250e17821d6bed713b70a512a9f52b9"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-female-e.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-female-e.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-female-e.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-worker.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-worker.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-worker.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "119564dc8da0c88af576b43b8b55a9b60dbe682859869ed042dfefdbb75889fe"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-worker.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-worker.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-worker.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-knight.obj",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-knight.obj",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-knight.obj",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "e20c548b1fdf8f33470302bfb0c8a5ea8c716e2fa8606c607585d2d7c7b559d1"
     },
     {
-      "file": "Assets/Resources/Hunter/Models/mini-characters/character-knight.mtl",
+      "file": "Assets/Resources/BemTeVi/Models/mini-characters/character-knight.mtl",
       "source": "downloads/v10/mini-characters/Models/OBJ format/character-knight.mtl",
       "url": "https://kenney.nl/assets/mini-characters",
       "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/footstep_wood_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/footstep_wood_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/footstep_wood_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "5f1c252942a220d658121bd9417448cd19649ded9fff2ff15f6e50899373ce8e"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/footstep_carpet_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/footstep_carpet_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/footstep_carpet_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "b9524658b52a99a20590f8feefc103088637fd13ea8ec35811aee785e1f2f330"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/footstep_concrete_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/footstep_concrete_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/footstep_concrete_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/footstep_grass_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/footstep_grass_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/footstep_grass_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "9d49497777405d78d7cf7f2888e28277f3a23192300cfd1d79d54876b20f479f"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactWood_light_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactWood_light_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactWood_light_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "eb45e35b4bed784d3f120de4afec4b0d6ac09d9e143cce8cfcb7d739e1b1f3c3"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactWood_medium_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactWood_medium_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactWood_medium_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "1723a9fd25103ed41af06054814e84e65f4a772bac86ab2dc927da93d9592ff5"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactTin_medium_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactTin_medium_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactTin_medium_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "f4bbee66ca191ec744b84fc07ac9ed2a6fda955d51cfed8360f12b62815d3cbd"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactMetal_light_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactMetal_light_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactMetal_light_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "33b5e6e37c6e9d54e07bf5a89b12c76e879f40c1ea83cdd82714df1d6f9fec6d"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactGlass_light_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactGlass_light_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactGlass_light_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "d750cf88097d0c3e69920e6e14496e1444e1a9da01aa4cca8f5ec8cb44c57b4f"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactBell_heavy_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactBell_heavy_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactBell_heavy_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactMining_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactMining_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactMining_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "36b4ea107222d073c67ca64dde26944975609202d5090b2f2021213c1a7e35cd"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/impact-sounds/impactSoft_medium_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/impact-sounds/impactSoft_medium_000.ogg",
       "source": "downloads/v10/impact-sounds/Audio/impactSoft_medium_000.ogg",
       "url": "https://kenney.nl/assets/impact-sounds",
       "sha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/computerNoise_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/computerNoise_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/computerNoise_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "1527944e16eb14b48ee03fe3e7ce6aae94262833a4e1f83928d451a7414fe4e1"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/computerNoise_001.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/computerNoise_001.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/computerNoise_001.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "29b4842f6d8c0ba2b0cb00bfaff3b852b492bb43197a82e697917aacbe106757"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/computerNoise_002.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/computerNoise_002.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/computerNoise_002.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "6ae9bb261c6536d1699972da0cdbf6e0762cf7e9b925adb64a06ff375255cb71"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/doorOpen_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/doorOpen_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/doorOpen_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "5b7e07eccd4413ad9ef3720c2d14f9cc699f4c50111e9b2f48bd60e6f1a164c3"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/doorClose_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/doorClose_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/doorClose_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "c9134651ebbd7c016f90393aee495ff8120bd343bb7569b689a7506987ebd6c2"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/spaceEngineLow_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/spaceEngineLow_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/spaceEngineLow_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "d7deee8d7217ce63aab802ad7365a59cacfd243392dc1bd03b0a9d454aa494df"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/forceField_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/forceField_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/forceField_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "c2916f2a062c8ddd1aca2826d134fe90847037db31342726ffb0f9097afe339c"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/sci-fi-sounds/thrusterFire_000.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/sci-fi-sounds/thrusterFire_000.ogg",
       "source": "downloads/v10/sci-fi-sounds/Audio/thrusterFire_000.ogg",
       "url": "https://kenney.nl/assets/sci-fi-sounds",
       "sha256": "0fdc474d93f209debf1fc4ea77765a669dcb7676db31b4d8a0a509685bccf374"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/Itim-Regular.ttf",
+      "file": "Assets/Resources/BemTeVi/UI/Itim-Regular.ttf",
       "source": "downloads/v10/itim/Itim-Regular.ttf",
       "url": "https://github.com/google/fonts/tree/main/ofl/itim",
       "sha256": "9164d7eb92ca717b53b07193e3445c96782222d24215151b8d2851b576b17645"
     },
     {
-      "file": "Assets/Resources/Hunter/UI/Boogaloo-Regular.ttf",
+      "file": "Assets/Resources/BemTeVi/UI/Boogaloo-Regular.ttf",
       "source": "downloads/v10/boogaloo/Boogaloo-Regular.ttf",
       "url": "https://github.com/google/fonts/tree/main/ofl/boogaloo",
       "sha256": "c38febf770bec2b8e30ea6bc1ddb39c9b0ce0e8625d94ceeafbe3af1c7096d9d"
     },
     {
-      "file": "Assets/Resources/Hunter/Audio/ambient-birds/birds-isaiah658_0.ogg",
+      "file": "Assets/Resources/BemTeVi/Audio/ambient-birds/birds-isaiah658_0.ogg",
       "source": "downloads/v10/birds-isaiah658_0.ogg",
       "url": "https://opengameart.org/sites/default/files/birds-isaiah658_0.ogg",
       "sha256": "359e4e3f9da9d75aac64cede511c7e3ef8b461f9d9f8c230f8f80e44c4b3e35f"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-locomotive.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/train-locomotive.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "aed5bbe5b1045e31f5ad163325a67c3918c3858a1ec17e19e816d55eab3f52a3"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-locomotive.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/train-locomotive.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/Textures/colormap.png",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/Textures/colormap.png",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "015fcc1664be7576f468a98bc4f5f329ef8b3c9caef0d85b2a4dc0ca69516863"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-wagon.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/train-wagon.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "3ef92c5e9af36d81eb7e78febe01f68f716c1a13f76ab46ac3a94d5c8eb4f3b1"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/train-wagon.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/train-wagon.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-a-round.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/present-a-round.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "1b8ddb37f5c18f966588cdf02df6a4ea64ddb643eae31f13d1ea1703ec12eeb5"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-a-round.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/present-a-round.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-b-cube.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/present-b-cube.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "fb855cd6d3541b07c2875faeb322cf5311dd82220beb8adf007cec8f30b01f28"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/present-b-cube.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/present-b-cube.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/nutcracker.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/nutcracker.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "8f3b777e2462ff6b4fb3321ba45a34ab30438c47af7522c447697960b7d84e0f"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/nutcracker.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/nutcracker.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/reindeer.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/reindeer.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "c1d2642b77eb5d46160421229aed525c9bb02754f1704efd530806437848d609"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/reindeer.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/reindeer.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-red.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/candy-cane-red.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "7893b86c795efc515d1ce5389f3c622c28c504f283588365a9ce61b4fbd67666"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-red.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/candy-cane-red.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-green.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/candy-cane-green.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "fddd04c3160ea377a0a69c9558b988a391099756802effa3049723cb3e7d5a13"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/candy-cane-green.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/candy-cane-green.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lantern.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/lantern.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "6dc6658e2f9b78cefbdccd758063e3074e33717fe1e8f673fa9d5b0b3435148e"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lantern.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/lantern.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/gingerbread-woman.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/gingerbread-woman.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "69b18b3019da06ffec97c9ddde465feba8ee7f90d5031f57ea5842036fa24efd"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/gingerbread-woman.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/gingerbread-woman.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowman-hat.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/snowman-hat.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "32ccf1ea5fdeb04f3e94f21bf70eec9f75ee9dee7bf68f8de08479bb5ab22710"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowman-hat.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/snowman-hat.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/sock-green.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/sock-green.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "91c374621a81f93417d004a3f8ebb538b9678a2083a4f80fbfe52ca54a893be4"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/sock-green.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/sock-green.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowflake-c.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/snowflake-c.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "14bdd249a73e56e366aaf824ee9bee28bfaa1c53745f7de86108edb5b541c664"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/snowflake-c.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/snowflake-c.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lights-colored.obj",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/lights-colored.obj",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "e7b74f86762827ead0c1ddca24e3d8224de30cf17296a9b9e791fb4c71bd66c3"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/holiday-kit/lights-colored.mtl",
+      "source": "downloads/bemtevi/holiday-kit/Models/OBJ format/lights-colored.mtl",
+      "url": "https://kenney.nl/assets/holiday-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-tram-round.obj",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/train-tram-round.obj",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "210e518facc8ad5ea2fd72d561872a6a2328e7569898d6d1ba09573ae2e9abae"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-tram-round.mtl",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/train-tram-round.mtl",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/Textures/colormap.png",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/Textures/colormap.png",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "e264660f3fc9ecbd642bdb7fb7b7dc10755a061560a66651baf48274c729af09"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-carriage-tank.obj",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/train-carriage-tank.obj",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "65aff4985f0d32343dbaa349168eff750e23d79019ef6240500d34e343a47afe"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/train-carriage-tank.mtl",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/train-carriage-tank.mtl",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/railroad-curve.obj",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/railroad-curve.obj",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "0834097d6dd61d1a308eec356bb4e4fd728594189502944071e8ff44f032095b"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/train-kit/railroad-curve.mtl",
+      "source": "downloads/bemtevi/train-kit/Models/OBJ format/railroad-curve.mtl",
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-2x4.obj",
+      "source": "downloads/bemtevi/brick-kit/Models/OBJ format/round-hq-brick-2x4.obj",
+      "url": "https://kenney.nl/assets/brick-kit",
+      "sha256": "84161d6d084d3a3bb3f6b996bb0708d004074478c6bf1b8fbbac15326803ba79"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-2x4.mtl",
+      "source": "downloads/bemtevi/brick-kit/Models/OBJ format/round-hq-brick-2x4.mtl",
+      "url": "https://kenney.nl/assets/brick-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/Textures/colormap.png",
+      "source": "downloads/bemtevi/brick-kit/Models/OBJ format/Textures/colormap.png",
+      "url": "https://kenney.nl/assets/brick-kit",
+      "sha256": "a802b8c02c0b0cc07654cd8edca30439a9e9d505b10088502169ab3b9cf5e94f"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-1x1-round.obj",
+      "source": "downloads/bemtevi/brick-kit/Models/OBJ format/round-hq-brick-1x1-round.obj",
+      "url": "https://kenney.nl/assets/brick-kit",
+      "sha256": "7e423e2494f985af031a17617f45b10e9e461068ea2d9c0659ceb2edbb5266b1"
+    },
+    {
+      "file": "Assets/Resources/BemTeVi/Models/brick-kit/round-hq-brick-1x1-round.mtl",
+      "source": "downloads/bemtevi/brick-kit/Models/OBJ format/round-hq-brick-1x1-round.mtl",
+      "url": "https://kenney.nl/assets/brick-kit",
+      "sha256": "45a6736aa344a0c7e286b9c43c6a48f25b6a2f78d8c5949e430c3b4a93b4e060"
     }
   ]
 }

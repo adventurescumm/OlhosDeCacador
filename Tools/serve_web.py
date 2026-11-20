@@ -5,7 +5,7 @@ from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 import argparse,os
 p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8000);args=p.parse_args()
 root=Path(__file__).resolve().parents[1]/'Builds/Web'
-if not (root/'index.html').exists():raise SystemExit('Build ausente. Execute Olhos de Cacador > 3. Compilar Web no Unity.')
+if not (root/'index.html').exists():raise SystemExit('Build ausente. Execute Bem-Te-Vi > 3. Compilar Web no Unity.')
 os.chdir(root)
 class Handler(SimpleHTTPRequestHandler):
  extensions_map={**SimpleHTTPRequestHandler.extensions_map,'.wasm':'application/wasm','.data':'application/octet-stream','.unityweb':'application/octet-stream'}

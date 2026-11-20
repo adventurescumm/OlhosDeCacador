@@ -5,11 +5,11 @@ Unity **6000.6.4f1**, Windows x64, URP 17.6.0 e Input System 1.20.1 permanecem i
 ## Instalar
 
 1. Preserve sua pasta anterior, principalmente cenas editadas e gravações.
-2. Extraia o ZIP em uma pasta nova e abra `OlhosDeCacador` no Unity Hub.
-3. Aguarde pacotes/importação e execute **Olhos de Cacador → 1. Preparar projeto**, depois **2. Verificar conteudo**.
+2. Extraia o ZIP em uma pasta nova e abra `BemTeVi` no Unity Hub.
+3. Aguarde pacotes/importação e execute **Bem-Te-Vi → 1. Preparar projeto**, depois **2. Verificar conteudo**.
 4. Abra Main e dê Play. Confira as buscas e as passagens antes de compilar Windows.
 
-Esta revisão modifica scripts, fontes, sons, catálogo e câmeras das cenas. Copiar apenas HunterBuild.cs aplica a correção histórica do FBX, mas não instala a v0.10.
+Esta revisão modifica scripts, fontes, sons, catálogo e câmeras das cenas. Copiar apenas BemTeViBuild.cs aplica a correção histórica do FBX, mas não instala a v0.10.
 
 As 18 cenas e GUIDs foram mantidos. O pacote contém suas configurações iniciais; Preparar projeto monta as hierarquias no Unity. Não copie cenas já montadas da versão anterior sobre as novas: elas conservariam as câmeras antigas e não teriam os novos bonecos. Preparar projeto continua preservando cenas já montadas. Para atualizar uma cópia existente sem edições próprias, o comando **7. Recriar cenas a partir do catalogo** reconstrói as composições após sua confirmação. Se houver edições próprias, compare o catálogo e os enquadramentos antes de usar esse comando.
 

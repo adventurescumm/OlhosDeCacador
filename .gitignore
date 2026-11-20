@@ -10,3 +10,7 @@ MemoryCaptures/
 *.sln
 *.user
 .DS_Store
+
+.idea/
+!Tools/DomainChecks/*.csproj
+Tools/DomainChecks/bin/

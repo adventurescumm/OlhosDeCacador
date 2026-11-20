@@ -24,10 +24,10 @@ O código anterior definia o tipo Default das texturas, sem definir explicitamen
 ## Abrir uma cópia nova
 
 1. Feche o Unity para interromper o ciclo da versão anterior.
-2. Extraia o ZIP atualizado em uma pasta nova e abra `OlhosDeCacador` no Hub com Unity 6000.6.4f1.
+2. Extraia o ZIP atualizado em uma pasta nova e abra `BemTeVi` no Hub com Unity 6000.6.4f1.
 3. Aguarde a resolução dos pacotes. Se aparecer a solicitação de ativar o novo backend de entrada, confirme e permita que o editor reinicie.
-4. Aguarde a importação e a compilação terminarem. Fora do Play, execute **Olhos de Cacador > 1. Preparar projeto** e **2. Verificar conteudo**. Preparar já inclui o reparo de materiais.
-5. Limpe o Console, abra `Assets/Hunter/Scenes/Main.unity` e teste em Play. Veja se aparecem mensagens novas, em vez de considerar erros antigos já registrados.
+4. Aguarde a importação e a compilação terminarem. Fora do Play, execute **Bem-Te-Vi > 1. Preparar projeto** e **2. Verificar conteudo**. Preparar já inclui o reparo de materiais.
+5. Limpe o Console, abra `Assets/BemTeVi/Scenes/Main.unity` e teste em Play. Veja se aparecem mensagens novas, em vez de considerar erros antigos já registrados.
 
 Preserve a cópia anterior se ela contém gravações ou cenários alterados. O pacote novo mantém os nove campos de áudio vazios; ele não inclui gravações suas que estejam apenas no seu computador.
 
@@ -37,8 +37,8 @@ Com o Unity fechado e uma cópia de segurança do projeto, compare e substitua e
 
 | Pasta | Arquivos |
 | --- | --- |
-| `Assets/Hunter/Editor/` | `HunterImporter.cs`, `HunterRenderPipeline.cs`, `HunterBuild.cs` |
-| `Assets/Hunter/Runtime/` | `HunterGame.cs`, `HunterUI.cs` |
+| `Assets/BemTeVi/Editor/` | `BemTeViImporter.cs`, `BemTeViRenderPipeline.cs`, `BemTeViBuild.cs` |
+| `Assets/BemTeVi/Runtime/` | `BemTeViGame.cs`, `BemTeViUI.cs` |
 
 1. Em `Packages/manifest.json`, acrescente ou atualize `"com.unity.inputsystem": "1.20.1"` dentro de `dependencies`, preservando seus outros pacotes e a sintaxe JSON.
 2. Abra o projeto e espere o pacote ser instalado. Se a Unity solicitar habilitar o backend, confirme e reinicie.

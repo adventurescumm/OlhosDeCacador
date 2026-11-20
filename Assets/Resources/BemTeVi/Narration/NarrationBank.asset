@@ -1,0 +1,610 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dabc07db825fba8b5d3f7db7991e30, type: 3}
+  m_Name: NarrationBank
+  m_EditorClassIdentifier:
+  readings:
+  - roomId: faroeste_estacao
+    round: 0
+    recordingScript: "Um balde quer água levar,\numa garrafinha veio passear.\nUma roda pede outra viagem,\numa maçã se esconde na bagagem.\nRosquinha com confeitos eu vou procurar,\ne um pato de borracha quer me acompanhar."
+    clip: {fileID: 0}
+  - roomId: faroeste_salao
+    round: 0
+    recordingScript: "Um martelo quer ajudar,\num peixe sem rio veio brincar.\nXícara de chá para a visita,\nbiscoito com chocolate na pista.\nUma banana curva eu quero achar,\ne livros empilhados para imaginar."
+    clip: {fileID: 0}
+  - roomId: faroeste_mina
+    round: 0
+    recordingScript: "Uma picareta quer trabalhar,\numa garrafa grandona vou encontrar.\nMoeda dourada vale um tesouro,\ncogumelo de mentira não é ouro.\nCristais juntinhos brilham no caminho,\ne uma cenoura espera num cantinho."
+    clip: {fileID: 0}
+  - roomId: faroeste_estacao
+    round: 1
+    recordingScript: "Uma pera de brinquedo veio de carona.\nA caneca com alça espera sua dona.\nUm caixote pequeno guarda uma viagem.\nUma lanterna clareia a bagagem.\nO trenzinho colorido quer partir.\nUma boneca de biscoito veio sorrir."
+    clip: {fileID: 0}
+  - roomId: faroeste_salao
+    round: 1
+    recordingScript: "Uma maçã foi convidada para o chá.\nA cenoura de brinquedo também está lá.\nConfeitos coloridos enfeitam uma rosquinha.\nUma garrafinha espera uma mãozinha.\nUm barril sem tampa serve de esconderijo.\nUma roda sem carro busca um abrigo."
+    clip: {fileID: 0}
+  - roomId: faroeste_mina
+    round: 1
+    recordingScript: "Um balde veio visitar a escavação.\nLivros empilhados contam outra missão.\nUma xícara traz chá para o mineiro.\nCaneca com alça espera um companheiro.\nUm biscoito com chocolate deixou farelinhos.\nUma banana faz curva entre os caminhos."
+    clip: {fileID: 0}
+  - roomId: faroeste_estacao
+    round: 2
+    recordingScript: "Soldado durinho, sem guerra nem quartel.\nUm doce faz curva, vermelho feito um pincel.\nRedondo e embrulhado, escondo uma surpresa.\nTenho um pé, mas não caminho pela mesa.\nNão derreto neste sol de faz de conta.\nLevo galhos na cabeça e não sou uma planta."
+    clip: {fileID: 0}
+  - roomId: faroeste_salao
+    round: 2
+    recordingScript: "Sou bengala listrada, mas não ajudo a andar.\nTenho laço e seis faces, quem vai me desembrulhar?\nVisto um chapéu, mas meu corpo devia derreter.\nGuardo luz numa casinha para você ver.\nAndo sobre trilhos, levando a vizinhança.\nSou uma garrafa com rodas nesta andança."
+    clip: {fileID: 0}
+  - roomId: faroeste_mina
+    round: 2
+    recordingScript: "Cristal de inverno, sem frio neste chão.\nUma menina de massa entrou na mineração.\nMinha cabeça tem galhos, meus pés não têm raiz.\nUm círculo com laço promete algo feliz.\nVim vestido de soldado, sou madeira de brincar.\nSem motor, preciso de alguém para me puxar."
+    clip: {fileID: 0}
+  - roomId: espaco_base
+    round: 0
+    recordingScript: "Um astronauta de bolso vai viajar,\numa antena curiosa quer escutar.\nCarrinho de corrida perdeu a direção,\num mouse apareceu nesta missão.\nPirulito redondo parece um planeta,\ne um abajur redondo ilumina a descoberta."
+    clip: {fileID: 0}
+  - roomId: espaco_jardim
+    round: 0
+    recordingScript: "Um visitante de outro lugar,\num meteoro com marcas veio pousar.\nUm rádio de brinquedo guarda o sinal,\numa laranja parece um sol especial.\nBerinjela virou nave na imaginação,\ne cristais juntinhos completam a missão."
+    clip: {fileID: 0}
+  - roomId: espaco_garagem
+    round: 0
+    recordingScript: "Uma nave pequenina vai partir,\num segundo tripulante quer se divertir.\nUma rodinha solta precisa voltar,\nalmofada azul é boa para descansar.\nDuas cerejas juntinhas fazem par,\ne sorvete no copinho eu quero encontrar."
+    clip: {fileID: 0}
+  - roomId: espaco_base
+    round: 1
+    recordingScript: "Um peixe de brinquedo quer ser astronauta.\nDuas cerejas se juntaram nesta pauta.\nUma taça de sorvete refresca a estação.\nLivros empilhados ensinam a missão.\nUma berinjela roxa veio viajar.\nUma lanterna tenta o céu iluminar."
+    clip: {fileID: 0}
+  - roomId: espaco_jardim
+    round: 1
+    recordingScript: "Uma cenoura brotou neste jardim.\nUm biscoito com chocolate sorri para mim.\nUma caneca com alça visita as flores.\nA boneca de massa trouxe novos sabores.\nUm trem de brinquedo chegou devagar.\nUma melancia veio aqui passear."
+    clip: {fileID: 0}
+  - roomId: espaco_garagem
+    round: 1
+    recordingScript: "Uma maçã vermelha espera o conserto.\nUma pera também quer ficar por perto.\nUm pirulito parece placa de atenção.\nLivros empilhados trazem instrução.\nUma lanterna visita a oficina espacial.\nUm vagão estacionou longe do quintal."
+    clip: {fileID: 0}
+  - roomId: espaco_base
+    round: 2
+    recordingScript: "Planeta embrulhado? Um laço me denuncia.\nEstrela geladinha que o sol derreteria.\nUm guarda de madeira patrulha o universo.\nUm gancho listrado adoça este verso.\nUm ônibus de trilhos perdeu sua cidade.\nGalhos sem folhas passeiam sem gravidade."
+    clip: {fileID: 0}
+  - roomId: espaco_jardim
+    round: 2
+    recordingScript: "Bengala de doce imitando uma plantinha.\nUma roupa de um pé se perdeu sozinha.\nMeu chapéu não me protege deste calor.\nCaixa com laço, sem revelar seu interior.\nUm tonel sobre rodas pede uma estação.\nTeclas sem piano esperam sua mão."
+    clip: {fileID: 0}
+  - roomId: espaco_garagem
+    round: 2
+    recordingScript: "Feita de massa, não posso pilotar.\nNeve de mentira veio nos visitar.\nSoldadinho de madeira cuida da partida.\nMeu laço esconde uma surpresa arredondada.\nSou doce e listrada, dobrada na ponta.\nUm bicho com galhos nesta nave de faz de conta."
+    clip: {fileID: 0}
+  - roomId: herois_praca
+    round: 0
+    recordingScript: "A Capitã Faísca está de prontidão,\num balde leva água para a missão.\nCaminhão de brinquedo veio trabalhar,\nmelancia de mentira quer participar.\nLivros empilhados guardam uma aventura,\ne um bolinho de festa completa a procura."
+    clip: {fileID: 0}
+  - roomId: herois_ponte
+    round: 0
+    recordingScript: "Um martelo pequeno pode consertar,\no Robô Violeta veio ajudar.\nBiscoito de gente observa a ponte,\numa pera se esconde no horizonte.\nUm cone de trânsito pede atenção,\ne caneca com alça espera uma mão."
+    clip: {fileID: 0}
+  - roomId: herois_quartel
+    round: 0
+    recordingScript: "Um comunicador quer ser encontrado,\num ajudante amarelinho está ao lado.\nCarro de corrida chegou à reunião,\nbiscoito de gente entrou na missão.\nUm picolé no palito quer participar,\ne abajur quadrado ilumina o lugar."
+    clip: {fileID: 0}
+  - roomId: herois_praca
+    round: 1
+    recordingScript: "Um morango vermelho visita a cidade.\nUm biscoito redondo pede amizade.\nUma almofada azul espera um cochilo.\nUma lanterna deixa o herói tranquilo.\nUm trenzinho colorido chama a população.\nUma pera de brinquedo assiste à missão."
+    clip: {fileID: 0}
+  - roomId: herois_ponte
+    round: 1
+    recordingScript: "Um bolinho de festa observa o rio.\nLivros empilhados contam um desafio.\nUm balde veio ajudar na construção.\nUm morango entrou nesta missão.\nUma boneca de massa quer atravessar.\nUma lanterna mostra por onde passar."
+    clip: {fileID: 0}
+  - roomId: herois_quartel
+    round: 1
+    recordingScript: "Duas cerejas vieram à reunião.\nUma laranja redonda deseja uma missão.\nUma taça de sorvete pede proteção.\nUma almofada azul aguarda o plantão.\nUma lanterna acompanha o vigia.\nUm trem de brinquedo traz a companhia."
+    clip: {fileID: 0}
+  - roomId: herois_praca
+    round: 2
+    recordingScript: "Uniforme de madeira, guardião sem poder.\nUm gancho de açúcar tenta se esconder.\nSeis faces e um laço, segredo bem guardado.\nGalhos na cabeça, um visitante inesperado.\nRoupa para um pé que esqueceu de caminhar.\nUm transporte de trilhos veio nos salvar."
+    clip: {fileID: 0}
+  - roomId: herois_ponte
+    round: 2
+    recordingScript: "Sou estrela de inverno, sem molhar o chão.\nSou redondo, tenho laço e guardo um presentão.\nBengala com listras, meu segredo é ser doce.\nFico de chapéu onde a neve nunca trouxe.\nTenho rodas, mas dependo de outra força.\nUm tanque de viagem espera uma locomotiva."
+    clip: {fileID: 0}
+  - roomId: herois_quartel
+    round: 2
+    recordingScript: "Sou guardião de madeira, parado no quartel.\nNão sou árvore, mas levo galhos até o céu.\nSurpresa arredondada, amarrada com carinho.\nCurva de açúcar espera num cantinho.\nUma estrela que prefere o frio ao verão.\nLevo a turma sobre trilhos, sem sair do chão."
+    clip: {fileID: 0}
+  discoveries:
+  - itemId: west_bucket
+    recordingScript: "Você encontrou: Um balde para a viagem."
+    clip: {fileID: 0}
+  - itemId: west_bottle
+    recordingScript: "Você encontrou: A garrafinha esquecida."
+    clip: {fileID: 0}
+  - itemId: west_wheel
+    recordingScript: "Você encontrou: Uma roda de borracha."
+    clip: {fileID: 0}
+  - itemId: west_apple
+    recordingScript: "Você encontrou: Uma maçã de brinquedo."
+    clip: {fileID: 0}
+  - itemId: west_donut
+    recordingScript: "Você encontrou: Uma rosquinha confeitada."
+    clip: {fileID: 0}
+  - itemId: west_bear
+    recordingScript: "Você encontrou: Um patinho de borracha."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_1
+    recordingScript: "Você encontrou: Pera."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_2
+    recordingScript: "Você encontrou: Caneca."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_3
+    recordingScript: "Você encontrou: Caixote."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_4
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_5
+    recordingScript: "Você encontrou: Locomotiva."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r2_6
+    recordingScript: "Você encontrou: Boneca de biscoito."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_1
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_2
+    recordingScript: "Você encontrou: Bengala doce vermelha."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_3
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_4
+    recordingScript: "Você encontrou: Meia verde."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_5
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: faroeste_estacao_r3_6
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: west_hammer
+    recordingScript: "Você encontrou: Um martelo de faz de conta."
+    clip: {fileID: 0}
+  - itemId: west_fish
+    recordingScript: "Você encontrou: Um peixe fora da água."
+    clip: {fileID: 0}
+  - itemId: west_cup
+    recordingScript: "Você encontrou: Uma xícara de chá."
+    clip: {fileID: 0}
+  - itemId: west_cookie
+    recordingScript: "Você encontrou: Um biscoito com chocolate."
+    clip: {fileID: 0}
+  - itemId: west_banana
+    recordingScript: "Você encontrou: Uma banana curva."
+    clip: {fileID: 0}
+  - itemId: west_books
+    recordingScript: "Você encontrou: Uma pilha de livros."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_1
+    recordingScript: "Você encontrou: Maçã."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_2
+    recordingScript: "Você encontrou: Cenoura."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_3
+    recordingScript: "Você encontrou: Rosquinha com confeitos."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_4
+    recordingScript: "Você encontrou: Garrafinha."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_5
+    recordingScript: "Você encontrou: Barril aberto."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r2_6
+    recordingScript: "Você encontrou: Roda."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_1
+    recordingScript: "Você encontrou: Bengala doce verde."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_2
+    recordingScript: "Você encontrou: Presente cúbico."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_3
+    recordingScript: "Você encontrou: Boneco de neve de chapéu."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_4
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_5
+    recordingScript: "Você encontrou: Bonde."
+    clip: {fileID: 0}
+  - itemId: faroeste_salao_r3_6
+    recordingScript: "Você encontrou: Vagão-tanque."
+    clip: {fileID: 0}
+  - itemId: west_pickaxe
+    recordingScript: "Você encontrou: A picareta do explorador."
+    clip: {fileID: 0}
+  - itemId: west_flask
+    recordingScript: "Você encontrou: Uma garrafa grandona."
+    clip: {fileID: 0}
+  - itemId: west_coin
+    recordingScript: "Você encontrou: Uma moeda dourada."
+    clip: {fileID: 0}
+  - itemId: west_mushroom
+    recordingScript: "Você encontrou: Um cogumelo de brinquedo."
+    clip: {fileID: 0}
+  - itemId: west_crystals
+    recordingScript: "Você encontrou: Um grupo de cristais."
+    clip: {fileID: 0}
+  - itemId: west_carrot
+    recordingScript: "Você encontrou: Uma cenoura comprida."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_1
+    recordingScript: "Você encontrou: Balde."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_2
+    recordingScript: "Você encontrou: Livros."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_3
+    recordingScript: "Você encontrou: Xícara de chá."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_4
+    recordingScript: "Você encontrou: Caneca."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_5
+    recordingScript: "Você encontrou: Biscoito com chocolate."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r2_6
+    recordingScript: "Você encontrou: Banana."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_1
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_2
+    recordingScript: "Você encontrou: Boneca de biscoito."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_3
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_4
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_5
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: faroeste_mina_r3_6
+    recordingScript: "Você encontrou: Vagão."
+    clip: {fileID: 0}
+  - itemId: space_astro
+    recordingScript: "Você encontrou: O astronauta de bolso."
+    clip: {fileID: 0}
+  - itemId: space_dish
+    recordingScript: "Você encontrou: Uma antena curiosa."
+    clip: {fileID: 0}
+  - itemId: space_car
+    recordingScript: "Você encontrou: Um carrinho de corrida."
+    clip: {fileID: 0}
+  - itemId: space_mouse
+    recordingScript: "Você encontrou: Um mouse de computador."
+    clip: {fileID: 0}
+  - itemId: space_lolly
+    recordingScript: "Você encontrou: Um pirulito redondo."
+    clip: {fileID: 0}
+  - itemId: space_lamp
+    recordingScript: "Você encontrou: Um abajur de cúpula redonda."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_1
+    recordingScript: "Você encontrou: Peixe."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_2
+    recordingScript: "Você encontrou: Cerejas."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_3
+    recordingScript: "Você encontrou: Taça de sorvete."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_4
+    recordingScript: "Você encontrou: Livros."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_5
+    recordingScript: "Você encontrou: Berinjela."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r2_6
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_1
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_2
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_3
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_4
+    recordingScript: "Você encontrou: Bengala doce vermelha."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_5
+    recordingScript: "Você encontrou: Bonde."
+    clip: {fileID: 0}
+  - itemId: espaco_base_r3_6
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: space_alien
+    recordingScript: "Você encontrou: Um visitante simpático."
+    clip: {fileID: 0}
+  - itemId: space_meteor
+    recordingScript: "Você encontrou: O meteoro cheio de marcas."
+    clip: {fileID: 0}
+  - itemId: space_radio
+    recordingScript: "Você encontrou: Um rádio de brinquedo."
+    clip: {fileID: 0}
+  - itemId: space_orange
+    recordingScript: "Você encontrou: Uma laranja redonda."
+    clip: {fileID: 0}
+  - itemId: space_eggplant
+    recordingScript: "Você encontrou: Uma berinjela de brinquedo."
+    clip: {fileID: 0}
+  - itemId: space_crystals
+    recordingScript: "Você encontrou: Um grupo de cristais."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_1
+    recordingScript: "Você encontrou: Cenoura."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_2
+    recordingScript: "Você encontrou: Biscoito com chocolate."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_3
+    recordingScript: "Você encontrou: Caneca."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_4
+    recordingScript: "Você encontrou: Boneca de biscoito."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_5
+    recordingScript: "Você encontrou: Locomotiva."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r2_6
+    recordingScript: "Você encontrou: Melancia."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_1
+    recordingScript: "Você encontrou: Bengala doce verde."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_2
+    recordingScript: "Você encontrou: Meia verde."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_3
+    recordingScript: "Você encontrou: Boneco de neve de chapéu."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_4
+    recordingScript: "Você encontrou: Presente cúbico."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_5
+    recordingScript: "Você encontrou: Vagão-tanque."
+    clip: {fileID: 0}
+  - itemId: espaco_jardim_r3_6
+    recordingScript: "Você encontrou: Teclado."
+    clip: {fileID: 0}
+  - itemId: space_ship
+    recordingScript: "Você encontrou: A nave pequenininha."
+    clip: {fileID: 0}
+  - itemId: space_pilot
+    recordingScript: "Você encontrou: O segundo tripulante."
+    clip: {fileID: 0}
+  - itemId: space_wheel
+    recordingScript: "Você encontrou: Uma rodinha solta."
+    clip: {fileID: 0}
+  - itemId: space_pillow
+    recordingScript: "Você encontrou: Uma almofada azul."
+    clip: {fileID: 0}
+  - itemId: space_cherries
+    recordingScript: "Você encontrou: Duas cerejas juntinhas."
+    clip: {fileID: 0}
+  - itemId: space_icecream
+    recordingScript: "Você encontrou: Um sorvete no copinho."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_1
+    recordingScript: "Você encontrou: Maçã."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_2
+    recordingScript: "Você encontrou: Pera."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_3
+    recordingScript: "Você encontrou: Pirulito."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_4
+    recordingScript: "Você encontrou: Livros."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_5
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r2_6
+    recordingScript: "Você encontrou: Vagão."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_1
+    recordingScript: "Você encontrou: Boneca de biscoito."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_2
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_3
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_4
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_5
+    recordingScript: "Você encontrou: Bengala doce vermelha."
+    clip: {fileID: 0}
+  - itemId: espaco_garagem_r3_6
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: hero_robot
+    recordingScript: "Você encontrou: A Capitã Faísca."
+    clip: {fileID: 0}
+  - itemId: hero_bucket
+    recordingScript: "Você encontrou: Água para a pracinha."
+    clip: {fileID: 0}
+  - itemId: hero_truck
+    recordingScript: "Você encontrou: Um caminhão de brinquedo."
+    clip: {fileID: 0}
+  - itemId: hero_watermelon
+    recordingScript: "Você encontrou: Uma melancia de brinquedo."
+    clip: {fileID: 0}
+  - itemId: hero_books
+    recordingScript: "Você encontrou: Uma pilha de livros."
+    clip: {fileID: 0}
+  - itemId: hero_cupcake
+    recordingScript: "Você encontrou: Um bolinho de festa."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_1
+    recordingScript: "Você encontrou: Morango."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_2
+    recordingScript: "Você encontrou: Biscoito."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_3
+    recordingScript: "Você encontrou: Almofada azul."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_4
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_5
+    recordingScript: "Você encontrou: Locomotiva."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r2_6
+    recordingScript: "Você encontrou: Pera."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_1
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_2
+    recordingScript: "Você encontrou: Bengala doce vermelha."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_3
+    recordingScript: "Você encontrou: Presente cúbico."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_4
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_5
+    recordingScript: "Você encontrou: Meia verde."
+    clip: {fileID: 0}
+  - itemId: herois_praca_r3_6
+    recordingScript: "Você encontrou: Bonde."
+    clip: {fileID: 0}
+  - itemId: hero_hammer
+    recordingScript: "Você encontrou: A ferramenta do conserto."
+    clip: {fileID: 0}
+  - itemId: hero_friend
+    recordingScript: "Você encontrou: O Robô Violeta."
+    clip: {fileID: 0}
+  - itemId: hero_bear
+    recordingScript: "Você encontrou: Um biscoito em forma de gente."
+    clip: {fileID: 0}
+  - itemId: hero_pear
+    recordingScript: "Você encontrou: Uma pera de brinquedo."
+    clip: {fileID: 0}
+  - itemId: hero_cone
+    recordingScript: "Você encontrou: Um cone de trânsito."
+    clip: {fileID: 0}
+  - itemId: hero_mug
+    recordingScript: "Você encontrou: Uma caneca com alça."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_1
+    recordingScript: "Você encontrou: Bolinho."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_2
+    recordingScript: "Você encontrou: Livros."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_3
+    recordingScript: "Você encontrou: Balde."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_4
+    recordingScript: "Você encontrou: Morango."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_5
+    recordingScript: "Você encontrou: Boneca de biscoito."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r2_6
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_1
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_2
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_3
+    recordingScript: "Você encontrou: Bengala doce verde."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_4
+    recordingScript: "Você encontrou: Boneco de neve de chapéu."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_5
+    recordingScript: "Você encontrou: Vagão."
+    clip: {fileID: 0}
+  - itemId: herois_ponte_r3_6
+    recordingScript: "Você encontrou: Vagão-tanque."
+    clip: {fileID: 0}
+  - itemId: hero_antenna
+    recordingScript: "Você encontrou: O comunicador da liga."
+    clip: {fileID: 0}
+  - itemId: hero_helper
+    recordingScript: "Você encontrou: O ajudante amarelinho."
+    clip: {fileID: 0}
+  - itemId: hero_car
+    recordingScript: "Você encontrou: Um carro de corrida."
+    clip: {fileID: 0}
+  - itemId: hero_cookie
+    recordingScript: "Você encontrou: Um biscoito em forma de gente."
+    clip: {fileID: 0}
+  - itemId: hero_popsicle
+    recordingScript: "Você encontrou: Um picolé no palito."
+    clip: {fileID: 0}
+  - itemId: hero_lamp
+    recordingScript: "Você encontrou: Um abajur de cúpula quadrada."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_1
+    recordingScript: "Você encontrou: Cerejas."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_2
+    recordingScript: "Você encontrou: Laranja."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_3
+    recordingScript: "Você encontrou: Taça de sorvete."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_4
+    recordingScript: "Você encontrou: Almofada azul."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_5
+    recordingScript: "Você encontrou: Lanterna."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r2_6
+    recordingScript: "Você encontrou: Locomotiva."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_1
+    recordingScript: "Você encontrou: Quebra-nozes."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_2
+    recordingScript: "Você encontrou: Rena."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_3
+    recordingScript: "Você encontrou: Presente redondo."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_4
+    recordingScript: "Você encontrou: Bengala doce verde."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_5
+    recordingScript: "Você encontrou: Floco de neve."
+    clip: {fileID: 0}
+  - itemId: herois_quartel_r3_6
+    recordingScript: "Você encontrou: Bonde."
+    clip: {fileID: 0}

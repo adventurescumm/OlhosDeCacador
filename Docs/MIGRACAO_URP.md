@@ -4,24 +4,24 @@ O aviso **“The Built-In Renderer Pipeline is deprecated”** se refere ao pipe
 
 ## Abrir a revisão
 
-1. Extraia o ZIP em uma pasta nova e abra `OlhosDeCacador` pelo Unity Hub com o editor 6000.6.4f1.
+1. Extraia o ZIP em uma pasta nova e abra `BemTeVi` pelo Unity Hub com o editor 6000.6.4f1.
 2. Espere o Package Manager resolver o pacote **Universal Render Pipeline 17.6.0** e a importação terminar.
-3. Execute **Olhos de Cacador > 1. Preparar projeto** e depois **2. Verificar conteudo**.
-4. Abra `Assets/Hunter/Scenes/Main.unity` e pressione Play.
+3. Execute **Bem-Te-Vi > 1. Preparar projeto** e depois **2. Verificar conteudo**.
+4. Abra `Assets/BemTeVi/Scenes/Main.unity` e pressione Play.
 5. Limpe o Console e reabra o projeto para conferir se o aviso reaparece. Uma mensagem antiga no Console não indica que a configuração atual ainda usa Built-in.
 
-Caso já tenha gravado sua narração ou editado cenários na versão anterior, mantenha essa pasta. Na atualização da v0.8 para a v0.9, somente a charada da estação de faroeste mudou: o último verso agora pede um patinho. Preserve as outras oito gravações e confira os roteiros em [NARRACAO.md](NARRACAO.md). Não substitua o catálogo ou o banco novos pelas versões antigas; compare alterações próprias conforme [ATUALIZACAO_V09.md](ATUALIZACAO_V09.md). Mudanças próprias nos scripts devem ser comparadas antes de substituir arquivos. A chave de salvamento do jogo continua `OlhosDeCacador.v1`.
+Caso já tenha gravado sua narração ou editado cenários na versão anterior, mantenha essa pasta. Na atualização da v0.8 para a v0.9, somente a charada da estação de faroeste mudou: o último verso agora pede um patinho. Preserve as outras oito gravações e confira os roteiros em [NARRACAO.md](NARRACAO.md). Não substitua o catálogo ou o banco novos pelas versões antigas; compare alterações próprias conforme [ATUALIZACAO_V09.md](ATUALIZACAO_V09.md). Mudanças próprias nos scripts devem ser comparadas antes de substituir arquivos. A chave de salvamento do jogo continua `BemTeVi.v1`.
 
 ## Campos para conferir no editor
 
 | Local | Valor esperado |
 | --- | --- |
 | Package Manager → Universal Render Pipeline | 17.6.0 |
-| Project Settings → Graphics → Default Render Pipeline | `HunterURP` |
-| Project Settings → Quality → Render Pipeline Asset | `HunterURP` em todos os níveis existentes |
-| `Assets/Hunter/Settings/HunterURP.asset` → Renderer List | `HunterRenderer`, índice padrão 0 |
-| `Assets/Hunter/Settings/HunterRenderer.asset` → Rendering Path | Forward |
-| Materiais em `Assets/Resources/Hunter/Materials` → Shader | Universal Render Pipeline/Lit |
+| Project Settings → Graphics → Default Render Pipeline | `BemTeViURP` |
+| Project Settings → Quality → Render Pipeline Asset | `BemTeViURP` em todos os níveis existentes |
+| `Assets/BemTeVi/Settings/BemTeViURP.asset` → Renderer List | `BemTeViRenderer`, índice padrão 0 |
+| `Assets/BemTeVi/Settings/BemTeViRenderer.asset` → Rendering Path | Forward |
+| Materiais em `Assets/Resources/BemTeVi/Materials` → Shader | Universal Render Pipeline/Lit |
 
 O nível de qualidade atual chama-se **Windows**, desde a revisão v0.5. Os assets fornecidos já estão atribuídos em Graphics e Quality. O comando **6. Configurar URP** refaz as referências se tiverem sido removidas, e também é chamado por Preparar projeto/build. Desde a v0.6, o projeto não agenda esse comando após importação ou recarga de scripts: as gravações são feitas por comandos explícitos, com o editor fora de Play e da importação. Os valores iniciais são MSAA 2×, HDR desligado, sombras de 1024 px e distância de 35 unidades. A v0.8 configura luzes adicionais por pixel, com limite de duas por objeto, para a luz quente de cada quarto. Suas sombras continuam desligadas. A preparação aplica essa configuração também aos assets já existentes.
 
@@ -40,7 +40,7 @@ Nenhum OBJ, MTL, PNG ou OGG original foi modificado. O importador calcula normai
 
 ## Correção CS0200 e Safe Mode
 
-As propriedades `supportsMainLightShadows` e `supportsAdditionalLightShadows` do URP 17.6 não oferecem um setter público. A versão anterior de `HunterRenderPipeline.cs` tentou atribuir valores a elas, causando os dois erros CS0200 relatados pelo usuário. O problema estava no script fornecido.
+As propriedades `supportsMainLightShadows` e `supportsAdditionalLightShadows` do URP 17.6 não oferecem um setter público. A versão anterior de `BemTeViRenderPipeline.cs` tentou atribuir valores a elas, causando os dois erros CS0200 relatados pelo usuário. O problema estava no script fornecido.
 
 O script corrigido configura `m_MainLightShadowsSupported`, `m_AdditionalLightShadowsSupported` e `m_AnyShadowsSupported` pelo `SerializedObject` já usado na criação do asset. Os valores continuam: sombras da luz principal ligadas, sombras de luzes adicionais desligadas. As outras onze atribuições a propriedades de URP nesse script foram conferidas na API pública 17.6 e têm setter público.
 
@@ -49,10 +49,10 @@ Os passos abaixo aplicam **somente a correção histórica dos dois CS0200**. Pa
 Para aplicar apenas a correção CS0200 na sua cópia em uso:
 
 1. Extraia o pacote atualizado em uma pasta temporária.
-2. Copie **somente** `Assets/Hunter/Editor/HunterRenderPipeline.cs` para o mesmo caminho no seu projeto, substituindo o arquivo anterior. Mantenha o `.meta` existente.
+2. Copie **somente** `Assets/BemTeVi/Editor/BemTeViRenderPipeline.cs` para o mesmo caminho no seu projeto, substituindo o arquivo anterior. Mantenha o `.meta` existente.
 3. Volte ao Unity e aguarde a recompilação. Se ela não iniciar, feche e reabra o projeto.
 4. Quando não restarem erros de compilação, a Unity sai automaticamente do Safe Mode e continua a importação.
-5. Depois da importação, execute **Olhos de Cacador > 1. Preparar projeto** e **2. Verificar conteudo**.
+5. Depois da importação, execute **Bem-Te-Vi > 1. Preparar projeto** e **2. Verificar conteudo**.
 
 Não é necessário substituir seus cenários, catálogos ou gravações para corrigir esses dois erros. Se aparecer outra mensagem, ela precisa ser diagnosticada separadamente; esta entrega não contém uma compilação Unity executada neste ambiente.
 

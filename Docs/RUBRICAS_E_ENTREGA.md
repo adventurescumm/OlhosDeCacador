@@ -1,3 +1,5 @@
+> Documento de critérios da revisão anterior. Para o estado implementado e os limites de validação atuais, consulte [VALIDACAO.md](VALIDACAO.md) e [GDD.md](GDD.md).
+
 # Rubricas e preparação da entrega
 
 Fonte: [documento fornecido da disciplina](https://docs.google.com/document/d/1jBL3xrub3hth5j5P7CbFNZcJv1uFdbAc/edit), consultado em 13/11/2026. Prazo indicado: **25/11/2026**. A entrega pede uma versão Windows, repositório do código, GDD atualizado e publicação na [jam do itch.io](https://itch.io/jam/projeto-jogo-3d-insper-20262), com a confirmação nos canais da disciplina. A versão web deixou de fazer parte do escopo, conforme a orientação posterior do usuário. A publicação prevista é um download Windows.

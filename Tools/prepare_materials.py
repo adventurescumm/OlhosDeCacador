@@ -7,7 +7,7 @@ from pathlib import Path
 import json, re, uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-MODELS = ROOT / 'Assets/Resources/Hunter/Models'
+MODELS = ROOT / 'Assets/Resources/BemTeVi/Models'
 # Unity Graphics 6000.6/staging, URP 17.6: Shaders/Lit.shader.meta.
 LIT_SHADER_GUID = '933532a4fcc9baf4fa0491de14d08ed7'
 # URP 17.6 Editor/AssetVersion.cs.meta and MaterialPostprocessor.k_Upgraders.
@@ -21,7 +21,7 @@ def guid(path):
     if meta.exists():
         match = re.search(r'guid: ([a-f0-9]+)', meta.read_text())
         if match: return match[1]
-    value = uuid.uuid5(uuid.NAMESPACE_URL, 'olhos-de-cacador/' + path.relative_to(ROOT).as_posix()).hex
+    value = uuid.uuid5(uuid.NAMESPACE_URL, 'bem-te-vi/' + path.relative_to(ROOT).as_posix()).hex
     meta.write_text('fileFormatVersion: 2\nguid: ' + value + '\n')
     return value
 
@@ -43,7 +43,7 @@ def main():
         asset = obj.relative_to(MODELS).with_suffix('').as_posix()
         for name in used:
             source = definitions[name.strip()]
-            mat = ROOT / 'Assets/Resources/Hunter/Materials' / asset / (name.strip() + '.mat')
+            mat = ROOT / 'Assets/Resources/BemTeVi/Materials' / asset / (name.strip() + '.mat')
             mat.parent.mkdir(parents=True, exist_ok=True)
             tex = '{fileID: 0}'
             if source['texture']:
@@ -123,7 +123,7 @@ MonoBehaviour:
             if 'NativeFormatImporter:' not in meta.read_text():
                 meta.write_text(meta.read_text() + 'NativeFormatImporter:\n  externalObjects: {}\n  mainObjectFileID: 2100000\n')
             records.append({'model': asset, 'name': name.strip(), 'material': mat.relative_to(ROOT).as_posix(), **source})
-    (ROOT / 'Assets/Resources/Hunter/material-bindings.json').write_text(json.dumps({'materials': records}, ensure_ascii=False, indent=2))
+    (ROOT / 'Assets/Resources/BemTeVi/material-bindings.json').write_text(json.dumps({'materials': records}, ensure_ascii=False, indent=2))
     print(f'{len(records)} original material definitions converted to URP/Lit; source art unchanged.')
 
 if __name__ == '__main__': main()

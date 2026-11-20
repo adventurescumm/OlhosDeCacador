@@ -34,8 +34,8 @@ O mesmo tipo de objeto conserva um som reconhecível entre salas. O ambiente toc
 
 ## Editar sem gerar assets
 
-- `Assets/Resources/Hunter/soundscapes.json`: sons por cena, ganho do ambiente e intervalo entre reproduções.
-- `PropData.sound` no catálogo/Inspector: caminho relativo a Hunter/Audio, sem extensão, para resposta específica do objeto.
+- `Assets/Resources/BemTeVi/soundscapes.json`: sons por cena, ganho do ambiente e intervalo entre reproduções.
+- `PropData.sound` no catálogo/Inspector: caminho relativo a BemTeVi/Audio, sem extensão, para resposta específica do objeto.
 - `Assets/ThirdPartyLicenses`: textos de licença originais e referência da gravação de pássaros.
 
 Os sons do vídeo não foram reutilizados. A aproximação procurada é a coerência entre brinquedo, material, movimento e som; não uma cópia exata da trilha de I Spy.

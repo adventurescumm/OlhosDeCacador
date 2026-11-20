@@ -13,10 +13,10 @@ A revisão preenche os 83 importadores de modelos e sete importadores de áudio.
 ## Abrir a revisão completa
 
 1. Feche Unity e preserve sua cópia atual, especialmente gravações e mudanças próprias.
-2. Extraia o ZIP v0.7 em uma pasta nova e abra `OlhosDeCacador` com **Unity 6000.6.4f1**.
+2. Extraia o ZIP v0.7 em uma pasta nova e abra `BemTeVi` com **Unity 6000.6.4f1**.
 3. Aguarde **URP 17.6.0** e **Input System 1.20.1**. Se o editor solicitar ativar o backend e reiniciar, permita o reinício. Active Input Handling deve ser **Input System Package (New)**.
-4. Fora do Play e após importação/compilação, execute **Olhos de Cacador > 1. Preparar projeto** e **2. Verificar conteudo**.
-5. Limpe o Console, abra `Assets/Hunter/Scenes/Main.unity` e dê Play. Escolha um brinquedo no quarto e teste placas e desafios.
+4. Fora do Play e após importação/compilação, execute **Bem-Te-Vi > 1. Preparar projeto** e **2. Verificar conteudo**.
+5. Limpe o Console, abra `Assets/BemTeVi/Scenes/Main.unity` e dê Play. Escolha um brinquedo no quarto e teste placas e desafios.
 
 Para levar suas gravações à nova cópia, copie os áudios e seus `.meta`, além do `NarrationBank.asset` preenchido e seu `.meta`. Os nove IDs e textos continuam iguais. Não substitua o catálogo novo pelo antigo: passagens, câmeras, quarto e desafios 3D dependem dos novos campos.
 
@@ -37,9 +37,9 @@ Reabra Unity, espere a importação terminar e execute Preparar projeto / Verifi
 
 Com backup e Unity fechado, compare suas alterações antes de substituir:
 
-- `Assets/Hunter/Runtime/`: mudanças de fluxo, composição e animação, novos `WorldHotspot.cs` e `HunterGame.World.cs` e atualização de `Domain/GameData.cs`. Copie também os `.meta` dos dois arquivos novos; mantenha os GUIDs existentes.
-- `Assets/Hunter/Editor/HunterBuild.cs`: confere quarto, passagens, peças e versões dos importadores, além das verificações anteriores.
-- `Assets/Resources/Hunter/catalog.json`: novas composições, câmeras, quarto, passagens e desafios. Preserve uma cópia caso tenha criado cenários próprios; combine essas alterações com o novo formato.
+- `Assets/BemTeVi/Runtime/`: mudanças de fluxo, composição e animação, novos `WorldHotspot.cs` e `BemTeViGame.World.cs` e atualização de `Domain/GameData.cs`. Copie também os `.meta` dos dois arquivos novos; mantenha os GUIDs existentes.
+- `Assets/BemTeVi/Editor/BemTeViBuild.cs`: confere quarto, passagens, peças e versões dos importadores, além das verificações anteriores.
+- `Assets/Resources/BemTeVi/catalog.json`: novas composições, câmeras, quarto, passagens e desafios. Preserve uma cópia caso tenha criado cenários próprios; combine essas alterações com o novo formato.
 - `Tools/`, `README.md` e `Docs/`: validadores e instruções atualizados.
 - Execute o reparo de metadados acima antes de reabrir. Preparar projeto aplica a versão de produto 0.7.0.
 

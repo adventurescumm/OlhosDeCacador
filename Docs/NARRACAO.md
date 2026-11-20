@@ -1,166 +1,387 @@
-# Sua voz em Olhos de Caçador — v0.10
+# Bem-Te-Vi — voz e charadas 0.12
 
-Atualizado em 13/11/2026 para Unity 6000.6.4f1 e Windows. Há **nove charadas, cada uma com seis versos e seis objetos**. Os nove IDs de sala continuam iguais, mas os textos foram ampliados: gravações da v0.7, com apenas dois alvos, precisam ser refeitas. O pacote não contém voz gerada nem gravações de narrador.
+Há 27 campos de charadas e 162 confirmações por objeto. Gravações próprias têm prioridade. Sem clipe, o Windows lê com uma voz instalada, preferindo pt-BR; fora do Windows, a voz depende das gravações. Não há arquivos de narração gravada incluídos.
 
-## Onde a narração aparece
+As confirmações entram em fila e são interrompidas ao pausar, perder foco ou trocar de sala. Elas não geram mensagens na tela. Veja [roteiros de confirmação](NARRACAO_DESCOBERTAS.md).
 
-A abertura mostra Iniciar, Opções e Como jogar sobre o quarto. Iniciar permite explorar três maquetes: vila do faroeste à esquerda, nave sobre a mesa e cidade à direita. Dentro de cada mundo, clique nas portas, trilhos e pontes para passar entre cenários; não há menu de destinos. Consulte [CENAS.md](CENAS.md) para os nomes das cenas.
+## Como gravar e importar
 
-A voz gravada é usada **somente nas nove buscas**. No caminho, no quarto, nas passagens e nos desafios, as instruções são texto e podem ser lidas ao vivo. Essas cenas não acrescentam campos ao banco de narração.
+Leia cada bloco de seis versos com pequenas pausas. Exporte uma gravação por bloco. Coloque os arquivos em `Assets/Resources/BemTeVi/Narration/` com os nomes indicados abaixo, sem mudar o sufixo `_r1`, `_r2` ou `_r3`. Alternativamente, arraste o áudio no campo Clip correspondente de `NarrationBank.asset`; Round usa 0, 1 e 2.
 
-Durante uma busca, os versos ficam na faixa inferior, em duas colunas de três linhas. Leia a primeira coluna de cima para baixo e depois a segunda. A faixa é reservada aos versos. Acesse **Menu → Uma ajudinha** para escolher um verso; **Menu → Ler juntos / Ouvir charada** reúne os controles de leitura. Uma marca e uma cor diferente indicam os versos já resolvidos.
+O jogo escolhe a gravação da rodada atual, com fallback para a voz instalada no Windows. Menu → Ouvir charada toca a voz; Ler juntos mostra os versos. Opções controla o volume da voz e a leitura automática. Sem gravação, as charadas usam a voz do Windows quando disponível e permanecem jogáveis por texto. A fala para ao sair da sala e não se sobrepõe à sequência musical do desafio.
 
-## Gravar e integrar
-
-1. Grave um arquivo por charada, lendo os seis versos do bloco correspondente. Não leia o ID. Faça pausas curtas entre versos e deixe os nomes dos objetos claros.
-2. Fora do Play, importe seus WAV ou OGG em `Assets` e aguarde o Unity. Os 28 efeitos/ambientes prontos são independentes da sua gravação.
-3. Selecione `Assets/Resources/Hunter/Narration/NarrationBank.asset` na janela Project.
-4. Expanda `Readings`. Cada item contém `Room Id`, `Recording Script` e `Clip`. Mantenha os nove IDs.
-5. Arraste a gravação nova para o `Clip` correspondente.
-6. Execute **Olhos de Cacador > 2. Verificar conteudo**. O comando compara os roteiros com o catálogo e conta as gravações disponíveis; ele não escuta o conteúdo dos clipes.
-7. Dê Play por `Assets/Hunter/Scenes/Main.unity`, entre no mundo e visite a busca. Teste **Menu → Ouvir charada**.
-
-**Alternativa por nome:** com Clip vazio, o banco procura `Assets/Resources/Hunter/Narration/<ID>.wav` ou `.ogg`, por exemplo `faroeste_estacao.wav`. Use apenas um arquivo com esse nome-base. Um Clip atribuído explicitamente tem prioridade. Importar um arquivo com o nome do caminho ou do desafio não cria uma fala nova nessas cenas.
-
-O texto de jogo vem de `Assets/Resources/Hunter/catalog.json`; o Inspector mostra `Recording Script`. Se personalizar a charada, mantenha os dois textos e este guia sincronizados, com **seis linhas**, e atualize o áudio. Editar este Markdown sozinho não altera a fala nem o texto no jogo.
-
-## Controles e interrupções
-
-| Situação | Comportamento |
-| --- | --- |
-| Ler juntos | Sempre disponível. Interrompe o áudio e abre os seis versos maiores; Voltar e procurar ou Esc retorna à busca. |
-| Ouvir charada | Toca o clipe da sala desde o começo. |
-| Abrir Menu durante a leitura | Interrompe a voz. Ouvir charada começa novamente do início. |
-| Sem gravação | Ouvir charada fica desabilitado no Menu; Ler juntos continua disponível. |
-| Encontrar um objeto | A voz continua; os efeitos ficam mais baixos enquanto ela toca. |
-| Atravessar uma passagem, mudar de cena, abrir pausa/caderno/leitura ou desafio | A fala é interrompida. Não continua tocando na cena seguinte. |
-| Alt+Tab ou perda de foco | Interrompe a voz; voltar à janela não a reinicia sozinho. |
-
-As gravações não se sobrepõem. A voz é opcional e não é necessária para resolver as passagens ou os desafios.
-
-### Opções e leitura ao vivo
-
-Abra Opções na abertura ou **Menu → Opções** durante a aventura. **Sons dos brinquedos** e **Voz do narrador** têm volumes independentes; o silêncio geral afeta ambos. As preferências são guardadas.
-
-**Leitura automática** começa desligada numa instalação sem preferências anteriores. Quando ativada, toca ao entrar numa busca e ao retornar à busca após pausa, caderno ou Ler juntos, se houver clipe e volume. Não toca no caminho nem no quarto. A saída física do desafio retorna à última busca, cuja leitura pode recomeçar se a opção automática estiver ativa. Objetos já encontrados não impedem a repetição da charada.
-
-Para narrar ao vivo enquanto alguém procura, use os versos na faixa inferior. Ler juntos ocupa a tela e precisa ser fechado para retomar os cliques no cenário. Desative Leitura automática ou deixe somente Voz do narrador em zero para evitar fala gravada junto da sua. Movimento reduzido não altera os versos nem o áudio.
-
-## Migrar gravações anteriores
-
-**Da v0.9 para a v0.10:** os nove roteiros são idênticos. Reaproveite suas gravações e referências; somente a interface e a mistura dos efeitos mudaram.
-
-**Da v0.8 para a v0.9:** somente a última linha de `faroeste_estacao` mudou, para o pato de borracha. Regrave essa charada; as outras oito mantêm os mesmos textos. Compare os roteiros antes de reutilizar seus clipes.
-
-Guarde os áudios antigos e seus `.meta` numa cópia do projeto. Os GUIDs preservam referências, mas **não tornam uma gravação antiga compatível com os seis alvos novos**. Se vier de uma versão anterior à v0.8, confira e grave os nove textos de seis versos abaixo; para a v0.9, não é necessário regravar. Se mantiver o mesmo arquivo para preservar um vínculo, substitua também seu conteúdo de áudio pela leitura nova.
-
-Não substitua o banco e o catálogo atuais por cópias antigas: isso restauraria roteiros de quatro versos e removeria dados dos caminhos. Para personalizações, combine os novos textos e campos conscientemente. Veja [ATUALIZACAO_V10.md](ATUALIZACAO_V10.md).
-
-Os 28 AudioImporters fornecidos pertencem aos efeitos e ambientes prontos. `Tools/repair_importer_metadata.py` atua nos assets do manifesto, não em gravações particulares. Importe sua voz normalmente pelo Unity, conservando os metadados que ele gerar.
-
-## Roteiros completos
+## Faroeste de Quintal — rodada 1
 
 ### Estação do Quintal
 
-ID: `faroeste_estacao`
+**Arquivo:** `faroeste_estacao_r1.wav`
 
-> Um balde quer água levar,  
-> uma garrafinha veio passear.  
-> Uma roda pede outra viagem,  
-> uma maçã se esconde na bagagem.  
-> Rosquinha com confeitos eu vou procurar,  
-> e um pato de borracha quer me acompanhar.  
+Um balde quer água levar,
+uma garrafinha veio passear.
+Uma roda pede outra viagem,
+uma maçã se esconde na bagagem.
+Rosquinha com confeitos eu vou procurar,
+e um pato de borracha quer me acompanhar.
+
+**Respostas (não ler):** Um balde para a viagem, A garrafinha esquecida, Uma roda de borracha, Uma maçã de brinquedo, Uma rosquinha confeitada, Um patinho de borracha.
 
 ### Salão do Suco
 
-ID: `faroeste_salao`
+**Arquivo:** `faroeste_salao_r1.wav`
 
-> Um martelo quer ajudar,  
-> um peixe sem rio veio brincar.  
-> Xícara de chá para a visita,  
-> biscoito com chocolate na pista.  
-> Uma banana curva eu quero achar,  
-> e livros empilhados para imaginar.  
+Um martelo quer ajudar,
+um peixe sem rio veio brincar.
+Xícara de chá para a visita,
+biscoito com chocolate na pista.
+Uma banana curva eu quero achar,
+e livros empilhados para imaginar.
 
-### Mina dos Brilhos
+**Respostas (não ler):** Um martelo de faz de conta, Um peixe fora da água, Uma xícara de chá, Um biscoito com chocolate, Uma banana curva, Uma pilha de livros.
 
-ID: `faroeste_mina`
+### A mina dentro do baú
 
-> Uma picareta quer trabalhar,  
-> uma garrafa grandona vou encontrar.  
-> Moeda dourada vale um tesouro,  
-> cogumelo de mentira não é ouro.  
-> Cristais juntinhos brilham no caminho,  
-> e uma cenoura espera num cantinho.  
+**Arquivo:** `faroeste_mina_r1.wav`
+
+Uma picareta quer trabalhar,
+uma garrafa grandona vou encontrar.
+Moeda dourada vale um tesouro,
+cogumelo de mentira não é ouro.
+Cristais juntinhos brilham no caminho,
+e uma cenoura espera num cantinho.
+
+**Respostas (não ler):** A picareta do explorador, Uma garrafa grandona, Uma moeda dourada, Um cogumelo de brinquedo, Um grupo de cristais, Uma cenoura comprida.
+
+## Faroeste de Quintal — rodada 2
+
+### Estação do Quintal
+
+**Arquivo:** `faroeste_estacao_r2.wav`
+
+Uma pera de brinquedo veio de carona.
+A caneca com alça espera sua dona.
+Um caixote pequeno guarda uma viagem.
+Uma lanterna clareia a bagagem.
+O trenzinho colorido quer partir.
+Uma boneca de biscoito veio sorrir.
+
+**Respostas (não ler):** Pera, Caneca, Caixote, Lanterna, Locomotiva, Boneca de biscoito.
+
+### Salão do Suco
+
+**Arquivo:** `faroeste_salao_r2.wav`
+
+Uma maçã foi convidada para o chá.
+A cenoura de brinquedo também está lá.
+Confeitos coloridos enfeitam uma rosquinha.
+Uma garrafinha espera uma mãozinha.
+Um barril sem tampa serve de esconderijo.
+Uma roda sem carro busca um abrigo.
+
+**Respostas (não ler):** Maçã, Cenoura, Rosquinha com confeitos, Garrafinha, Barril aberto, Roda.
+
+### A mina dentro do baú
+
+**Arquivo:** `faroeste_mina_r2.wav`
+
+Um balde veio visitar a escavação.
+Livros empilhados contam outra missão.
+Uma xícara traz chá para o mineiro.
+Caneca com alça espera um companheiro.
+Um biscoito com chocolate deixou farelinhos.
+Uma banana faz curva entre os caminhos.
+
+**Respostas (não ler):** Balde, Livros, Xícara de chá, Caneca, Biscoito com chocolate, Banana.
+
+## Faroeste de Quintal — rodada 3
+
+### Estação do Quintal
+
+**Arquivo:** `faroeste_estacao_r3.wav`
+
+Soldado durinho, sem guerra nem quartel.
+Um doce faz curva, vermelho feito um pincel.
+Redondo e embrulhado, escondo uma surpresa.
+Tenho um pé, mas não caminho pela mesa.
+Não derreto neste sol de faz de conta.
+Levo galhos na cabeça e não sou uma planta.
+
+**Respostas (não ler):** Quebra-nozes, Bengala doce vermelha, Presente redondo, Meia verde, Floco de neve, Rena.
+
+### Salão do Suco
+
+**Arquivo:** `faroeste_salao_r3.wav`
+
+Sou bengala listrada, mas não ajudo a andar.
+Tenho laço e seis faces, quem vai me desembrulhar?
+Visto um chapéu, mas meu corpo devia derreter.
+Guardo luz numa casinha para você ver.
+Ando sobre trilhos, levando a vizinhança.
+Sou uma garrafa com rodas nesta andança.
+
+**Respostas (não ler):** Bengala doce verde, Presente cúbico, Boneco de neve de chapéu, Lanterna, Bonde, Vagão-tanque.
+
+### A mina dentro do baú
+
+**Arquivo:** `faroeste_mina_r3.wav`
+
+Cristal de inverno, sem frio neste chão.
+Uma menina de massa entrou na mineração.
+Minha cabeça tem galhos, meus pés não têm raiz.
+Um círculo com laço promete algo feliz.
+Vim vestido de soldado, sou madeira de brincar.
+Sem motor, preciso de alguém para me puxar.
+
+**Respostas (não ler):** Floco de neve, Boneca de biscoito, Rena, Presente redondo, Quebra-nozes, Vagão.
+
+## Missão Caixa Lunar — rodada 1
 
 ### Base de Papelão
 
-ID: `espaco_base`
+**Arquivo:** `espaco_base_r1.wav`
 
-> Um astronauta de bolso vai viajar,  
-> uma antena curiosa quer escutar.  
-> Carrinho de corrida perdeu a direção,  
-> um mouse apareceu nesta missão.  
-> Pirulito redondo parece um planeta,  
-> e um abajur redondo ilumina a descoberta.  
+Um astronauta de bolso vai viajar,
+uma antena curiosa quer escutar.
+Carrinho de corrida perdeu a direção,
+um mouse apareceu nesta missão.
+Pirulito redondo parece um planeta,
+e um abajur redondo ilumina a descoberta.
+
+**Respostas (não ler):** O astronauta de bolso, Uma antena curiosa, Um carrinho de corrida, Um mouse de computador, Um pirulito redondo, Um abajur de cúpula redonda.
 
 ### Jardim de Meteoros
 
-ID: `espaco_jardim`
+**Arquivo:** `espaco_jardim_r1.wav`
 
-> Um visitante de outro lugar,  
-> um meteoro com marcas veio pousar.  
-> Um rádio de brinquedo guarda o sinal,  
-> uma laranja parece um sol especial.  
-> Berinjela virou nave na imaginação,  
-> e cristais juntinhos completam a missão.  
+Um visitante de outro lugar,
+um meteoro com marcas veio pousar.
+Um rádio de brinquedo guarda o sinal,
+uma laranja parece um sol especial.
+Berinjela virou nave na imaginação,
+e cristais juntinhos completam a missão.
+
+**Respostas (não ler):** Um visitante simpático, O meteoro cheio de marcas, Um rádio de brinquedo, Uma laranja redonda, Uma berinjela de brinquedo, Um grupo de cristais.
 
 ### Garagem das Naves
 
-ID: `espaco_garagem`
+**Arquivo:** `espaco_garagem_r1.wav`
 
-> Uma nave pequenina vai partir,  
-> um segundo tripulante quer se divertir.  
-> Uma rodinha solta precisa voltar,  
-> almofada azul é boa para descansar.  
-> Duas cerejas juntinhas fazem par,  
-> e sorvete no copinho eu quero encontrar.  
+Uma nave pequenina vai partir,
+um segundo tripulante quer se divertir.
+Uma rodinha solta precisa voltar,
+almofada azul é boa para descansar.
+Duas cerejas juntinhas fazem par,
+e sorvete no copinho eu quero encontrar.
+
+**Respostas (não ler):** A nave pequenininha, O segundo tripulante, Uma rodinha solta, Uma almofada azul, Duas cerejas juntinhas, Um sorvete no copinho.
+
+## Missão Caixa Lunar — rodada 2
+
+### Base de Papelão
+
+**Arquivo:** `espaco_base_r2.wav`
+
+Um peixe de brinquedo quer ser astronauta.
+Duas cerejas se juntaram nesta pauta.
+Uma taça de sorvete refresca a estação.
+Livros empilhados ensinam a missão.
+Uma berinjela roxa veio viajar.
+Uma lanterna tenta o céu iluminar.
+
+**Respostas (não ler):** Peixe, Cerejas, Taça de sorvete, Livros, Berinjela, Lanterna.
+
+### Jardim de Meteoros
+
+**Arquivo:** `espaco_jardim_r2.wav`
+
+Uma cenoura brotou neste jardim.
+Um biscoito com chocolate sorri para mim.
+Uma caneca com alça visita as flores.
+A boneca de massa trouxe novos sabores.
+Um trem de brinquedo chegou devagar.
+Uma melancia veio aqui passear.
+
+**Respostas (não ler):** Cenoura, Biscoito com chocolate, Caneca, Boneca de biscoito, Locomotiva, Melancia.
+
+### Garagem das Naves
+
+**Arquivo:** `espaco_garagem_r2.wav`
+
+Uma maçã vermelha espera o conserto.
+Uma pera também quer ficar por perto.
+Um pirulito parece placa de atenção.
+Livros empilhados trazem instrução.
+Uma lanterna visita a oficina espacial.
+Um vagão estacionou longe do quintal.
+
+**Respostas (não ler):** Maçã, Pera, Pirulito, Livros, Lanterna, Vagão.
+
+## Missão Caixa Lunar — rodada 3
+
+### Base de Papelão
+
+**Arquivo:** `espaco_base_r3.wav`
+
+Planeta embrulhado? Um laço me denuncia.
+Estrela geladinha que o sol derreteria.
+Um guarda de madeira patrulha o universo.
+Um gancho listrado adoça este verso.
+Um ônibus de trilhos perdeu sua cidade.
+Galhos sem folhas passeiam sem gravidade.
+
+**Respostas (não ler):** Presente redondo, Floco de neve, Quebra-nozes, Bengala doce vermelha, Bonde, Rena.
+
+### Jardim de Meteoros
+
+**Arquivo:** `espaco_jardim_r3.wav`
+
+Bengala de doce imitando uma plantinha.
+Uma roupa de um pé se perdeu sozinha.
+Meu chapéu não me protege deste calor.
+Caixa com laço, sem revelar seu interior.
+Um tonel sobre rodas pede uma estação.
+Teclas sem piano esperam sua mão.
+
+**Respostas (não ler):** Bengala doce verde, Meia verde, Boneco de neve de chapéu, Presente cúbico, Vagão-tanque, Teclado.
+
+### Garagem das Naves
+
+**Arquivo:** `espaco_garagem_r3.wav`
+
+Feita de massa, não posso pilotar.
+Neve de mentira veio nos visitar.
+Soldadinho de madeira cuida da partida.
+Meu laço esconde uma surpresa arredondada.
+Sou doce e listrada, dobrada na ponta.
+Um bicho com galhos nesta nave de faz de conta.
+
+**Respostas (não ler):** Boneca de biscoito, Floco de neve, Quebra-nozes, Presente redondo, Bengala doce vermelha, Rena.
+
+## Liga dos Brinquedos — rodada 1
 
 ### Praça dos Blocos
 
-ID: `herois_praca`
+**Arquivo:** `herois_praca_r1.wav`
 
-> A Capitã Faísca está de prontidão,  
-> um balde leva água para a missão.  
-> Caminhão de brinquedo veio trabalhar,  
-> melancia de mentira quer participar.  
-> Livros empilhados guardam uma aventura,  
-> e um bolinho de festa completa a procura.  
+A Capitã Faísca está de prontidão,
+um balde leva água para a missão.
+Caminhão de brinquedo veio trabalhar,
+melancia de mentira quer participar.
+Livros empilhados guardam uma aventura,
+e um bolinho de festa completa a procura.
+
+**Respostas (não ler):** A Capitã Faísca, Água para a pracinha, Um caminhão de brinquedo, Uma melancia de brinquedo, Uma pilha de livros, Um bolinho de festa.
 
 ### Ponte do Faz de Conta
 
-ID: `herois_ponte`
+**Arquivo:** `herois_ponte_r1.wav`
 
-> Um martelo pequeno pode consertar,  
-> o Robô Violeta veio ajudar.  
-> Biscoito de gente observa a ponte,  
-> uma pera se esconde no horizonte.  
-> Um cone de trânsito pede atenção,  
-> e caneca com alça espera uma mão.  
+Um martelo pequeno pode consertar,
+o Robô Violeta veio ajudar.
+Biscoito de gente observa a ponte,
+uma pera se esconde no horizonte.
+Um cone de trânsito pede atenção,
+e caneca com alça espera uma mão.
+
+**Respostas (não ler):** A ferramenta do conserto, O Robô Violeta, Um biscoito em forma de gente, Uma pera de brinquedo, Um cone de trânsito, Uma caneca com alça.
 
 ### Quartel das Boas Ideias
 
-ID: `herois_quartel`
+**Arquivo:** `herois_quartel_r1.wav`
 
-> Um comunicador quer ser encontrado,  
-> um ajudante amarelinho está ao lado.  
-> Carro de corrida chegou à reunião,  
-> biscoito de gente entrou na missão.  
-> Um picolé no palito quer participar,  
-> e abajur quadrado ilumina o lugar.  
+Um comunicador quer ser encontrado,
+um ajudante amarelinho está ao lado.
+Carro de corrida chegou à reunião,
+biscoito de gente entrou na missão.
+Um picolé no palito quer participar,
+e abajur quadrado ilumina o lugar.
 
-## Conferir antes de distribuir
+**Respostas (não ler):** O comunicador da liga, O ajudante amarelinho, Um carro de corrida, Um biscoito em forma de gente, Um picolé no palito, Um abajur de cúpula quadrada.
 
-Teste os nove clipes em Play e no executável Windows: correspondência com os seis versos, Ouvir/interromper pelo Menu/repetir, interrupção ao trocar de cena, leitura automática, silêncio e equilíbrio com os efeitos. Confira também uma sala sem clipe, Ler juntos e a faixa inferior em 1280 × 720.
+## Liga dos Brinquedos — rodada 2
 
-Depois de importar as gravações, gere um novo build; um executável anterior não passa a conter os áudios sozinho. Os roteiros deste arquivo foram comparados com o banco e o catálogo. Reprodução e transições de voz ainda precisam ser confirmadas no Unity, conforme [VALIDACAO.md](VALIDACAO.md).
+### Praça dos Blocos
+
+**Arquivo:** `herois_praca_r2.wav`
+
+Um morango vermelho visita a cidade.
+Um biscoito redondo pede amizade.
+Uma almofada azul espera um cochilo.
+Uma lanterna deixa o herói tranquilo.
+Um trenzinho colorido chama a população.
+Uma pera de brinquedo assiste à missão.
+
+**Respostas (não ler):** Morango, Biscoito, Almofada azul, Lanterna, Locomotiva, Pera.
+
+### Ponte do Faz de Conta
+
+**Arquivo:** `herois_ponte_r2.wav`
+
+Um bolinho de festa observa o rio.
+Livros empilhados contam um desafio.
+Um balde veio ajudar na construção.
+Um morango entrou nesta missão.
+Uma boneca de massa quer atravessar.
+Uma lanterna mostra por onde passar.
+
+**Respostas (não ler):** Bolinho, Livros, Balde, Morango, Boneca de biscoito, Lanterna.
+
+### Quartel das Boas Ideias
+
+**Arquivo:** `herois_quartel_r2.wav`
+
+Duas cerejas vieram à reunião.
+Uma laranja redonda deseja uma missão.
+Uma taça de sorvete pede proteção.
+Uma almofada azul aguarda o plantão.
+Uma lanterna acompanha o vigia.
+Um trem de brinquedo traz a companhia.
+
+**Respostas (não ler):** Cerejas, Laranja, Taça de sorvete, Almofada azul, Lanterna, Locomotiva.
+
+## Liga dos Brinquedos — rodada 3
+
+### Praça dos Blocos
+
+**Arquivo:** `herois_praca_r3.wav`
+
+Uniforme de madeira, guardião sem poder.
+Um gancho de açúcar tenta se esconder.
+Seis faces e um laço, segredo bem guardado.
+Galhos na cabeça, um visitante inesperado.
+Roupa para um pé que esqueceu de caminhar.
+Um transporte de trilhos veio nos salvar.
+
+**Respostas (não ler):** Quebra-nozes, Bengala doce vermelha, Presente cúbico, Rena, Meia verde, Bonde.
+
+### Ponte do Faz de Conta
+
+**Arquivo:** `herois_ponte_r3.wav`
+
+Sou estrela de inverno, sem molhar o chão.
+Sou redondo, tenho laço e guardo um presentão.
+Bengala com listras, meu segredo é ser doce.
+Fico de chapéu onde a neve nunca trouxe.
+Tenho rodas, mas dependo de outra força.
+Um tanque de viagem espera uma locomotiva.
+
+**Respostas (não ler):** Floco de neve, Presente redondo, Bengala doce verde, Boneco de neve de chapéu, Vagão, Vagão-tanque.
+
+### Quartel das Boas Ideias
+
+**Arquivo:** `herois_quartel_r3.wav`
+
+Sou guardião de madeira, parado no quartel.
+Não sou árvore, mas levo galhos até o céu.
+Surpresa arredondada, amarrada com carinho.
+Curva de açúcar espera num cantinho.
+Uma estrela que prefere o frio ao verão.
+Levo a turma sobre trilhos, sem sair do chão.
+
+**Respostas (não ler):** Quebra-nozes, Rena, Presente redondo, Bengala doce verde, Floco de neve, Bonde.
+
+
+## Fallback Windows
+
+O auxiliar inicia Windows PowerShell com um comando fixo codificado, sem acesso à rede, e lê o texto com System.Speech. Escolhe uma voz pt-BR, depois outra voz portuguesa ou a voz padrão instalada. Não muda políticas de execução, não instala vozes e não cria arquivos de áudio. Sistemas que bloqueiam PowerShell devem usar os clipes gravados.
+
+Documentação: [SpeechSynthesizer](https://learn.microsoft.com/en-us/dotnet/api/system.speech.synthesis.speechsynthesizer?view=netframework-4.8). A leitura real e o tempo de início precisam ser testados no Windows.
